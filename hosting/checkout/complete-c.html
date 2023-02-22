@@ -21,6 +21,7 @@
         <!-- Script Element (Type: Text/Javascript) -->
         <script defer src="/asset/js/root.js"></script>
         <script defer src="/asset/js/main.js"></script>
+        <script defer src="/asset/js/template.js"></script>
         <!-- Link Element (Relationship: Apple Touch Icon, Icon, Manifest) -->
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
@@ -28,22 +29,5 @@
         <link rel="manifest" href="/site.webmanifest" />
     </head>
     <!-- Body Element -->
-    <body class="bg-light overflow-hidden">
-        <!-- Navigation Element -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom fixed-top">
-            <div class="container justify-content-center">
-                <a class="navbar-brand fw-bold m-0" href="/">Rayatiga</a>
-            </div>
-        </nav>
-        <!-- Header Element -->
-        <header><div></div></header>
-        <!-- Main Element -->
-        <main>
-            <div class="container min-vh-100 bg-light d-flex flex-column justify-content-center align-items-center text-center">
-                <h1 class="fw-bold">Checkouting...</h1>
-                <p>Please wait, you'll be redirected to WhatsApp Rayatiga in <span id="checkoutTimer">5</span>s.</p>
-                <button class="btn btn-danger" onclick="closeWindow()">Cancel</button>
-            </div>
-        </main>
-    </body>
+    <body class="bg-light overflow-hidden" id="checkoutPage"></body>
 </html>

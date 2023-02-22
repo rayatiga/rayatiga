@@ -26,6 +26,7 @@
         <!-- Script Element (Type: Text/Javascript) -->
         <script defer type="text/javascript" src="/asset/js/main.js"></script>
         <script defer type="text/javascript" src="/asset/js/root.js"></script>
+        <script defer type="text/javascript" src="/asset/js/template.js"></script>
         <!-- Link Element (Relationship: Apple Touch Icon, Icon, Manifest) -->
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
@@ -35,49 +36,7 @@
     <!-- Body Element -->
     <body class="bg-light">
         <!-- Navigation Element -->
-        <nav class="navbar navbar-expand-lg bg-light border-bottom fixed-top">
-            <div class="container py-2">
-                <a class="navbar-brand fw-bold" href="/">Rayatiga</a>
-                <button class="navbar-toggler" type="button" data-root-toggle="collapse" data-root-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/about/">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/career/">Career</a></li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle active" aria-current="page" href="#" role="button" data-root-toggle="dropdown" aria-expanded="false">Service&nbsp;</a>
-                            <ul class="dropdown-menu bg-light">
-                                <li><h6 class="dropdown-header">Web Hosting</h6></li>
-                                <li><a class="dropdown-item" href="/hosting/">Home</a></li>
-                                <li><a class="dropdown-item" href="/hosting/about/">About</a></li>
-                                <li><a class="dropdown-item" href="/hosting/contact/">Contact</a></li>
-                                <li><a class="dropdown-item active" aria-current="page" href="/hosting/pricing/">Pricing</a></li>
-                                <li class="dropdown-divider"></li>
-                                <li><h6 class="dropdown-header">Promotion</h6></li>
-                                <li><a class="dropdown-item" href="/hosting/pricing/#domain">Domain Name</a></li>
-                                <li><a class="dropdown-item" href="/hosting/pricing/#wordpress">WordPress Package</a></li>
-                                <li><a class="dropdown-item" href="/hosting/pricing/#complete">Complete Website</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-root-toggle="dropdown" aria-expanded="false">Project&nbsp;</a>
-                            <ul class="dropdown-menu bg-light">
-                                <li><h6 class="dropdown-header">Top Three</h6></li>
-                                <li><a class="dropdown-item" href="/project/apache2-benchmark.html">Apache2 Benchmark</a></li>
-                                <li><a class="dropdown-item" href="/project/php-ini-configuration.html">PHP ini Configuration</a></li>
-                                <li><a class="dropdown-item" href="/project/wordpress-installer.html">WordPress Installer</a></li>
-                                <li class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="/project/">Other</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item d-lg-none"><a class="nav-link" href="/contact/">Contact</a></li>
-                        <li class="nav-item d-none d-lg-block"><a class="btn btn-dark ms-2" href="/contact/">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+        <nav></nav>
         <!-- Header Element -->
         <header class="d-flex align-items-center background-pricing pt-73px mb-5">
             <div class="container">
@@ -342,11 +301,7 @@
             </div>
         </main>
         <!-- Footer Element -->
-        <footer>
-            <div class="d-flex justify-content-center align-items-center bg-light border-top h-73px">
-                <p class="text-center text-secondary m-0">Copyright © Rayatiga 2023</p>
-            </div>
-        </footer>
+        <footer></footer>
         <!-- Modal (Learn More Info Center) -->
         <div class="modal fade" id="learnMoreInfoCenter" tabindex="-1" aria-labelledby="learnMoreInfoCenterLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
