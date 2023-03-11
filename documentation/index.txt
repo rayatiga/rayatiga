@@ -27,12 +27,20 @@ Template HTML for head, navigation, and footer.
 - Navigation    : Path /asset/template/navigation.html
 - Footer        : Path /asset/template/footer.html
 
-Documentation 5 - Code Change.
+Documentation 5 - Visual Debugging
+Debug layout with all selector css.
+- Code  :
+* {
+    outline: 1px solid #000000;
+    background: #ff00001a;
+}
+
+Documentation 6 - Code Change.
 Code change from original source, intended for localization purposes.
 - Change 1  : Bootstrap to Utility.
 - Change 2  : Code start with -bs change to -root.
 
-Documentation 6 - Comment.
+Documentation 7 - Comment.
 Comment with code "Modified" following by integer e.g. "(1)" and status e.g. "Disable" inside square brackets for e.g. "[Modified (1) Disable]" indicate the modified line.
 List of "[Modified (<int>) <status>]" information:
 - <int>     : Numbering or identifier category of modified.
@@ -41,11 +49,22 @@ List of "[Modified (<int>) <status>]" information:
 - Change    : Commenting above line and changed line at the bottom.
 - Addition  : Commenting between additional line.
 
-Documentation 7 - FormSpree.
+Documentation 8 - FormSpree.
 FormSpree API URL in form action attribute.
 - Form URL  : https://formspree.io/f/xknavynp
 
-Documentation 8 - Backup at File and Line.
+Documentation 9 - Backup at File and Line.
 Create a backup snippet and stored from specified line.
-- Backup 1  : /career/index.html @ 208 => <form id="applyPositionForm" action="https://formspree.io/f/xknavynp" method="post">
-- Backup 2  : /career/index.html @ 229 => <button type="submit" form="applyPositionForm" class="btn btn-dark">Apply Now</button>
+- Backup 1  : Path /career/index.html @ 208 => <form id="applyPositionForm" action="https://formspree.io/f/xknavynp" method="post">
+- Backup 2  : Path /career/index.html @ 229 => <button type="submit" form="applyPositionForm" class="btn btn-dark">Apply Now</button>
+
+Documentation 10 - Asset Backup
+Backup main file inside asset folder before minify.
+- Backup 1  : Path /documentation/main.css.bak
+- Backup 2  : Path /documentation/main.js.bak
+
+Documentation 11 - Ignore File
+Ignoring file for uploading to public zone.
+- Ignore 1  : **/documentation/**
+- Ignore 2  : README.md
+- Ignore 3  : LICENSE
