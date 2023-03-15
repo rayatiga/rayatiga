@@ -36,4 +36,16 @@
         <loc>https://rayatiga.com/hosting/pricing</loc>
         <lastmod>2023-03-28</lastmod>
     </url>
+    <url>
+        <loc>https://rayatiga.com/project/apache2-benchmark.html</loc>
+        <lastmod>2023-01-05</lastmod>
+    </url>
+    <url>
+        <loc>https://rayatiga.com/project/php-ini-configuration.html</loc>
+        <lastmod>2023-01-05</lastmod>
+    </url>
+    <url>
+        <loc>https://rayatiga.com/project/wordpress-installer.html</loc>
+        <lastmod>2023-01-05</lastmod>
+    </url>
 </urlset>
