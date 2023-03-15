@@ -56,8 +56,8 @@ FormSpree API URL in form action attribute.
 
 Documentation 9 - Backup at File and Line.
 Create a backup snippet and stored from specified line.
-- Backup 1  : Path /career/index.html => <form id="applyPositionForm" action="" method=""> @ 224 => <form id="applyPositionForm" action="https://formspree.io/f/xknavynp" method="post">
-- Backup 2  : Path /career/index.html => <button type="" form="" class="btn btn-dark disabled">Application Closed</button> @ 245 => <button type="submit" form="applyPositionForm" class="btn btn-dark">Apply Now</button>
+- Backup 1  : Path /career/index.html => <form id="applyPositionForm" action="" method=""> => <form id="applyPositionForm" action="https://formspree.io/f/xknavynp" method="post">
+- Backup 2  : Path /career/index.html => <button type="" form="" class="btn btn-dark disabled">Application Closed</button> => <button type="submit" form="applyPositionForm" class="btn btn-dark">Apply Now</button>
 
 Documentation 10 - Ignore File
 Ignoring file for uploading to public zone.
