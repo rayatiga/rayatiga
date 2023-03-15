@@ -19,23 +19,3 @@ if (scrollTopButton) {
         document.documentElement.scrollTop = 0
     }
 }
-// Checkout Countdown Timer
-var checkoutTimerSpan = document.getElementById('checkoutTimer')
-if (checkoutTimerSpan) {
-    checkoutTimer()
-}
-function checkoutTimer() {
-    var countdown = 5
-    var interval = setInterval(function () {
-        checkoutTimerSpan.innerHTML = --countdown
-
-        if (countdown <= 0) {
-            clearInterval(interval)
-        }
-    }, 1000)
-}
-// Button Cancel Checkout
-function closeWindow() {
-    window.open('', '_self', '')
-    window.close()
-}
