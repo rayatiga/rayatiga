@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>WordPress Installer</title>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="title" content="WordPress Installer" />
+        <meta name="description" content="Automation script for installing and setup WordPress in server." />
+        <meta name="author" content="Rayatiga" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://rayatiga.com/project/wordpress-installer.html" />
+        <meta property="og:title" content="WordPress Installer" />
+        <meta property="og:description" content="Automation script for installing and setup WordPress in server." />
+        <meta property="og:image" content="https://rayatiga.com/asset/image/brand/rayatiga-og.png" />
+        <link rel="stylesheet" href="/asset/css/main.css" />
+        <link rel="stylesheet" href="/asset/css/utility.min.css" />
+        <link rel="stylesheet" href="/asset/css/icon.css" />
+        <script defer type="text/javascript" src="/asset/js/main.js"></script>
+        <script defer type="text/javascript" src="/asset/js/utility.min.js"></script>
+        <link rel="stylesheet" href="/asset/css/prism-min.css" />
+        <script defer type="text/javascript" src="/asset/js/prism-min.js"></script>
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="manifest" href="/site.webmanifest" />
+    </head>
+    <body class="bg-light">
+        <nav class="navbar navbar-expand-lg bg-light border-bottom fixed-top">
+            <div class="container py-2">
+                <a class="navbar-brand fw-bold" href="/">Rayatiga</a>
+                <button class="navbar-toggler" type="button" data-root-toggle="collapse" data-root-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/about/">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/career/">Career</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-root-toggle="dropdown" aria-expanded="false">Service&nbsp;</a>
+                            <ul class="dropdown-menu bg-light">
+                                <li><h6 class="dropdown-header">Web Hosting</h6></li>
+                                <li><a class="dropdown-item" href="/hosting/">Home</a></li>
+                                <li><a class="dropdown-item" href="/hosting/about/">About</a></li>
+                                <li><a class="dropdown-item" href="/hosting/contact/">Contact</a></li>
+                                <li><a class="dropdown-item" href="/hosting/pricing/">Pricing</a></li>
+                                <li class="dropdown-divider"></li>
+                                <li><h6 class="dropdown-header">Promotion</h6></li>
+                                <li><a class="dropdown-item" href="/hosting/pricing/#domain">Domain Name</a></li>
+                                <li><a class="dropdown-item" href="/hosting/pricing/#wordpress">WordPress Package</a></li>
+                                <li><a class="dropdown-item" href="/hosting/pricing/#complete">Complete Website</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active" aria-current="page" href="#" role="button" data-root-toggle="dropdown" aria-expanded="false">Project&nbsp;</a>
+                            <ul class="dropdown-menu bg-light">
+                                <li><h6 class="dropdown-header">Top Three</h6></li>
+                                <li><a class="dropdown-item" href="/project/apache2-benchmark.html">Apache2 Benchmark</a></li>
+                                <li><a class="dropdown-item" href="/project/php-ini-configuration.html">PHP ini Configuration</a></li>
+                                <li><a class="dropdown-item active" aria-current="page" href="/project/wordpress-installer.html">WordPress Installer</a></li>
+                                <li class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="/project/">Other</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item d-lg-none"><a class="nav-link" href="/contact/">Contact</a></li>
+                        <li class="nav-item d-none d-lg-block"><a class="btn btn-dark ms-2" href="/contact/">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <header><div></div></header>
+        <main>
+            <div class="container bg-light text-center d-flex flex-column justify-content-center align-items-center single-page">
+                <div class="container">
+                    <div class="py-4">
+                        <h1 class="fw-bold"><i class="icon icon-wordpress d-block"></i><span class="fw-lighter">WordPress</span> Installer.</h1>
+                        <p>Automation script for installing and setup WordPress in server.</p>
+                        <pre class="pre-page" data-copy-state="copy">
+<code class="language-bash">#!/bin/bash
+
+# Script for installing WordPress.
+# Compatible for Debian/Ubuntu based distro.
+# Recommended for fresh install Ubuntu server.
+
+# STEP -3: fisrt run
+if ! [ $(id -u) = 0 ]; then
+    printf &quot;Please run as root!\n&quot;
+    exit 1
+fi
+
+printf &quot;\nWordPress Installer Script by https://github.com/bydzen/. Well managed.\n&quot;
+printf &quot;Any issue? go to https://github.com/rayatiga/wordpress-installer/issues/. Create new issue.\n&quot;
+printf &quot;Visit more on https://github.com/rayatiga/wordpress-installer/. GitHub repository.\n&quot;
+
+# STEP -2: removing rest of file (especially for testing)
+while true; do
+    printf &quot;\nThis script provide for development too. Therefore feature named &#039;CLEAN&#039; will be introduce first.\nCLEAN will delete apache2 file as detail below.
+    Root Directory  : /var/www/html/* (except latest.tar.gz and index.html)
+    Config Directory: /etc/apache2/sites-available/* (except 000-default.conf)\n&quot;
+    read -p &quot;Run CLEAN for erase previously? (y/n): &quot; yn
+    case $yn in
+    [Yy]*)
+        printf &quot;\nDeleting WordPress directory and custom apache2 configuration...\n&quot;
+        sleep 1
+        find /var/www/html/ -mindepth 1 -name &#039;latest.tar.gz&#039; -or -name &#039;index.html&#039; -prune -o -exec rm -rf {} \;
+        find /etc/apache2/sites-available/ -type f -not \( -name &#039;000-default.conf&#039; \) -delete
+        printf &quot;Deleted. ✓\n&quot;
+        sleep 1
+        break
+        ;;
+    [Nn]*)
+        break
+        ;;
+    *) printf &quot;Please answer &#039;Y/y&#039; or &#039;N/n&#039;.\n&quot; ;;
+    esac
+done
+
+# STEP -1: giving change information
+printf &quot;\nThis script will modified file as detail below.\n&quot;
+printf &quot;1. Directory /var/www/html/\n&quot;
+printf &quot;2. Directory /etc/apache2/sites-available/\n&quot;
+printf &quot;3. Directory /etc/apache2/sites-enabled/\n&quot;
+
+printf &quot;\nThis script can also make changes to the detail below.\n&quot;
+printf &quot;1. Altering user root databse\n&quot;
+printf &quot;2. Creating new database\n&quot;
+printf &quot;3. Creating new database user\n&quot;
+printf &quot;4. Creating new database password\n\n&quot;
+
+while true; do
+    read -p &quot;Accept the ability above? (y/n): &quot; yn
+    case $yn in
+    [Yy]*)
+        break
+        ;;
+    [Nn]*)
+        printf &quot;\nExiting tool.\n&quot;
+        exit
+        ;;
+    *) printf &quot;Please answer &#039;Y/y&#039; or &#039;N/n&#039;.\n&quot; ;;
+    esac
+done
+
+# STEP 0: initialization
+printf &quot;\nWelcome to wp-install.sh script!\n&quot;
+printf &quot;Please note, this script is intended for WordPress fresh install.\n&quot;
+printf &quot;No checking packages, no sub-directory/domain, just root for one WordPress config.\n&quot;
+printf &quot;Please consider to check this script code to get more information.\n\n&quot;
+
+while true; do
+    read -p &quot;Are you sure to continue? (y/n): &quot; yn
+    case $yn in
+    [Yy]*)
+        break
+        ;;
+    [Nn]*)
+        printf &quot;\nExiting tool.\n&quot;
+        exit
+        ;;
+    *) printf &quot;Please answer &#039;Y/y&#039; or &#039;N/n&#039;.\n&quot; ;;
+    esac
+done
+
+# STEP 1: check root user (again)
+if ! [ $(id -u) = 0 ]; then
+    printf &quot;Please run as root!\n&quot;
+    exit 1
+fi
+
+# STEP 2: installing apache2, mysql server, and php package
+printf &quot;\nInstalling apache2, mysql-server, and required php module...\n&quot;
+sleep 1
+apt install -y apache2 ghostscript libapache2-mod-php mysql-server php php-bcmath php-curl php-imagick php-intl php-gd php-json php-mbstring php-mysql php-xml php-zip &gt;/dev/null 2&gt;&amp;1
+printf &quot;Installed. ✓\n&quot;
+sleep 1
+
+# STEP 3: downloading latest version of WordPress in tar.gz file and configure
+printf &quot;\nConfiguring WordPress file...\n&quot;
+sleep 1
+cd /var/www/html
+
+FILE=latest.tar.gz
+if test -f &quot;$FILE&quot;; then
+    printf &quot;File $FILE exists, decompress instead of redownload. ✓\n&quot;
+    sleep 1
+else
+    printf &quot;Downloading latest version of WordPress...\n&quot;
+    sleep 1
+    wget https://wordpress.org/latest.tar.gz &gt;/dev/null 2&gt;&amp;1
+    printf &quot;Downloaded. ✓\n&quot;
+    sleep 1
+fi
+
+printf &quot;\nDecompressing $FILE...\n&quot;
+sleep 1
+tar zxvf latest.tar.gz &gt;/dev/null 2&gt;&amp;1
+printf &quot;Decompressed. ✓\n\n&quot;
+sleep 1
+
+read -p &quot;Input directory name for WordPress (e.g. yoursite.com): &quot; dirname
+mv /var/www/html/wordpress /var/www/html/$dirname
+
+chown -R www-data:www-data /var/www/html/$dirname
+
+# STEP 4: configuring apache2 config
+printf &quot;\n&quot;
+read -p &quot;Input config name for apache2 (e.g. yoursite.com without &#039;.conf&#039;): &quot; confname
+{
+    printf &quot;&lt;VirtualHost *:80&gt;\n&quot;
+    printf &quot;  DocumentRoot /var/www/html/$dirname\n&quot;
+    printf &quot;  &lt;Directory /var/www/html/$dirname&gt;\n&quot;
+    printf &quot;      Options FollowSymLinks\n&quot;
+    printf &quot;      AllowOverride Limit Options FileInfo\n&quot;
+    printf &quot;      DirectoryIndex index.php\n&quot;
+    printf &quot;      Require all granted\n&quot;
+    printf &quot;  &lt;/Directory&gt;\n&quot;
+    printf &quot;  &lt;Directory /var/www/html/$dirname/wp-content&gt;\n&quot;
+    printf &quot;      Options FollowSymLinks\n&quot;
+    printf &quot;      Require all granted\n&quot;
+    printf &quot;      AllowOverride All\n&quot;
+    printf &quot;  &lt;/Directory&gt;\n&quot;
+    printf &quot;&lt;/VirtualHost&gt;\n&quot;
+} &gt;&gt;/etc/apache2/sites-available/$confname.conf
+
+printf &quot;\nConfiguring apache2...\n&quot;
+sleep 1
+rm /etc/apache2/sites-enabled/* &gt;/dev/null 2&gt;&amp;1
+
+a2ensite $confname &gt;/dev/null 2&gt;&amp;1
+a2enmod rewrite &gt;/dev/null 2&gt;&amp;1
+
+systemctl restart apache2.service &gt;/dev/null 2&gt;&amp;1
+printf &quot;Configured. ✓\n\n&quot;
+sleep 1
+
+# STEP 5: creating database and the setting up
+read -p &quot;Input database name for WordPress (e.g. yoursitecom): &quot; dbname
+
+while true; do
+    printf &quot;\n&quot;
+    read -p &quot;Do you have mysql user root configured/secured by password? (y/n): &quot; yn
+    case $yn in
+    [Yy]*)
+        dbuser=root
+        while true; do
+            printf &quot;\nPlease enter correct password, there is no checking/validation!\n&quot;
+            read -p &quot;Enter your $dbuser password: &quot; dbpass1
+            read -p &quot;Enter your confirmation $dbuser password: &quot; dbpass2
+            if [ &quot;$dbpass1&quot; = &quot;$dbpass2&quot; ]; then
+                dbpass=$dbpass2
+                dbpassroot=$dbpass2
+                break
+            else
+                printf &quot;Password $dbpass1 and $dbpass2 for user $dbuser is not match!\n&quot;
+            fi
+        done
+        break
+        ;;
+    [Nn]*)
+        dbuser=root
+        printf &quot;\nConfigure database for user $dbuser.\n&quot;
+        read -p &quot;Enter your new $dbuser password: &quot; dbpassroot
+        mysql -u root -p$dbpassroot -e &quot;ALTER USER $dbuser@localhost IDENTIFIED WITH caching_sha2_password BY &#039;$dbpassroot&#039;;&quot; &gt;/dev/null 2&gt;&amp;1
+        dbpass=$dbpassroot
+        break
+        ;;
+    *) printf &quot;Please answer &#039;Y/y&#039; or &#039;N/n&#039;.\n&quot; ;;
+    esac
+done
+
+printf &quot;\n&quot;
+while true; do
+    read -p &quot;Are you want to create database specific user? (y/n): &quot; yn
+    case $yn in
+    [Yy]*)
+        read -p &quot;Please enter database username: &quot; dbuser
+        read -p &quot;Please enter database user password: &quot; dbpass
+        mysql -u root -p$dbpassroot -e &quot;CREATE USER $dbuser@localhost IDENTIFIED BY &#039;$dbpass&#039;;&quot; &gt;/dev/null 2&gt;&amp;1
+        break
+        ;;
+    [Nn]*)
+        sleep 1
+        printf &quot;Using $dbuser for handling WordPress database. ✓\n&quot;
+        sleep 1
+        break
+        ;;
+    *) printf &quot;Please answer &#039;Y/y&#039; or &#039;N/n&#039;.\n&quot; ;;
+    esac
+done
+mysql -u root -p$dbpassroot -e &quot;CREATE DATABASE $dbname;GRANT ALL PRIVILEGES ON $dbname.* TO $dbuser@localhost;FLUSH PRIVILEGES;&quot; &gt;/dev/null 2&gt;&amp;1
+
+# STEP 6: finalization
+sleep 1
+printf &quot;
+    Visit IP server, then this is database connection detail.
+    Database Name   : $dbname
+    Username        : $dbuser
+    Password        : $dbpass
+    Database Host   : localhost
+    Table Prefix    : (default &#039;wp_&#039; or change)
+
+    Your complete information output from this program.
+    File Downloaded : /var/www/html/$FILE
+    Document Root   : /var/www/html/$dirname
+    Configuration   : /etc/apache2/sites-available/$confname.conf
+    For databse see above.
+&quot;
+sleep 1
+
+printf &quot;\nReach to finalization. Thank you.\n&quot;
+printf &quot;Please check your site.\n&quot;
+printf &quot;Exiting tool.\n&quot;
+
+exit 0</code>
+                    </pre>
+                        <a class="btn btn-dark mt-3" href="https://github.com/rayatiga/wordpress-installer/" rel="nofollow noopener noreferrer" target="_blank">Visit Repository</a>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="d-flex justify-content-center align-items-center bg-light border-top h-73px">
+                <p class="text-center text-secondary m-0">Copyright © Rayatiga 2023</p>
+            </div>
+        </footer>
+    </body>
+</html>

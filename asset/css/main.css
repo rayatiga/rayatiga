@@ -1,0 +1,142 @@
+@font-face {
+    font-family: 'Work Sans-Local';
+    src: url(../font/work-sans.ttf);
+}
+@font-face {
+    font-family: 'Source Code Pro-Local';
+    src: url(../font/source-code-pro.ttf);
+}
+/* #AIM-FOR-DEBUGGING,
+* {
+    outline: 1px solid #000000;
+    background: rgba(255, 0, 0, 0.1) fixed;
+} */
+html body {
+    --dark: #212529;
+    --light: #f8f9fa;
+    font-family: 'Work Sans-Local', sans-serif;
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+*::selection {
+    color: var(--light);
+    background-color: var(--dark);
+}
+button,
+a {
+    cursor: pointer;
+}
+span.anchor {
+    height: 73px;
+    display: block;
+    margin-top: -73px;
+    position: relative;
+    visibility: hidden;
+}
+header,
+main {
+    animation-name: fade;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+pre {
+    font-size: 0.85rem;
+}
+pre::-webkit-scrollbar {
+    display: none;
+}
+code::selection,
+span::selection {
+    background-color: var(--root-gray-800);
+}
+#scrollTop {
+    opacity: 0;
+    right: 25px;
+    bottom: 20px;
+    z-index: 99;
+    position: fixed;
+    padding: 5px 10px;
+    background: #f8f9fa;
+    transition: 500ms all;
+    border: 1px solid #212529;
+    outline: 5px solid #f8f9fa;
+}
+.background-home {
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(rgba(250, 250, 250, 0.7), rgba(250, 250, 250, 0.7)), url(/asset/image/hosting/home.webp);
+}
+.background-about {
+    height: 60vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(rgba(250, 250, 250, 0.7), rgba(250, 250, 250, 0.7)), url(/asset/image/hosting/about.webp);
+}
+.background-contact {
+    height: 60vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(rgba(250, 250, 250, 0.7), rgba(250, 250, 250, 0.7)), url(/asset/image/hosting/contact.webp);
+}
+.background-pricing {
+    height: 60vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(rgba(250, 250, 250, 0.7), rgba(250, 250, 250, 0.7)), url(/asset/image/hosting/pricing.webp);
+}
+.h-73px {
+    height: 73px !important;
+}
+.pt-73px {
+    padding-top: 73px !important;
+}
+.w-25rem {
+    width: 22.75rem !important;
+}
+.pre-page {
+    height: 44vh !important;
+    border-radius: 12px !important;
+    border: 5px solid var(--root-border-color) !important;
+}
+.single-page {
+    padding-top: 73px !important;
+    min-height: calc(100vh - 73px) !important;
+}
+.half-page {
+    min-height: calc(40vh - 73px) !important;
+}
+.spinner-normal {
+    width: 1.8rem !important;
+    height: 1.8rem !important;
+    border-width: 0.4rem !important;
+}
+.text-magenta {
+    color: #c208c2 !important;
+}
+.border-magenta {
+    border: 1px solid #c208c2 !important;
+}
+.btn-magenta {
+    color: #ffffff !important;
+    border: 1px solid #c208c2 !important;
+    background-color: #c208c2 !important;
+}
+.btn-magenta:hover {
+    background: #df09df !important;
+    border: 1px solid #dd0add !important;
+}
+.btn-magenta:focus-visible {
+    background: #df09df !important;
+    box-shadow: 0 0 0 0.25rem rgba(224, 40, 145, 0.5) !important;
+}

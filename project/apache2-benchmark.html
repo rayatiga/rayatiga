@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Apache2 Benchmark</title>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="title" content="Apache2 Benchmark" />
+        <meta name="description" content="Tool for benchmarking your apache2 based sites. Clone and enjoy bechmarking!" />
+        <meta name="author" content="Rayatiga" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://rayatiga.com/project/apache2-benchmark.html" />
+        <meta property="og:title" content="Apache2 Benchmark" />
+        <meta property="og:description" content="Tool for benchmarking your apache2 based sites. Clone and enjoy bechmarking!" />
+        <meta property="og:image" content="https://rayatiga.com/asset/image/brand/rayatiga-og.png" />
+        <link rel="stylesheet" href="/asset/css/main.css" />
+        <link rel="stylesheet" href="/asset/css/utility.min.css" />
+        <link rel="stylesheet" href="/asset/css/icon.css" />
+        <script defer type="text/javascript" src="/asset/js/main.js"></script>
+        <script defer type="text/javascript" src="/asset/js/utility.min.js"></script>
+        <link rel="stylesheet" href="/asset/css/prism-min.css" />
+        <script defer type="text/javascript" src="/asset/js/prism-min.js"></script>
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="manifest" href="/site.webmanifest" />
+    </head>
+    <body class="bg-light">
+        <nav class="navbar navbar-expand-lg bg-light border-bottom fixed-top">
+            <div class="container py-2">
+                <a class="navbar-brand fw-bold" href="/">Rayatiga</a>
+                <button class="navbar-toggler" type="button" data-root-toggle="collapse" data-root-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/about/">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/career/">Career</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-root-toggle="dropdown" aria-expanded="false">Service&nbsp;</a>
+                            <ul class="dropdown-menu bg-light">
+                                <li><h6 class="dropdown-header">Web Hosting</h6></li>
+                                <li><a class="dropdown-item" href="/hosting/">Home</a></li>
+                                <li><a class="dropdown-item" href="/hosting/about/">About</a></li>
+                                <li><a class="dropdown-item" href="/hosting/contact/">Contact</a></li>
+                                <li><a class="dropdown-item" href="/hosting/pricing/">Pricing</a></li>
+                                <li class="dropdown-divider"></li>
+                                <li><h6 class="dropdown-header">Promotion</h6></li>
+                                <li><a class="dropdown-item" href="/hosting/pricing/#domain">Domain Name</a></li>
+                                <li><a class="dropdown-item" href="/hosting/pricing/#wordpress">WordPress Package</a></li>
+                                <li><a class="dropdown-item" href="/hosting/pricing/#complete">Complete Website</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active" aria-current="page" href="#" role="button" data-root-toggle="dropdown" aria-expanded="false">Project&nbsp;</a>
+                            <ul class="dropdown-menu bg-light">
+                                <li><h6 class="dropdown-header">Top Three</h6></li>
+                                <li><a class="dropdown-item active" aria-current="page" href="/project/apache2-benchmark.html">Apache2 Benchmark</a></li>
+                                <li><a class="dropdown-item" href="/project/php-ini-configuration.html">PHP ini Configuration</a></li>
+                                <li><a class="dropdown-item" href="/project/wordpress-installer.html">WordPress Installer</a></li>
+                                <li class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="/project/">Other</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item d-lg-none"><a class="nav-link" href="/contact/">Contact</a></li>
+                        <li class="nav-item d-none d-lg-block"><a class="btn btn-dark ms-2" href="/contact/">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <header><div></div></header>
+        <main>
+            <div class="container bg-light text-center d-flex flex-column justify-content-center align-items-center single-page">
+                <div class="container">
+                    <div class="py-4">
+                        <h1 class="fw-bold"><i class="icon icon-graph-up-arrow d-block"></i><span class="fw-lighter">Apache2</span> Benchmark.</h1>
+                        <p>Tool for benchmarking your apache2 based sites. Clone and enjoy bechmarking!</p>
+                        <pre class="pre-page" data-copy-state="copy">
+<code class="language-bash">#!/bin/bash
+
+# static color
+RED=&#039;\033[0;31m&#039;
+REDBOLD=&#039;\033[1;31m&#039;
+GREEN=&#039;\e[0;32m&#039;
+YELLOW=&#039;\e[0;33m&#039;
+NC=&#039;\033[0m&#039;
+
+# static background color
+WHITEONRED=&#039;\e[1;41m&#039;
+BGNC=&#039;\e[0m&#039;
+
+# clear the screen
+printf &quot;Clearing the terminal screen...&quot;
+sleep 1
+clear
+
+# checking apache2-utils packages
+printf &quot;\nChecking prerequisites first. Please wait...\n&quot;
+sleep 0.7
+REQUIRED_PKG=&quot;apache2-utils&quot;
+PKG_OK=$(dpkg-query -W --showformat=&#039;${Status}\n&#039; $REQUIRED_PKG|grep &quot;install ok installed&quot;)
+printf &quot;Checking for $REQUIRED_PKG: ${GREEN}$PKG_OK${NC}\n&quot;
+if [ &quot;&quot; = &quot;$PKG_OK&quot; ]; then
+printf &quot;No $REQUIRED_PKG. Setting up $REQUIRED_PKG. This sometime required a password.\n&quot;
+sleep 1
+sudo apt-get --yes install $REQUIRED_PKG 
+# clear the screen
+printf &quot;\nClearing the terminal screen...&quot;
+sleep 1
+clear
+fi
+
+# double check the packages
+REQUIRED_PKG=&quot;apache2-utils&quot;
+PKG_OK=$(dpkg-query -W --showformat=&#039;${Status}\n&#039; $REQUIRED_PKG|grep &quot;install ok installed&quot;)
+if [ &quot;&quot; = &quot;$PKG_OK&quot; ]; then
+printf &quot;${REDBOLD}Can&#039;t find/install $REQUIRED_PKG package(s). Please install manually.${NC}&quot;
+exit 1;
+fi
+
+# delay 1 second
+sleep 1
+
+# ok if apache2-utils already installed
+printf &quot;\nOK, $REQUIRED_PKG already installed in your system, now running the tools.\n&quot;
+
+# cancelling information 1
+printf &quot;NOTE: press ${REDBOLD}CTRL + C${NC} at anytime to exit this tool.\n&quot;
+sleep 1
+
+# loading the tools
+printf &quot;\nLoading tools...\n&quot;
+echo -ne &#039;=&gt;                      (4%)\r&#039;
+sleep 0.1
+echo -ne &#039;==&gt;                     (11%)\r&#039;
+sleep 0.1
+echo -ne &#039;===&gt;                    (17%)\r&#039;
+sleep 0.1
+echo -ne &#039;====&gt;                   (28%)\r&#039;
+sleep 0.1
+echo -ne &#039;=====&gt;                  (33%)\r&#039;
+sleep 0.1
+echo -ne &#039;=======&gt;                (49%)\r&#039;
+sleep 0.1
+echo -ne &#039;=============&gt;          (68%)\r&#039;
+sleep 0.1
+echo -ne &#039;===================&gt;    (84%)\r&#039;
+sleep 0.2
+echo -ne &#039;=====================&gt;  (96%)\r&#039;
+sleep 0.2
+echo -ne &#039;=======================&gt;(100%)\r&#039;
+sleep 0.2
+echo -ne &#039;completed.                    \r&#039;
+sleep 0.5
+echo -ne &#039;\n&#039;
+
+# welcome
+printf &quot;\nWelcome to Apache Bechmark Website!&quot;
+
+# disclaimer and warning
+printf &quot;\n\n${WHITEONRED}!!! PLESE READ CAREFULLY !!!${BGNC}&quot;
+printf &quot;\n${RED}Please use this program for testing purposes only!&quot;
+printf &quot;\nAny illegal activities (e.g. DDoS) will be processed by law. So, becareful!\n${NC}&quot;
+
+# agreement
+read -p &quot;Do you agree? (y/n): &quot; yn
+case $yn in 
+y|Y|yes|Yes|YEs|yEs|yES|YeS|YES ) printf &quot;Great, I appreciate that!&quot;;;
+n|N|no|No|nO|NO ) printf &quot;OK then don&#039;t use this tool please :)\n\n&quot;; exit 1;;
+* ) printf &quot;${RED}Invalid input, abort.\n${NC}&quot;; exit 1;;
+esac
+sleep 0.5
+
+# ready to use
+printf &quot;\n\nOK. Enough intro, let&#039;s input your request for bechmarking your site now.&quot;
+printf &quot;\nThis program is build by ${RED}@bydzen @ (https://github.com/bydzen)\n\n${NC}&quot;
+sleep 0.5
+
+# number request
+read -p &quot;Please input your request number: &quot; reqval
+if ! [[ &quot;$reqval&quot; =~ ^[0-9]+$ ]] ; 
+then exec &gt;&amp;2; printf &quot;${RED}error: Not a number!\n${NC}&quot;; exit 1
+fi
+if [ $reqval -gt 9999999 ]
+then exec &gt;&amp;2; printf &quot;${RED}error: Too much requests!\n${NC}&quot;; exit 1
+fi
+sleep 0.5
+printf &quot;Input: ${GREEN}$reqval request(s)${NC} saved.\n&quot;
+sleep 0.5
+
+# numnber of concurrent
+read -p &quot;Please input your concurrent number: &quot; conval
+if ! [[ &quot;$conval&quot; =~ ^[0-9]+$ ]] ; 
+then exec &gt;&amp;2; printf &quot;${RED}error: Not a number!\n${NC}&quot;; exit 1
+fi
+if [ $conval -gt 9999999 ]
+then exec &gt;&amp;2; printf &quot;${RED}error: Too much concurrents!\n${NC}&quot;; exit 1
+fi
+sleep 0.5
+printf &quot;Input: ${GREEN}$conval concurrent(s)${NC} saved.\n&quot;
+sleep 0.5
+
+# is use http or https?
+read -p &quot;Is your website using https/ssl enabled? (y/n): &quot; yn
+case $yn in 
+y|Y|yes|Yes|YEs|yEs|yES|YeS|YES ) procval=&quot;https://&quot;;;
+n|N|no|No|nO|NO ) procval=&quot;http://&quot;;;
+* ) printf &quot;${RED}Invalid input, abort.\n${NC}&quot;; exit 1;;
+esac
+sleep 0.5
+printf &quot;Protocol: ${GREEN}$procval${NC} saved.\n&quot;
+sleep 0.5
+
+# domain or ip address destination
+read -p &quot;Please input your ip/domain destination (e.g. yoursite.com): &quot; siteval
+sleep 0.5
+printf &quot;Destination: ${GREEN}$procval$siteval/${NC} saved.\n&quot;
+sleep 0.5
+
+# use log file (log-benchmark.txt)?
+read -p &quot;Output log file? (y/n): &quot; yn
+case $yn in 
+y|Y|yes|Yes|YEs|yEs|yES|YeS|YES) sleep 0.5; logval=&quot;Yes&quot;; printf &quot;Using log: ${GREEN}Yes.${NC}\n&quot;; logfile=&quot; -e log-benchmark.txt &quot;;;
+n|N|no|No|nO|NO ) sleep 0.5; logval=&quot;No&quot;; printf &quot;Using log: ${RED}No.${NC}\n&quot;; logfile=&quot; &quot;;;
+* ) printf &quot;${RED}Invalid input, abort\n${NC}&quot;; exit 1;;
+esac
+sleep 0.5
+
+# full generated information
+printf &quot;\nExecuting apache benchmark as shown:\n&quot;
+sleep 0.1
+printf &quot;Number of request(s)    : $reqval\n&quot;
+sleep 0.1
+printf &quot;Number of concurrent(s) : $conval\n&quot;
+sleep 0.1
+printf &quot;Protocol                : $procval\n&quot;
+sleep 0.1
+printf &quot;Destination             : $siteval\n&quot;
+sleep 0.1
+printf &quot;Save log                : $logval\n&quot;
+sleep 0.1
+printf &quot;Result CLI              : ab -n $reqval -c $conval$logfile$procval$siteval/\n\n&quot;
+sleep 0.1
+read -p &quot;If the information is correct, confirm to perform benchmank execution. (y/n): &quot; yn
+case $yn in 
+y|Y|yes|Yes|YEs|yEs|yES|YeS|YES) ;;
+n|N|no|No|nO|NO ) printf &quot;Abort.&quot;; exit 1;;
+* ) printf &quot;${RED}Invalid input, abort.\n${NC}&quot;; exit 1;;
+esac
+
+# delay 1 second
+sleep 1
+
+# cancelling information 2
+printf &quot;NOTE: press ${REDBOLD}CTRL + C${NC} for abort or cancel this request.\n\n&quot;
+sleep 2
+
+# loading to execute
+printf &quot;Executing...\n&quot;
+echo -ne &#039;=&gt;                      (4%)\r&#039;
+sleep 0.1
+echo -ne &#039;==&gt;                     (11%)\r&#039;
+sleep 0.1
+echo -ne &#039;===&gt;                    (17%)\r&#039;
+sleep 0.1
+echo -ne &#039;====&gt;                   (28%)\r&#039;
+sleep 0.1
+echo -ne &#039;=====&gt;                  (33%)\r&#039;
+sleep 0.1
+echo -ne &#039;=======&gt;                (49%)\r&#039;
+sleep 0.1
+echo -ne &#039;=============&gt;          (68%)\r&#039;
+sleep 0.1
+echo -ne &#039;===================&gt;    (84%)\r&#039;
+sleep 0.2
+echo -ne &#039;=====================&gt;  (96%)\r&#039;
+sleep 0.2
+echo -ne &#039;=======================&gt;(100%)\r&#039;
+sleep 0.5
+echo -ne &#039;                              \r&#039;
+echo -ne &#039;\n&#039;
+
+# delay 1 second
+sleep 1
+
+# execute command ab for apache2 benchmark 
+ab -n $reqval -c $conval$logfile$procval$siteval/</code>
+                    </pre>
+                        <a class="btn btn-dark mt-3" href="https://github.com/rayatiga/apache2-benchmark/" rel="nofollow noopener noreferrer" target="_blank">Visit Repository</a>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="d-flex justify-content-center align-items-center bg-light border-top h-73px">
+                <p class="text-center text-secondary m-0">Copyright © Rayatiga 2023</p>
+            </div>
+        </footer>
+    </body>
+</html>
