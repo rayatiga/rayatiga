@@ -1,1 +1,41 @@
-var scrollTopButton=document.getElementById("scrollTop");if(scrollTopButton){function showScrollButton(){scrollTopButton&&(document.body.scrollTop>20||document.documentElement.scrollTop>20?scrollTopButton.style.opacity="1":scrollTopButton.style.opacity="0")}function scrollTopAction(){document.body.scrollTop=0,document.documentElement.scrollTop=0}window.onscroll=function(){showScrollButton()}}var checkoutTimerSpan=document.getElementById("checkoutTimer");function checkoutTimer(){var o=5,t=setInterval((function(){checkoutTimerSpan.innerHTML=--o,o<=0&&clearInterval(t)}),1e3)}function closeWindow(){window.open("","_self",""),window.close()}checkoutTimerSpan&&checkoutTimer();
+// JavaScript Main
+// Button Scroll to Top
+var scrollTopButton = document.getElementById('scrollTop')
+if (scrollTopButton) {
+    window.onscroll = function () {
+        showScrollButton()
+    }
+    function showScrollButton() {
+        if (scrollTopButton) {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollTopButton.style.opacity = '1'
+            } else {
+                scrollTopButton.style.opacity = '0'
+            }
+        }
+    }
+    function scrollTopAction() {
+        document.body.scrollTop = 0
+        document.documentElement.scrollTop = 0
+    }
+}
+// Checkout Countdown Timer
+var checkoutTimerSpan = document.getElementById('checkoutTimer')
+if (checkoutTimerSpan) {
+    checkoutTimer()
+}
+function checkoutTimer() {
+    var countdown = 5
+    var interval = setInterval(function () {
+        checkoutTimerSpan.innerHTML = --countdown
+
+        if (countdown <= 0) {
+            clearInterval(interval)
+        }
+    }, 1000)
+}
+// Button Cancel Checkout
+function closeWindow() {
+    window.open('', '_self', '')
+    window.close()
+}

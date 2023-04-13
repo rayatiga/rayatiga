@@ -1,1 +1,198 @@
-@font-face{font-family:'Work Sans-Local';src:url(/asset/font/work-sans.ttf);}@font-face{font-family:'Source Code Pro-Local';src:url(/asset/font/source-code-pro.ttf);}*{--dark:#212529;--light:#f8f9fa;--magenta:#c208c2;--bg-magenta:#df09df;--border-magenta:#dd0add;--bg-header:rgba(250,250,250,.7);--shadow-magenta:rgba(224,40,145,.5);}html{scroll-padding:73px;}body{scrollbar-width:none;-ms-overflow-style:none;font-family:'Work Sans-Local',sans-serif!important;}body::-webkit-scrollbar{display:none;}*::selection{color:var(--light);background-color:var(--dark);}button,a{cursor:pointer;}header,main{animation-name:fade;animation-duration:500ms;animation-fill-mode:forwards;animation-timing-function:ease-in-out;}@keyframes fade{from{opacity:0}to{opacity:1}}pre{font-size:.85rem;}pre::-webkit-scrollbar{height:0;width:10px;}pre::-webkit-scrollbar-track{background:#212529;border-radius:999rem;}pre::-webkit-scrollbar-corner{background:#212529;border-radius:999rem;}pre::-webkit-scrollbar-thumb{background:#4e4e4e;border-radius:999rem;}pre::-webkit-scrollbar-thumb:hover{background:#3d3d3d;}code::selection,span::selection{background-color:var(--root-gray-800);}#scrollTop{opacity:0;right:25px;bottom:20px;z-index:99;position:fixed;padding:5px 10px;background:#f8f9fa;transition:500ms all;border:1px solid var(--dark);outline:5px solid var(--light);}.background-home{height:100vh;background-size:cover;background-repeat:no-repeat;background-image:linear-gradient(var(--bg-header),var(--bg-header)),url(/asset/image/hosting/home.webp);}.background-about{height:60vh;background-size:cover;background-repeat:no-repeat;background-image:linear-gradient(var(--bg-header),var(--bg-header)),url(/asset/image/hosting/about.webp);}.background-contact{height:60vh;background-size:cover;background-repeat:no-repeat;background-image:linear-gradient(var(--bg-header),var(--bg-header)),url(/asset/image/hosting/contact.webp);}.background-pricing{height:60vh;background-size:cover;background-repeat:no-repeat;background-image:linear-gradient(var(--bg-header),var(--bg-header)),url(/asset/image/hosting/pricing.webp);}.h-73px{height:73px!important;}.pt-73px{padding-top:73px!important;}.w-25rem{width:22.75rem!important;}.pre-page{height:44vh!important;border-radius:12px!important;border:5px solid var(--root-border-color)!important;}.single-page{padding-top:73px!important;min-height:calc(100vh - 73px)!important;}.half-page{min-height:calc(40vh - 73px)!important;}.spinner-normal{width:1.8rem!important;height:1.8rem!important;border-width:.4rem!important;}.text-magenta{color:var(--magenta)!important;}.border-magenta{border:1px solid var(--magenta)!important;}.btn-magenta{color:#ffffff!important;border:1px solid var(--magenta)!important;background-color:var(--magenta)!important;}.btn-magenta:hover{background:var(--bg-magenta)!important;border:1px solid var(--border-magenta)!important;}.btn-magenta:focus-visible{background:var(--bg-magenta)!important;box-shadow:0 0 0 .25rem var(--shadow-magenta)!important;}
+/* Cascading Style Sheet Main */
+@font-face {
+    font-family: 'Work Sans';
+    src: url(/asset/font/work-sans.ttf);
+}
+@font-face {
+    font-family: 'Source Code Pro';
+    src: url(/asset/font/source-code-pro.ttf);
+}
+/* Kit */
+* {
+    --dark: #212529;
+    --light: #f8f9fa;
+    --magenta: #c208c2;
+    --bg-magenta: #df09df;
+    --pre-scrollbar: #f5f2f0;
+    --border-magenta: #dd0add;
+    --pre-scrollbar-thumb: #cecac8;
+    --pre-scrollbar-thumb-hover: #a8a6a5;
+    --bg-header: rgba(250, 250, 250, 0.7);
+    --shadow-magenta: rgba(224, 40, 145, 0.5);
+}
+/* Root */
+.form-control:focus {
+    box-shadow: 0 0 0 0.25rem rgba(110, 110, 110, 0.25) !important;
+}
+.dropdown-item:hover,
+.dropdown-item:focus {
+    background-color: var(--root-dark-bg-subtle) !important;
+}
+.dropdown-item.active,
+.dropdown-item:active {
+    background-color: var(--root-dark) !important;
+}
+.nav-link:focus-visible {
+    box-shadow: 0 0 0 0.25rem rgba(110, 110, 110, 0.25) !important;
+    border-radius: var(--root-border-radius);
+    transition: 250ms all;
+}
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 calc(var(--root-navbar-toggler-focus-width) - 0.15rem) var(--root-dark) !important;
+}
+/* Prism */
+code[class*='language-'],
+pre[class*='language-'] {
+    font-family: 'Source Code Pro', monospace !important;
+    font-size: 0.8rem !important;
+    line-height: 1.25 !important;
+}
+div.code-toolbar > .toolbar > .toolbar-item > a,
+div.code-toolbar > .toolbar > .toolbar-item > button,
+div.code-toolbar > .toolbar > .toolbar-item > span {
+    padding: 0.2rem 0.5em !important;
+    border-radius: 0.25em !important;
+    margin: 0.5em 1em !important;
+    border: 1px solid #bbb !important;
+}
+/* Element */
+html {
+    scroll-padding: 73px;
+}
+body {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    font-family: 'Work Sans', sans-serif !important;
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+*::selection {
+    color: var(--light) !important;
+    background-color: var(--dark) !important;
+}
+header,
+main {
+    animation-name: fadeIn;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+pre::-webkit-scrollbar {
+    height: 0;
+    width: 10px;
+}
+pre::-webkit-scrollbar-track {
+    background: var(--pre-scrollbar);
+    border-radius: 999rem;
+}
+pre::-webkit-scrollbar-corner {
+    background: var(--pre-scrollbar);
+    border-radius: 999rem;
+}
+pre::-webkit-scrollbar-thumb {
+    background: var(--pre-scrollbar-thumb);
+    border-radius: .15rem;
+}
+pre::-webkit-scrollbar-thumb:hover {
+    background: var(--pre-scrollbar-thumb-hover);
+}
+code::selection,
+span::selection {
+    background-color: var(--root-gray-800);
+}
+/* ID */
+/* Button Scroll to Top */
+#scrollTop {
+    opacity: 0;
+    right: 25px;
+    bottom: 20px;
+    z-index: 99;
+    position: fixed;
+    padding: 5px 10px;
+    background: var(--light);
+    transition: 500ms all;
+    border: 1px solid var(--dark);
+    outline: 5px solid var(--light);
+}
+/* Class */
+/* Header Background */
+.background-home {
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(var(--bg-header), var(--bg-header)), url(/asset/image/hosting/home.webp);
+}
+.background-about {
+    height: 60vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(var(--bg-header), var(--bg-header)), url(/asset/image/hosting/about.webp);
+}
+.background-contact {
+    height: 60vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(var(--bg-header), var(--bg-header)), url(/asset/image/hosting/contact.webp);
+}
+.background-pricing {
+    height: 60vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(var(--bg-header), var(--bg-header)), url(/asset/image/hosting/pricing.webp);
+}
+/* Unit */
+.h-73px {
+    height: 73px !important;
+}
+.pt-73px {
+    padding-top: 73px !important;
+}
+.w-25rem {
+    width: 22.75rem !important;
+}
+/* Prism */
+.pre-page {
+    height: 44vh !important;
+    border-radius: 8px !important;
+    border: 5px solid var(--root-border-color) !important;
+}
+/* Single Page */
+.single-page {
+    padding-top: 73px !important;
+    min-height: calc(100vh - 73px) !important;
+}
+/* Page with Header */
+.half-page {
+    min-height: calc(40vh - 73px) !important;
+}
+/* Text, Border, Button for Color Magenta */
+.text-magenta {
+    color: var(--magenta) !important;
+}
+.border-magenta {
+    border: 1px solid var(--magenta) !important;
+}
+.btn-magenta {
+    color: #ffffff !important;
+    border: 1px solid var(--magenta) !important;
+    background-color: var(--magenta) !important;
+}
+.btn-magenta:hover {
+    background: var(--bg-magenta) !important;
+    border: 1px solid var(--border-magenta) !important;
+}
+.btn-magenta:focus-visible {
+    background: var(--bg-magenta) !important;
+    box-shadow: 0 0 0 0.25rem var(--shadow-magenta) !important;
+}
+/* Keyframe */
+/* Fade in at Header and Main Element */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

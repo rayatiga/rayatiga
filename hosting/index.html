@@ -1,29 +1,40 @@
 <!DOCTYPE html>
+<!-- HTML Element -->
 <html lang="en">
+    <!-- Head Element -->
     <head>
+        <!-- Title Element -->
         <title>Web Hosting</title>
+        <!-- Meta Element (Charset: UTF-8; HTTP-equiv: X-UA-Compatible; Name: Viewport) -->
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Meta Element (Name: Title, Description, Author) -->
         <meta name="title" content="Web Hosting" />
         <meta name="description" content="Rayatiga Web Hosting is a place to create websites for your business and business without the hassle of simple steps." />
         <meta name="author" content="Rayatiga" />
+        <!-- Meta Element (Property: Open Graph) -->
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://rayatiga.com/hosting/" />
         <meta property="og:title" content="Web Hosting" />
         <meta property="og:description" content="Rayatiga Web Hosting is a place to create websites for your business and business without the hassle of simple steps." />
         <meta property="og:image" content="https://rayatiga.com/asset/image/brand/rayatiga-og.png" />
+        <!-- Link Element (Relationship: Stylesheet) -->
         <link rel="stylesheet" href="/asset/css/main.css" />
-        <link rel="stylesheet" href="/asset/css/utility.min.css" />
+        <link rel="stylesheet" href="/asset/css/root.css" />
         <link rel="stylesheet" href="/asset/css/icon.css" />
+        <!-- Script Element (Type: Text/Javascript) -->
         <script defer type="text/javascript" src="/asset/js/main.js"></script>
-        <script defer type="text/javascript" src="/asset/js/utility.min.js"></script>
+        <script defer type="text/javascript" src="/asset/js/root.js"></script>
+        <!-- Link Element (Relationship: Apple Touch Icon, Icon, Manifest) -->
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="manifest" href="/site.webmanifest" />
     </head>
+    <!-- Body Element -->
     <body class="bg-light">
+        <!-- Navigation Element -->
         <nav class="navbar navbar-expand-lg bg-light border-bottom fixed-top">
             <div class="container py-2">
                 <a class="navbar-brand fw-bold" href="/">Rayatiga</a>
@@ -67,6 +78,7 @@
                 </div>
             </div>
         </nav>
+        <!-- Header Element -->
         <header class="pt-5 d-flex align-items-center background-home mb-5">
             <div class="container">
                 <div class="row justify-content-center">
@@ -81,7 +93,9 @@
                 </div>
             </div>
         </header>
+        <!-- Main Element -->
         <main>
+            <!-- Section Element (Service) -->
             <section id="service" class="mt-5 pb-5 bg-light">
                 <div class="container text-center text-lg-start">
                     <div class="row">
@@ -112,6 +126,7 @@
                     </div>
                 </div>
             </section>
+            <!-- Section Element (WordPress Package) -->
             <section class="bg-light pb-5">
                 <div class="container">
                     <div class="text-center mb-5">
@@ -195,6 +210,7 @@
                     </div>
                 </div>
             </section>
+            <!-- Section Element (User Testimonial) -->
             <section class="pb-5 bg-light">
                 <div class="container">
                     <div class="text-center mb-5">
@@ -257,6 +273,7 @@
                     </div>
                 </div>
             </section>
+            <!-- Section Element (Any Question?) -->
             <section class="pb-5 bg-light">
                 <div class="container">
                     <div class="text-center">
@@ -271,12 +288,15 @@
                     </div>
                 </div>
             </section>
+            <button id="scrollTop" class="rounded-1" onclick="scrollTopAction()"><i class="icon icon-arrow-up-square-fill"></i></button>
         </main>
+        <!-- Footer Element -->
         <footer>
             <div class="d-flex justify-content-center align-items-center bg-light border-top h-73px">
                 <p class="text-center text-secondary m-0">Copyright © Rayatiga 2023</p>
             </div>
         </footer>
+        <!-- Modal (WordPress A) -->
         <div class="modal fade" id="wordpress-aModal" tabindex="-1" aria-labelledby="wordpress-aModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content bg-light">
@@ -292,6 +312,7 @@
                 </div>
             </div>
         </div>
+        <!-- Modal (WordPress B) -->
         <div class="modal fade" id="wordpress-bModal" tabindex="-1" aria-labelledby="wordpress-bModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content bg-light">
@@ -307,6 +328,7 @@
                 </div>
             </div>
         </div>
+        <!-- Modal (WordPress C) -->
         <div class="modal fade" id="wordpress-cModal" tabindex="-1" aria-labelledby="wordpress-cModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content bg-light">
