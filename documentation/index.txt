@@ -17,7 +17,7 @@ Page no active, no displayed in the navigation bar.
 - Payment   : Path /payment/
 - Checkout  : Path /hosting/checkout/
 
-Documentation 3 - 404 Not Found Page
+Documentation 3 - 404 Not Found Page.
 Page return for not founded a resources in web.
 - 404.html  : Path /404.html
 
@@ -27,7 +27,7 @@ Template HTML for head, navigation, and footer.
 - Navigation    : Path /asset/template/navigation.html
 - Footer        : Path /asset/template/footer.html
 
-Documentation 5 - Visual Debugging
+Documentation 5 - Visual Debugging.
 Debug layout with all selector css.
 - Code  :
 * {
@@ -59,8 +59,8 @@ Create a backup snippet and stored from specified line.
 - Backup 1  : Path /career/index.html => <form id="applyPositionForm" action="" method=""> => <form id="applyPositionForm" action="https://formspree.io/f/xknavynp" method="post">
 - Backup 2  : Path /career/index.html => <button type="" form="" class="btn btn-dark disabled">Application Closed</button> => <button type="submit" form="applyPositionForm" class="btn btn-dark">Apply Now</button>
 
-Documentation 10 - Ignore File
+Documentation 10 - Ignore File.
 Ignoring file for uploading to public zone.
-- Ignore 1  : **/documentation/**
-- Ignore 2  : README.md
-- Ignore 3  : LICENSE
+- Ignore 1  : /documentation/
+- Ignore 2  : /README.md
+- Ignore 3  : /LICENSE
