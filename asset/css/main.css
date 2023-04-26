@@ -13,10 +13,10 @@
     --light: #f8f9fa;
     --magenta: #c208c2;
     --bg-magenta: #df09df;
-    --pre-scrollbar: #f5f2f0;
+    --pre-scrollbar: #31373d;
     --border-magenta: #dd0add;
-    --pre-scrollbar-thumb: #cecac8;
-    --pre-scrollbar-thumb-hover: #a8a6a5;
+    --pre-scrollbar-thumb: #616161;
+    --pre-scrollbar-thumb-hover: #8d8d8d;
     --bg-header: rgba(250, 250, 250, 0.7);
     --shadow-magenta: rgba(224, 40, 145, 0.5);
 }
@@ -67,7 +67,7 @@ body {
 body::-webkit-scrollbar {
     display: none;
 }
-*::selection {
+::selection {
     color: var(--light) !important;
     background-color: var(--dark) !important;
 }
@@ -84,7 +84,7 @@ pre::-webkit-scrollbar {
 }
 pre::-webkit-scrollbar-track {
     background: var(--pre-scrollbar);
-    border-radius: 999rem;
+    border-radius: 0.1rem;
 }
 pre::-webkit-scrollbar-corner {
     background: var(--pre-scrollbar);
@@ -155,7 +155,7 @@ span::selection {
 .pre-page {
     height: 44vh !important;
     border-radius: 8px !important;
-    border: 5px solid var(--root-border-color) !important;
+    border: 4px solid var(--root-border-color) !important;
 }
 /* Single Page */
 .single-page {
@@ -185,6 +185,65 @@ span::selection {
 .btn-magenta:focus-visible {
     background: var(--bg-magenta) !important;
     box-shadow: 0 0 0 0.25rem var(--shadow-magenta) !important;
+}
+/* Media */
+@media (prefers-color-scheme: dark) {
+    ::selection {
+        color: var(--dark) !important;
+        background-color: var(--light) !important;
+    }
+    #scrollTop {
+        opacity: 0;
+        right: 25px;
+        bottom: 20px;
+        z-index: 99;
+        position: fixed;
+        padding: 5px 10px;
+        color: var(--light);
+        transition: 500ms all;
+        background: var(--dark);
+        outline: 5px solid var(--dark);
+        border: 1px solid var(--pre-scrollbar);
+    }
+    div.card-footer, div.card-header {
+        color: #ffffff !important;
+        background-color: #31373d;
+    }
+    div.card-header, div.modal-header, .dropdown-divider {
+        border-bottom: 1px solid rgb(var(--root-secondary-rgb)) !important;
+    }
+    div.card-footer, div.modal-footer {
+        border-top: 1px solid rgb(var(--root-secondary-rgb)) !important;
+    }
+    table {
+        color: rgb(var(--root-light)) !important;
+    }
+    a.dropdown-item:hover {
+        background-color: #31373d !important;
+    }
+    a.dropdown-item.active {
+        background-color: #31373d !important;
+    }
+    a.nav-link.active {
+        background-color: #31373d !important;
+        border-radius: 5px !important;
+        padding-left: 0.5rem !important;
+    }
+    .dropdown-menu {
+        border: 1px solid rgb(var(--root-secondary-rgb)) !important;
+    }
+    .navbar-collapse.show, .collapsing {
+        padding-top: 1rem !important;
+    }
+    .pre-page {
+        height: 44vh !important;
+        border-radius: 8px !important;
+        border: 4px solid #31373d !important;
+    }
+    .navbar-toggler {
+        /* border: 1px solid rgb(var(--root-secondary-rgb)) !important; */
+        background-color: var(--light) !important;
+    }
 }
 /* Keyframe */
 /* Fade in at Header and Main Element */
