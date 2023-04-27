@@ -45,15 +45,50 @@
             <div class="container bg-light text-center d-flex flex-column justify-content-center align-items-center single-page">
                 <h1 class="fw-bold"><i class="icon icon-cpu d-block"></i><span class="fw-lighter">Information Technology</span> Agency.</h1>
                 <p>Rayatiga is an agency engaged in the field of information technology. Rayatiga provides web services such as domain name reservation, WordPress hosting, and WordPress-based website establishment services such as portfolios, company profiles, to e-commerce.</p>
-                <a href="/hosting/" class="btn btn-dark">Main Service</a>
+                <div class="d-flex gap-2 flex-wrap justify-content-center align-items-center">
+                    <!-- <a href="/hosting/" class="btn btn-dark">Main Service</a> -->
+                    <button class="btn btn-dark" data-root-toggle="modal" data-root-target="#popupMainService">Main Service</button>
+                    <button class="btn btn-warning border-dark" data-root-toggle="modal" data-root-target="#popupInformation">Important Information</button>
+                </div>
             </div>
         </main>
         <!-- Footer Element -->
         <footer></footer>
         <script>
-            if ('serviceWorker' in navigator) {
-                navigator.serviceWorker.register('/sw.js', { scope: '/' })
+            if ("serviceWorker" in navigator) {
+                navigator.serviceWorker.register("/sw.js", { scope: "/" })
             }
         </script>
+        <!-- Modal Popup Information -->
+        <div class="modal fade" id="popupInformation" tabindex="-1" aria-labelledby="popupInformationLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content bg-light">
+                    <div class="modal-header">
+                        <h5 class="modal-title fw-bold" id="popupInformationLabel">Important Information!</h5>
+                        <button type="button" class="btn-close shadow-none" data-root-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">Now that Rayatiga services have <b class="text-danger">exceeded the quota</b>, some services cannot be ordered.</div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-dark" data-root-dismiss="modal">Okay</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Popup Main Service -->
+        <div class="modal fade" id="popupMainService" tabindex="-1" aria-labelledby="popupMainServiceLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content bg-light">
+                    <div class="modal-header">
+                        <h5 class="modal-title fw-bold" id="popupMainServiceLabel">Important Information!</h5>
+                        <button type="button" class="btn-close shadow-none" data-root-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">Now that Rayatiga services have <b class="text-danger">exceeded the quota</b>, some services cannot be ordered.</div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-root-dismiss="modal">Close</button>
+                        <a href="/hosting/" class="btn btn-dark">Service</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
