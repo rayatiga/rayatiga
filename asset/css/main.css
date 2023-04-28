@@ -187,7 +187,7 @@ span::selection {
     box-shadow: 0 0 0 0.25rem var(--shadow-magenta) !important;
 }
 /* Media */
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
     ::selection {
         color: var(--dark) !important;
         background-color: var(--light) !important;
@@ -241,7 +241,6 @@ span::selection {
         border: 4px solid #31373d !important;
     }
     .navbar-toggler {
-        /* border: 1px solid rgb(var(--root-secondary-rgb)) !important; */
         background-color: var(--light) !important;
     }
     .btn-dark.disabled, .btn-magenta.disabled {
@@ -251,10 +250,9 @@ span::selection {
         color: var(--light) !important;
     }
     button.btn-close.shadow-none {
-        /* display: none; */
         filter: invert(100%);
     }
-}
+} */
 /* Keyframe */
 /* Fade in at Header and Main Element */
 @keyframes fadeIn {
