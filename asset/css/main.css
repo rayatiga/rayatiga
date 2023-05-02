@@ -57,7 +57,7 @@ div.code-toolbar > .toolbar > .toolbar-item > span {
 }
 /* Element */
 html {
-    scroll-padding: 73px;
+    scroll-padding: calc(73px + 2.5rem);
 }
 body {
     scrollbar-width: none;
