@@ -1,5 +1,5 @@
 {
-    "printWidth": 9999,
+    "semi": false,
     "tabWidth": 4,
-    "semi": false
+    "printWidth": 9999
 }
