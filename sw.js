@@ -10,6 +10,7 @@ self.addEventListener("install", (event) => {
     )
 })
 
+// Fetch cache
 self.addEventListener("fetch", (event) => {
     event.respondWith(
         (async () => {
