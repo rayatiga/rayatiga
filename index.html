@@ -57,6 +57,7 @@
         <!-- Script for Service Worker -->
         <script>
             if ("serviceWorker" in navigator) {
+                // Call sw.js file
                 navigator.serviceWorker.register("/sw.js", { scope: "/" })
             }
         </script>
