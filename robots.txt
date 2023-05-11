@@ -5,7 +5,6 @@ Disallow: /payment
 Disallow: /asset/template
 Disallow: /hosting/checkout
 Disallow: /fun
-Disallow: /blog/template-how-to.html
-Disallow: /blog/template-problem.html
+Disallow: /blog/template
 
 Sitemap: https://rayatiga.com/sitemap.xml
