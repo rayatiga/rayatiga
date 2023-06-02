@@ -1,0 +1,17 @@
+{
+    "lang": "en-us",
+    "name": "Rayatiga",
+    "short_name": "Rayatiga",
+    "description": "Rayatiga is an agency engaged in the field of information technology. Rayatiga provides web services such as domain name reservation, WordPress hosting, and WordPress-based website establishment services such as portfolios, company profiles, to e-commerce.",
+    "start_url": "/",
+    "background_color": "#f8f9fa",
+    "theme_color": "#f8f9fa",
+    "orientation": "any",
+    "display": "standalone",
+    "icons": [
+        {
+            "src": "/android-chrome-512x512.png",
+            "sizes": "512x512"
+        }
+    ]
+}
