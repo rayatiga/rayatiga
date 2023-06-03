@@ -23,18 +23,37 @@
         <link rel="stylesheet" href="/asset/css/main.css" />
         <link rel="stylesheet" href="/asset/css/root.css" />
         <link rel="stylesheet" href="/asset/css/icon.css" />
-        <link rel="stylesheet" href="/asset/css/prism.css" />
         <!-- Script Element (Type: Text/Javascript) -->
         <script defer type="text/javascript" src="/asset/js/main.js"></script>
         <script defer type="text/javascript" src="/asset/js/root.js"></script>
         <script defer type="text/javascript" src="/asset/js/template.js"></script>
         <script defer type="text/javascript" src="/asset/js/angular.min.js"></script>
-        <script defer type="text/javascript" src="/asset/js/prism.js"></script>
         <!-- Link Element (Relationship: Apple Touch Icon, Icon, Manifest) -->
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-        <link rel="manifest" href="/manifest.json" />
+        <!--<link rel="manifest" href="/manifest.json" />-->
+        <!-- Embed Style -->
+        <style>
+            .hilite_me {
+                width: auto;
+                overflow: auto;
+                text-align: left;
+                max-height: 428px;
+                border-radius: 12px;
+                padding: 0.2em 0.6em;
+                background: #f8f9fa;
+                border: 1px solid #212529;
+                border-width: 0.1em 0.1em 0.1em 0.8em;
+            }
+            .hilite_me::-webkit-scrollbar {
+                display: none;
+            }
+            pre {
+                margin: 12px;
+                line-height: 150%;
+            }
+        </style>
     </head>
     <!-- Body Element -->
     <body class="bg-light">
@@ -49,218 +68,219 @@
                     <div class="py-4">
                         <h1 class="fw-bold"><i class="icon icon-graph-up-arrow d-block"></i><span class="fw-lighter">Apache2</span> Benchmark.</h1>
                         <p>Tool for benchmarking your apache2 based sites. Clone and enjoy bechmarking!</p>
-                        <!-- Pre Element (Apache2 Benchmark) -->
-                        <pre class="pre-page" data-copy-state="copy">
-<code class="language-bash">#!/bin/bash
+                        <!-- HTML generated using hilite.me -->
+                        <div class="hilite_me">
+                            <pre><span style="color: #408080; font-style: italic">#!/bin/bash</span>
 
-# static color
-RED=&#039;\033[0;31m&#039;
-REDBOLD=&#039;\033[1;31m&#039;
-GREEN=&#039;\e[0;32m&#039;
-YELLOW=&#039;\e[0;33m&#039;
-NC=&#039;\033[0m&#039;
+<span style="color: #408080; font-style: italic"># static color</span>
+<span style="color: #19177C">RED</span><span style="color: #666666">=</span><span style="color: #BA2121">&#39;\033[0;31m&#39;</span>
+<span style="color: #19177C">REDBOLD</span><span style="color: #666666">=</span><span style="color: #BA2121">&#39;\033[1;31m&#39;</span>
+<span style="color: #19177C">GREEN</span><span style="color: #666666">=</span><span style="color: #BA2121">&#39;\e[0;32m&#39;</span>
+<span style="color: #19177C">YELLOW</span><span style="color: #666666">=</span><span style="color: #BA2121">&#39;\e[0;33m&#39;</span>
+<span style="color: #19177C">NC</span><span style="color: #666666">=</span><span style="color: #BA2121">&#39;\033[0m&#39;</span>
 
-# static background color
-WHITEONRED=&#039;\e[1;41m&#039;
-BGNC=&#039;\e[0m&#039;
+<span style="color: #408080; font-style: italic"># static background color</span>
+<span style="color: #19177C">WHITEONRED</span><span style="color: #666666">=</span><span style="color: #BA2121">&#39;\e[1;41m&#39;</span>
+<span style="color: #19177C">BGNC</span><span style="color: #666666">=</span><span style="color: #BA2121">&#39;\e[0m&#39;</span>
 
-# clear the screen
-printf &quot;Clearing the terminal screen...&quot;
+<span style="color: #408080; font-style: italic"># clear the screen</span>
+<span style="color: #008000">printf</span> <span style="color: #BA2121">&quot;Clearing the terminal screen...&quot;</span>
 sleep 1
 clear
 
-# checking apache2-utils packages
-printf &quot;\nChecking prerequisites first. Please wait...\n&quot;
+<span style="color: #408080; font-style: italic"># checking apache2-utils packages</span>
+<span style="color: #008000">printf</span> <span style="color: #BA2121">&quot;\nChecking prerequisites first. Please wait...\n&quot;</span>
 sleep 0.7
-REQUIRED_PKG=&quot;apache2-utils&quot;
-PKG_OK=$(dpkg-query -W --showformat=&#039;${Status}\n&#039; $REQUIRED_PKG|grep &quot;install ok installed&quot;)
-printf &quot;Checking for $REQUIRED_PKG: ${GREEN}$PKG_OK${NC}\n&quot;
-if [ &quot;&quot; = &quot;$PKG_OK&quot; ]; then
-printf &quot;No $REQUIRED_PKG. Setting up $REQUIRED_PKG. This sometime required a password.\n&quot;
+<span style="color: #19177C">REQUIRED_PKG</span><span style="color: #666666">=</span><span style="color: #BA2121">&quot;apache2-utils&quot;</span>
+<span style="color: #19177C">PKG_OK</span><span style="color: #666666">=</span><span style="color: #008000; font-weight: bold">$(</span>dpkg-query -W --showformat<span style="color: #666666">=</span><span style="color: #BA2121">&#39;${Status}\n&#39;</span> <span style="color: #19177C">$REQUIRED_PKG</span>|grep <span style="color: #BA2121">&quot;install ok installed&quot;</span><span style="color: #008000; font-weight: bold">)</span>
+<span style="color: #008000">printf</span> <span style="color: #BA2121">&quot;Checking for $REQUIRED_PKG: ${GREEN}$PKG_OK${NC}\n&quot;</span>
+<span style="color: #008000; font-weight: bold">if</span> <span style="color: #666666">[</span> <span style="color: #BA2121">&quot;&quot;</span> <span style="color: #666666">=</span> <span style="color: #BA2121">&quot;$PKG_OK&quot;</span> <span style="color: #666666">]</span>; <span style="color: #008000; font-weight: bold">then</span>
+<span style="color: #008000; font-weight: bold">    </span><span style="color: #008000">printf</span> <span style="color: #BA2121">&quot;No $REQUIRED_PKG. Setting up $REQUIRED_PKG. This sometime required a password.\n&quot;</span>
 sleep 1
-sudo apt-get --yes install $REQUIRED_PKG 
-# clear the screen
-printf &quot;\nClearing the terminal screen...&quot;
+sudo apt-get --yes install <span style="color: #19177C">$REQUIRED_PKG</span> 
+<span style="color: #408080; font-style: italic"># clear the screen</span>
+<span style="color: #008000">printf</span> <span style="color: #BA2121">&quot;\nClearing the terminal screen...&quot;</span>
 sleep 1
 clear
-fi
+<span style="color: #008000; font-weight: bold">fi</span>
 
-# double check the packages
-REQUIRED_PKG=&quot;apache2-utils&quot;
-PKG_OK=$(dpkg-query -W --showformat=&#039;${Status}\n&#039; $REQUIRED_PKG|grep &quot;install ok installed&quot;)
-if [ &quot;&quot; = &quot;$PKG_OK&quot; ]; then
-printf &quot;${REDBOLD}Can&#039;t find/install $REQUIRED_PKG package(s). Please install manually.${NC}&quot;
-exit 1;
-fi
+<span style="color: #408080; font-style: italic"># double check the packages</span>
+<span style="color: #19177C">REQUIRED_PKG</span><span style="color: #666666">=</span><span style="color: #BA2121">&quot;apache2-utils&quot;</span>
+<span style="color: #19177C">PKG_OK</span><span style="color: #666666">=</span><span style="color: #008000; font-weight: bold">$(</span>dpkg-query -W --showformat<span style="color: #666666">=</span><span style="color: #BA2121">&#39;${Status}\n&#39;</span> <span style="color: #19177C">$REQUIRED_PKG</span>|grep <span style="color: #BA2121">&quot;install ok installed&quot;</span><span style="color: #008000; font-weight: bold">)</span>
+<span style="color: #008000; font-weight: bold">if</span> <span style="color: #666666">[</span> <span style="color: #BA2121">&quot;&quot;</span> <span style="color: #666666">=</span> <span style="color: #BA2121">&quot;$PKG_OK&quot;</span> <span style="color: #666666">]</span>; <span style="color: #008000; font-weight: bold">then</span>
+<span style="color: #008000; font-weight: bold">    </span><span style="color: #008000">printf</span> <span style="color: #BA2121">&quot;${REDBOLD}Can&#39;t find/install $REQUIRED_PKG package(s). Please install manually.${NC}&quot;</span>
+<span style="color: #008000">exit </span>1;
+<span style="color: #008000; font-weight: bold">fi</span>
 
-# delay 1 second
+<span style="color: #408080; font-style: italic"># delay 1 second</span>
 sleep 1
 
-# ok if apache2-utils already installed
-printf &quot;\nOK, $REQUIRED_PKG already installed in your system, now running the tools.\n&quot;
+<span style="color: #408080; font-style: italic"># ok if apache2-utils already installed</span>
+<span style="color: #008000">printf</span> <span style="color: #BA2121">&quot;\nOK, $REQUIRED_PKG already installed in your system, now running the tools.\n&quot;</span>
 
-# cancelling information 1
-printf &quot;NOTE: press ${REDBOLD}CTRL + C${NC} at anytime to exit this tool.\n&quot;
+<span style="color: #408080; font-style: italic"># cancelling information 1</span>
+<span style="color: #008000">printf</span> <span style="color: #BA2121">&quot;NOTE: press ${REDBOLD}CTRL + C${NC} at anytime to exit this tool.\n&quot;</span>
 sleep 1
 
-# loading the tools
-printf &quot;\nLoading tools...\n&quot;
-echo -ne &#039;=&gt;                      (4%)\r&#039;
-sleep 0.1
-echo -ne &#039;==&gt;                     (11%)\r&#039;
-sleep 0.1
-echo -ne &#039;===&gt;                    (17%)\r&#039;
-sleep 0.1
-echo -ne &#039;====&gt;                   (28%)\r&#039;
-sleep 0.1
-echo -ne &#039;=====&gt;                  (33%)\r&#039;
-sleep 0.1
-echo -ne &#039;=======&gt;                (49%)\r&#039;
-sleep 0.1
-echo -ne &#039;=============&gt;          (68%)\r&#039;
-sleep 0.1
-echo -ne &#039;===================&gt;    (84%)\r&#039;
-sleep 0.2
-echo -ne &#039;=====================&gt;  (96%)\r&#039;
-sleep 0.2
-echo -ne &#039;=======================&gt;(100%)\r&#039;
-sleep 0.2
-echo -ne &#039;completed.                    \r&#039;
+<span style="color: #408080; font-style: italic"># loading the tools</span>
+<span style="color: #008000">printf</span> <span style="color: #BA2121">&quot;\nLoading tools...\n&quot;</span>
+<span style="color: #008000">echo</span> -ne <span style="color: #BA2121">&#39;=&gt;                      (4%)\r&#39;</span>
+sleep 0.4
+<span style="color: #008000">echo</span> -ne <span style="color: #BA2121">&#39;==&gt;                     (11%)\r&#39;</span>
+sleep 0.4
+<span style="color: #008000">echo</span> -ne <span style="color: #BA2121">&#39;===&gt;                    (17%)\r&#39;</span>
+sleep 0.4
+<span style="color: #008000">echo</span> -ne <span style="color: #BA2121">&#39;====&gt;                   (28%)\r&#39;</span>
+sleep 0.4
+<span style="color: #008000">echo</span> -ne <span style="color: #BA2121">&#39;=====&gt;                  (33%)\r&#39;</span>
+sleep 0.4
+<span style="color: #008000">echo</span> -ne <span style="color: #BA2121">&#39;=======&gt;                (49%)\r&#39;</span>
+sleep 0.4
+<span style="color: #008000">echo</span> -ne <span style="color: #BA2121">&#39;=============&gt;          (68%)\r&#39;</span>
+sleep 0.4
+<span style="color: #008000">echo</span> -ne <span style="color: #BA2121">&#39;===================&gt;    (84%)\r&#39;</span>
 sleep 0.5
-echo -ne &#039;\n&#039;
-
-# welcome
-printf &quot;\nWelcome to Apache Bechmark Website!&quot;
-
-# disclaimer and warning
-printf &quot;\n\n${WHITEONRED}!!! PLESE READ CAREFULLY !!!${BGNC}&quot;
-printf &quot;\n${RED}Please use this program for testing purposes only!&quot;
-printf &quot;\nAny illegal activities (e.g. DDoS) will be processed by law. So, becareful!\n${NC}&quot;
-
-# agreement
-read -p &quot;Do you agree? (y/n): &quot; yn
-case $yn in 
-y|Y|yes|Yes|YEs|yEs|yES|YeS|YES ) printf &quot;Great, I appreciate that!&quot;;;
-n|N|no|No|nO|NO ) printf &quot;OK then don&#039;t use this tool please :)\n\n&quot;; exit 1;;
-* ) printf &quot;${RED}Invalid input, abort.\n${NC}&quot;; exit 1;;
-esac
+<span style="color: #008000">echo</span> -ne <span style="color: #BA2121">&#39;=====================&gt;  (96%)\r&#39;</span>
 sleep 0.5
+<span style="color: #008000">echo</span> -ne <span style="color: #BA2121">&#39;=======================&gt;(100%)\r&#39;</span>
+sleep 0.5
+<span style="color: #008000">echo</span> -ne <span style="color: #BA2121">&#39;Load completed.               \r&#39;</span>
+sleep 0.8
+<span style="color: #008000">echo</span> -ne <span style="color: #BA2121">&#39;\n&#39;</span>
 
-# ready to use
-printf &quot;\n\nOK. Enough intro, let&#039;s input your request for bechmarking your site now.&quot;
-printf &quot;\nThis program is build by ${RED}@bydzen @ (https://github.com/bydzen)\n\n${NC}&quot;
+<span style="color: #408080; font-style: italic"># welcome</span>
+<span style="color: #008000">printf</span> <span style="color: #BA2121">&quot;\nWelcome to Apache Bechmark Website!&quot;</span>
+
+<span style="color: #408080; font-style: italic"># disclaimer and warning</span>
+<span style="color: #008000">printf</span> <span style="color: #BA2121">&quot;\n\n${WHITEONRED}!!! PLESE READ CAREFULLY !!!${BGNC}&quot;</span>
+<span style="color: #008000">printf</span> <span style="color: #BA2121">&quot;\n${RED}Please use this program for testing purposes only!&quot;</span>
+<span style="color: #008000">printf</span> <span style="color: #BA2121">&quot;\nAny illegal activities (e.g. DDoS) will be processed by law. So, becareful!\n${NC}&quot;</span>
+
+<span style="color: #408080; font-style: italic"># agreement</span>
+<span style="color: #008000">read</span> -p <span style="color: #BA2121">&quot;Do you agree? (y/n): &quot;</span> yn
+<span style="color: #008000; font-weight: bold">case</span> <span style="color: #19177C">$yn</span> in 
+y|Y|yes|Yes|YEs|yEs|yES|YeS|YES <span style="color: #666666">)</span> <span style="color: #008000">printf</span> <span style="color: #BA2121">&quot;Great, I appreciate that!&quot;</span>;;
+n|N|no|No|nO|NO <span style="color: #666666">)</span> <span style="color: #008000">printf</span> <span style="color: #BA2121">&quot;OK then don&#39;t use this tool please :)\n\n&quot;</span>; <span style="color: #008000">exit </span>1;;
+* <span style="color: #666666">)</span> <span style="color: #008000">printf</span> <span style="color: #BA2121">&quot;${RED}Invalid input, abort.\n${NC}&quot;</span>; <span style="color: #008000">exit </span>1;;
+<span style="color: #008000; font-weight: bold">esac</span>
 sleep 0.5
 
-# number request
-read -p &quot;Please input your request number: &quot; reqval
-if ! [[ &quot;$reqval&quot; =~ ^[0-9]+$ ]] ; 
-then exec &gt;&amp;2; printf &quot;${RED}error: Not a number!\n${NC}&quot;; exit 1
-fi
-if [ $reqval -gt 9999999 ]
-then exec &gt;&amp;2; printf &quot;${RED}error: Too much requests!\n${NC}&quot;; exit 1
-fi
-sleep 0.5
-printf &quot;Input: ${GREEN}$reqval request(s)${NC} saved.\n&quot;
+<span style="color: #408080; font-style: italic"># ready to use</span>
+<span style="color: #008000">printf</span> <span style="color: #BA2121">&quot;\n\nOK. Enough intro, let&#39;s input your request for bechmarking your site now.&quot;</span>
+<span style="color: #008000">printf</span> <span style="color: #BA2121">&quot;\nThis program is build by ${RED}@bydzen @ (https://github.com/bydzen)\n\n${NC}&quot;</span>
 sleep 0.5
 
-# numnber of concurrent
-read -p &quot;Please input your concurrent number: &quot; conval
-if ! [[ &quot;$conval&quot; =~ ^[0-9]+$ ]] ; 
-then exec &gt;&amp;2; printf &quot;${RED}error: Not a number!\n${NC}&quot;; exit 1
-fi
-if [ $conval -gt 9999999 ]
-then exec &gt;&amp;2; printf &quot;${RED}error: Too much concurrents!\n${NC}&quot;; exit 1
-fi
+<span style="color: #408080; font-style: italic"># number request</span>
+<span style="color: #008000">read</span> -p <span style="color: #BA2121">&quot;Please input your request number: &quot;</span> reqval
+<span style="color: #008000; font-weight: bold">if</span> ! <span style="color: #666666">[[</span> <span style="color: #BA2121">&quot;$reqval&quot;</span> <span style="color: #666666">=</span>~ ^<span style="color: #666666">[</span>0-9<span style="color: #666666">]</span>+<span style="color: #19177C">$ </span><span style="color: #666666">]]</span> ; 
+<span style="color: #008000; font-weight: bold">then </span><span style="color: #008000">exec</span> &gt;&amp;2; <span style="color: #008000">printf</span> <span style="color: #BA2121">&quot;${RED}error: Not a number!\n${NC}&quot;</span>; <span style="color: #008000">exit </span>1
+<span style="color: #008000; font-weight: bold">fi</span>
+<span style="color: #008000; font-weight: bold">if</span> <span style="color: #666666">[</span> <span style="color: #19177C">$reqval</span> -gt 9999999 <span style="color: #666666">]</span>
+<span style="color: #008000; font-weight: bold">then </span><span style="color: #008000">exec</span> &gt;&amp;2; <span style="color: #008000">printf</span> <span style="color: #BA2121">&quot;${RED}error: Too much requests!\n${NC}&quot;</span>; <span style="color: #008000">exit </span>1
+<span style="color: #008000; font-weight: bold">fi</span>
 sleep 0.5
-printf &quot;Input: ${GREEN}$conval concurrent(s)${NC} saved.\n&quot;
-sleep 0.5
-
-# is use http or https?
-read -p &quot;Is your website using https/ssl enabled? (y/n): &quot; yn
-case $yn in 
-y|Y|yes|Yes|YEs|yEs|yES|YeS|YES ) procval=&quot;https://&quot;;;
-n|N|no|No|nO|NO ) procval=&quot;http://&quot;;;
-* ) printf &quot;${RED}Invalid input, abort.\n${NC}&quot;; exit 1;;
-esac
-sleep 0.5
-printf &quot;Protocol: ${GREEN}$procval${NC} saved.\n&quot;
+<span style="color: #008000">printf</span> <span style="color: #BA2121">&quot;Input: ${GREEN}$reqval request(s)${NC} saved.\n&quot;</span>
 sleep 0.5
 
-# domain or ip address destination
-read -p &quot;Please input your ip/domain destination (e.g. yoursite.com): &quot; siteval
+<span style="color: #408080; font-style: italic"># numnber of concurrent</span>
+<span style="color: #008000">read</span> -p <span style="color: #BA2121">&quot;Please input your concurrent number: &quot;</span> conval
+<span style="color: #008000; font-weight: bold">if</span> ! <span style="color: #666666">[[</span> <span style="color: #BA2121">&quot;$conval&quot;</span> <span style="color: #666666">=</span>~ ^<span style="color: #666666">[</span>0-9<span style="color: #666666">]</span>+<span style="color: #19177C">$ </span><span style="color: #666666">]]</span> ; 
+<span style="color: #008000; font-weight: bold">then </span><span style="color: #008000">exec</span> &gt;&amp;2; <span style="color: #008000">printf</span> <span style="color: #BA2121">&quot;${RED}error: Not a number!\n${NC}&quot;</span>; <span style="color: #008000">exit </span>1
+<span style="color: #008000; font-weight: bold">fi</span>
+<span style="color: #008000; font-weight: bold">if</span> <span style="color: #666666">[</span> <span style="color: #19177C">$conval</span> -gt 9999999 <span style="color: #666666">]</span>
+<span style="color: #008000; font-weight: bold">then </span><span style="color: #008000">exec</span> &gt;&amp;2; <span style="color: #008000">printf</span> <span style="color: #BA2121">&quot;${RED}error: Too much concurrents!\n${NC}&quot;</span>; <span style="color: #008000">exit </span>1
+<span style="color: #008000; font-weight: bold">fi</span>
 sleep 0.5
-printf &quot;Destination: ${GREEN}$procval$siteval/${NC} saved.\n&quot;
-sleep 0.5
-
-# use log file (log-benchmark.txt)?
-read -p &quot;Output log file? (y/n): &quot; yn
-case $yn in 
-y|Y|yes|Yes|YEs|yEs|yES|YeS|YES) sleep 0.5; logval=&quot;Yes&quot;; printf &quot;Using log: ${GREEN}Yes.${NC}\n&quot;; logfile=&quot; -e log-benchmark.txt &quot;;;
-n|N|no|No|nO|NO ) sleep 0.5; logval=&quot;No&quot;; printf &quot;Using log: ${RED}No.${NC}\n&quot;; logfile=&quot; &quot;;;
-* ) printf &quot;${RED}Invalid input, abort\n${NC}&quot;; exit 1;;
-esac
+<span style="color: #008000">printf</span> <span style="color: #BA2121">&quot;Input: ${GREEN}$conval concurrent(s)${NC} saved.\n&quot;</span>
 sleep 0.5
 
-# full generated information
-printf &quot;\nExecuting apache benchmark as shown:\n&quot;
-sleep 0.1
-printf &quot;Number of request(s)    : $reqval\n&quot;
-sleep 0.1
-printf &quot;Number of concurrent(s) : $conval\n&quot;
-sleep 0.1
-printf &quot;Protocol                : $procval\n&quot;
-sleep 0.1
-printf &quot;Destination             : $siteval\n&quot;
-sleep 0.1
-printf &quot;Save log                : $logval\n&quot;
-sleep 0.1
-printf &quot;Result CLI              : ab -n $reqval -c $conval$logfile$procval$siteval/\n\n&quot;
-sleep 0.1
-read -p &quot;If the information is correct, confirm to perform benchmank execution. (y/n): &quot; yn
-case $yn in 
-y|Y|yes|Yes|YEs|yEs|yES|YeS|YES) ;;
-n|N|no|No|nO|NO ) printf &quot;Abort.&quot;; exit 1;;
-* ) printf &quot;${RED}Invalid input, abort.\n${NC}&quot;; exit 1;;
-esac
+<span style="color: #408080; font-style: italic"># is use http or https?</span>
+<span style="color: #008000">read</span> -p <span style="color: #BA2121">&quot;Is your website using https/ssl enabled? (y/n): &quot;</span> yn
+<span style="color: #008000; font-weight: bold">case</span> <span style="color: #19177C">$yn</span> in 
+y|Y|yes|Yes|YEs|yEs|yES|YeS|YES <span style="color: #666666">)</span> <span style="color: #19177C">procval</span><span style="color: #666666">=</span><span style="color: #BA2121">&quot;https://&quot;</span>;;
+n|N|no|No|nO|NO <span style="color: #666666">)</span> <span style="color: #19177C">procval</span><span style="color: #666666">=</span><span style="color: #BA2121">&quot;http://&quot;</span>;;
+* <span style="color: #666666">)</span> <span style="color: #008000">printf</span> <span style="color: #BA2121">&quot;${RED}Invalid input, abort.\n${NC}&quot;</span>; <span style="color: #008000">exit </span>1;;
+<span style="color: #008000; font-weight: bold">esac</span>
+sleep 0.5
+<span style="color: #008000">printf</span> <span style="color: #BA2121">&quot;Protocol: ${GREEN}$procval${NC} saved.\n&quot;</span>
+sleep 0.5
 
-# delay 1 second
+<span style="color: #408080; font-style: italic"># domain or ip address destination</span>
+<span style="color: #008000">read</span> -p <span style="color: #BA2121">&quot;Please input your ip/domain destination (e.g. yoursite.com): &quot;</span> siteval
+sleep 0.5
+<span style="color: #008000">printf</span> <span style="color: #BA2121">&quot;Destination: ${GREEN}$procval$siteval/${NC} saved.\n&quot;</span>
+sleep 0.5
+
+<span style="color: #408080; font-style: italic"># use log file (log-benchmark.txt)?</span>
+<span style="color: #008000">read</span> -p <span style="color: #BA2121">&quot;Output log file? (y/n): &quot;</span> yn
+<span style="color: #008000; font-weight: bold">case</span> <span style="color: #19177C">$yn</span> in 
+y|Y|yes|Yes|YEs|yEs|yES|YeS|YES<span style="color: #666666">)</span> sleep 0.5; <span style="color: #19177C">logval</span><span style="color: #666666">=</span><span style="color: #BA2121">&quot;Yes&quot;</span>; <span style="color: #008000">printf</span> <span style="color: #BA2121">&quot;Using log: ${GREEN}Yes.${NC}\n&quot;</span>; <span style="color: #19177C">logfile</span><span style="color: #666666">=</span><span style="color: #BA2121">&quot; -e log-benchmark.txt &quot;</span>;;
+n|N|no|No|nO|NO <span style="color: #666666">)</span> sleep 0.5; <span style="color: #19177C">logval</span><span style="color: #666666">=</span><span style="color: #BA2121">&quot;No&quot;</span>; <span style="color: #008000">printf</span> <span style="color: #BA2121">&quot;Using log: ${RED}No.${NC}\n&quot;</span>; <span style="color: #19177C">logfile</span><span style="color: #666666">=</span><span style="color: #BA2121">&quot; &quot;</span>;;
+* <span style="color: #666666">)</span> <span style="color: #008000">printf</span> <span style="color: #BA2121">&quot;${RED}Invalid input, abort\n${NC}&quot;</span>; <span style="color: #008000">exit </span>1;;
+<span style="color: #008000; font-weight: bold">esac</span>
+sleep 0.5
+
+<span style="color: #408080; font-style: italic"># full generated information</span>
+<span style="color: #008000">printf</span> <span style="color: #BA2121">&quot;\nExecuting apache benchmark as shown:\n&quot;</span>
+sleep 0.1
+<span style="color: #008000">printf</span> <span style="color: #BA2121">&quot;Number of request(s)    : $reqval\n&quot;</span>
+sleep 0.1
+<span style="color: #008000">printf</span> <span style="color: #BA2121">&quot;Number of concurrent(s) : $conval\n&quot;</span>
+sleep 0.1
+<span style="color: #008000">printf</span> <span style="color: #BA2121">&quot;Protocol                : $procval\n&quot;</span>
+sleep 0.1
+<span style="color: #008000">printf</span> <span style="color: #BA2121">&quot;Destination             : $siteval\n&quot;</span>
+sleep 0.1
+<span style="color: #008000">printf</span> <span style="color: #BA2121">&quot;Save log                : $logval\n&quot;</span>
+sleep 0.1
+<span style="color: #008000">printf</span> <span style="color: #BA2121">&quot;Result CLI              : ab -n $reqval -c $conval$logfile$procval$siteval/\n\n&quot;</span>
+sleep 0.1
+<span style="color: #008000">read</span> -p <span style="color: #BA2121">&quot;If the information is correct, confirm to perform benchmank execution. (y/n): &quot;</span> yn
+<span style="color: #008000; font-weight: bold">case</span> <span style="color: #19177C">$yn</span> in 
+y|Y|yes|Yes|YEs|yEs|yES|YeS|YES<span style="color: #666666">)</span> ;;
+n|N|no|No|nO|NO <span style="color: #666666">)</span> <span style="color: #008000">printf</span> <span style="color: #BA2121">&quot;Abort.&quot;</span>; <span style="color: #008000">exit </span>1;;
+* <span style="color: #666666">)</span> <span style="color: #008000">printf</span> <span style="color: #BA2121">&quot;${RED}Invalid input, abort.\n${NC}&quot;</span>; <span style="color: #008000">exit </span>1;;
+<span style="color: #008000; font-weight: bold">esac</span>
+
+<span style="color: #408080; font-style: italic"># delay 1 second</span>
 sleep 1
 
-# cancelling information 2
-printf &quot;NOTE: press ${REDBOLD}CTRL + C${NC} for abort or cancel this request.\n\n&quot;
+<span style="color: #408080; font-style: italic"># cancelling information 2</span>
+<span style="color: #008000">printf</span> <span style="color: #BA2121">&quot;NOTE: press ${REDBOLD}CTRL + C${NC} for abort or cancel this request.\n\n&quot;</span>
 sleep 2
 
-# loading to execute
-printf &quot;Executing...\n&quot;
-echo -ne &#039;=&gt;                      (4%)\r&#039;
+<span style="color: #408080; font-style: italic"># loading to execute</span>
+<span style="color: #008000">printf</span> <span style="color: #BA2121">&quot;Executing...\n&quot;</span>
+<span style="color: #008000">echo</span> -ne <span style="color: #BA2121">&#39;=&gt;                      (4%)\r&#39;</span>
 sleep 0.1
-echo -ne &#039;==&gt;                     (11%)\r&#039;
+<span style="color: #008000">echo</span> -ne <span style="color: #BA2121">&#39;==&gt;                     (11%)\r&#39;</span>
 sleep 0.1
-echo -ne &#039;===&gt;                    (17%)\r&#039;
+<span style="color: #008000">echo</span> -ne <span style="color: #BA2121">&#39;===&gt;                    (17%)\r&#39;</span>
 sleep 0.1
-echo -ne &#039;====&gt;                   (28%)\r&#039;
+<span style="color: #008000">echo</span> -ne <span style="color: #BA2121">&#39;====&gt;                   (28%)\r&#39;</span>
 sleep 0.1
-echo -ne &#039;=====&gt;                  (33%)\r&#039;
+<span style="color: #008000">echo</span> -ne <span style="color: #BA2121">&#39;=====&gt;                  (33%)\r&#39;</span>
 sleep 0.1
-echo -ne &#039;=======&gt;                (49%)\r&#039;
+<span style="color: #008000">echo</span> -ne <span style="color: #BA2121">&#39;=======&gt;                (49%)\r&#39;</span>
 sleep 0.1
-echo -ne &#039;=============&gt;          (68%)\r&#039;
+<span style="color: #008000">echo</span> -ne <span style="color: #BA2121">&#39;=============&gt;          (68%)\r&#39;</span>
 sleep 0.1
-echo -ne &#039;===================&gt;    (84%)\r&#039;
+<span style="color: #008000">echo</span> -ne <span style="color: #BA2121">&#39;===================&gt;    (84%)\r&#39;</span>
 sleep 0.2
-echo -ne &#039;=====================&gt;  (96%)\r&#039;
+<span style="color: #008000">echo</span> -ne <span style="color: #BA2121">&#39;=====================&gt;  (96%)\r&#39;</span>
 sleep 0.2
-echo -ne &#039;=======================&gt;(100%)\r&#039;
+<span style="color: #008000">echo</span> -ne <span style="color: #BA2121">&#39;=======================&gt;(100%)\r&#39;</span>
 sleep 0.5
-echo -ne &#039;                              \r&#039;
-echo -ne &#039;\n&#039;
+<span style="color: #008000">echo</span> -ne <span style="color: #BA2121">&#39;                              \r&#39;</span>
+<span style="color: #008000">echo</span> -ne <span style="color: #BA2121">&#39;\n&#39;</span>
 
-# delay 1 second
+<span style="color: #408080; font-style: italic"># delay 1 second</span>
 sleep 1
 
-# execute command ab for apache2 benchmark 
-ab -n $reqval -c $conval$logfile$procval$siteval/</code>
-                    </pre>
+<span style="color: #408080; font-style: italic"># execute command ab for apache2 benchmark </span>
+ab -n <span style="color: #19177C">$reqval</span> -c <span style="color: #19177C">$conval$logfile$procval$siteval</span>/
+</pre>
+                        </div>
                         <a class="btn btn-dark mt-3" href="https://github.com/rayatiga/apache2-benchmark/" rel="nofollow noopener noreferrer" target="_blank">Visit Repository</a>
                     </div>
                 </div>

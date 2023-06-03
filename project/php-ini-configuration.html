@@ -23,18 +23,37 @@
         <link rel="stylesheet" href="/asset/css/main.css" />
         <link rel="stylesheet" href="/asset/css/root.css" />
         <link rel="stylesheet" href="/asset/css/icon.css" />
-        <link rel="stylesheet" href="/asset/css/prism.css" />
         <!-- Script Element (Type: Text/Javascript) -->
         <script defer type="text/javascript" src="/asset/js/main.js"></script>
         <script defer type="text/javascript" src="/asset/js/root.js"></script>
         <script defer type="text/javascript" src="/asset/js/template.js"></script>
         <script defer type="text/javascript" src="/asset/js/angular.min.js"></script>
-        <script defer type="text/javascript" src="/asset/js/prism.js"></script>
         <!-- Link Element (Relationship: Apple Touch Icon, Icon, Manifest) -->
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-        <link rel="manifest" href="/manifest.json" />
+        <!--<link rel="manifest" href="/manifest.json" />-->
+        <!-- Embed Style -->
+        <style>
+            .hilite_me {
+                width: auto;
+                overflow: auto;
+                text-align: left;
+                max-height: 428px;
+                border-radius: 6px;
+                padding: 0.2em 0.6em;
+                background: #f8f9fa;
+                border: 1px solid #212529;
+                border-width: 0.1em 0.1em 0.1em 0.8em;
+            }
+            .hilite_me::-webkit-scrollbar {
+                display: none;
+            }
+            pre {
+                margin: 12px;
+                line-height: 150%;
+            }
+        </style>
     </head>
     <!-- Body Element -->
     <body class="bg-light">
@@ -49,62 +68,63 @@
                     <div class="py-4">
                         <h1 class="fw-bold"><i class="icon icon-gear d-block"></i><span class="fw-lighter">PHP ini</span> Configuration.</h1>
                         <p>Set configuration for php.ini file inside apache2 http server for big upload size and increase the site performance.</p>
-                        <!-- Pre Element (PHP ini Configuration) -->
-                        <pre class="pre-page" data-copy-state="copy">
-<code class="language-bash">#!/bin/bash
+                        <!-- HTML generated using hilite.me -->
+                        <div class="hilite_me">
+                            <pre><span style="color: #408080; font-style: italic">#!/bin/bash</span>
 
-# Set configuration for php.ini file inside apache2 http server.
-# Intende for big upload size and increase the site performance.
+<span style="color: #408080; font-style: italic"># Set configuration for php.ini file inside apache2 http server.</span>
+<span style="color: #408080; font-style: italic"># Intende for big upload size and increase the site performance.</span>
 
-coloroff=&#039;\033[0m&#039;
-red=&#039;\033[0;31m&#039; 
-green=&#039;\033[0;32m&#039;
+<span style="color: #19177C">coloroff</span><span style="color: #666666">=</span><span style="color: #BA2121">&#39;\033[0m&#39;</span>
+<span style="color: #19177C">red</span><span style="color: #666666">=</span><span style="color: #BA2121">&#39;\033[0;31m&#39;</span> 
+<span style="color: #19177C">green</span><span style="color: #666666">=</span><span style="color: #BA2121">&#39;\033[0;32m&#39;</span>
 
-# STEP -1: root check
-if ! [ $(id -u) = 0 ]; then
-    printf &quot;Please run as root!\n&quot;
-    exit 1
-fi
+<span style="color: #408080; font-style: italic"># STEP -1: root check</span>
+<span style="color: #008000; font-weight: bold">if</span> ! <span style="color: #666666">[</span> <span style="color: #008000; font-weight: bold">$(</span>id -u<span style="color: #008000; font-weight: bold">)</span> <span style="color: #666666">=</span> 0 <span style="color: #666666">]</span>; <span style="color: #008000; font-weight: bold">then</span>
+<span style="color: #008000; font-weight: bold">    </span><span style="color: #008000">printf</span> <span style="color: #BA2121">&quot;Please run as root!\n&quot;</span>
+<span style="color: #008000">exit </span>1
+<span style="color: #008000; font-weight: bold">fi</span>
 
-# STEP 0: first run
-printf &quot;\nPHP.ini apache2 tweaker script by https://github.com/bydzen/. Well managed.\n&quot;
-printf &quot;Any issue? go to https://github.com/rayatiga/phpini-apache2-conf/issues/. Create new issue.\n&quot;
-printf &quot;Visit more on https://github.com/rayatiga/phpini-apache2-conf/. GitHub repository.\n\n&quot;
-$currentdir = $(pwd)
+<span style="color: #408080; font-style: italic"># STEP 0: first run</span>
+<span style="color: #008000">printf</span> <span style="color: #BA2121">&quot;\nPHP.ini apache2 tweaker script by https://github.com/bydzen/. Well managed.\n&quot;</span>
+<span style="color: #008000">printf</span> <span style="color: #BA2121">&quot;Any issue? go to https://github.com/rayatiga/phpini-apache2-conf/issues/. Create new issue.\n&quot;</span>
+<span style="color: #008000">printf</span> <span style="color: #BA2121">&quot;Visit more on https://github.com/rayatiga/phpini-apache2-conf/. GitHub repository.\n\n&quot;</span>
+<span style="color: #19177C">$currentdir</span> <span style="color: #666666">=</span> <span style="color: #008000; font-weight: bold">$(</span><span style="color: #008000">pwd</span><span style="color: #008000; font-weight: bold">)</span>
 
-# STEP 1: creating php.ini file with custom config
-printf &quot;Your current custom config .ini file: ./php-conf.ini\n&quot;
-printf &quot;Create a custom specification for your config.\n&quot;
+<span style="color: #408080; font-style: italic"># STEP 1: creating php.ini file with custom config</span>
+<span style="color: #008000">printf</span> <span style="color: #BA2121">&quot;Your current custom config .ini file: ./php-conf.ini\n&quot;</span>
+<span style="color: #008000">printf</span> <span style="color: #BA2121">&quot;Create a custom specification for your config.\n&quot;</span>
 
-read -p &quot;Enter upload max size (e.g. 2G): &quot; upmax
-read -p &quot;Enter post max size (e.g. 4G): &quot; postmax
-read -p &quot;Enter max exec time (without second) (e.g. 120): &quot; exectime
-read -p &quot;Enter memory limit (e.g. 2G): &quot; memlimit
-read -p &quot;Enter max file upload (e.g. 100): &quot; upfile
+<span style="color: #008000">read</span> -p <span style="color: #BA2121">&quot;Enter upload max size (e.g. 2G): &quot;</span> upmax
+<span style="color: #008000">read</span> -p <span style="color: #BA2121">&quot;Enter post max size (e.g. 4G): &quot;</span> postmax
+<span style="color: #008000">read</span> -p <span style="color: #BA2121">&quot;Enter max exec time (without second) (e.g. 120): &quot;</span> exectime
+<span style="color: #008000">read</span> -p <span style="color: #BA2121">&quot;Enter memory limit (e.g. 2G): &quot;</span> memlimit
+<span style="color: #008000">read</span> -p <span style="color: #BA2121">&quot;Enter max file upload (e.g. 100): &quot;</span> upfile
 
-# STEP 2: giving information about custom config
-printf &quot;\nCustom config saved. Here the information: \n&quot;
-printf &quot;Upload max size = ${green}$upmax${coloroff}
-        Post max size = ${green}$postmax${coloroff}
-        Max execution time = ${green}$exectime${coloroff}
-        Memory limit = ${green}$memlimit${coloroff}
-        Max file upload = ${green}$upfile${coloroff}\n\n&quot;
+<span style="color: #408080; font-style: italic"># STEP 2: giving information about custom config</span>
+<span style="color: #008000">printf</span> <span style="color: #BA2121">&quot;\nCustom config saved. Here the information: \n&quot;</span>
+<span style="color: #008000">printf</span> <span style="color: #BA2121">&quot;Upload max size = ${green}$upmax${coloroff}</span>
+<span style="color: #BA2121">        Post max size = ${green}$postmax${coloroff}</span>
+<span style="color: #BA2121">        Max execution time = ${green}$exectime${coloroff}</span>
+<span style="color: #BA2121">        Memory limit = ${green}$memlimit${coloroff}</span>
+<span style="color: #BA2121">        Max file upload = ${green}$upfile${coloroff}\n\n&quot;</span>
 
-sed -i &#039;s/upload_max_filesize_here/$upmax/&#039; php-conf.ini
-sed -i &#039;s/post_max_size_here/$postmax/&#039; php-conf.ini
-sed -i &#039;s/max_execution_time_here/$exectime/&#039; php-conf.ini
-sed -i &#039;s/memory_limit_here/$memlimit/&#039; php-conf.ini
-sed -i &#039;s/max_file_uploads_here/$upfile/&#039; php-conf.ini
+sed -i <span style="color: #BA2121">&#39;s/upload_max_filesize_here/$upmax/&#39;</span> php-conf.ini
+sed -i <span style="color: #BA2121">&#39;s/post_max_size_here/$postmax/&#39;</span> php-conf.ini
+sed -i <span style="color: #BA2121">&#39;s/max_execution_time_here/$exectime/&#39;</span> php-conf.ini
+sed -i <span style="color: #BA2121">&#39;s/memory_limit_here/$memlimit/&#39;</span> php-conf.ini
+sed -i <span style="color: #BA2121">&#39;s/max_file_uploads_here/$upfile/&#39;</span> php-conf.ini
 
 cp php-conf.ini php.ini
 rm php-cong.ini
 
-# STEP 3: information about copying custom php.ini
-printf &quot;Copy and replace your php.ini file from ${green}$currentdir/php.ini${coloroff} to ${green}/etc/php/(your-php-version)/apache2/php.ini${coloroff}\n&quot;
-printf &quot;${red}Important!${coloroff} please backup your default/current active php.ini config incase the problem occurs.\n\n&quot;
+<span style="color: #408080; font-style: italic"># STEP 3: information about copying custom php.ini</span>
+<span style="color: #008000">printf</span> <span style="color: #BA2121">&quot;Copy and replace your php.ini file from ${green}$currentdir/php.ini${coloroff} to ${green}/etc/php/(your-php-version)/apache2/php.ini${coloroff}\n&quot;</span>
+<span style="color: #008000">printf</span> <span style="color: #BA2121">&quot;${red}Important!${coloroff} please backup your default/current active php.ini config incase the problem occurs.\n\n&quot;</span>
 
-printf &quot;Done. Program terminated.&quot;</code>
-                    </pre>
+<span style="color: #008000">printf</span> <span style="color: #BA2121">&quot;Done. Program terminated.&quot;</span>
+</pre>
+                        </div>
                         <a class="btn btn-dark mt-3" href="https://github.com/rayatiga/php-ini-configuration/" rel="nofollow noopener noreferrer" target="_blank">Visit Repository</a>
                     </div>
                 </div>
