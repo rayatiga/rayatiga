@@ -1,10 +1,10 @@
 /* Cascading Style Sheet Main */
 @font-face {
-    font-family: 'Work Sans';
-    src: url(/asset/font/work-sans.ttf);
+    font-family: "space-grotesk";
+    src: url(/asset/font/space-grotesk.ttf);
 }
 @font-face {
-    font-family: 'Source Code Pro';
+    font-family: "Source Code Pro";
     src: url(/asset/font/source-code-pro.ttf);
 }
 /* Kit */
@@ -41,9 +41,9 @@
     box-shadow: 0 0 0 calc(var(--root-navbar-toggler-focus-width) - 0.15rem) var(--root-dark) !important;
 }
 /* Prism */
-code[class*='language-'],
-pre[class*='language-'] {
-    font-family: 'Source Code Pro', monospace !important;
+code[class*="language-"],
+pre[class*="language-"] {
+    font-family: "Source Code Pro", monospace !important;
     font-size: 0.8rem !important;
     line-height: 1.25 !important;
 }
@@ -62,7 +62,7 @@ html {
 body {
     scrollbar-width: none;
     -ms-overflow-style: none;
-    font-family: 'Work Sans', sans-serif !important;
+    font-family: "space-grotesk", sans-serif !important;
 }
 ::selection {
     color: var(--light) !important;
@@ -92,7 +92,7 @@ pre::-webkit-scrollbar-corner {
 }
 pre::-webkit-scrollbar-thumb {
     background: var(--pre-scrollbar-thumb);
-    border-radius: .15rem;
+    border-radius: 0.15rem;
 }
 pre::-webkit-scrollbar-thumb:hover {
     background: var(--pre-scrollbar-thumb-hover);
