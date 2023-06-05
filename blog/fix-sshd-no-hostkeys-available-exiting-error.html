@@ -30,6 +30,7 @@
         <script defer type="text/javascript" src="/asset/js/main.js"></script>
         <script defer type="text/javascript" src="/asset/js/root.js"></script>
         <script defer type="text/javascript" src="/asset/js/template.js"></script>
+        <script defer type="text/javascript" src="/asset/js/article.js"></script>
         <script defer type="text/javascript" src="/asset/js/angular.min.js"></script>
         <!-- Link Element (Relationship: Apple Touch Icon, Icon, Manifest) -->
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -64,7 +65,7 @@
                             <p>If needed, you have to restart the SSH service. Run this command:</p>
                             <pre class="border p-2 rounded-1 text-wrap">sudo systemctl restart ssh</pre>
                             <p>And that's it. Problem should be solved!</p>
-                            <p id="articleUpdated" class="text-center text-secondary small">Last Updated at <span class="d-inline-block">Jun 19, 2023</span> <span class="d-inline-block">@ 4:11 PM</span></p>
+                            <p id="articleUpdated" class="text-center text-secondary small">Last Updated at <span id="articleDateUpdated" class="d-inline-block">No Date</span> <span class="d-inline-block">@ <span id="articleTimeUpdated">No Time</span></span></p>
                         </div>
                     </div>
                     <a href="/blog/" class="btn btn-dark mt-3 animate__animated animate__fadeIn animate__delay-3s d-block d-sm-inline-block">Back to Archive</a>
