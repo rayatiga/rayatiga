@@ -4,5 +4,6 @@ Disallow: /founder
 Disallow: /payment
 Disallow: /asset/template
 Disallow: /hosting/checkout
+Disallow: /fun
 
 Sitemap: https://rayatiga.com/sitemap.xml
