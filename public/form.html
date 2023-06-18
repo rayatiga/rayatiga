@@ -31,31 +31,31 @@
       <main>
         <h1>Form Submission</h1>
         <p>Send us a message for more information regarding your feedback. We will be delighted to assist you, and all responses and information will be conveyed through email. Kindly complete the form with accurate details, ensuring that all required fields are filled in.</p>
-        <form>
+        <form action="https://formspree.io/f/xknavynp" method="post">
           <h2>Type</h2>
           <input type="radio" name="type" id="form-support" value="support" onclick="radioChecked()" required />
-          <label for="form-support">Support <sup>*</sup></label>
+          <label for="form-support">Support<sup>*</sup></label>
           <br />
           <input type="radio" name="type" id="form-byol" value="byol" onclick="radioChecked()" required />
-          <label for="form-byol" title="Bring Your Own Labs">BYOL <sup>*</sup></label>
+          <label for="form-byol" title="Bring Your Own Labs">BYOL<sup>*</sup></label>
           <br />
           <input type="radio" name="type" id="form-proof" value="proof" onclick="radioChecked()" required />
-          <label for="form-proof">Proof <sup>*</sup></label>
+          <label for="form-proof">Proof<sup>*</sup></label>
           <h2>Identity</h2>
-          <label for="form-name">Name <sup>*</sup></label>
+          <label for="form-name">Name<sup>*</sup></label>
           <input type="text" name="name" id="form-name" placeholder="Enter your name..." required />
-          <label for="form-email">Email <sup>*</sup></label>
+          <label for="form-email">Email<sup>*</sup></label>
           <input type="email" name="email" id="form-email" placeholder="Enter your email..." required />
           <h2>Message</h2>
-          <label for="form-subject">Subject <sup>*</sup></label>
+          <label for="form-subject">Subject<sup>*</sup></label>
           <input type="text" name="subject" id="form-subject" placeholder="Enter your subject..." required />
-          <label for="form-message">Message <sup>*</sup></label>
+          <label for="form-message">Message<sup>*</sup></label>
           <textarea name="message" id="form-message" placeholder="Please select type first or enter message..." maxlength="500" required></textarea>
           <input type="checkbox" name="agreement" id="form-agreement" value="ok" required />
-          <label for="form-agreement">I agree to the privacy policy on this site <sup>*</sup></label>
+          <label for="form-agreement">I agree to the privacy policy on this site<sup>*</sup></label>
           <div class="button">
             <button type="reset" onclick="formReset()">Reset</button>
-            <button type="reset" onclick="formMaintenance()">Submit</button>
+            <button type="submit" onclick="formSubmit()">Submit</button>
           </div>
           <span id="form-status"></span>
         </form>
@@ -67,13 +67,8 @@
           <li><a href="/">Home</a></li>
           <li><a href="/about.html">About</a></li>
           <li><a href="/service.html">Service</a></li>
-          <li><a href="/form.html">Form</a></li>
           <li><a href="/project.html">Project</a></li>
           <li><a href="/contact.html">Contact</a></li>
-          <li><a href="/documentation.html">Docs</a></li>
-          <li><a href="/cdn.html">CDN</a></li>
-          <li><a href="/ticket.html">Ticket</a></li>
-          <li><a href="/privacy-policy.html">Policy</a></li>
           <li><a href="/sitemap.html">Sitemap</a></li>
         </ul>
         <p>Location: <span id="location"></span></p>

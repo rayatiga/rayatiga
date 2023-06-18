@@ -30,14 +30,13 @@
       </header>
       <main>
         <h1>Workflow</h1>
-        <small class="development">This page is under development.</small>
         <p>This workflow is a feature for tracking tickets, the work process, implementation processes, and so on. You just need to input the workflow ID code, and you can access the information within it.</p>
         <hr />
         <h1>Track Progress</h1>
         <p>Track your progress and get detailed information. Enter your workflow ID in the following form.</p>
         <form id="workflow-form">
           <label for="workflow-input">Workflow code</label>
-          <input type="" id="workflow-input" placeholder="Enter ticket code (e.g., 2308251137)" />
+          <input type="" id="workflow-input" placeholder="Enter ticket code (e.g., 1234567890)" />
           <button type="submit" id="workflow-input-button" onclick="workflowSearch()">Search</button>
         </form>
         <div class="workflow-status">
@@ -47,11 +46,13 @@
           <h1><span id="workflow-tag"></span></h1>
           <span>Wrong workflow? <span onclick="workflowReload()">Reload here</span> then input again.</span>
           <p>
-            Workflow id: <strong id="workflow-id"></strong> <br />
+            Workflow ID: <strong id="workflow-id"></strong> <br />
             Subject: <span id="workflow-subject"></span> <br />
             PIC: <span id="workflow-pic"></span> <br />
-            Status: <span id="workflow-status"></span>
+            Status: <code id="workflow-status"></code>
           </p>
+          <strong>Step by step workflow.</strong>
+          <ul id="workflow-step-other"></ul>
         </div>
       </main>
       <footer>
@@ -61,13 +62,8 @@
           <li><a href="/">Home</a></li>
           <li><a href="/about.html">About</a></li>
           <li><a href="/service.html">Service</a></li>
-          <li><a href="/form.html">Form</a></li>
           <li><a href="/project.html">Project</a></li>
           <li><a href="/contact.html">Contact</a></li>
-          <li><a href="/documentation.html">Docs</a></li>
-          <li><a href="/cdn.html">CDN</a></li>
-          <li><a href="/ticket.html">Ticket</a></li>
-          <li><a href="/privacy-policy.html">Policy</a></li>
           <li><a href="/sitemap.html">Sitemap</a></li>
         </ul>
         <p>Location: <span id="location"></span></p>
