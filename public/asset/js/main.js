@@ -42,25 +42,32 @@ if (formPage) {
   let radioProof = document.getElementById('form-proof')
   let inputSubject = document.getElementById('form-subject')
   let textareaMessage = document.getElementById('form-message')
-  // Placeholder
+  let formStatus = document.getElementById('form-status')
   function radioChecked() {
     if (radioSupport.checked == 1) {
-      inputSubject.placeholder = 'I need support for my...'
-      textareaMessage.placeholder = 'Hello, i need support for...\ntroubleshooting?\nbug fixing?\netc.'
+      inputSubject.placeholder = 'I need support for...'
+      textareaMessage.placeholder = 'Hello, I need support for...'
     } else if (radioByol.checked == 1) {
-      inputSubject.placeholder = 'I bring with my BYOL...'
-      textareaMessage.placeholder = 'Hello, my byol specs is...\nCloud provider?\nvCPUs?\nvRAM?\netc.'
+      inputSubject.placeholder = 'I bring with my own properties...'
+      textareaMessage.placeholder = 'Hello, I have lab with specifications...'
     } else if (radioProof.checked == 1) {
-      inputSubject.placeholder = 'My invoice e.g., 73023 is already paid'
-      textareaMessage.placeholder = 'Hello, i have payed for invoice no e.g., 73023. Please proceed. Thank you.'
+      inputSubject.placeholder = 'My invoice 12345 is already paid'
+      textareaMessage.placeholder = 'Hello, I have payed for invoice no 12345 with bank transfer...'
     }
   }
-  // Status
   function formReset() {
-    document.getElementById('form-status').innerHTML = 'Form resseted.'
+    inputSubject.placeholder = 'Enter your subject...'
+    textareaMessage.placeholder = 'Please select type first or enter message...'
+    formStatus.innerHTML = `Form resseted.`
+    setTimeout(function () {
+      formStatus.innerHTML = ``
+    }, 2500)
   }
-  function formMaintenance() {
-    document.getElementById('form-status').innerHTML = 'Sorry, the form is currently undergoing maintenance.'
+  function formSubmit() {
+    formStatus.innerHTML = `Form submit triggered.`
+    setTimeout(function () {
+      formStatus.innerHTML = ``
+    }, 2500)
   }
 }
 /* ===== Form: form.html ===== */
@@ -68,46 +75,7 @@ if (formPage) {
 /* ===== Invoice: invoice.html ===== */
 let invoicePage = document.getElementsByClassName('invoice')[0]
 if (invoicePage) {
-  const invoiceDataList = [
-    {
-      no: 73023,
-      due: '07/27/2023',
-      submitted: '07/20/2023',
-      paymentoption: 'QRIS - All Payment Method',
-
-      status: 'paid',
-      lastupdated: '09/03/2023',
-
-      name: 'Sultan Kautsar',
-      company: 'Rayatiga',
-      phone: '+62 821 2222 0362',
-      email: 'sultan@rayatiga.com',
-      service: 'Domain .COM',
-
-      paid: ['Domain name (sultankautsar.com) &mdash; IDR 245,000.00', 'Managed domain name system (DNS & Zone) &mdash; IDR 45,000.00', 'Maintenance &mdash; IDR 25,000.00'],
-      discountother: ['Secure socket layer (SSL) &mdash; FREE', 'CloudFlare integration &mdash; FREE', 'Tax and other charge &mdash; FREE', 'Adjustment &mdash; IDR 0.045'],
-      total: 'IDR 315,045.00',
-    },
-    {
-      no: 73024,
-      due: '09/11/2023',
-      submitted: '09/04/2023',
-      paymentoption: 'BCA - Bank Transfer',
-
-      status: 'unpaid',
-      lastupdated: '09/04/2023',
-
-      name: 'John Doe',
-      company: 'Rayatiga',
-      phone: '+62 821 2222 0362',
-      email: 'johndoe@rayatiga.com',
-      service: 'Domain .COM',
-
-      paid: ['Domain name (johndoe.com) &mdash; IDR 245,000.00', 'Managed domain name system (DNS & Zone) &mdash; IDR 45,000.00', 'Maintenance &mdash; IDR 25,000.00'],
-      discountother: ['Secure socket layer (SSL) &mdash; FREE', 'CloudFlare integration &mdash; FREE', 'Tax and other charge &mdash; FREE', 'Adjustment &mdash; IDR 0.045'],
-      total: 'IDR 315,045.00',
-    },
-  ]
+  let invoiceDataApi = `/asset/json/invoiceDataList.json`
   let invoiceForm = document.getElementById('invoice-form')
   let invoiceInput = document.getElementById('invoice-input')
   let invoiceSubmitButton = document.getElementById('invoice-input-button')
@@ -130,7 +98,6 @@ if (invoicePage) {
   let total = document.getElementById('invoice-detail-total')
   let paidI = 0
   let discountotherI = 0
-  // Prevent reload
   function handleForm(event) {
     event.preventDefault()
   }
@@ -141,43 +108,92 @@ if (invoicePage) {
       invoiceSubmitButton.click()
     }
   })
-  // Reload
   function invoiceReload() {
-    window.location.reload()
+    window.location.replace(window.location.origin + window.location.pathname)
   }
-  // Search
   function invoiceSearch() {
-    let invoiceInputValue = invoiceInput.value
-    let invI = invoiceDataList.findIndex((item) => item.no == invoiceInputValue)
-    if (invoiceInputValue.length < 5 || invoiceInputValue.length > 5) {
-      invoiceStatusReturn.innerHTML = 'Please enter invoice number in <strong>5 digit only</strong>.'
+    fetch(invoiceDataApi)
+      .then(function (invoiceResponse) {
+        if (!invoiceResponse.ok) {
+          invoiceErrorApi(invoiceResponse.status, 1)
+        }
+        return invoiceResponse.json()
+      })
+      .then(function (invoiceDataList) {
+        let invoiceInputValue = invoiceInput.value
+        let invI = invoiceDataList.findIndex((item) => item.no == invoiceInputValue)
+        if (invoiceInputValue.length < 5 || invoiceInputValue.length > 5) {
+          invoiceStatusReturn.innerHTML = `Please enter invoice number in <strong>5 digit only</strong>.`
+        } else {
+          if (invI == -1) {
+            invoiceNoDataFound(invoiceInputValue)
+          } else {
+            invoiceDisplay(invoiceDataList, invoiceInputValue, invI)
+          }
+        }
+      })
+      .catch(function (error) {
+        invoiceErrorApi(error, 2)
+      })
+  }
+  let invoiceUrlParam = new URLSearchParams(window.location.search)
+  let invoiceUrlParamId = invoiceUrlParam.get('no')
+  if (invoiceUrlParamId) {
+    fetch(invoiceDataApi)
+      .then(function (invoiceResponse) {
+        if (!invoiceResponse.ok) {
+          invoiceErrorApi(invoiceResponse.status, 1)
+        }
+        return invoiceResponse.json()
+      })
+      .then(function (invoiceDataList) {
+        if (invoiceUrlParamId.length < 5 || invoiceUrlParamId.length > 5) {
+          invoiceStatusReturn.innerHTML = `Please enter invoice number in <strong>5 digit only</strong>.`
+        } else {
+          InvoiceSearchParam(invoiceDataList, invoiceUrlParamId)
+        }
+      })
+      .catch(function (error) {
+        invoiceErrorApi(error, 2)
+      })
+  }
+  function InvoiceSearchParam(invoiceDataList, invoiceUrlParamId) {
+    let invI = invoiceDataList.findIndex((item) => item.no == invoiceUrlParamId)
+    if (invI == -1) {
+      invoiceNoDataFound(invoiceUrlParamId)
     } else {
-      if (invI == -1) {
-        invoiceStatusReturn.innerHTML = `<strong>No data found</strong> for invoice #${invoiceInputValue}, please enter invoice number correctly.`
-        invoiceTag.innerHTML = ``
-        invoiceInformation.style.display = 'none'
-        no.innerHTML = ``
-        due.innerHTML = ``
-        submitted.innerHTML = ``
-        paymentoption.innerHTML = ``
-        status.setAttribute('status', '')
-        lastupdated.innerHTML = ``
-        name.innerHTML = ``
-        company.innerHTML = ``
-        phone.innerHTML = ``
-        email.innerHTML = ``
-        service.innerHTML = ``
-        paid.innerHTML = ``
-        discountother.innerHTML = ``
-        total.innerHTML = ``
-      } else {
-        invoiceDisplay(invoiceInputValue, invI)
-      }
+      invoiceInput.value = invoiceUrlParamId
+      invoiceDisplay(invoiceDataList, invoiceUrlParamId, invI)
     }
   }
-  // Display
-  function invoiceDisplay(invoiceInputValue, invI) {
-    invoiceStatusReturn.innerHTML = ''
+  function invoiceErrorApi(invoiceResponseStatus, numberOfError) {
+    if (numberOfError == 1) {
+      invoiceStatusReturn.innerHTML = `There is a <strong>server-side error</strong>. The code is: ${invoiceResponseStatus}.`
+    } else {
+      invoiceStatusReturn.innerHTML += `<br />Please report it to us on the <a href="/contact.html">contact page</a>. <pre>Error message: ${invoiceResponseStatus}</pre>`
+    }
+  }
+  function invoiceNoDataFound(invoiceValue) {
+    invoiceStatusReturn.innerHTML = `<strong>No data found</strong> for invoice #${invoiceValue}, please enter invoice number correctly.`
+    invoiceTag.innerHTML = ``
+    invoiceInformation.style.display = 'none'
+    no.innerHTML = ``
+    due.innerHTML = ``
+    submitted.innerHTML = ``
+    paymentoption.innerHTML = ``
+    status.setAttribute('status', '')
+    lastupdated.innerHTML = ``
+    name.innerHTML = ``
+    company.innerHTML = ``
+    phone.innerHTML = ``
+    email.innerHTML = ``
+    service.innerHTML = ``
+    paid.innerHTML = ``
+    discountother.innerHTML = ``
+    total.innerHTML = ``
+  }
+  function invoiceDisplay(invoiceDataList, invoiceInputValue, invI) {
+    invoiceStatusReturn.innerHTML = ``
     invoiceTag.innerHTML = `#${invoiceInputValue}`
     invoiceInformation.style.display = 'block'
     no.innerHTML = invoiceDataList[invI].no
@@ -204,29 +220,44 @@ if (invoicePage) {
 }
 /* ===== Invoice: invoice.html ===== */
 
+/* ===== Service: service.html ===== */
+let servicePage = document.getElementsByClassName('service')[0]
+if (servicePage) {
+  let serviceDataApi = `/asset/json/serviceDataList.json`
+  fetch(serviceDataApi)
+    .then(function (serviceResponse) {
+      if (!serviceResponse.ok && onLocal()) {
+        console.error(`Network response was not ok.`)
+      }
+      return serviceResponse.json()
+    })
+    .then(function (serviceDataList) {
+      let serviceUrlParam = new URLSearchParams(window.location.search)
+      let serviceUrlParamId = serviceUrlParam.get('checkout')
+      if (serviceUrlParamId) {
+        serviceSearchParam(serviceDataList, serviceUrlParamId)
+      }
+    })
+    .catch(function (error) {
+      if (onLocal()) {
+        console.error(`There was a problem with the fetch operation: ${error}`)
+      }
+    })
+  function serviceSearchParam(serviceDataList, serviceUrlParamId) {
+    let svcI = serviceDataList.findIndex((item) => item.checkout == serviceUrlParamId)
+    if (svcI == -1 && onLocal()) {
+      console.error(`No data found for id: ${serviceUrlParamId}.`)
+    } else {
+      window.location.replace(serviceDataList[svcI].link)
+    }
+  }
+}
+/* ===== Service: service.html ===== */
+
 /* ===== Workflow: workflow.html ===== */
 let workflowPage = document.getElementsByClassName('workflow')[0]
 if (workflowPage) {
-  const workflowDataList = [
-    {
-      id: '2308251137',
-      subject: 'front page displayed not properly',
-      pic: 'r01',
-      status: 'resolved',
-    },
-    {
-      id: '2308251457',
-      subject: 'ajax shopping cart not working',
-      pic: 'r01',
-      status: 'pending',
-    },
-    {
-      id: '2308251534',
-      subject: 'my payment gateway error',
-      pic: 'r01',
-      status: 'unresolved',
-    },
-  ]
+  let workflowDataApi = `/asset/json/workflowDataList.json`
   let workflowForm = document.getElementById('workflow-form')
   let workflowInput = document.getElementById('workflow-input')
   let workflowSubmitButton = document.getElementById('workflow-input-button')
@@ -237,7 +268,7 @@ if (workflowPage) {
   let subject = document.getElementById('workflow-subject')
   let pic = document.getElementById('workflow-pic')
   let status = document.getElementById('workflow-status')
-  // Prevent reload
+  let stepother = document.getElementById('workflow-step-other')
   function handleForm(event) {
     event.preventDefault()
   }
@@ -248,51 +279,107 @@ if (workflowPage) {
       workflowSubmitButton.click()
     }
   })
-  // Search
+  function workflowReload() {
+    window.location.replace(window.location.origin + window.location.pathname)
+  }
   function workflowSearch() {
-    let workflowInputValue = workflowInput.value
-    if (workflowInputValue.length < 10 || workflowInputValue.length > 10) {
-      workflowStatusReturn.innerHTML = `Please enter workflow id in <strong>10 digit only</strong>.`
+    fetch(workflowDataApi)
+      .then(function (workflowResponse) {
+        if (!workflowResponse.ok) {
+          workflowErrorApi(workflowResponse.status, 1)
+        }
+        return workflowResponse.json()
+      })
+      .then(function (workflowDataList) {
+        let workflowInputValue = workflowInput.value
+        if (workflowInputValue.length < 10 || workflowInputValue.length > 10) {
+          workflowStatusReturn.innerHTML = `Please enter workflow id in <strong>10 digit only</strong>.`
+        } else {
+          let wflI = workflowDataList.findIndex((item) => item.id == workflowInputValue)
+          if (wflI == -1) {
+            workflowNoDataFound(workflowInputValue)
+          } else {
+            workflowDispay(workflowDataList, workflowInputValue, wflI)
+          }
+        }
+      })
+      .catch(function (error) {
+        workflowErrorApi(error, 2)
+      })
+  }
+  let workflowUrlParam = new URLSearchParams(window.location.search)
+  let workflowUrlParamId = workflowUrlParam.get('id')
+  if (workflowUrlParamId) {
+    fetch(workflowDataApi)
+      .then(function (workflowResponse) {
+        if (!workflowResponse.ok) {
+          workflowErrorApi(workflowResponse.status, 1)
+        }
+        return workflowResponse.json()
+      })
+      .then(function (workflowDataList) {
+        if (workflowUrlParamId.length < 10 || workflowUrlParamId.length > 10) {
+          workflowStatusReturn.innerHTML = `Please enter workflow id in <strong>10 digit only</strong>.`
+        } else {
+          workflowSearchParam(workflowDataList, workflowUrlParamId)
+        }
+      })
+      .catch(function (error) {
+        workflowErrorApi(error, 2)
+      })
+  }
+  function workflowSearchParam(workflowDataList, workflowUrlParamId) {
+    let wflI = workflowDataList.findIndex((item) => item.id == workflowUrlParamId)
+    if (wflI == -1) {
+      workflowNoDataFound(workflowUrlParamId)
     } else {
-      let wflI = workflowDataList.findIndex((item) => item.id == workflowInputValue)
-      if (wflI == -1) {
-        workflowStatusReturn.innerHTML = `<strong>No data found</strong> for workflow #${workflowInputValue}, please enter workflow id correctly.`
-        workflowInformation.style.display = 'none'
-        tag.innerHTML = ``
-        id.innerHTML = ``
-        subject.innerHTML = ``
-        pic.innerHTML = ``
-        status.innerHTML = ``
-      } else {
-        workflowDispay(workflowInputValue, wflI)
-      }
+      workflowInput.value = workflowUrlParamId
+      workflowDispay(workflowDataList, workflowUrlParamId, wflI)
     }
   }
-  // Reload
-  function workflowReload() {
-    window.location.reload()
+  function workflowErrorApi(workflowResponseStatus, numberOfError) {
+    if (numberOfError == 1) {
+      workflowStatusReturn.innerHTML = `There is a <strong>server-side error</strong>. The code is: ${workflowResponseStatus}.`
+    } else {
+      workflowStatusReturn.innerHTML += `<br />Please report it to us on the <a href="/contact.html">contact page</a>. <pre>Error message: ${workflowResponseStatus}</pre>`
+    }
   }
-  // Display
-  function workflowDispay(workflowInputValue, wflI) {
+  function workflowNoDataFound(workflowInputValue) {
+    workflowStatusReturn.innerHTML = `<strong>No data found</strong> for workflow #${workflowInputValue}, please enter workflow id correctly.`
+    workflowInformation.style.display = 'none'
+    tag.innerHTML = ``
+    id.innerHTML = ``
+    subject.innerHTML = ``
+    pic.innerHTML = ``
+    status.innerHTML = ``
+  }
+  function workflowDispay(workflowDataList, workflowInputValue, wflI) {
     workflowInformation.style.display = 'block'
     workflowStatusReturn.innerHTML = ``
     tag.innerHTML = `#${workflowInputValue}`
     id.innerHTML = workflowDataList[wflI].id
     subject.innerHTML = workflowDataList[wflI].subject
-    pic.innerHTML = workflowDataList[wflI].pic
-    status.innerHTML = workflowDataList[wflI].status
+    pic.innerHTML = `<a href="/founder.html">${workflowDataList[wflI].pic}</a>`
+    status.setAttribute('status', workflowDataList[wflI].status)
+    for (let index = 0; index < workflowDataList[wflI].step.length; index++) {
+      stepother.innerHTML += `<li>${workflowDataList[wflI].step[index]}</li>`
+    }
   }
 }
 /* ===== Workflow: workflow.html ===== */
 
 /* ===== Other ===== */
+// Localhost detector
+function onLocal() {
+  return window.location.hostname == '127.0.0.1'
+}
 // Developer navigation
-if (window.location.hostname == '127.0.0.1' || window.location.hostname == 'localhost') {
+if (onLocal()) {
   console.warn(`Window hostname is ${window.location.hostname}. Developer navigation mode active.`)
   let navdev = document.getElementsByClassName('navigation-sitemap')[0]
   let navlist = {
     href: ['/404.html', '/about.html', '/cdn.html', '/contact.html', '/documentation.html', '/form.html', '/founder.html', '/index.html', '/invoice.html', '/maintenance.html', '/payment.html', '/privacy-policy.html', '/project.html', '/service.html', '/sitemap.html', '/template.html', '/ticket.html', '/workflow.html'],
-    name: ['404', 'About', 'CDN', 'Contact', 'Documentation', 'Form', 'Founder', 'Home', 'Invoice', 'Maintenance', 'Payment', 'Privacy Policy', 'Project', 'Service', 'Sitemap', 'Template', 'Ticket', 'Workflow'],
+    name: ['404', 'About', 'CDN', 'Contact', 'Documentation', 'Form', 'Founder', 'Index', 'Invoice', 'Maintenance', 'Payment', 'Privacy Policy', 'Project', 'Service', 'Sitemap', 'Template', 'Ticket', 'Workflow'],
   }
   navdev.innerHTML = `<!-- main.js: Developer Navigation -->`
   let count = 0

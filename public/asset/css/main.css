@@ -1,5 +1,4 @@
 /* ===== Font ===== */
-/* Inconsolata */
 @font-face {
   font-display: swap;
   font-family: 'Inconsolata';
@@ -8,7 +7,6 @@
 /* ===== Font ===== */
 
 /* ===== Global ===== */
-/* Root */
 :root {
   --red: #ff0000;
   --gray: #787878;
@@ -85,7 +83,6 @@ body {
   padding: var(--box-padding);
   max-width: var(--box-width);
 }
-/* Unit */
 a {
   cursor: pointer;
   text-decoration: none;
@@ -209,6 +206,7 @@ div.form main form textarea::placeholder {
 }
 div.form main form label sup {
   color: var(--red);
+  margin-left: 0.15em;
 }
 div.form main form textarea {
   width: 100%;
@@ -244,9 +242,6 @@ div.form main form div.button button {
 div.form main form div.button button:first-child {
   margin-right: 0.25em;
 }
-div.form main form span#form-status {
-  color: var(--red);
-}
 div.form main form input,
 div.form main form textarea {
   padding: 0.25em 0.5em;
@@ -270,19 +265,19 @@ div.founder main p img {
 
 /* ===== Invoice: invoice.html ===== */
 div.invoice main form#invoice-form {
+  gap: 0.25em;
   display: flex;
   align-items: start;
   flex-direction: column;
-  gap: 0.25em;
 }
 div.invoice main form#invoice-form input {
   width: 100%;
+  padding: 0.25em 0.5em;
+  border-radius: 0.25em;
   box-sizing: border-box;
   color: var(--input-textarea-color);
   background-color: var(--input-textarea-bg);
   border: 1px solid var(--input-textarea-border-color);
-  padding: 0.25em 0.5em;
-  border-radius: 0.25em;
 }
 div.invoice main div.invoice-status p {
   color: var(--red);
@@ -371,13 +366,6 @@ div.ticket main div.table-overflow table td {
   text-align: left;
   border: 1px solid var(--table-border-color);
 }
-div.ticket main div.table-overflow table tr td:nth-child(1),
-div.ticket main div.table-overflow table tr td:nth-child(3) {
-  text-transform: uppercase;
-}
-div.ticket main div.table-overflow table tr td:nth-child(2) {
-  text-transform: lowercase;
-}
 div.ticket main div.table-overflow table tr td code[status='pending']::before {
   content: 'Pending';
 }
@@ -419,8 +407,29 @@ div.workflow main input {
   background-color: var(--input-textarea-bg);
   border: 1px solid var(--input-textarea-border-color);
 }
+div.workflow main div.workflow-status p {
+  color: var(--red);
+}
 div.workflow main div.workflow-information {
   display: none;
+}
+div.workflow main div.workflow-information p code#workflow-status[status='pending']::before {
+  content: 'Pending';
+}
+div.workflow main div.workflow-information p code#workflow-status[status='pending'] {
+  background-color: var(--code-status-0-bg);
+}
+div.workflow main div.workflow-information p code#workflow-status[status='resolved']::before {
+  content: 'Resolved';
+}
+div.workflow main div.workflow-information p code#workflow-status[status='resolved'] {
+  background-color: var(--code-status-1-bg);
+}
+div.workflow main div.workflow-information p code#workflow-status[status='unresolved']::before {
+  content: 'Unresolved';
+}
+div.workflow main div.workflow-information p code#workflow-status[status='unresolved'] {
+  background-color: var(--code-status-2-bg);
 }
 /* ===== Workflow: workflow.html ===== */
 
