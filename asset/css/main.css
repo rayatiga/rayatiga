@@ -13,6 +13,7 @@
     --light: #f8f9fa;
     --magenta: #c208c2;
     --bg-magenta: #df09df;
+    --magenta-hover: #880d88;
     --pre-scrollbar: #31373d;
     --border-magenta: #dd0add;
     --pre-scrollbar-thumb: #616161;
@@ -60,13 +61,21 @@ html {
     scroll-padding: calc(73px + 2.5rem);
 }
 body {
-    scrollbar-width: none;
-    -ms-overflow-style: none;
     font-family: "space-grotesk", sans-serif !important;
 }
 ::selection {
     color: var(--light) !important;
     background-color: var(--dark) !important;
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
 }
 header,
 main {
@@ -169,6 +178,13 @@ span::selection {
 /* Text, Border, Button for Color Magenta */
 .text-magenta {
     color: var(--magenta) !important;
+}
+.link-magenta {
+    color: var(--magenta) !important;
+    transition: 0.25s all;
+}
+.link-magenta:hover {
+    color: var(--magenta-hover) !important;
 }
 .border-magenta {
     border: 1px solid var(--magenta) !important;
