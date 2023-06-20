@@ -48,4 +48,24 @@
         <loc>https://rayatiga.com/project/wordpress-installer.html</loc>
         <lastmod>2023-01-05</lastmod>
     </url>
+    <url>
+        <loc>https://rayatiga.com/blog/</loc>
+        <lastmod>2023-06-19</lastmod>
+    </url>
+    <url>
+        <loc>https://rayatiga.com/blog/web-hosting-magelang.html</loc>
+        <lastmod>2023-06-19</lastmod>
+    </url>
+    <url>
+        <loc>https://rayatiga.com/blog/fix-sshd-no-hostkeys-available-exiting-error.html</loc>
+        <lastmod>2023-06-19</lastmod>
+    </url>
+    <url>
+        <loc>https://rayatiga.com/blog/fix-we-cant-reach-the-adobe-servers-error.html</loc>
+        <lastmod>2023-06-19</lastmod>
+    </url>
+    <url>
+        <loc>https://rayatiga.com/blog/fix-exception-eaccessviolation-in-module-xampp-control-exe-at-0025b2ae-error.html</loc>
+        <lastmod>2023-06-20</lastmod>
+    </url>
 </urlset>
