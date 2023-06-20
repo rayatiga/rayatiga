@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!-- HTML Element -->
+<html lang="en">
+    <!-- Head Element -->
+    <head>
+        <!-- Title Element -->
+        <title>Fix 'sshd: no hostkeys available — exiting' Error | Rayatiga</title>
+        <!-- Meta Element (Charset: UTF-8; HTTP-equiv: X-UA-Compatible; Name: Viewport) -->
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Meta Element (Name: Title, Description, Author) -->
+        <meta name="title" content="Fix 'sshd: no hostkeys available — exiting' Error | Rayatiga" />
+        <meta name="description" content="Fix 'sshd: no hostkeys available — exiting' Error in Ubuntu WSL." />
+        <meta name="author" content="Rayatiga" />
+        <!-- Meta Element (Property: Open Graph) -->
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://rayatiga.com/blog/fix-sshd-no-hostkeys-available-exiting-error.html" />
+        <meta property="og:title" content="Fix 'sshd: no hostkeys available — exiting' Error | Rayatiga" />
+        <meta property="og:description" content="Fix 'sshd: no hostkeys available — exiting' Error in Ubuntu WSL." />
+        <meta property="og:image" content="https://rayatiga.com/blog/image/fix-sshd-no-hostkeys-available-exiting-error.jpg" />
+        <!-- Link Element (Relationship: Stylesheet) -->
+        <link rel="stylesheet" href="/asset/css/main.css" />
+        <link rel="stylesheet" href="/asset/css/root.css" />
+        <link rel="stylesheet" href="/asset/css/icon.css" />
+        <link rel="stylesheet" href="/asset/css/animation.css" />
+        <link rel="stylesheet" href="/asset/css/aos.css" />
+        <!-- Script Element (Type: Text/Javascript) -->
+        <script defer type="text/javascript" src="/asset/js/aos.js"></script>
+        <script defer type="text/javascript" src="/asset/js/main.js"></script>
+        <script defer type="text/javascript" src="/asset/js/root.js"></script>
+        <script defer type="text/javascript" src="/asset/js/template.js"></script>
+        <script defer type="text/javascript" src="/asset/js/angular.min.js"></script>
+        <!-- Link Element (Relationship: Apple Touch Icon, Icon, Manifest) -->
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <!--<link rel="manifest" href="/manifest.json" />-->
+    </head>
+    <!-- Body Element -->
+    <body class="bg-light">
+        <!-- Navigation Element -->
+        <nav></nav>
+        <!-- Header Element -->
+        <header><div></div></header>
+        <!-- Main Element -->
+        <main>
+            <div class="container bg-light text-center d-flex flex-column justify-content-center align-items-center single-page">
+                <div class="py-4">
+                    <h1 class="fw-bold animate__animated animate__fadeInUp">Fix 'sshd: no hostkeys available — exiting' Error.</h1>
+                    <p class="animate__animated animate__fadeInUp animate__delay-1s">Error message show up while trying to start up SSH service in Ubuntu WSL.</p>
+                    <div class="animate__animated animate__fadeIn animate__delay-2s">
+                        <div class="border border-black rounded-3 p-3 pb-0 text-start">
+                            <h5 class="fw-bold">Error Information</h5>
+                            <p style="text-align: justify">Today while trying to start ssh server on my WSL Ubuntu installation, I got this error:</p>
+                            <pre class="text-danger border p-2 rounded-1 text-wrap"># sshd: no hostkeys available -- exiting</pre>
+                            <h5 class="fw-bold">How to Fix</h5>
+                            <p>
+                                After searching on the web, I found that the solution was really simple, at least in this case.
+                                <br />
+                                I only needed to run:
+                            </p>
+                            <pre class="text-danger border p-2 rounded-1 text-wrap"># ssh-keygen -A</pre>
+                            <h5 class="fw-bold">After Fixing</h5>
+                            <p>If needed, you have to restart the SSH service. Run this command:</p>
+                            <pre class="text-danger border p-2 rounded-1 text-wrap"># sudo systemctl restart ssh</pre>
+                            <p>And that's it. Problem should be solved!</p>
+                            <p id="articleUpdated" class="text-center text-secondary small">Last Updated at <span class="d-inline-block">Jun 19, 2023</span> <span class="d-inline-block">@ 4:11 PM</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- Footer Element -->
+        <footer></footer>
+    </body>
+</html>
