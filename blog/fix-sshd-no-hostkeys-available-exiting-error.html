@@ -52,22 +52,22 @@
                         <div class="border border-black rounded-3 p-3 pb-0 text-start">
                             <h5 class="fw-bold">Error Information</h5>
                             <p>Today while trying to start ssh server on my WSL Ubuntu installation, I got this error:</p>
-                            <pre class="text-danger border p-2 rounded-1 text-wrap"># sshd: no hostkeys available -- exiting</pre>
+                            <pre class="text-danger border p-2 rounded-1 text-wrap">sshd: no hostkeys available -- exiting</pre>
                             <h5 class="fw-bold">How to Fix</h5>
                             <p>
                                 After searching on the web, I found that the solution was really simple, at least in this case.
                                 <br />
                                 I only needed to run:
                             </p>
-                            <pre class="text-danger border p-2 rounded-1 text-wrap"># ssh-keygen -A</pre>
+                            <pre class="border p-2 rounded-1 text-wrap">ssh-keygen -A</pre>
                             <h5 class="fw-bold">After Fixing</h5>
                             <p>If needed, you have to restart the SSH service. Run this command:</p>
-                            <pre class="text-danger border p-2 rounded-1 text-wrap"># sudo systemctl restart ssh</pre>
+                            <pre class="border p-2 rounded-1 text-wrap">sudo systemctl restart ssh</pre>
                             <p>And that's it. Problem should be solved!</p>
                             <p id="articleUpdated" class="text-center text-secondary small">Last Updated at <span class="d-inline-block">Jun 19, 2023</span> <span class="d-inline-block">@ 4:11 PM</span></p>
                         </div>
                     </div>
-                    <a href="/blog/" class="btn btn-dark mt-3 animate__animated animate__fadeIn animate__delay-3s">Back to Archive</a>
+                    <a href="/blog/" class="btn btn-dark mt-3 animate__animated animate__fadeIn animate__delay-3s d-block d-sm-inline-block">Back to Archive</a>
                 </div>
             </div>
         </main>

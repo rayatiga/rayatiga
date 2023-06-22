@@ -55,15 +55,15 @@
                             <p>In my case, I want to export databases in localhost phpMyAdmin with xampp, but there error window say:</p>
                             <pre class="text-danger border p-2 rounded-1 text-wrap"><i>"Some errors have been detected on the server! Please look at the bottom of this window."</i></pre>
                             <h5 class="fw-bold">How to Fix</h5>
-                            <p>Add this line code inside xampp/phpMyAdmin/config.inc.php before ?> tag<br />or inside /etc/phpmyadmin/config.inc.php (outside using xampp):</p>
-                            <pre class="text-danger border p-2 rounded-1 text-wrap">$cfg['SendErrorReports'] = 'never';</pre>
+                            <p>Add this line code inside xampp/phpMyAdmin/config.inc.php before <span class="small bg-secondary-subtle px-1 rounded-1 font-monospace d-inline-block">?></span> tag<br />or inside /etc/phpmyadmin/config.inc.php (outside using xampp):</p>
+                            <pre class="border p-2 rounded-1 text-wrap">$cfg['SendErrorReports'] = 'never';</pre>
                             <h5 class="fw-bold">After Fixing</h5>
                             <p>Now, the windows say “Some errors have been detected on the server! Please look at the bottom of this window” should be gone.</p>
                             <p>And that's it. Problem should be solved!<br /><a href="https://youtu.be/MQZGRFmtH0Y" class="link-dark">Watch on YouTube</a></p>
                             <p id="articleUpdated" class="text-center text-secondary small">Last Updated at <span class="d-inline-block">Jun 20, 2023</span> <span class="d-inline-block">@ 2:43 PM</span></p>
                         </div>
                     </div>
-                    <a href="/blog/" class="btn btn-dark mt-3 animate__animated animate__fadeIn animate__delay-3s">Back to Archive</a>
+                    <a href="/blog/" class="btn btn-dark mt-3 animate__animated animate__fadeIn animate__delay-3s d-block d-sm-inline-block">Back to Archive</a>
                 </div>
             </div>
         </main>
