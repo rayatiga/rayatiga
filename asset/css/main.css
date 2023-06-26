@@ -2,10 +2,12 @@
 @font-face {
     font-family: "space-grotesk";
     src: url(/asset/font/space-grotesk.ttf);
+    font-display: swap;
 }
 @font-face {
     font-family: "Source Code Pro";
     src: url(/asset/font/source-code-pro.ttf);
+    font-display: swap;
 }
 /* Kit */
 * {
