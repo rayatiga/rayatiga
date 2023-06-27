@@ -74,7 +74,7 @@ let footer = document.getElementsByTagName("footer")[0]
 if (footer) {
     footer.outerHTML = `<footer>
             <div class="d-flex justify-content-center align-items-center bg-light border-top h-73px">
-                <p class="text-center text-secondary m-0">Copyright © Rayatiga 2023</p>
+                <p class="text-center m-0">Copyright © Rayatiga 2023</p>
             </div>
         </footer>`
 }
