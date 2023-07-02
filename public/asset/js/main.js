@@ -1,5 +1,3 @@
-// JavaScript Main
-// Button Scroll to Top
 var scrollTopButton = document.getElementById('scrollTop')
 if (scrollTopButton) {
     window.onscroll = function () {
