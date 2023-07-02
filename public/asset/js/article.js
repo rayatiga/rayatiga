@@ -1,6 +1,6 @@
-// ====================================
-// [IMPORTTANT] EDIT ARTICLE LIST HERE
-// ====================================
+// ======================
+// EDIT ARTICLE LIST HERE
+// ======================
 let articleBigData = [
     {
         id: "1",
@@ -63,10 +63,9 @@ let articleBigData = [
         timeUpdated: "10:48 AM",
     },
 ]
-// ======================================
-// [IMPORTTANT] END OF EDIT ARTICLE LIST
-// ======================================
-
+// ========================
+// END OF EDIT ARTICLE LIST
+// ========================
 let articleArchiveList = document.getElementById("articleArchiveList")
 let articleListTrigger = document.getElementById("articleTitle")
 if (articleArchiveList || articleListTrigger) {
@@ -95,8 +94,7 @@ function showArchiveArticle() {
     }
 
     let idxLength = 0
-    // SET MAX ARCHIVE ARTICLE TITLE IN /BLOG/INDEX.HTML
-    let idxMaxLength = 10 // Default is 10 (ten)
+    let idxMaxLength = 10
     for (let index = articleBigData.length - 1; index >= 0; index--) {
         if (idxLength == idxMaxLength) {
             break
