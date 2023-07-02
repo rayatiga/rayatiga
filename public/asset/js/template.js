@@ -115,21 +115,3 @@ if (checkout) {
             </div>
         </main>`
 }
-let checkoutTimerSpan = document.getElementById("checkoutTimer")
-if (checkoutTimerSpan) {
-    checkoutTimer()
-}
-function checkoutTimer() {
-    let countdown = 5
-    let interval = setInterval(function () {
-        checkoutTimerSpan.innerHTML = --countdown
-
-        if (countdown <= 0) {
-            clearInterval(interval)
-        }
-    }, 1000)
-}
-function closeWindow() {
-    window.open("", "_self", "")
-    window.close()
-}
