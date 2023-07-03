@@ -1,4 +1,4 @@
-var scrollTopButton = document.getElementById("scrollTop")
+var scrollTopButton = document.getElementById('scrollTop')
 if (scrollTopButton) {
     window.onscroll = function () {
         showScrollButton()
@@ -6,9 +6,9 @@ if (scrollTopButton) {
     function showScrollButton() {
         if (scrollTopButton) {
             if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                scrollTopButton.style.opacity = "1"
+                scrollTopButton.style.opacity = '1'
             } else {
-                scrollTopButton.style.opacity = "0"
+                scrollTopButton.style.opacity = '0'
             }
         }
     }
@@ -17,7 +17,7 @@ if (scrollTopButton) {
         document.documentElement.scrollTop = 0
     }
 }
-let checkoutTimerSpan = document.getElementById("checkoutTimer")
+let checkoutTimerSpan = document.getElementById('checkoutTimer')
 if (checkoutTimerSpan) {
     checkoutTimer()
 }
@@ -32,7 +32,7 @@ function checkoutTimer() {
     }, 1000)
 }
 function closeWindow() {
-    window.open("", "_self", "")
+    window.open('', '_self', '')
     window.close()
 }
 

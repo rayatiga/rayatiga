@@ -1,10 +1,10 @@
 @font-face {
-    font-family: "space-grotesk";
+    font-family: 'space-grotesk';
     src: url(/asset/font/space-grotesk.ttf);
     font-display: swap;
 }
 @font-face {
-    font-family: "Source Code Pro";
+    font-family: 'Source Code Pro';
     src: url(/asset/font/source-code-pro.ttf);
     font-display: swap;
 }
@@ -24,25 +24,25 @@
 .form-control:focus {
     box-shadow: 0 0 0 0.25rem rgba(110, 110, 110, 0.25) !important;
 }
-.dropdown-item:hover,
-.dropdown-item:focus {
-    background-color: var(--root-dark-bg-subtle) !important;
+.dropdown-item {
+    color: var(--bs-nav-link-color) !important;
 }
 .dropdown-item.active,
 .dropdown-item:active {
-    background-color: var(--root-dark) !important;
+    color: var(--bs-dark) !important;
+    background-color: transparent !important;
 }
 .nav-link:focus-visible {
     box-shadow: 0 0 0 0.25rem rgba(110, 110, 110, 0.25) !important;
-    border-radius: var(--root-border-radius);
+    border-radius: var(--bs-border-radius);
     transition: 250ms all;
 }
 .navbar-toggler:focus {
-    box-shadow: 0 0 0 calc(var(--root-navbar-toggler-focus-width) - 0.15rem) var(--root-dark) !important;
+    box-shadow: 0 0 0 calc(var(--bs-navbar-toggler-focus-width) - 0.15rem) var(--bs-dark) !important;
 }
-code[class*="language-"],
-pre[class*="language-"] {
-    font-family: "Source Code Pro", monospace !important;
+code[class*='language-'],
+pre[class*='language-'] {
+    font-family: 'Source Code Pro', monospace !important;
     font-size: 0.8rem !important;
     line-height: 1.25 !important;
 }
@@ -58,7 +58,7 @@ html {
     scroll-padding: calc(73px + 2.5rem);
 }
 body {
-    font-family: "space-grotesk", sans-serif !important;
+    font-family: 'space-grotesk', sans-serif !important;
 }
 ::selection {
     color: var(--light) !important;
@@ -91,7 +91,7 @@ pre::-webkit-scrollbar-thumb:hover {
 }
 code::selection,
 span::selection {
-    background-color: var(--root-gray-800);
+    background-color: var(--bs-gray-800);
 }
 #scrollTop {
     opacity: 0;
@@ -141,7 +141,7 @@ span::selection {
 .pre-page {
     height: 44vh !important;
     border-radius: 8px !important;
-    border: 4px solid var(--root-border-color) !important;
+    border: 4px solid var(--bs-border-color) !important;
 }
 .single-page {
     padding-top: 73px !important;

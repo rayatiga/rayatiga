@@ -6,43 +6,18 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="title" content="Fix 'Some errors have been detected on the server! Please look at the bottom of this window' Error | Rayatiga" />
-        <meta
-            name="description"
-            content="Fix 'Some errors have been detected on the server! Please look at the bottom of this window' Error in phpMyAdmin."
-        />
+        <meta name="description" content="Fix 'Some errors have been detected on the server! Please look at the bottom of this window' Error in phpMyAdmin." />
         <meta name="author" content="Rayatiga" />
         <meta property="og:type" content="website" />
-        <meta
-            property="og:url"
-            content="https://rayatiga.com/blog/fix-some-errors-have-been-detected-on-the-server-please-look-at-the-bottom-of-this-window-error.html"
-        />
-        <meta
-            property="og:title"
-            content="Fix 'Some errors have been detected on the server! Please look at the bottom of this window' Error | Rayatiga"
-        />
-        <meta
-            property="og:description"
-            content="Fix 'Some errors have been detected on the server! Please look at the bottom of this window' Error in phpMyAdmin."
-        />
-        <meta
-            property="og:image"
-            content="https://rayatiga.com/blog/image/fix-some-errors-have-been-detected-on-the-server-please-look-at-the-bottom-of-this-window-error.jpg"
-        />
+        <meta property="og:url" content="https://rayatiga.com/blog/fix-some-errors-have-been-detected-on-the-server-please-look-at-the-bottom-of-this-window-error.html" />
+        <meta property="og:title" content="Fix 'Some errors have been detected on the server! Please look at the bottom of this window' Error | Rayatiga" />
+        <meta property="og:description" content="Fix 'Some errors have been detected on the server! Please look at the bottom of this window' Error in phpMyAdmin." />
+        <meta property="og:image" content="https://rayatiga.com/blog/image/fix-some-errors-have-been-detected-on-the-server-please-look-at-the-bottom-of-this-window-error.jpg" />
         <link rel="stylesheet" href="/asset/css/main.css" />
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
-            crossorigin="anonymous"
-        />
-        <link rel="stylesheet" href="/asset/css/icon.css" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
         <script defer type="text/javascript" src="/asset/js/main.js"></script>
-        <script
-            defer
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-            crossorigin="anonymous"
-        ></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
         <script defer type="text/javascript" src="/asset/js/template.js"></script>
         <script defer type="text/javascript" src="/asset/js/article.js"></script>
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -56,32 +31,23 @@
             <div class="container bg-light text-center d-flex flex-column justify-content-center align-items-center single-page">
                 <div class="py-4">
                     <h1 class="fw-bold"><span id="articleTitle">[Article Title]</span>.</h1>
-                    <p>
-                        Error message show up while accessing some phpMyAdmin and appering the error log in bottom of the page.
-                    </p>
+                    <p>Error message show up while accessing some phpMyAdmin and appering the error log in bottom of the page.</p>
                     <div>
                         <div class="border border-black rounded-3 p-3 pb-0 text-start">
                             <p class="small text-secondary">Note: Warning, this is masking the problem!</p>
                             <h5 class="fw-bold">Error Information</h5>
                             <p>In my case, I want to export databases in localhost phpMyAdmin with xampp, but there error window say:</p>
-                            <pre
-                                class="text-danger border p-2 rounded-1 text-wrap"
-                            ><i>"Some errors have been detected on the server! Please look at the bottom of this window."</i></pre>
+                            <pre class="text-danger border p-2 rounded-1 text-wrap"><i>"Some errors have been detected on the server! Please look at the bottom of this window."</i></pre>
                             <h5 class="fw-bold">How to Fix</h5>
                             <p>
                                 Add this line code inside xampp/phpMyAdmin/config.inc.php before
-                                <span class="small bg-secondary-subtle px-1 rounded-1 font-monospace d-inline-block">?></span> tag<br />or inside
-                                /etc/phpmyadmin/config.inc.php (outside using xampp):
+                                <span class="small bg-secondary-subtle px-1 rounded-1 font-monospace d-inline-block">?></span> tag<br />or inside /etc/phpmyadmin/config.inc.php (outside using xampp):
                             </p>
                             <pre class="border p-2 rounded-1 text-wrap">$cfg['SendErrorReports'] = 'never';</pre>
                             <h5 class="fw-bold">After Fixing</h5>
+                            <p>Now, the windows say “Some errors have been detected on the server! Please look at the bottom of this window” should be gone.</p>
                             <p>
-                                Now, the windows say “Some errors have been detected on the server! Please look at the bottom of this window” should
-                                be gone.
-                            </p>
-                            <p>
-                                And that's it. Problem should be solved!<br /><span id="articleYoutube"
-                                    ><a href="#" class="link-dark">Watch on YouTube</a></span
+                                And that's it. Problem should be solved!<br /><span id="articleYoutube"><a href="#" class="link-dark">Watch on YouTube</a></span
                                 >.
                             </p>
                             <p id="articleUpdated" class="text-center text-secondary small">
@@ -90,9 +56,7 @@
                             </p>
                         </div>
                     </div>
-                    <a href="/blog/" class="btn btn-dark mt-3 d-block d-sm-inline-block"
-                        >Back to Archive</a
-                    >
+                    <a href="/blog/" class="btn btn-dark mt-3 d-block d-sm-inline-block">Back to Archive</a>
                 </div>
             </div>
         </main>
