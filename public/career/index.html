@@ -17,10 +17,19 @@
         />
         <meta property="og:image" content="https://rayatiga.com/asset/image/brand/rayatiga-og.png" />
         <link rel="stylesheet" href="/asset/css/main.css" />
-        <link rel="stylesheet" href="/asset/css/root.css" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+            crossorigin="anonymous"
+        />
         <link rel="stylesheet" href="/asset/css/icon.css" />
         <script defer type="text/javascript" src="/asset/js/main.js"></script>
-        <script defer type="text/javascript" src="/asset/js/root.js"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+            crossorigin="anonymous"
+        ></script>
         <script defer type="text/javascript" src="/asset/js/template.js"></script>
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
@@ -33,37 +42,42 @@
             <div class="container bg-light text-center d-flex flex-column justify-content-center align-items-center single-page">
                 <div class="d-flex align-items-center flex-column py-4">
                     <h1 class="fw-bold"><span class="fw-lighter">Career</span> Rayatiga.</h1>
-                    <p>
-                        Develop your career by applying the skills you have, gain additional experience for your future success.
-                    </p>
-                    <div class="card bg-light text-start border-dark col-xl-9 mb-3">
-                        <div class="card-header d-flex flex-wrap gap-1 small">
-                            <span class="text-bg-success rounded-1 px-1">Featured</span><span class="text-bg-danger rounded-1 px-1">Closed</span>
+                    <p>Develop your career by applying the skills you have, gain additional experience for your future success.</p>
+                    <div class="row row-cols-1 row-cols-md-2 g-3">
+                        <div class="col">
+                            <div class="card bg-light text-start border-dark h-100">
+                                <div class="card-header d-flex flex-wrap gap-1 small">
+                                    <span class="text-bg-success rounded-1 px-1">Featured</span><span class="text-bg-primary rounded-1 px-1">Open Form</span
+                                    ><span class="text-bg-danger rounded-1 px-1">Closed</span>
+                                </div>
+                                <div class="card-body bg-light">
+                                    <h5 class="card-title fw-bold">Google Ads Copywriter</h5>
+                                    <p class="card-text">
+                                        The ideal candidate is someone who has a passion for copywriting skills, and has experience in advertising products,
+                                        especially digital products on the Google Ads platform (written in english).
+                                    </p>
+                                    <button type="button" class="btn btn-dark abso" data-bs-toggle="modal" data-bs-target="#jobPosition1">Learn More</button>
+                                </div>
+                                <div class="card-footer text-body-secondary small">Posted: March 6, 2023</div>
+                            </div>
                         </div>
-                        <div class="card-body bg-light">
-                            <h5 class="card-title fw-bold">Google Ads Copywriter</h5>
-                            <p class="card-text">
-                                The ideal candidate is someone who has a passion for copywriting skills, and has experience in advertising products,
-                                especially digital products on the Google Ads platform (written in english).
-                            </p>
-                            <button type="button" class="btn btn-dark" data-root-toggle="modal" data-root-target="#jobPosition1">Learn More</button>
+                        <div class="col">
+                            <div class="card bg-light text-start border-dark h-100">
+                                <div class="card-header d-flex flex-wrap gap-1 small">
+                                    <span class="text-bg-success rounded-1 px-1">Featured</span><span class="text-bg-danger rounded-1 px-1">Closed</span
+                                    ><span class="text-bg-secondary rounded-1 px-1">Outdated</span>
+                                </div>
+                                <div class="card-body bg-light">
+                                    <h5 class="card-title fw-bold">Landing Page Copywriter</h5>
+                                    <p class="card-text">
+                                        The ideal candidate is someone who has previously written marketing page, blog, or commercial content. Have knowledge
+                                        of SEO and understand a little about pitching or negotiation.
+                                    </p>
+                                    <button href="#" class="btn btn-dark disabled">Position Closed</button>
+                                </div>
+                                <div class="card-footer text-body-secondary small">Posted: April 20, 2022</div>
+                            </div>
                         </div>
-                        <div class="card-footer text-body-secondary small">Posted: March 6, 2023</div>
-                    </div>
-                    <div class="card bg-light text-start border-dark col-xl-9">
-                        <div class="card-header d-flex flex-wrap gap-1 small">
-                            <span class="text-bg-success rounded-1 px-1">Featured</span><span class="text-bg-danger rounded-1 px-1">Closed</span
-                            ><span class="text-bg-secondary rounded-1 px-1">Outdated</span>
-                        </div>
-                        <div class="card-body bg-light">
-                            <h5 class="card-title fw-bold">Landing Page Copywriter</h5>
-                            <p class="card-text">
-                                The ideal candidate is someone who has previously written marketing page, blog, or commercial content. Have knowledge
-                                of SEO and understand a little about pitching or negotiation.
-                            </p>
-                            <button href="#" class="btn btn-dark disabled">Position Closed</button>
-                        </div>
-                        <div class="card-footer text-body-secondary small">Posted: April 20, 2022</div>
                     </div>
                 </div>
             </div>
@@ -74,10 +88,13 @@
                 <div class="modal-content bg-light">
                     <div class="modal-header">
                         <h5 class="modal-title fw-bold" id="jobPosition1Label">Job Requirements Details</h5>
-                        <button type="button" class="btn-close shadow-none" data-root-dismiss="modal" aria-label="Close"></button>
+                        <button type="button" class="btn-close shadow-none" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <h5 class="fw-bold text-bg-dark p-2 rounded-1 mb-3">Google Ads Copywriter</h5>
+                        <div class="bg-dark text-white pt-2 pb-1 rounded-1 shadow-sm">
+                            <small class="d-block text-center">You are applying for:</small>
+                            <h5 class="fw-bold text-center">Google Ads Copywriter</h5>
+                        </div>
                         <hr />
                         <ul class="list-unstyled small">
                             <li><i class="icon icon-briefcase me-1"></i> Remote Work</li>
@@ -124,7 +141,7 @@
                             <div>
                                 <h6 class="fw-bold">Important Date</h6>
                                 <div class="table-responsive">
-                                    <table class="table table-hover table-sm w-100">
+                                    <table class="table table-light table-hover table-sm w-100">
                                         <thead>
                                             <tr>
                                                 <th scope="col" class="fw-semibold">No</th>
@@ -147,11 +164,6 @@
                                                 <td scope="row">3</td>
                                                 <td>Technical Test</td>
                                                 <td>March 13, 2023</td>
-                                            </tr>
-                                            <tr>
-                                                <td scope="row">4</td>
-                                                <td>Async Interview</td>
-                                                <td>March 15, 2023</td>
                                             </tr>
                                             <tr>
                                                 <td scope="row">5</td>
@@ -180,8 +192,8 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-root-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-dark" data-root-toggle="modal" data-root-target="#applyPosition">Apply Position</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#applyPosition">Apply Position</button>
                     </div>
                 </div>
             </div>
@@ -191,11 +203,11 @@
                 <div class="modal-content bg-light">
                     <div class="modal-header">
                         <h5 class="modal-title fw-bold" id="applyPositionLabel">Job Applicant Form</h5>
-                        <button type="button" class="btn-close shadow-none" data-root-dismiss="modal" aria-label="Close"></button>
+                        <button type="button" class="btn-close shadow-none" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
                         <section class="bg-light">
-                            <form id="applyPositionForm" action="" method="">
+                            <form id="applyPositionForm" action="https://formspree.io/f/xknavynp" method="post">
                                 <div class="mb-3">
                                     <label for="name" class="form-label">Full name <span class="text-danger">*</span></label>
                                     <input
@@ -251,8 +263,8 @@
                         </section>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-root-toggle="modal" data-root-target="#jobPosition1">Back</button>
-                        <button type="" form="" class="btn btn-dark disabled">Application Closed</button>
+                        <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#jobPosition1">Back</button>
+                        <button type="submit" form="applyPositionForm" class="btn btn-dark">Apply Now</button>
                     </div>
                 </div>
             </div>

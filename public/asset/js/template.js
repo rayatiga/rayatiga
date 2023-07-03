@@ -7,7 +7,7 @@ if (nav) {
     nav.outerHTML = `<nav class="navbar navbar-expand-lg bg-light border-bottom fixed-top">
             <div class="container py-2">
                 <a class="navbar-brand fw-bold" href="/">Rayatiga</a>
-                <button class="navbar-toggler" type="button" data-root-toggle="collapse" data-root-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
@@ -29,7 +29,7 @@ if (nav) {
                                 path == "/hosting/" || path == "/hosting/about/" || path == "/hosting/contact/" || path == "/hosting/pricing/"
                                     ? (state = active)
                                     : (state = "")
-                            } dropdown-toggle" href="#" role="button" data-root-toggle="dropdown" aria-expanded="false">Service&nbsp;</a>
+                            } dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Service&nbsp;</a>
                             <ul class="dropdown-menu bg-light">
                                 <li><h6 class="dropdown-header">Web Hosting</h6></li>
                                 <li><a class="dropdown-item${path == "/hosting/" ? (state = active) : (state = "")}"${
@@ -62,7 +62,7 @@ if (nav) {
                                 path == "/project/wordpress-installer/"
                                     ? (state = active)
                                     : (state = "")
-                            } dropdown-toggle" href="#" role="button" data-root-toggle="dropdown" aria-expanded="false">Project&nbsp;</a>
+                            } dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Project&nbsp;</a>
                             <ul class="dropdown-menu bg-light">
                                 <li><h6 class="dropdown-header">Top Three</h6></li>
                                 <li><a class="dropdown-item${path == "/project/apache2-benchmark.html" ? (state = active) : (state = "")}"${

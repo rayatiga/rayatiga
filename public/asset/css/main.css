@@ -176,3 +176,6 @@ span::selection {
     background: var(--bg-magenta) !important;
     box-shadow: 0 0 0 0.25rem var(--shadow-magenta) !important;
 }
+.custom-tooltip {
+    background-color: #c208c2 !important;
+}
