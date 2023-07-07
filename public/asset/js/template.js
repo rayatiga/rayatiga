@@ -64,7 +64,6 @@ if (checkout) {
                 <a class="navbar-brand fw-bold m-0" href="/">Rayatiga</a>
             </div>
         </nav>
-        <header><div></div></header>
         <main>
             <div class="container min-vh-100 bg-light d-flex flex-column justify-content-center align-items-center text-center">
                 <h1 class="fw-bold">Checkouting...</h1>
