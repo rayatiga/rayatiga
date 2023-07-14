@@ -1,23 +1,11 @@
-@font-face {
-    font-family: 'space-grotesk';
-    src: url(/asset/font/space-grotesk.ttf);
-    font-display: swap;
-}
-@font-face {
-    font-family: 'Source Code Pro';
-    src: url(/asset/font/source-code-pro.ttf);
-    font-display: swap;
-}
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap');
 * {
     --dark: #212529;
     --light: #f8f9fa;
     --magenta: #c208c2;
     --bg-magenta: #df09df;
     --magenta-hover: #880d88;
-    --pre-scrollbar: #31373d;
     --border-magenta: #dd0add;
-    --pre-scrollbar-thumb: #616161;
-    --pre-scrollbar-thumb-hover: #8d8d8d;
     --bg-header: rgba(250, 250, 250, 0.7);
     --shadow-magenta: rgba(224, 40, 145, 0.5);
 }
@@ -40,58 +28,15 @@
 .navbar-toggler:focus {
     box-shadow: 0 0 0 calc(var(--bs-navbar-toggler-focus-width) - 0.15rem) var(--bs-dark) !important;
 }
-code[class*='language-'],
-pre[class*='language-'] {
-    font-family: 'Source Code Pro', monospace !important;
-    font-size: 0.8rem !important;
-    line-height: 1.25 !important;
-}
-div.code-toolbar > .toolbar > .toolbar-item > a,
-div.code-toolbar > .toolbar > .toolbar-item > button,
-div.code-toolbar > .toolbar > .toolbar-item > span {
-    padding: 0.2rem 0.5em !important;
-    border-radius: 0.25em !important;
-    margin: 0.5em 1em !important;
-    border: 1px solid #bbb !important;
-}
 html {
     scroll-padding: calc(73px + 2.5rem);
 }
 body {
-    font-family: 'space-grotesk', sans-serif !important;
+    font-family: 'Space Grotesk', sans-serif !important;
 }
 ::selection {
     color: var(--light) !important;
     background-color: var(--dark) !important;
-}
-body::-webkit-scrollbar {
-    display: none;
-}
-.modal-body::-webkit-scrollbar {
-    display: none;
-}
-pre::-webkit-scrollbar {
-    height: 0;
-    width: 10px;
-}
-pre::-webkit-scrollbar-track {
-    background: var(--pre-scrollbar);
-    border-radius: 0.1rem;
-}
-pre::-webkit-scrollbar-corner {
-    background: var(--pre-scrollbar);
-    border-radius: 999rem;
-}
-pre::-webkit-scrollbar-thumb {
-    background: var(--pre-scrollbar-thumb);
-    border-radius: 0.15rem;
-}
-pre::-webkit-scrollbar-thumb:hover {
-    background: var(--pre-scrollbar-thumb-hover);
-}
-code::selection,
-span::selection {
-    background-color: var(--bs-gray-800);
 }
 #scrollTop {
     opacity: 0;
@@ -175,7 +120,4 @@ span::selection {
 .btn-magenta:focus-visible {
     background: var(--bg-magenta) !important;
     box-shadow: 0 0 0 0.25rem var(--shadow-magenta) !important;
-}
-.custom-tooltip {
-    background-color: #c208c2 !important;
 }
