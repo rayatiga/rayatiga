@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <!-- Main -->
     <url>
         <loc>https://rayatiga.com/</loc>
         <lastmod>2023-01-05</lastmod>
@@ -20,6 +21,7 @@
         <loc>https://rayatiga.com/career/</loc>
         <lastmod>2023-03-28</lastmod>
     </url>
+    <!-- Hosting -->
     <url>
         <loc>https://rayatiga.com/hosting/</loc>
         <lastmod>2023-03-28</lastmod>
@@ -35,45 +37,5 @@
     <url>
         <loc>https://rayatiga.com/hosting/pricing/</loc>
         <lastmod>2023-03-28</lastmod>
-    </url>
-    <url>
-        <loc>https://rayatiga.com/project/apache2-benchmark.html</loc>
-        <lastmod>2023-01-05</lastmod>
-    </url>
-    <url>
-        <loc>https://rayatiga.com/project/php-ini-configuration.html</loc>
-        <lastmod>2023-01-05</lastmod>
-    </url>
-    <url>
-        <loc>https://rayatiga.com/project/wordpress-installer.html</loc>
-        <lastmod>2023-01-05</lastmod>
-    </url>
-    <url>
-        <loc>https://rayatiga.com/blog/</loc>
-        <lastmod>2023-06-19</lastmod>
-    </url>
-    <url>
-        <loc>https://rayatiga.com/blog/web-hosting-magelang.html</loc>
-        <lastmod>2023-06-19</lastmod>
-    </url>
-    <url>
-        <loc>https://rayatiga.com/blog/fix-sshd-no-hostkeys-available-exiting-error.html</loc>
-        <lastmod>2023-06-19</lastmod>
-    </url>
-    <url>
-        <loc>https://rayatiga.com/blog/fix-we-cant-reach-the-adobe-servers-error.html</loc>
-        <lastmod>2023-06-19</lastmod>
-    </url>
-    <url>
-        <loc>https://rayatiga.com/blog/fix-exception-eaccessviolation-in-module-xampp-control-exe-at-0025b2ae-error.html</loc>
-        <lastmod>2023-06-20</lastmod>
-    </url>
-    <url>
-        <loc>https://rayatiga.com/blog/fix-some-errors-have-been-detected-on-the-server-please-look-at-the-bottom-of-this-window-error.html</loc>
-        <lastmod>2023-06-20</lastmod>
-    </url>
-    <url>
-        <loc>https://rayatiga.com/blog/how-to-force-https-securely-using-htaccess.html</loc>
-        <lastmod>2023-06-23</lastmod>
     </url>
 </urlset>
