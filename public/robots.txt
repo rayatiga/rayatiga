@@ -1,8 +1,5 @@
 User-agent: *
 Allow: /
 Disallow: /api
-Disallow: /founder
-Disallow: /payment
-Disallow: /asset/bootstrap
 
 Sitemap: https://rayatiga.com/sitemap.xml
