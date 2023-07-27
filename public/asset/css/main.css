@@ -1,5 +1,10 @@
-/* Import */
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap');
+/* Font */
+@font-face {
+  font-family: 'Space Grotesk';
+  src: url(/asset/font/space-grotesk.ttf);
+  font-display: swap;
+}
+/* Debugging */
 /* * {
     outline: 1px solid #00000055;
     background: #ff000011;
