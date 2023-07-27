@@ -15,7 +15,9 @@
   --light: #f8f9fa;
   --magenta: #c208c2;
   --bg-magenta: #df09df;
+  --selection: var(--dark);
   --magenta-hover: #880d88;
+  --bg-selection: #2e229b55;
   --border-magenta: #dd0add;
   --bg-header: rgba(250, 250, 250, 0.7);
   --shadow-magenta: rgba(224, 40, 145, 0.5);
@@ -49,8 +51,8 @@ body {
   font-family: 'Space Grotesk', sans-serif !important;
 }
 ::selection {
-  color: var(--light) !important;
-  background-color: var(--dark) !important;
+  color: currentColor;
+  background-color: var(--bg-selection) !important;
 }
 /* Scroll to Top */
 #scrollTopButton {
