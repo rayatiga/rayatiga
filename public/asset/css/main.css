@@ -6,8 +6,8 @@
 }
 /* Debugging */
 /* * {
-    outline: 1px solid #00000055;
-    background: #ff000011;
+  outline: 1px solid #00000055;
+  background: #ff000011;
 } */
 /* Variable */
 * {
@@ -15,7 +15,6 @@
   --light: #f8f9fa;
   --magenta: #c208c2;
   --bg-magenta: #df09df;
-  --selection: var(--dark);
   --magenta-hover: #880d88;
   --bg-selection: #2e229b55;
   --border-magenta: #dd0add;
