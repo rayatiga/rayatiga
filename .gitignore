@@ -77,3 +77,6 @@ node_modules/
 **/bootstrap/icon/font/*.json
 **/bootstrap/icon/font/*.scss
 **/bootstrap/icon/font/bootstrap-icons.css
+
+# Invoice
+**/invoice
