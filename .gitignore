@@ -65,18 +65,5 @@ node_modules/
 # dotenv environment variables file
 .env
 
-# Bootstrap 5.3.0
-**/bootstrap/css/bootstrap-*
-**/bootstrap/css/bootstrap.rtl*
-**/bootstrap/css/bootstrap.css*
-**/bootstrap/js/bootstrap.js*
-**/bootstrap/js/bootstrap.min*
-**/bootstrap/js/bootstrap.esm*
-**/bootstrap/js/bootstrap.bundle.js*
-**/bootstrap/icon/svg
-**/bootstrap/icon/font/*.json
-**/bootstrap/icon/font/*.scss
-**/bootstrap/icon/font/bootstrap-icons.css
-
 # Invoice
 **/invoice
