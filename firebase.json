@@ -24,21 +24,10 @@
         "headers": [
           {
             "key": "Cache-Control",
-            "value": "max-age=31536000"
-          }
-        ]
-      },
-      {
-        "source": "404.html",
-        "headers": [
-          {
-            "key": "Cache-Control",
-            "value": "max-age=31536000"
+            "value": "max-age=86400"
           }
         ]
       }
-    ],
-    "cleanUrls": false,
-    "trailingSlash": true
+    ]
   }
 }
