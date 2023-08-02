@@ -16,7 +16,7 @@
   --magenta: #c208c2;
   --bg-magenta: #df09df;
   --magenta-hover: #880d88;
-  --bg-selection: #2e229b55;
+  --bg-selection: #c208c255;
   --border-magenta: #dd0add;
   --bg-header: rgba(250, 250, 250, 0.7);
   --shadow-magenta: rgba(224, 40, 145, 0.5);
@@ -139,4 +139,7 @@ iframe {
 .btn-magenta:focus-visible {
   background: var(--bg-magenta) !important;
   box-shadow: 0 0 0 0.25rem var(--shadow-magenta) !important;
+}
+.text-justify {
+  text-align: justify;
 }
