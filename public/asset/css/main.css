@@ -10,16 +10,19 @@
   background: #ff000011;
 } */
 /* Variable */
-* {
+:root {
   --dark: #212529;
   --light: #f8f9fa;
   --magenta: #c208c2;
   --bg-magenta: #df09df;
+  --nav-active: #212529;
   --magenta-hover: #880d88;
+  --bg-scroll-top: #ffffff;
   --bg-selection: #c208c255;
   --border-magenta: #dd0add;
-  --bg-header: rgba(250, 250, 250, 0.7);
+  --bg-header: rgba(250, 250, 250, 0.8);
   --shadow-magenta: rgba(224, 40, 145, 0.5);
+  --border-scroll-top: #212529;
 }
 /* Form */
 .form-control:focus {
@@ -31,7 +34,7 @@
 }
 .dropdown-item.active,
 .dropdown-item:active {
-  color: var(--bs-dark) !important;
+  color: var(--nav-active) !important;
   background-color: transparent !important;
 }
 .nav-link:focus-visible {
@@ -54,6 +57,7 @@ iframe {
   border-radius: 6px;
   width: 100%;
   height: 427px;
+  /* filter: grayscale(52%) invert(92%) contrast(92%); */
 }
 ::selection {
   color: currentColor;
@@ -63,39 +67,43 @@ iframe {
 #scrollTopButton {
   opacity: 0;
   right: 25px;
-  bottom: 20px;
+  bottom: 70px;
   z-index: 99;
   position: fixed;
   padding: 5px 10px;
-  background: var(--light);
+  background: var(--bg-scroll-top);
   transition: 500ms all;
-  border: 1px solid var(--dark);
-  outline: 5px solid var(--light);
+  border: 1px solid var(--border-scroll-top);
+  outline: 5px solid var(--bg-scroll-top);
 }
 /* Background */
 .background-home {
   height: 100vh;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: linear-gradient(var(--bg-header), var(--bg-header)), url(/asset/image/hosting/home.webp);
+  background-image: linear-gradient(var(--bg-header), var(--bg-header)), url(/asset/image/home.webp);
+  background-position: center;
 }
 .background-about {
-  height: 60vh;
+  height: 512px;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: linear-gradient(var(--bg-header), var(--bg-header)), url(/asset/image/hosting/about.webp);
+  background-image: linear-gradient(var(--bg-header), var(--bg-header)), url(/asset/image/about.webp);
+  background-position: center;
 }
 .background-contact {
-  height: 60vh;
+  height: 512px;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: linear-gradient(var(--bg-header), var(--bg-header)), url(/asset/image/hosting/contact.webp);
+  background-image: linear-gradient(var(--bg-header), var(--bg-header)), url(/asset/image/contact.webp);
+  background-position: center;
 }
 .background-pricing {
-  height: 60vh;
+  height: 512px;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: linear-gradient(var(--bg-header), var(--bg-header)), url(/asset/image/hosting/pricing.webp);
+  background-image: linear-gradient(var(--bg-header), var(--bg-header)), url(/asset/image/pricing.webp);
+  background-position: center;
 }
 /* Unit */
 .h-73px {
@@ -142,4 +150,26 @@ iframe {
 }
 .text-justify {
   text-align: justify;
+}
+/* Scheme */
+[data-bs-theme='dark'] {
+  --nav-active: #ffffff;
+  --bs-body-color: #f8f9fa;
+  --bg-scroll-top: #212529;
+  --bs-body-bg-rgb: 24, 27, 31;
+  --border-scroll-top: #f8f9fa;
+  --bs-body-bg: rgb(24, 27, 31);
+  --bg-header: rgba(5, 5, 5, 0.5) !important;
+}
+#schemeButton {
+  opacity: 1;
+  right: 25px;
+  bottom: 20px;
+  z-index: 99;
+  position: fixed;
+  padding: 5px 10px;
+  background: var(--bg-scroll-top);
+  transition: 500ms all;
+  border: 1px solid var(--border-scroll-top);
+  outline: 5px solid var(--bg-scroll-top);
 }

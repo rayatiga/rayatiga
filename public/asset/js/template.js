@@ -26,7 +26,7 @@ if (nav) {
                           </li>
                           <li class="nav-item"><a class="nav-link${path == '/project/' ? (state = active) : (state = '')}"${path == '/project/' ? (state = aria) : (state = '')} href="/project/">Project</a></li>
                           <li class="nav-item d-lg-none"><a class="nav-link${path == '/contact/' ? (state = active) : (state = '')}"${path == '/contact/' ? (state = aria) : (state = '')} href="/contact/">Contact</a></li>
-                          <li class="nav-item d-none d-lg-block"><a class="btn btn-dark ms-2${path == '/contact/' ? (state = active) : (state = '')}"${path == '/contact/' ? (state = aria) : (state = '')} href="/contact/">Contact</a></li>
+                          <li class="nav-item d-none d-lg-block"><a class="btn btn-dark border ms-2${path == '/contact/' ? (state = active) : (state = '')}"${path == '/contact/' ? (state = aria) : (state = '')} href="/contact/">Contact</a></li>
                         </ul>
                       </div>
                     </div>
