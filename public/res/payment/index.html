@@ -30,6 +30,7 @@
     <meta property="og:image" content="https://rayatiga.com/asset/image/rayatiga-og.png" />
     <!-- Asset -->
     <link rel="stylesheet" href="/asset/css/main.css" />
+    <script defer type="text/javascript" src="/asset/js/scheme.js"></script>
     <!-- Style -->
     <style>
       * {
@@ -108,5 +109,20 @@
         </div>
       </div>
     </main>
+    <!-- Script -->
+    <script>
+      let schemeState = localStorage.getItem('scheme')
+      let images = document.getElementsByTagName('img')
+      if (schemeState === 'dark') {
+        document.body.style.backgroundColor = 'rgb(24, 27, 31)'
+        document.getElementsByTagName('h1')[0].style.color = '#f8f9fa'
+        document.getElementsByTagName('p')[0].style.color = '#f8f9fa'
+        document.getElementsByTagName('a')[0].style.color = '#c208c2'
+        for (let i = 0; i < images.length; i++) {
+          document.getElementsByTagName('img')[i].style.backgroundColor = '#f8f9fa'
+          document.getElementsByTagName('img')[i].style.borderColor = '#f8f9fa'
+        }
+      }
+    </script>
   </body>
 </html>

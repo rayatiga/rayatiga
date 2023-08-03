@@ -1,5 +1,6 @@
-// Navigation
+// get navigation html tag name
 let nav = document.getElementsByTagName('nav')[0]
+// if nav html tag exist in the page
 if (nav) {
   let active = ' active'
   let aria = ' aria-current="page"'
@@ -32,8 +33,9 @@ if (nav) {
                     </div>
                   </nav>`
 }
-// Footer
+// get footer html tag name
 let footer = document.getElementsByTagName('footer')[0]
+// if footer html tag exist in the page
 if (footer) {
   footer.outerHTML = `<footer>
                         <div class="d-flex justify-content-center align-items-center bg-body border-top h-73px">
@@ -41,8 +43,9 @@ if (footer) {
                         </div>
                       </footer>`
 }
-// Checkout
+// get element checkout by id attribute
 let checkoutContent = document.getElementById('checkoutContent')
+// if element checkout exist in the page
 if (checkoutContent) {
   checkoutContent.innerHTML = `<nav class="navbar navbar-expand-lg bg-body border-bottom fixed-top">
                                 <div class="container justify-content-center">
@@ -55,5 +58,7 @@ if (checkoutContent) {
                                   <p>Please wait, you'll be redirected to WhatsApp Rayatiga in <span id="checkoutTimer">5</span>s.</p>
                                     <button class="btn btn-danger" onclick="closeWindow()">Cancel</button>
                                 </div>
+                                <!-- Scheme -->
+                                <button id="schemeButton" class="rounded-1"><i class="bi bi-sun-fill text-dark-tertiary"></i></button>
                               </main>`
 }
