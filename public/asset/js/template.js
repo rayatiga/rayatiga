@@ -59,6 +59,6 @@ if (checkoutContent) {
                                     <button class="btn btn-danger" onclick="closeWindow()">Cancel</button>
                                 </div>
                                 <!-- Scheme -->
-                                <button id="schemeButton" class="rounded-1"><i class="bi bi-sun-fill text-dark-tertiary"></i></button>
+                                <button id="schemeButton" aria-label="Scheme Toggle" class="rounded-1"><i class="bi bi-sun-fill text-dark-tertiary"></i></button>
                               </main>`
 }
