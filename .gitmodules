@@ -1,0 +1,36 @@
+[submodule "public/res/staging"]
+	path = public/res/staging
+	url = https://github.com/rayatiga/staging
+[submodule "public/res/documentation"]
+	path = public/res/documentation
+	url = https://github.com/rayatiga/documentation
+[submodule "public/res/invoice"]
+	path = public/res/invoice
+	url = https://github.com/rayatiga/invoice
+[submodule "public/res/legacy"]
+	path = public/res/legacy
+	url = https://github.com/rayatiga/legacy
+[submodule "public/res/.github"]
+	path = public/res/.github
+	url = https://github.com/rayatiga/.github
+[submodule "public/res/wordpress-extractor"]
+	path = public/res/wordpress-extractor
+	url = https://github.com/rayatiga/wordpress-extractor
+[submodule "public/res/apache2-wordpress-config"]
+	path = public/res/apache2-wordpress-config
+	url = https://github.com/rayatiga/apache2-wordpress-config
+[submodule "public/res/wordpress-installer"]
+	path = public/res/wordpress-installer
+	url = https://github.com/rayatiga/wordpress-installer
+[submodule "public/res/pawonkos799"]
+	path = public/res/pawonkos799
+	url = https://github.com/rayatiga/pawonkos799
+[submodule "public/res/apache2-benchmark"]
+	path = public/res/apache2-benchmark
+	url = https://github.com/rayatiga/apache2-benchmark
+[submodule "public/res/php-ini-configuration"]
+	path = public/res/php-ini-configuration
+	url = https://github.com/rayatiga/php-ini-configuration
+[submodule "public/res/sultan-kautsar"]
+	path = public/res/sultan-kautsar
+	url = https://github.com/rayatiga/sultan-kautsar
