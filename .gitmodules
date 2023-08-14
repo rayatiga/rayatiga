@@ -34,3 +34,6 @@
 [submodule "public/res/sultan-kautsar"]
 	path = public/res/sultan-kautsar
 	url = https://github.com/rayatiga/sultan-kautsar
+[submodule "public/res/cdn"]
+	path = public/res/cdn
+	url = https://github.com/rayatiga/cdn
