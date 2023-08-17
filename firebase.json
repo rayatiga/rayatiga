@@ -4,12 +4,22 @@
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "redirects": [
       {
-        "source": "/hiring",
-        "destination": "/career",
+        "source": ["/web/", "/web/hosting"],
+        "destination": "/res/maintenance/",
         "type": 301
       },
       {
-        "source": "/sultankautsar",
+        "source": ["/web/pricing/", "/web/create/"],
+        "destination": "/res/maintenance/",
+        "type": 301
+      },
+      {
+        "source": "/hiring/",
+        "destination": "/career/",
+        "type": 301
+      },
+      {
+        "source": "/sultankautsar/",
         "destination": "https://sultankautsar.com/",
         "type": 301
       }
