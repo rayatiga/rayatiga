@@ -1,7 +1,7 @@
 {
   "hosting": {
     "public": "public",
-    "ignore": ["firebase.json", "**/.*", "**/node_modules/**", "**/res/apache2-benchmark", "**/res/apache2-wordpress-config", "**/res/cdn", "**/res/documentation", "**/res/pawonkos799", "**/res/php-ini-configuration", "**/res/sultan-kautsar", "**/res/wordpress-extractor", "**/res/wordpress-installer"],
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "redirects": [
       {
         "source": "/hiring",
