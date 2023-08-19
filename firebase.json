@@ -4,12 +4,17 @@
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "redirects": [
       {
-        "source": ["/web/", "/web/hosting"],
+        "source": "/web/hosting/",
         "destination": "/res/maintenance/",
         "type": 301
       },
       {
-        "source": ["/web/pricing/", "/web/create/"],
+        "source": "/web/create/",
+        "destination": "/res/maintenance/",
+        "type": 301
+      },
+      {
+        "source": "/web/pricing/",
         "destination": "/res/maintenance/",
         "type": 301
       },
