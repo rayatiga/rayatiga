@@ -148,6 +148,16 @@ iframe {
 .text-justify {
   text-align: justify;
 }
+@media (max-width: 576px) {
+  .lead {
+    font-size: 1rem !important;
+  }
+  .btn-lg {
+    --bs-btn-font-size: 1rem !important;
+    --bs-btn-padding-x: 0.75rem !important;
+    --bs-btn-padding-y: 0.375rem !important;
+  }
+}
 [data-bs-theme='dark'] {
   --magenta: #e715e7;
   --nav-active: #ffffff;
