@@ -18,6 +18,8 @@
   --bs-body-bg-rgb: 252, 252, 252;
   --bg-header: rgba(250, 250, 250, 0.8);
   --shadow-magenta: rgba(224, 40, 145, 0.5);
+
+  --animate-delay: 0.125s;
 }
 .form-control:focus {
   box-shadow: 0 0 0 0.25rem rgba(110, 110, 110, 0.25) !important;
@@ -46,6 +48,7 @@ body {
 }
 body,
 nav,
+nav a,
 footer div,
 .card,
 td,
