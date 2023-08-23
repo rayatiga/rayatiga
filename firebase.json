@@ -4,28 +4,33 @@
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "redirects": [
       {
-        "source": "/hiring/",
+        "source": "/hiring",
         "destination": "/career.html",
         "type": 301
       },
       {
-        "source": "/legacy/",
-        "destination": "https://legacy.rayatiga.com/",
+        "source": "/legacy",
+        "destination": "https://legacy.rayatiga.com",
         "type": 301
       },
       {
-        "source": "/cdn/",
-        "destination": "https://cdn.rayatiga.com/",
+        "source": "/privacy-policy",
+        "destination": "https://legacy.rayatiga.com/#privacy-policy",
         "type": 301
       },
       {
-        "source": "/cloud/",
-        "destination": "https://cloud.rayatiga.com/",
+        "source": "/cdn",
+        "destination": "https://cdn.rayatiga.com",
         "type": 301
       },
       {
-        "source": "/sultankautsar/",
-        "destination": "https://sultankautsar.com/",
+        "source": "/cloud",
+        "destination": "https://cloud.rayatiga.com",
+        "type": 301
+      },
+      {
+        "source": "/sultankautsar",
+        "destination": "https://sultankautsar.com",
         "type": 301
       }
     ],
@@ -48,6 +53,8 @@
           }
         ]
       }
-    ]
+    ],
+    "cleanUrls": true,
+    "trailingSlash": false
   }
 }
