@@ -7,6 +7,26 @@
         "source": "/hiring/",
         "destination": "/career.html",
         "type": 301
+      },
+      {
+        "source": "/legacy/",
+        "destination": "https://legacy.rayatiga.com/",
+        "type": 301
+      },
+      {
+        "source": "/cdn/",
+        "destination": "https://cdn.rayatiga.com/",
+        "type": 301
+      },
+      {
+        "source": "/cloud/",
+        "destination": "https://cloud.rayatiga.com/",
+        "type": 301
+      },
+      {
+        "source": "/sultankautsar/",
+        "destination": "https://sultankautsar.com/",
+        "type": 301
       }
     ],
     "headers": [
