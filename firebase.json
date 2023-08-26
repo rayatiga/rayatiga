@@ -15,7 +15,7 @@
       },
       {
         "source": "/privacy-policy",
-        "destination": "https://legacy.rayatiga.com/#privacy-policy",
+        "destination": "https://legacy.rayatiga.com/privacy-policy",
         "type": 301
       },
       {
