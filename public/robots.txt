@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /res/
 
 Sitemap: https://rayatiga.com/sitemap.xml

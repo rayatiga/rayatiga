@@ -1,31 +1,22 @@
 {
   "hosting": {
     "public": "public",
+    "site": "rayatigacom",
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "redirects": [
       {
-        "source": "/hiring",
-        "destination": "/career.html",
+        "source": "/rayatigacloud",
+        "destination": "https://cloud.rayatiga.com",
         "type": 301
       },
       {
-        "source": "/legacy",
-        "destination": "https://legacy.rayatiga.com",
-        "type": 301
-      },
-      {
-        "source": "/privacy-policy",
-        "destination": "https://legacy.rayatiga.com/privacy-policy",
-        "type": 301
-      },
-      {
-        "source": "/cdn",
+        "source": "/rayatigacdn",
         "destination": "https://cdn.rayatiga.com",
         "type": 301
       },
       {
-        "source": "/cloud",
-        "destination": "https://cloud.rayatiga.com",
+        "source": "/rayatigastaging",
+        "destination": "https://staging.rayatiga.com",
         "type": 301
       },
       {

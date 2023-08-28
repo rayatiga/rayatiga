@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form - Rayatiga</title>
+    <meta name="description" content="Empowering Your Digital Presence" />
+    <meta property="og:image" content="https://rayatiga.com/asset/img/rayatiga-og.jpg" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/asset/css/main.css" />
+    <script defer src="/asset/js/main.js"></script>
+  </head>
+  <body>
+    <div class="container form">
+      <header>
+        <span id="hdr"></span>
+        <hr />
+      </header>
+      <main>
+        <h1>Form submission</h1>
+        <p>Send us a message for more information regarding your feedback. We will be delighted to assist you, and all responses and information will be conveyed through email. Kindly complete the form with accurate details, ensuring that all required fields are filled in.</p>
+        <form>
+          <h2>Type</h2>
+          <input type="radio" name="type" id="support" value="support" required />
+          <label for="support">Support <sup>*</sup></label>
+          <input type="radio" name="type" id="byol" value="byol" required />
+          <label for="byol" title="Bring Your Own Labs">BYOL <sup>*</sup></label>
+          <h2>Identity</h2>
+          <label for="name">Name <sup>*</sup></label>
+          <input type="text" name="name" id="name" placeholder="Enter your name..." required />
+          <label for="email">Email <sup>*</sup></label>
+          <input type="email" name="email" id="email" placeholder="Enter your email..." required />
+          <h2>Message</h2>
+          <label for="subject">Subject <sup>*</sup></label>
+          <input type="text" name="subject" id="subject" placeholder="Enter your subject..." required />
+          <label for="message">Message <sup>*</sup></label>
+          <textarea name="message" id="message" placeholder="Type your message/byol specs here..." maxlength="500" required></textarea>
+          <input type="checkbox" name="agreement" id="agreement" value="ok" required />
+          <label for="agreement">I agree to the privacy policy on this site <sup>*</sup></label>
+          <div class="button">
+            <button type="reset" onclick="formReset()">Reset</button>
+            <button type="reset" onclick="formMaintenance()">Submit</button>
+          </div>
+          <span id="form-status"></span>
+        </form>
+      </main>
+      <footer>
+        <hr />
+        <span id="map"></span>
+        <span id="loc"></span>
+        <hr />
+        <span id="sme"></span>
+        <hr />
+        <span id="cr"></span>
+      </footer>
+    </div>
+  </body>
+</html>
