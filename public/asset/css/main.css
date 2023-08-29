@@ -34,14 +34,14 @@ h1 {
 }
 /* Horizontal line */
 hr {
-  box-sizing: content-box;
   height: 0;
   overflow: visible;
+  box-sizing: content-box;
 }
 /* Pre */
 pre {
-  font-family: monospace, monospace;
   font-size: 1em;
+  font-family: monospace, monospace;
 }
 /* Anchor link */
 a {
@@ -62,8 +62,8 @@ strong {
 code,
 kbd,
 samp {
-  font-family: monospace, monospace;
   font-size: 1em;
+  font-family: monospace, monospace;
 }
 /* Small size */
 small {
@@ -93,10 +93,10 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: inherit;
+  margin: 0;
   font-size: 100%;
   line-height: 1.15;
-  margin: 0;
+  font-family: inherit;
 }
 button,
 input {
@@ -116,8 +116,8 @@ button::-moz-focus-inner,
 [type='button']::-moz-focus-inner,
 [type='reset']::-moz-focus-inner,
 [type='submit']::-moz-focus-inner {
-  border-style: none;
   padding: 0;
+  border-style: none;
 }
 button:-moz-focusring,
 [type='button']:-moz-focusring,
@@ -129,12 +129,12 @@ fieldset {
   padding: 0.35em 0.75em 0.625em;
 }
 legend {
-  box-sizing: border-box;
+  padding: 0;
   color: inherit;
   display: table;
   max-width: 100%;
-  padding: 0;
   white-space: normal;
+  box-sizing: border-box;
 }
 progress {
   vertical-align: baseline;
@@ -152,15 +152,15 @@ textarea {
   height: auto;
 }
 [type='search'] {
-  -webkit-appearance: textfield;
   outline-offset: -2px;
+  -webkit-appearance: textfield;
 }
 [type='search']::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 ::-webkit-file-upload-button {
-  -webkit-appearance: button;
   font: inherit;
+  -webkit-appearance: button;
 }
 details {
   display: block;
@@ -282,6 +282,7 @@ header p {
 }
 /* List */
 ul {
+  padding-left: 1.25em;
   list-style-type: square;
 }
 /* Code */
