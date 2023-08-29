@@ -335,19 +335,19 @@ ul.map {
   gap: 0.65em;
   display: flex;
   flex-wrap: wrap;
-  row-gap: 0.25em;
   list-style: none;
-}
-p.loc {
-  color: var(--gray);
 }
 p.cr {
   margin-bottom: 0;
 }
-a.sme[scheme='light']::before {
+span.sme {
+  cursor: pointer;
+  color: var(--anchor-color);
+}
+[scheme='light'] span.sme::before {
   content: 'dark';
 }
-a.sme[scheme='dark']::before {
+[scheme='dark'] span.sme::before {
   content: 'light';
 }
 /* ===== GLOBAL END ===== */
@@ -386,8 +386,9 @@ div.form main form input#name,
 div.form main form input#email,
 div.form main form input#subject,
 div.form main form textarea#message {
-  margin-top: 0.25em;
   width: 100%;
+  margin-top: 0.25em;
+  box-sizing: border-box;
 }
 div.form main form input[type='checkbox'] {
   margin-top: 1em;
@@ -436,7 +437,7 @@ div.ticket main table td:nth-child(3) {
 div.ticket main table td:nth-child(2) {
   text-transform: lowercase;
 }
-/* Ticket: Media */
+/* Media */
 @media (max-width: 480px) {
   div.ticket main table th:nth-child(2),
   div.ticket main table td:nth-child(2) {
