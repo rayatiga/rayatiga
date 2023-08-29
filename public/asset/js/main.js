@@ -1,6 +1,4 @@
 /* ===== GLOBAL START ===== */
-// Display pathname location below header
-document.getElementById('loc').outerHTML = `<p>Location: ${window.location.pathname}</p>`
 // Display title and subtitle inside header
 document.getElementById('hdr').outerHTML = `<h1>Rayatiga</h1>
                                             <p>Crafting cutting-edge websites to elevate your digital presence.</p>`
@@ -19,8 +17,14 @@ document.getElementById('map').outerHTML = `<p>Navigation & Sitemap</p>
                                               <li><a href="/privacy-policy.html" title="Go to privacy & policy page">Policy</a></li>
                                               <li><a href="/sitemap.html" title="Go to sitemap page">Sitemap</a></li>
                                             </ul>`
-document.getElementById('cr').outerHTML = `<p class="cr">Copyright &copy; 2020-2023 Rayatiga Agency. All Rights Reserved.</p>`
+// Display pathname location inside footer
+document.getElementById('loc').outerHTML = `<p>Location: ${window.location.pathname}</p>`
+// Display scheme inside footer
 document.getElementById('sme').outerHTML = `<p>Your native theme is <span id="nesme"></span>. Switch scheme to <span onclick="switchScheme()" class="sme"></span>.</p>`
+// Display copyright inside footer
+document.getElementById('cr').outerHTML = `<p class="cr">Copyright &copy; 2020-2023 Rayatiga Agency. All Rights Reserved.</p>`
+// Display page information inside footer
+document.getElementById('inf').outerHTML = `<p>Displaying the website in its minimal version. Kindly visit the <a href="/landing">landing page</a> for a more enriching experience.</p>`
 // Get preffered color scheme, local storage scheme, button sme
 let preferScheme = window.matchMedia('(prefers-color-scheme: light)').matches
 let currentScheme = localStorage.getItem('scheme')

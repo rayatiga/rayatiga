@@ -1,4 +1,4 @@
-# Rayatiga: Empowering Your Digital Presence
+# Rayatiga: Empowering Web Solutions for a Digital Future
 
 Welcome to Rayatiga, your go-to solution for simplifying your online presence through user-friendly Information Technology services.
 
