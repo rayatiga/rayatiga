@@ -11,6 +11,7 @@ document.getElementById('map').outerHTML = `<p>Navigation & Sitemap</p>
                                               <li><a href="/about.html" title="Go to about page">About</a></li>
                                               <li><a href="/service.html" title="Go to service page">Service</a></li>
                                               <li><a href="/form.html" title="Go to form submission page">Form</a></li>
+                                              <li><a href="/project.html" title="Go to project page">Project</a></li>
                                               <li><a href="/contact.html" title="Go to contact page">Contact</a></li>
                                               <li><a href="/documentation.html" title="Go to documentation page">Docs</a></li>
                                               <li><a href="/cdn.html" title="Go to CDN page">CDN</a></li>
