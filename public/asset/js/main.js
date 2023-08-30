@@ -23,8 +23,6 @@ document.getElementById('loc').outerHTML = `<p>Location: ${window.location.pathn
 document.getElementById('sme').outerHTML = `<p>Your native theme is <span id="nesme"></span>. Switch scheme to <span onclick="switchScheme()" class="sme"></span>.</p>`
 // Display copyright inside footer
 document.getElementById('cr').outerHTML = `<p class="cr">Copyright &copy; 2020-2023 Rayatiga Agency. All Rights Reserved.</p>`
-// Display page information inside footer
-document.getElementById('inf').outerHTML = `<p>Displaying the website in its minimal version. Kindly visit the <a href="/landing">landing page</a> for a more enriching experience.</p>`
 // Get preffered color scheme, local storage scheme, button sme
 let preferScheme = window.matchMedia('(prefers-color-scheme: light)').matches
 let currentScheme = localStorage.getItem('scheme')

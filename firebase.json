@@ -1,22 +1,11 @@
 {
   "hosting": {
     "public": "public",
-    "site": "rayatigacom",
-    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "ignore": ["**/.*"],
     "redirects": [
       {
-        "source": "/rayatigacloud",
-        "destination": "https://cloud.rayatiga.com",
-        "type": 301
-      },
-      {
-        "source": "/rayatigacdn",
+        "source": "/rcdn",
         "destination": "https://cdn.rayatiga.com",
-        "type": 301
-      },
-      {
-        "source": "/rayatigastaging",
-        "destination": "https://staging.rayatiga.com",
         "type": 301
       },
       {
@@ -27,7 +16,7 @@
     ],
     "headers": [
       {
-        "source": "**/*.@(eot|otf|ttf|ttc|woff|woff2|font.css)",
+        "source": "**/*.@(ttf)",
         "headers": [
           {
             "key": "Access-Control-Allow-Origin",
@@ -36,11 +25,20 @@
         ]
       },
       {
-        "source": "**/*.@(jpg|jpeg|gif|png|css|js|eot|otf|ttf|ttc|woff|woff2)",
+        "source": "**/*.@(jpg|css|js|ttf)",
         "headers": [
           {
             "key": "Cache-Control",
-            "value": "max-age=86400"
+            "value": "max-age=7200"
+          }
+        ]
+      },
+      {
+        "source": "404.html",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=300"
           }
         ]
       }

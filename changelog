@@ -1,0 +1,11 @@
+v1.0
+- Pushing main files first time
+
+v1.1
+- Deleting span with id "inf"
+- Deleting JavaScript line for document id "inf"
+- Add prettier ignore and config file
+
+v1.2
+- Remove cloud subdomain
+- Remove staging subdomain
