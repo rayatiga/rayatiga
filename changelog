@@ -2,10 +2,30 @@ v1.0
 - Pushing main files first time
 
 v1.1
-- Deleting span with id "inf"
-- Deleting JavaScript line for document id "inf"
+- Delete span with id "inf"
+- Delete js line for document id "inf"
 - Add prettier ignore and config file
 
 v1.2
-- Remove cloud subdomain
-- Remove staging subdomain
+- Delete cloud subdomain
+- Delete staging subdomain
+
+v1.3
+- Update prettier config file
+
+v1.4
+- Delete table scroll div
+- Delete table scroll css class
+- Add invoice page
+- Add payment page
+- Add invoice form input feature
+- Update template id
+- Update css hierarchy document
+- Update content for individual page
+- Add rayatiga-qris.png
+
+v1.5
+- Update id and classe name
+- Change image css to founder page
+- Update for adjusting changelog consistency
+- Update displaying chagelog in user input if already found

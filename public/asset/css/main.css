@@ -1,4 +1,4 @@
-/* ===== FONT START ===== */
+/* ===== Font ===== */
 /* Outfit */
 @font-face {
   font-display: swap;
@@ -11,9 +11,9 @@
   font-family: 'Roboto Mono';
   src: url('/asset/font/roboto-mono.ttf');
 }
-/* ===== FONT END ===== */
+/* ===== Font ===== */
 
-/* ===== RESET START ===== */
+/* ===== Reset ===== */
 /* Document */
 html {
   line-height: 1.25;
@@ -174,9 +174,9 @@ template {
 [hidden] {
   display: none;
 }
-/* ===== RESET END ===== */
+/* ===== Reset ===== */
 
-/* ===== GLOBAL START ===== */
+/* ===== Global ===== */
 /* Root */
 :root {
   /* Initial Color */
@@ -296,73 +296,64 @@ code {
   background-color: var(--code-bg);
   font-family: 'Roboto Mono', monospace;
 }
-code[status='0']::before {
-  content: 'Pending';
-}
-code[status='0'] {
-  background-color: var(--code-status-0-bg);
-}
-code[status='1']::before {
-  content: 'Resolved';
-}
-code[status='1'] {
-  background-color: var(--code-status-1-bg);
-}
-code[status='2']::before {
-  content: 'Unresolved';
-}
-code[status='2'] {
-  background-color: var(--code-status-2-bg);
-}
-code[status='3']::before {
-  content: 'Serving';
-}
-code[status='3'] {
-  background-color: var(--code-status-1-bg);
-  animation: glow 350ms ease-in-out alternate infinite;
-}
 code[status] {
   border: 1px solid var(--code-status-border-color);
 }
-/* Image */
-img[alt='verified'] {
-  width: 1.125em;
-  margin-left: 0.25em;
-  margin-bottom: -0.25em;
-}
 /* JavaScript */
-ul.map {
+ul.navigation-sitemap {
   padding: 0;
   gap: 0.65em;
   display: flex;
   flex-wrap: wrap;
   list-style: none;
 }
-p.cr {
+p.copyright {
   margin-bottom: 0;
 }
-span.sme {
+span.scheme {
   cursor: pointer;
   color: var(--anchor-color);
 }
-[scheme='light'] span.sme::before {
+[scheme='light'] span.scheme::before {
   content: 'dark';
 }
-[scheme='dark'] span.sme::before {
+[scheme='dark'] span.scheme::before {
   content: 'light';
 }
-/* ===== GLOBAL END ===== */
+/* ===== Global ===== */
 
-/* ===== DOCUMENTATION START (documentation.html) ===== */
+/* ===== 404.html ===== */
+div.not-found main h1 {
+  color: var(--red);
+}
+/* ===== 404.html ===== */
+
+/* ===== about.html ===== */
+/* ===== about.html ===== */
+
+/* ===== cdn.html ===== */
+div.cdn main p code[status='3']::before {
+  content: 'Serving';
+}
+div.cdn main p code[status='3'] {
+  background-color: var(--code-status-1-bg);
+  animation: glow 350ms ease-in-out alternate infinite;
+}
+/* ===== cdn.html ===== */
+
+/* ===== contact.html ===== */
+/* ===== contact.html ===== */
+
+/* ===== documentation.html ===== */
 div.documentation main div.info-detail {
   padding-left: 1.5em;
 }
 div.documentation main div.info-detail p {
   font-weight: bold;
 }
-/* ===== DOCUMENTATION END (documentation.html) ===== */
+/* ===== documentation.html ===== */
 
-/* ===== FORM START (form.html) ===== */
+/* ===== form.html ===== */
 div.form main form input::placeholder,
 div.form main form textarea::placeholder {
   font-size: 1em;
@@ -415,12 +406,82 @@ div.form main form textarea {
   background-color: var(--input-textarea-bg);
   border: 1px solid var(--input-textarea-border-color);
 }
-/* ===== FORM END (form.html) ===== */
+/* ===== form.html ===== */
 
-/* ===== TICKET START (ticket.html) ===== */
-div.ticket main div.table-scroll {
-  overflow-x: auto;
+/* ===== founder.html ===== */
+div.index main p img {
+  width: 1.125em;
+  margin-left: 0.25em;
+  margin-bottom: -0.25em;
 }
+/* ===== founder.html ===== */
+
+/* ===== index.html ===== */
+/* ===== index.html ===== */
+
+/* ===== invoice.html ===== */
+div.invoice main form#invoice-form {
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  gap: 0.25em;
+}
+div.invoice main form#invoice-form input {
+  width: 100%;
+  box-sizing: border-box;
+  color: var(--input-textarea-color);
+  background-color: var(--input-textarea-bg);
+  border: 1px solid var(--input-textarea-border-color);
+  padding: 0.25em 0.5em;
+  border-radius: 0.25em;
+}
+div.invoice main div.invoice-status p {
+  color: var(--red);
+}
+div.invoice main div.invoice-information {
+  display: none;
+}
+div.invoice main div.invoice-information img {
+  width: 100%;
+  max-width: 25em;
+  border-radius: 0.25em;
+  background-color: var(--light);
+  border: 1px solid var(--border-color);
+}
+/* ===== invoice.html ===== */
+
+/* ===== maintenance.html ===== */
+div.maintenance main h1 {
+  color: var(--red);
+}
+/* ===== maintenance.html ===== */
+
+/* ===== payment.html ===== */
+div.payment main img {
+  width: 100%;
+  max-width: 25em;
+  border-radius: 0.25em;
+  background-color: var(--light);
+  border: 1px solid var(--border-color);
+}
+/* ===== payment.html ===== */
+
+/* ===== privacy-policy.html ===== */
+/* ===== privacy-policy.html ===== */
+
+/* ===== project.html ===== */
+/* ===== project.html ===== */
+
+/* ===== service.html ===== */
+/* ===== service.html ===== */
+
+/* ===== sitemap.html ===== */
+/* ===== sitemap.html ===== */
+
+/* ===== template.html ===== */
+/* ===== template.html ===== */
+
+/* ===== ticket.html ===== */
 div.ticket main table {
   width: 100%;
   border-collapse: collapse;
@@ -431,12 +492,31 @@ div.ticket main table td {
   text-align: left;
   border: 1px solid var(--table-border-color);
 }
-div.ticket main table td:nth-child(1),
-div.ticket main table td:nth-child(3) {
+div.ticket main table tr td:nth-child(1),
+div.ticket main table tr td:nth-child(3) {
   text-transform: uppercase;
 }
-div.ticket main table td:nth-child(2) {
+div.ticket main table tr td:nth-child(2) {
   text-transform: lowercase;
+}
+/* Status */
+div.ticket main table tr td code[status='pending']::before {
+  content: 'Pending';
+}
+div.ticket main table tr td code[status='pending'] {
+  background-color: var(--code-status-0-bg);
+}
+div.ticket main table tr td code[status='resolved']::before {
+  content: 'Resolved';
+}
+div.ticket main table tr td code[status='resolved'] {
+  background-color: var(--code-status-1-bg);
+}
+div.ticket main table tr td code[status='unresolved']::before {
+  content: 'Unresolved';
+}
+div.ticket main table tr td code[status='unresolved'] {
+  background-color: var(--code-status-2-bg);
 }
 /* Media */
 @media (max-width: 480px) {
@@ -445,9 +525,9 @@ div.ticket main table td:nth-child(2) {
     display: none;
   }
 }
-/* ===== TICKET END (ticket.html) ===== */
+/* ===== ticket.html ===== */
 
-/* ===== KEYFRAME START ===== */
+/* ===== Keyframe ===== */
 @keyframes glow {
   from {
     opacity: 1;
@@ -456,9 +536,9 @@ div.ticket main table td:nth-child(2) {
     opacity: 0.75;
   }
 }
-/* ===== KEYFRAME END ===== */
+/* ===== Keyframe ===== */
 
-/* ===== SCHEME START ===== */
+/* ===== Scheme ===== */
 [scheme='light'] {
   --code-bg: #eeeeee;
   --thumb-bg: #aaaaaa;
@@ -515,4 +595,4 @@ div.ticket main table td:nth-child(2) {
     --code-status-border-color: var(--gray);
   }
 }
-/* ===== SCHEME END ===== */
+/* ===== Scheme ===== */

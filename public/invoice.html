@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Invoice - Rayatiga</title>
+    <meta name="description" content="Empowering web solutions for a digital future." />
+    <meta property="og:image" content="https://rayatiga.com/asset/img/rayatiga-og.jpg" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/asset/css/main.css" />
+    <script defer src="/asset/js/main.js"></script>
+  </head>
+  <body>
+    <div class="container invoice">
+      <header>
+        <span id="header"></span>
+        <hr />
+      </header>
+      <main>
+        <h1>Invoice</h1>
+        <p>The Invoice web page offers a comprehensive solution for managing financial transactions with ease and precision.</p>
+        <p>This user-friendly platform is designed to streamline the invoicing process, catering to businesses of all sizes. Upon accessing the web page, users are greeted with a clean and intuitive interface that allows them to generate, send, and track invoices effortlessly.</p>
+        <form id="invoice-form">
+          <label for="invoice-input">Invoice number</label>
+          <input type="number" id="invoice-input" placeholder="Enter 5 digit of invoice number (e.g., 12345)" />
+          <button type="submit" id="invoice-input-button" onclick="invoiceSearch()">Search</button>
+        </form>
+        <div class="invoice-status">
+          <p><span id="invoice-not-found"></span></p>
+        </div>
+        <div class="invoice-information">
+          <h1><span id="invoice-tag"></span></h1>
+          <span>Wrong invoice? <a id="invoice-reset" onclick="invoiceReset()">Reset here</a> then input again.</span>
+          <p>
+            Invoice no: <strong id="invoice-no"></strong> <br />
+            Due date: <span id="invoice-due"></span> <br />
+            Submitted on: <span id="invoice-sub"></span> <br />
+            Payment option: QRIS - All Payment Method <br />
+          </p>
+          <hr />
+          <h1>For</h1>
+          <p>
+            Name: <span id="invoice-for-name"></span> <br />
+            Company: <span id="invoice-for-comp"></span> <br />
+            Phone: <span id="invoice-for-ph"></span> <br />
+            Email: <span id="invoice-for-em"></span> <br />
+            Service: <span id="invoice-for-serv"></span> <br />
+          </p>
+          <hr />
+          <h1>Detail</h1>
+          <h2>Paid</h2>
+          <ul>
+            <span id="invoice-detail-paid"></span>
+          </ul>
+          <h2>Discounted & Other</h2>
+          <ul>
+            <span id="invoice-detail-disco"></span>
+          </ul>
+          <h2>Total</h2>
+          <p>
+            Your total amount: <strong id="invoice-detail-tot"></strong> <br />
+            Pay your total amount on <a href="/payment.html">payment page</a>. <br />
+          </p>
+          <p>Alternatively, scan this QRIS and enter your total amount. Please ensure that the business name on the QRIS is <strong>Rayatiga.com</strong>.</p>
+          <img src="/asset/img/rayatiga-qris.png" alt="Rayatiga QRIS Code" />
+          <p>Services marked with an asterisk (*) fall outside the scope of our agency and may result in significant changes to both price and schedule. The adjusted price is intended to reflect the total number of orders placed.</p>
+        </div>
+        <p>Looking for a quicker checkup? Please submit proof of your successful payment on the <a href="/form.html">form submission</a> page.</p>
+      </main>
+      <footer>
+        <hr />
+        <span id="navigation-sitemap"></span>
+        <span id="location"></span>
+        <hr />
+        <span id="scheme"></span>
+        <hr />
+        <span id="copyright"></span>
+      </footer>
+    </div>
+  </body>
+</html>

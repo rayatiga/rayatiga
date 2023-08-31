@@ -13,7 +13,7 @@
   <body>
     <div class="container form">
       <header>
-        <span id="hdr"></span>
+        <span id="header"></span>
         <hr />
       </header>
       <main>
@@ -21,10 +21,12 @@
         <p>Send us a message for more information regarding your feedback. We will be delighted to assist you, and all responses and information will be conveyed through email. Kindly complete the form with accurate details, ensuring that all required fields are filled in.</p>
         <form>
           <h2>Type</h2>
-          <input type="radio" name="type" id="support" value="support" required />
+          <input type="radio" name="type" id="support" value="support" onclick="radioChecked()" required />
           <label for="support">Support <sup>*</sup></label>
-          <input type="radio" name="type" id="byol" value="byol" required />
+          <input type="radio" name="type" id="byol" value="byol" onclick="radioChecked()" required />
           <label for="byol" title="Bring Your Own Labs">BYOL <sup>*</sup></label>
+          <input type="radio" name="type" id="proof" value="proof" onclick="radioChecked()" required />
+          <label for="proof">Proof <sup>*</sup></label>
           <h2>Identity</h2>
           <label for="name">Name <sup>*</sup></label>
           <input type="text" name="name" id="name" placeholder="Enter your name..." required />
@@ -34,7 +36,7 @@
           <label for="subject">Subject <sup>*</sup></label>
           <input type="text" name="subject" id="subject" placeholder="Enter your subject..." required />
           <label for="message">Message <sup>*</sup></label>
-          <textarea name="message" id="message" placeholder="Type your message/byol specs here..." maxlength="500" required></textarea>
+          <textarea name="message" id="message" placeholder="Please select type first or enter message..." maxlength="500" required></textarea>
           <input type="checkbox" name="agreement" id="agreement" value="ok" required />
           <label for="agreement">I agree to the privacy policy on this site <sup>*</sup></label>
           <div class="button">
@@ -46,12 +48,12 @@
       </main>
       <footer>
         <hr />
-        <span id="map"></span>
-        <span id="loc"></span>
+        <span id="navigation-sitemap"></span>
+        <span id="location"></span>
         <hr />
-        <span id="sme"></span>
+        <span id="scheme"></span>
         <hr />
-        <span id="cr"></span>
+        <span id="copyright"></span>
       </footer>
     </div>
   </body>
