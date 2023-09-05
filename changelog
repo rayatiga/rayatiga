@@ -4,7 +4,7 @@ v1.0
 v1.1
 - Delete span with id "inf"
 - Delete js line for document id "inf"
-- Add prettier ignore and config file
+- Create prettier ignore and config file
 
 v1.2
 - Delete cloud subdomain
@@ -16,16 +16,63 @@ v1.3
 v1.4
 - Delete table scroll div
 - Delete table scroll css class
-- Add invoice page
-- Add payment page
-- Add invoice form input feature
+- Create invoice page
+- Create payment page
+- Create invoice form input feature
 - Update template id
 - Update css hierarchy document
 - Update content for individual page
-- Add rayatiga-qris.png
+- Create rayatiga-qris.png
 
 v1.5
 - Update id and classe name
 - Change image css to founder page
 - Update for adjusting changelog consistency
 - Update displaying chagelog in user input if already found
+
+v1.6
+- Create folder public v2 and importing the content
+- Update public folder move to public root
+- Update rename from add to create in changelog
+- Update gitignore public v2
+
+v1.7
+- Update gitignore removing ignore for public v2 folder
+- Create sitemap and robots for page indexing
+
+v1.8
+- Create wrangler deployment script
+- Update firebase public path to v2
+- Create redirects inside _redirects file
+
+v1.9
+- Update moving create to v2
+- Delete all previous landing moved to v2
+- Update pricing and services
+- Update asset css and js from create to main
+- Delete 404 page
+
+v2.0
+- Update cdn to unserving and display deleted file
+- Update documentation info about website technology and features
+- Create css rule with code status 4
+
+v2.1
+- Update div class for fixing verified image in founder page
+- Create developer naviation page on main js when in local ip
+- Add static package and glossary for pay as you go
+
+v2.2
+- Add legacy files to asset v2 folder
+- Update route link in legacy files
+- Delete legacy sitemap favicon and others non required files
+
+v2.3
+- Update path verified image at founder page 
+- Update path legacy from v2 asset to v2
+- Update path from asset legacy to legacy
+
+v2.4
+- Update worker js template to each html file for avoiding cumulative layout shift
+- Update invoice information and details
+- Delete legacy folder
