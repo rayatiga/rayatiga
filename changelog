@@ -1,5 +1,5 @@
 v1.0
-- Pushing main files first time
+- Create main files first time
 
 v1.1
 - Delete span with id "inf"
@@ -60,10 +60,10 @@ v2.0
 v2.1
 - Update div class for fixing verified image in founder page
 - Create developer naviation page on main js when in local ip
-- Add static package and glossary for pay as you go
+- Create static package and glossary for pay as you go
 
 v2.2
-- Add legacy files to asset v2 folder
+- Create legacy files to asset v2 folder
 - Update route link in legacy files
 - Delete legacy sitemap favicon and others non required files
 
@@ -76,3 +76,11 @@ v2.4
 - Update worker js template to each html file for avoiding cumulative layout shift
 - Update invoice information and details
 - Delete legacy folder
+
+v2.5
+- Delete folder public root
+- Update moving folder public v2 to public
+- Update wrangler deploy script echo and change directory to public
+
+v2.6
+- Update changelog

@@ -2,8 +2,6 @@
 
 Welcome to Rayatiga, your go-to solution for simplifying your online presence through user-friendly Information Technology services.
 
-![image](https://github.com/rayatiga/rayatiga/assets/42274355/7278b79b-712e-42d7-a973-89046582b2f7)
-
 ## About Us
 
 Rayatiga specializes in helping individuals, entrepreneurs, and small businesses establish a strong online identity with ease. Our core services revolve around building dynamic websites using the WordPress platform and facilitating domain name reservations.
