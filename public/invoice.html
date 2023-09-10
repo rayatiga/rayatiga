@@ -1,139 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- gtag.js -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-E94958W4T7"></script>
+    <script>
+      window.dataLayer = window.dataLayer || []
+      function gtag() {
+        dataLayer.push(arguments)
+      }
+      gtag('js', new Date())
+      gtag('config', 'G-E94958W4T7')
+    </script>
+    <!-- gtag.js -->
     <meta charset="UTF-8" />
-    <meta name="robots" content="noindex, nofollow" />
-    <title>Rayatiga Invoice</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Invoice - Rayatiga</title>
+    <meta name="description" content="Empowering web solutions for a digital future." />
+    <meta property="og:image" content="https://rayatiga.com/asset/img/rayatiga-og.jpg" />
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="/asset/css/invoice.css" />
+    <link rel="stylesheet" href="/asset/css/main.css" />
+    <script defer src="/asset/js/main.js"></script>
   </head>
   <body>
-    <div class="inv container">
-      <hr />
+    <div class="container invoice">
       <header>
-        <div class="from">
-          <h1>Rayatiga</h1>
-          <a href="https://rayatiga.com/">rayatiga.com</a>
-          <span>24 Menur Ave.,</span>
-          <span>Pahlawan St., Central Magelang,</span>
-          <span>Magelang, Central Java, 56117 Indonesia.</span>
-          <span>+62 821 2222 0362</span>
-          <a href="mailto:contact@rayatiga.com">contact@rayatiga.com</a>
-        </div>
-        <div class="pay">
-          <h1>#123</h1>
-          <span>Order Number #123</span>
-          <span>Payment Information</span>
-          <span>BCA 1221368067 (Sultan Kautsar) or</span>
-          <span>Quick Response Indonesian Standard (QRIS) at</span>
-          <a href="https://rayatiga.com/res/payment/">rayatiga.com/res/payment</a>
-        </div>
+        <h1>Rayatiga</h1>
+        <p>Crafting cutting-edge websites to elevate your digital presence.</p>
+        <hr />
       </header>
       <main>
-        <div class="title">
-          <h1>Invoice</h1>
-          <span>Submitted on 02/20/2020</span>
+        <h1>Invoice</h1>
+        <p>The Invoice web page offers a comprehensive solution for managing financial transactions with ease and precision.</p>
+        <p>This user-friendly platform is designed to streamline the invoicing process, catering to businesses of all sizes. Upon accessing the web page, users are greeted with a clean and intuitive interface that allows them to generate, send, and track invoices effortlessly.</p>
+        <form id="invoice-form">
+          <label for="invoice-input">Invoice number</label>
+          <input type="number" id="invoice-input" placeholder="Enter 5 digit of invoice number (e.g., 12345)" />
+          <button type="submit" id="invoice-input-button" onclick="invoiceSearch()">Search</button>
+        </form>
+        <div class="invoice-status">
+          <p><span id="invoice-not-found"></span></p>
         </div>
-        <div class="info">
-          <div class="destination">
-            <h1>Invoice for</h1>
-            <span>Sultan Kautsar</span>
-            <span>Rayatiga</span>
-            <span>+62 812 2545 9071</span>
-            <span>contact@sultankautsar.com</span>
-          </div>
-          <div class="for">
-            <h1>Payable to</h1>
-            <a href="/">Rayatiga.com</a>
-            <h1>Service</h1>
-            <span>Domain <a href="https://sultankautsar.com/">sultankautsar.com</a></span>
-          </div>
-          <div class="due">
-            <h1>Invoice #</h1>
-            <span>R-INV-02202020-123-DMN</span>
-            <h1>Due date</h1>
-            <span>02/27/2020</span>
-          </div>
+        <div class="invoice-information">
+          <h1><span id="invoice-tag"></span></h1>
+          <span>Wrong invoice? <a id="invoice-reset" onclick="invoiceReset()">Reset here</a> then input again.</span>
+          <p>
+            Invoice no: <strong id="invoice-no"></strong> <br />
+            Due date: <span id="invoice-due"></span> <br />
+            Submitted on: <span id="invoice-submitted"></span> <br />
+            Payment option: <span id="invoice-payment-option"></span>
+          </p>
+          <p>
+            Status: <code id="invoice-status"></code><br />
+            Last updated: <code id="invoice-last-updated"></code>
+          </p>
+          <hr />
+          <h1>For</h1>
+          <p>
+            Name: <span id="invoice-for-name"></span> <br />
+            Company: <span id="invoice-for-company"></span> <br />
+            Phone: <span id="invoice-for-phone"></span> <br />
+            Email: <span id="invoice-for-email"></span> <br />
+            Service: <span id="invoice-for-service"></span>
+          </p>
+          <hr />
+          <h1>Detail</h1>
+          <h2>Paid</h2>
+          <ul>
+            <span id="invoice-detail-paid"></span>
+          </ul>
+          <h2>Discounted & Other</h2>
+          <ul>
+            <span id="invoice-detail-discount-other"></span>
+          </ul>
+          <h2>Total</h2>
+          <p>
+            Your total amount: <strong id="invoice-detail-total"></strong> <br />
+            Pay your total amount on <a href="/payment.html">payment page</a>.
+          </p>
+          <p>
+            <strong>Payment method QRIS</strong> <br />
+            Alternatively, scan this QRIS and enter your total amount. Please ensure that the business name on the QRIS is <strong>Rayatiga.com</strong>.
+          </p>
+          <img src="/asset/img/rayatiga-qris.png" alt="Rayatiga QRIS Code" />
+          <p>
+            <strong>Payment method Bank Transfer</strong> <br />
+            The other alternative, via bank transfer to BCA, <strong>1221368067</strong>, account name <strong>SULTAN KAUTSAR</strong>.
+          </p>
+          <p>
+            <strong>Other information</strong> <br />
+            Services marked with an asterisk (*) fall outside the scope of our agency and may result in significant changes to both price and schedule. The adjusted price is intended to reflect the total number of orders placed.
+          </p>
         </div>
-        <table>
-          <tr>
-            <th>Description</th>
-            <th>Qty</th>
-            <th>Unit Price</th>
-            <th>Total Price</th>
-          </tr>
-          <tr>
-            <td>Domain <a href="https://sultankautsar.com/">sultankautsar.com</a></td>
-            <td>1</td>
-            <td>178.000,00</td>
-            <td>178.000,00</td>
-          </tr>
-          <tr>
-            <td>CloudFlare</td>
-            <td>1</td>
-            <td>0,00</td>
-            <td>0,00</td>
-          </tr>
-          <tr>
-            <td>Maintenance</td>
-            <td>1</td>
-            <td>75.000,00</td>
-            <td>75.000,00</td>
-          </tr>
-          <tr>
-            <td>International Tax</td>
-            <td>1</td>
-            <td>8.400,00</td>
-            <td>8.400,00</td>
-          </tr>
-          <tr>
-            <td><b>Discounted</b> Maintenance</td>
-            <td>1</td>
-            <td>75.000,00</td>
-            <td>75.000,00</td>
-          </tr>
-          <tr>
-            <td><b>Discounted</b> International Tax</td>
-            <td>1</td>
-            <td>8.400,00</td>
-            <td>8.400,00</td>
-          </tr>
-          <tr>
-            <td>Other</td>
-            <td>0</td>
-            <td>0,00</td>
-            <td>0,00</td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td>Subtotal</td>
-            <td>178.100,000</td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td>Adjustment</td>
-            <td>26.00,00</td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td><b>TOTAL</b></td>
-            <td>178.126,00</td>
-          </tr>
-        </table>
+        <p>Looking for a quicker checkup? Please submit proof of your successful payment on the <a href="/form.html">form submission</a> page.</p>
       </main>
       <footer>
-        <span>Notes: Services with an asterisk are outside our agency. May cause significant price and schedule changes. Adjustment price intended for labeling number of orders</span>
-        <button onclick="window.print()">Print</button>
+        <hr />
+        <p>Navigation & Sitemap</p>
+        <ul class="navigation-sitemap">
+          <li><a href="/">Home</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/service.html">Service</a></li>
+          <li><a href="/form.html">Form</a></li>
+          <li><a href="/project.html">Project</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+          <li><a href="/documentation.html">Docs</a></li>
+          <li><a href="/cdn.html">CDN</a></li>
+          <li><a href="/ticket.html">Ticket</a></li>
+          <li><a href="/privacy-policy.html">Policy</a></li>
+          <li><a href="/sitemap.html">Sitemap</a></li>
+        </ul>
+        <p>Location: <span id="location"></span></p>
+        <hr />
+        <p>Your native theme is <span id="native-scheme"></span>. Switch scheme to <span onclick="switchScheme()" class="scheme"></span>.</p>
+        <hr />
+        <p class="copyright">Copyright &copy; 2020-2023 Rayatiga Agency. All Rights Reserved.</p>
       </footer>
     </div>
-    <div class="template">
-      <span>Warning!</span>
-      <p>This is invoice template.</p>
-      <button onclick="closeTemplate()">OK, Understand</button>
-    </div>
-    <script src="/asset/js/invoice.js"></script>
   </body>
 </html>
