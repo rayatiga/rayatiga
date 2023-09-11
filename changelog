@@ -84,3 +84,41 @@ v2.5
 
 v2.6
 - Update changelog
+
+v2.7
+- Update wrangler deploy with user interactive
+- Create v1 and v2 directory
+- Update move public to public v1
+- Create v1 with legacy content
+
+v2.8
+- Update fixing wrangler deploy directory source
+
+v2.9
+- Delete public v1 v2 v3 and move v1 to public only
+
+v3.0
+- Delete cdn serving file
+- Delete deleted cdn file in css rule
+
+v3.1
+- Create gtag.js below head open tag
+- Delete firebase integration
+- Delete fireabase gitignore
+- Delete title on navigation sitemap
+- Update title at verified to verified person
+
+v3.2
+- Update fix delete double gtag.js inside index.html file
+
+v3.3
+- Create tag site to display information about web style on bottom right
+
+v3.4
+- Create new workflow page
+- Update documentation, sitemap, and developer navigation pointing to workflow page
+- Update comment section on css and js adwith file name colon
+
+v3.5
+- Update local storage and attribute scheme to rayatiga-scheme
+- Update invoice local storage and attribute to rayatiga-invoice
