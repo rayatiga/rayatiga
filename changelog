@@ -122,3 +122,9 @@ v3.4
 v3.5
 - Update local storage and attribute scheme to rayatiga-scheme
 - Update invoice local storage and attribute to rayatiga-invoice
+
+v3.6
+- Update favicon to dark and white 48x48
+
+v3.7
+- Delete bottom information inside main.js

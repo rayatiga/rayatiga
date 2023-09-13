@@ -222,10 +222,4 @@ if (window.location.hostname == '127.0.0.1' || window.location.hostname == 'loca
   }
   navdev.innerHTML += `<li>(Count: ${count})</li>`
 }
-// Display tag site at bottom right for giving information about website style
-let tagSite = `<!-- main.js: Bottom Information --><div id="tag-site"><span>Why text only</span><span onclick="tagSiteClose()" title="Close">&times;</span><span>You viewing in <u>legacy mode</u>. The normal website is under maintenance.</span></div>`
-document.body.insertAdjacentHTML('beforeend', tagSite);
-function tagSiteClose() {
-  document.getElementById('tag-site').style.display = 'none'
-}
 /* ===== Other ===== */
