@@ -128,3 +128,16 @@ v3.6
 
 v3.7
 - Delete bottom information inside main.js
+
+v3.8
+- Delete no required font files
+- Update and change font family for all elements to inconsolata.ttf
+
+v3.9
+- Delete reset css section
+- Update server return with black heading
+- Create small with class development
+- Create span with attribute onclick act like anchor
+- Create table overflow
+- Update character case capitalize on heading
+- Create table version below unordered list service page

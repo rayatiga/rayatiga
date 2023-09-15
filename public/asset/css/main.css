@@ -1,189 +1,15 @@
 /* ===== Font ===== */
-/* Outfit */
+/* Inconsolata */
 @font-face {
   font-display: swap;
-  font-family: 'Outfit';
-  src: url('/asset/font/outfit.ttf');
-}
-/* Roboto Mono */
-@font-face {
-  font-display: swap;
-  font-family: 'Roboto Mono';
-  src: url('/asset/font/roboto-mono.ttf');
+  font-family: 'Inconsolata';
+  src: url('/asset/font/inconsolata.ttf');
 }
 /* ===== Font ===== */
-
-/* ===== Reset ===== */
-/* All Element */
-* {
-  box-sizing: border-box;
-}
-/* Document */
-html {
-  line-height: 1.25;
-  -webkit-text-size-adjust: 100%;
-}
-/* Body */
-body {
-  margin: 0;
-}
-/* Main */
-main {
-  display: block;
-}
-/* Heading */
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
-/* Horizontal line */
-hr {
-  height: 0;
-  overflow: visible;
-  box-sizing: content-box;
-}
-/* Pre */
-pre {
-  font-size: 1em;
-  font-family: monospace, monospace;
-}
-/* Anchor link */
-a {
-  background-color: transparent;
-}
-/* Abbreviation */
-abbr[title] {
-  border-bottom: none;
-  text-decoration: underline;
-  text-decoration: underline dotted;
-}
-/* Bold text */
-b,
-strong {
-  font-weight: bolder;
-}
-/* Code text */
-code,
-kbd,
-samp {
-  font-size: 1em;
-  font-family: monospace, monospace;
-}
-/* Small size */
-small {
-  font-size: 80%;
-}
-/* Sub and sup */
-sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-}
-sub {
-  bottom: -0.25em;
-}
-sup {
-  top: -0.5em;
-}
-/* Image */
-img {
-  border-style: none;
-}
-/* Form */
-button,
-input,
-optgroup,
-select,
-textarea {
-  margin: 0;
-  font-size: 100%;
-  line-height: 1.15;
-  font-family: inherit;
-}
-button,
-input {
-  overflow: visible;
-}
-button,
-select {
-  text-transform: none;
-}
-button,
-[type='button'],
-[type='reset'],
-[type='submit'] {
-  -webkit-appearance: button;
-}
-button::-moz-focus-inner,
-[type='button']::-moz-focus-inner,
-[type='reset']::-moz-focus-inner,
-[type='submit']::-moz-focus-inner {
-  padding: 0;
-  border-style: none;
-}
-button:-moz-focusring,
-[type='button']:-moz-focusring,
-[type='reset']:-moz-focusring,
-[type='submit']:-moz-focusring {
-  outline: 1px dotted ButtonText;
-}
-fieldset {
-  padding: 0.35em 0.75em 0.625em;
-}
-legend {
-  padding: 0;
-  color: inherit;
-  display: table;
-  max-width: 100%;
-  white-space: normal;
-  box-sizing: border-box;
-}
-progress {
-  vertical-align: baseline;
-}
-textarea {
-  overflow: auto;
-}
-[type='checkbox'],
-[type='radio'] {
-  box-sizing: border-box;
-  padding: 0;
-}
-[type='number']::-webkit-inner-spin-button,
-[type='number']::-webkit-outer-spin-button {
-  height: auto;
-}
-[type='search'] {
-  outline-offset: -2px;
-  -webkit-appearance: textfield;
-}
-[type='search']::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-::-webkit-file-upload-button {
-  font: inherit;
-  -webkit-appearance: button;
-}
-details {
-  display: block;
-}
-summary {
-  display: list-item;
-}
-template {
-  display: none;
-}
-[hidden] {
-  display: none;
-}
-/* ===== Reset ===== */
 
 /* ===== Global ===== */
 /* Root */
 :root {
-  /* Initial Color */
   --red: #ff0000;
   --gray: #787878;
   --blue: #0000ff;
@@ -217,14 +43,12 @@ template {
   --font-weight: 400;
   --box-padding: 1em;
   --scrollbar-width: 12px;
-  --body-font-family: 'Outfit', sans-serif;
+  --body-font-family: 'Inconsolata', monospace;
 }
-/* Selection */
 ::selection {
   color: var(--selection-color);
   background-color: var(--selection-bg);
 }
-/* Scrollbar */
 ::-webkit-scrollbar {
   width: var(--scrollbar-width);
 }
@@ -237,13 +61,16 @@ template {
 ::-webkit-scrollbar-thumb:hover {
   background-color: var(--thumb-hover-bg);
 }
-/* Document */
+* {
+  box-sizing: border-box;
+}
 html {
   overflow-y: auto;
+  line-height: 1.25;
   overflow-x: hidden;
 }
-/* Body */
 body {
+  margin: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -254,12 +81,11 @@ body {
   background-color: var(--body-bg);
   font-family: var(--body-font-family);
 }
-/* Container */
 .container {
   padding: var(--box-padding);
   max-width: var(--box-width);
 }
-/* Anchor */
+/* Unit */
 a {
   cursor: pointer;
   text-decoration: none;
@@ -271,25 +97,19 @@ a:visited {
 a:hover {
   text-decoration: underline;
 }
-/* Horizontal */
-hr {
-  border: 0;
-  border-top: 0.07em solid var(--border-color);
+button {
+  border-radius: 0.25em;
+  padding: 0.15em 0.35em;
+  color: var(--body-color);
+  background-color: var(--body-bg);
+  border: 1px solid var(--input-textarea-border-color);
 }
-/* Header */
-header h1 {
-  margin-top: 0;
-  margin-bottom: 0;
+button,
+input,
+textarea {
+  font-size: 1em;
+  font-family: var(--body-font-family);
 }
-header p {
-  margin-top: 0.75em;
-}
-/* List */
-ul {
-  padding-left: 1.25em;
-  list-style-type: square;
-}
-/* Code */
 code {
   font-weight: 400;
   font-size: 0.85em;
@@ -298,25 +118,47 @@ code {
   border-radius: 0.25em;
   vertical-align: middle;
   background-color: var(--code-bg);
-  font-family: 'Roboto Mono', monospace;
+  font-family: var(--body-font-family);
 }
 code[status] {
   border: 1px solid var(--code-status-border-color);
 }
-/* JavaScript */
-ul.navigation-sitemap {
-  padding: 0;
-  gap: 0.65em;
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
+hr {
+  border: 0;
+  border-top: 0.07em solid var(--border-color);
+}
+header h1 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+header p {
+  margin-top: 0.75em;
 }
 p.copyright {
   margin-bottom: 0;
 }
-span.scheme {
+small.development {
+  color: var(--red);
+}
+span.scheme,
+span[onclick] {
   cursor: pointer;
   color: var(--anchor-color);
+}
+span[onclick]:hover {
+  text-decoration: underline;
+}
+ul {
+  padding-left: 1.25em;
+  list-style-type: square;
+}
+ul.navigation-sitemap {
+  padding: 0;
+  gap: 1em;
+  display: flex;
+  row-gap: 0.65em;
+  flex-wrap: wrap;
+  list-style: none;
 }
 [rayatiga-scheme='light'] span.scheme::before {
   content: 'dark';
@@ -327,9 +169,6 @@ span.scheme {
 /* ===== Global ===== */
 
 /* ===== 404: 404.html ===== */
-div.not-found main h1 {
-  color: var(--red);
-}
 /* ===== 404: 404.html ===== */
 
 /* ===== About: about.html ===== */
@@ -479,9 +318,6 @@ div.invoice main div.invoice-information img {
 /* ===== Invoice: invoice.html ===== */
 
 /* ===== Maintenance: maintenance.html ===== */
-div.maintenance main h1 {
-  color: var(--red);
-}
 /* ===== Maintenance: maintenance.html ===== */
 
 /* ===== Payment: payment.html ===== */
@@ -501,6 +337,21 @@ div.payment main img {
 /* ===== Project: project.html ===== */
 
 /* ===== Service: service.html ===== */
+div.service main div.table-overflow table {
+  width: 100%;
+  border-collapse: collapse;
+}
+div.service main div.table-overflow table th,
+div.service main div.table-overflow table td {
+  padding: 0.4em;
+  text-align: left;
+  border: 1px solid var(--table-border-color);
+}
+@media (max-width: 441px) {
+  div.service main div.table-overflow {
+    display: none;
+  }
+}
 /* ===== Service: service.html ===== */
 
 /* ===== Sitemap: sitemap.html ===== */
@@ -510,50 +361,68 @@ div.payment main img {
 /* ===== Template: template.html ===== */
 
 /* ===== Ticket: ticket.html ===== */
-div.ticket main table {
+div.ticket main div.table-overflow table {
   width: 100%;
   border-collapse: collapse;
 }
-div.ticket main table th,
-div.ticket main table td {
+div.ticket main div.table-overflow table th,
+div.ticket main div.table-overflow table td {
   padding: 0.4em;
   text-align: left;
   border: 1px solid var(--table-border-color);
 }
-div.ticket main table tr td:nth-child(1),
-div.ticket main table tr td:nth-child(3) {
+div.ticket main div.table-overflow table tr td:nth-child(1),
+div.ticket main div.table-overflow table tr td:nth-child(3) {
   text-transform: uppercase;
 }
-div.ticket main table tr td:nth-child(2) {
+div.ticket main div.table-overflow table tr td:nth-child(2) {
   text-transform: lowercase;
 }
-/* Status */
-div.ticket main table tr td code[status='pending']::before {
+div.ticket main div.table-overflow table tr td code[status='pending']::before {
   content: 'Pending';
 }
-div.ticket main table tr td code[status='pending'] {
+div.ticket main div.table-overflow table tr td code[status='pending'] {
   background-color: var(--code-status-0-bg);
 }
-div.ticket main table tr td code[status='resolved']::before {
+div.ticket main div.table-overflow table tr td code[status='resolved']::before {
   content: 'Resolved';
 }
-div.ticket main table tr td code[status='resolved'] {
+div.ticket main div.table-overflow table tr td code[status='resolved'] {
   background-color: var(--code-status-1-bg);
 }
-div.ticket main table tr td code[status='unresolved']::before {
+div.ticket main div.table-overflow table tr td code[status='unresolved']::before {
   content: 'Unresolved';
 }
-div.ticket main table tr td code[status='unresolved'] {
+div.ticket main div.table-overflow table tr td code[status='unresolved'] {
   background-color: var(--code-status-2-bg);
 }
-/* Media */
-@media (max-width: 480px) {
-  div.ticket main table th:nth-child(2),
-  div.ticket main table td:nth-child(2) {
+div.ticket main u {
+  display: none;
+}
+@media (max-width: 336px) {
+  div.ticket main div.table-overflow {
     display: none;
+  }
+  div.ticket main u {
+    display: block;
   }
 }
 /* ===== Ticket: ticket.html ===== */
+
+/* ===== Workflow: workflow.html ===== */
+div.workflow main input {
+  width: 100%;
+  margin: 0.25em 0;
+  padding: 0.25em 0.5em;
+  border-radius: 0.25em;
+  color: var(--input-textarea-color);
+  background-color: var(--input-textarea-bg);
+  border: 1px solid var(--input-textarea-border-color);
+}
+div.workflow main div.workflow-information {
+  display: none;
+}
+/* ===== Workflow: workflow.html ===== */
 
 /* ===== Keyframe ===== */
 @keyframes glow {
@@ -626,42 +495,4 @@ div.ticket main table tr td code[status='unresolved'] {
 /* ===== Scheme ===== */
 
 /* ===== Other ===== */
-div#tag-site {
-  bottom: 0;
-  gap: 0.5em;
-  right: 1em;
-  width: 220px;
-  display: flex;
-  padding: 0.5em;
-  position: fixed;
-  margin-bottom: -68px;
-  transition: 0.35s all;
-  flex-direction: column;
-  background-color: var(--body-bg);
-  border: 1px solid var(--body-color);
-}
-div#tag-site:hover {
-  width: 220px;
-  margin-bottom: -1px;
-}
-div#tag-site span:first-child {
-  font-weight: 600;
-}
-div#tag-site span:first-child::after {
-  content: '? 🤔';
-}
-div#tag-site span:nth-child(2) {
-  top: 0;
-  right: 0;
-  cursor: pointer;
-  padding: 0 0.5em;
-  font-weight: 600;
-  font-size: 1.75em;
-  position: absolute;
-}
-@media (max-width: 257px) {
-  div#tag-site {
-    display: none;
-  }
-}
 /* ===== Other ===== */
