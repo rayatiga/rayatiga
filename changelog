@@ -141,3 +141,26 @@ v3.9
 - Create table overflow
 - Update character case capitalize on heading
 - Create table version below unordered list service page
+
+v4.0
+- Update navigation sitemap menu to more less
+- Update workflow now in production mode
+- Update add margin left to sub tag
+- Create boolean for developer navigation switch
+- Create workflow worker and adding data to main.js
+- Update form is now in production mode and ready to use
+
+v4.1
+- Create data api map on documentation page
+- Update change to url parameter on service page whatsapp link
+- Create ticket list page on sitemap page
+- Update workflow table, id, and change to url parameter
+- Create step by step on workflow page
+- Update css font color to red on workflow return status
+- Create new fetch api replacing local data inside main.js
+- Create json folder inside asset to store the data list
+
+v4.2
+- Update data api map on documentation page
+- Update api to local file
+- Create function on local to detect development mode

@@ -1,0 +1,23 @@
+[
+  {
+    "id": "2308251137",
+    "subject": "Front Page Displayed Not Properly",
+    "pic": "R01",
+    "status": "resolved",
+    "step": ["Checking target page", "Inspecting front end code", "Fixing front end code", "Testing target page", "Page fixed", "Message: Front page has been fixed."]
+  },
+  {
+    "id": "2308251457",
+    "subject": "AJAX Shopping Cart Not Working",
+    "pic": "R01",
+    "status": "pending",
+    "step": ["System checking", "Inspecting back end code"]
+  },
+  {
+    "id": "2308251534",
+    "subject": "My Payment Gateway Error",
+    "pic": "R01",
+    "status": "unresolved",
+    "step": ["System checking", "Inspecting back end code", "Testing sytem", "System OK", "Message: There is an error from your payment gateway."]
+  }
+]
