@@ -33,6 +33,9 @@
         <p>Send us a message for more information regarding your feedback. We will be delighted to assist you, and all responses and information will be conveyed through email. Kindly complete the form with accurate details, ensuring that all required fields are filled in.</p>
         <form action="https://formspree.io/f/xknavynp" method="post">
           <h2>Type</h2>
+          <input type="radio" name="type" id="form-contact" value="contact" onclick="radioChecked()" required />
+          <label for="form-contact">Contact<sup>*</sup></label>
+          <br />
           <input type="radio" name="type" id="form-support" value="support" onclick="radioChecked()" required />
           <label for="form-support">Support<sup>*</sup></label>
           <br />

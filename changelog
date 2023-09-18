@@ -164,3 +164,18 @@ v4.2
 - Update data api map on documentation page
 - Update api to local file
 - Create function on local to detect development mode
+
+v4.3
+- Create radio contact type on form page
+- Update add cursor pointer to button elements
+- Update fix bug repeated step workflow
+- Update adding radio contact placeholder
+
+v4.4
+- Create image display on home page index
+- Create css rule for managing image
+
+v4.5
+- Update fixing image png blurry to svg format
+- Update image tag add lazy loading for performance
+- Update pointer event none to image on main.css

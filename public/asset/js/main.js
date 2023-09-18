@@ -37,6 +37,7 @@ function switchScheme() {
 /* ===== Form: form.html ===== */
 let formPage = document.getElementsByClassName('form')[0]
 if (formPage) {
+  let radioContact = document.getElementById('form-contact')
   let radioSupport = document.getElementById('form-support')
   let radioByol = document.getElementById('form-byol')
   let radioProof = document.getElementById('form-proof')
@@ -44,20 +45,23 @@ if (formPage) {
   let textareaMessage = document.getElementById('form-message')
   let formStatus = document.getElementById('form-status')
   function radioChecked() {
-    if (radioSupport.checked == 1) {
-      inputSubject.placeholder = 'I need support for...'
-      textareaMessage.placeholder = 'Hello, I need support for...'
+    if (radioContact.checked == 1) {
+      inputSubject.placeholder = `Enter your subject...`
+      textareaMessage.placeholder = `Enter your message...`
+    } else if (radioSupport.checked == 1) {
+      inputSubject.placeholder = `I need support for...`
+      textareaMessage.placeholder = `Hello, I need support for...`
     } else if (radioByol.checked == 1) {
-      inputSubject.placeholder = 'I bring with my own properties...'
-      textareaMessage.placeholder = 'Hello, I have lab with specifications...'
+      inputSubject.placeholder = `I bring with my own properties...`
+      textareaMessage.placeholder = `Hello, I have lab with specifications...`
     } else if (radioProof.checked == 1) {
-      inputSubject.placeholder = 'My invoice 12345 is already paid'
-      textareaMessage.placeholder = 'Hello, I have payed for invoice no 12345 with bank transfer...'
+      inputSubject.placeholder = `My invoice 12345 is already paid`
+      textareaMessage.placeholder = `Hello, I have payed for invoice no 12345 with bank transfer...`
     }
   }
   function formReset() {
-    inputSubject.placeholder = 'Enter your subject...'
-    textareaMessage.placeholder = 'Please select type first or enter message...'
+    inputSubject.placeholder = `Enter your subject...`
+    textareaMessage.placeholder = `Please select type first or enter message...`
     formStatus.innerHTML = `Form resseted.`
     setTimeout(function () {
       formStatus.innerHTML = ``
@@ -269,6 +273,7 @@ if (workflowPage) {
   let pic = document.getElementById('workflow-pic')
   let status = document.getElementById('workflow-status')
   let stepother = document.getElementById('workflow-step-other')
+  let stepotherI = 0
   function handleForm(event) {
     event.preventDefault()
   }
@@ -361,8 +366,9 @@ if (workflowPage) {
     subject.innerHTML = workflowDataList[wflI].subject
     pic.innerHTML = `<a href="/founder.html">${workflowDataList[wflI].pic}</a>`
     status.setAttribute('status', workflowDataList[wflI].status)
-    for (let index = 0; index < workflowDataList[wflI].step.length; index++) {
-      stepother.innerHTML += `<li>${workflowDataList[wflI].step[index]}</li>`
+    while (stepotherI < workflowDataList[wflI].step.length) {
+      stepother.innerHTML += `<li>${workflowDataList[wflI].step[stepotherI]}</li>`
+      stepotherI++
     }
   }
 }

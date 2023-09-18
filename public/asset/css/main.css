@@ -95,6 +95,7 @@ a:hover {
   text-decoration: underline;
 }
 button {
+  cursor: pointer;
   border-radius: 0.25em;
   padding: 0.15em 0.35em;
   color: var(--body-color);
@@ -256,11 +257,30 @@ div.form main form textarea {
 div.founder main p img {
   width: 1.125em;
   margin-left: 0.25em;
+  pointer-events: none;
   margin-bottom: -0.25em;
 }
 /* ===== Founder: founder.html ===== */
 
 /* ===== Index: index.html ===== */
+div.index main p img {
+  width: 1.125em;
+  margin-left: 0.25em;
+  pointer-events: none;
+  margin-bottom: -0.25em;
+}
+div.index main div[image] {
+  gap: 0.35em;
+  display: flex;
+  flex-wrap: wrap;
+}
+div.index main div[image] img {
+  width: 100%;
+  pointer-events: none;
+  border-radius: 0.25em;
+  max-width: max-content;
+  border: 1px solid var(--border-color);
+}
 /* ===== Index: index.html ===== */
 
 /* ===== Invoice: invoice.html ===== */
@@ -306,6 +326,7 @@ div.invoice main div.invoice-information p code#invoice-status[status='failed'] 
 div.invoice main div.invoice-information img {
   width: 100%;
   max-width: 25em;
+  pointer-events: none;
   border-radius: 0.25em;
   background-color: var(--light);
   border: 1px solid var(--border-color);
@@ -319,6 +340,7 @@ div.invoice main div.invoice-information img {
 div.payment main img {
   width: 100%;
   max-width: 25em;
+  pointer-events: none;
   border-radius: 0.25em;
   background-color: var(--light);
   border: 1px solid var(--border-color);
