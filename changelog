@@ -179,3 +179,8 @@ v4.5
 - Update fixing image png blurry to svg format
 - Update image tag add lazy loading for performance
 - Update pointer event none to image on main.css
+
+v4.6
+- Create rule aspect ratio to all image with alt selector
+- Update gtag.js comment with google analytics title
+- Update sitemap link and location to all pages
