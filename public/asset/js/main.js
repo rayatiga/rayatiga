@@ -439,20 +439,4 @@ if (workflowPage) {
 function onLocal() {
   return window.location.hostname == '127.0.0.1'
 }
-// Developer navigation
-if (onLocal()) {
-  console.warn(`Window hostname is ${window.location.hostname}. Developer navigation mode active.`)
-  let navdev = document.getElementsByClassName('navigation-sitemap')[0]
-  let navlist = {
-    href: ['/404.html', '/about.html', '/cdn.html', '/contact.html', '/documentation.html', '/form.html', '/founder.html', '/index.html', '/invoice.html', '/maintenance.html', '/payment.html', '/privacy-policy.html', '/project.html', '/service.html', '/sitemap.html', '/template.html', '/ticket.html', '/workflow.html'],
-    name: ['404', 'About', 'CDN', 'Contact', 'Documentation', 'Form+', 'Founder', 'Index', 'Invoice+', 'Maintenance', 'Payment', 'Privacy Policy', 'Project', 'Service+', 'Sitemap', 'Template', 'Ticket', 'Workflow+'],
-  }
-  let count = 0
-  navdev.innerHTML = ''
-  for (let i = 0; i < navlist.href.length; i++) {
-    navdev.innerHTML += `<li><a href="${navlist.href[i]}">${navlist.name[i]}</a></li>`
-    count++
-  }
-  navdev.innerHTML += `<li>(Count: ${count})</li>`
-}
 /* ===== Other ===== */

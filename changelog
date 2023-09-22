@@ -209,3 +209,7 @@ v5.0
 - Update tick with single quote if there is no multiline and javascript needed
 - Create inner html before looping a developer navigation to ensure there is no duplicate
 - Update fixing bug for query param not found not displaying in ticket page ouside local
+
+v5.1
+- Update cdn page adding the json list file
+- Delete developer navigation on the main.js
