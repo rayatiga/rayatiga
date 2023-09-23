@@ -184,3 +184,28 @@ v4.6
 - Create rule aspect ratio to all image with alt selector
 - Update gtag.js comment with google analytics title
 - Update sitemap link and location to all pages
+
+v4.7
+- Update add height and width attribute to all image html tags
+- Delete all css image selector contain aspect ratio
+- Update blue color to darker for accessibility reason
+- Update font family to system ui and increase html line height
+- Delete local font inconsolata changed to system ui sans serif
+
+v4.8
+- Delete upper right arrow and right arrow
+- Update right arrow with mdash on documentation page
+- Update padding size on the element code html tag
+
+v4.9
+- Update comment for external script applied to project
+- Create documentation text about comment information on html, css, and js
+- Create cloudflare trunstile and applied on form page
+- Delete developer navigation html comment on main.js
+
+v5.0
+- Create and implementing ticket per id user with query parameters
+- Create json to store data from ticket list per user id
+- Update tick with single quote if there is no multiline and javascript needed
+- Create inner html before looping a developer navigation to ensure there is no duplicate
+- Update fixing bug for query param not found not displaying in ticket page ouside local

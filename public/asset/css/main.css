@@ -10,7 +10,7 @@
 :root {
   --red: #ff0000;
   --gray: #787878;
-  --blue: #0000ff;
+  --blue: #0000cc;
   --dark: #131313;
   --white: #ffffff;
   --light: #fdfdfd;
@@ -41,7 +41,7 @@
   --font-weight: 400;
   --box-padding: 1em;
   --scrollbar-width: 12px;
-  --body-font-family: 'Inconsolata', monospace;
+  --body-font-family: 'system-ui', sans-serif;
 }
 ::selection {
   color: var(--selection-color);
@@ -64,7 +64,7 @@
 }
 html {
   overflow-y: auto;
-  line-height: 1.25;
+  line-height: 1.5;
   overflow-x: hidden;
 }
 body {
@@ -106,17 +106,17 @@ button,
 input,
 textarea {
   font-size: 1em;
-  font-family: var(--body-font-family);
+  font-family: inherit;
 }
 code {
   font-weight: 400;
   font-size: 0.85em;
   display: inline-block;
-  padding: 0.15em 0.3em;
+  padding: 0.05em 0.25em;
   border-radius: 0.25em;
   vertical-align: middle;
   background-color: var(--code-bg);
-  font-family: var(--body-font-family);
+  font-family: inherit;
 }
 code[status] {
   border: 1px solid var(--code-status-border-color);
@@ -257,11 +257,7 @@ div.form main form textarea {
 div.founder main p img {
   width: 1.125em;
   margin-left: 0.25em;
-  pointer-events: none;
   margin-bottom: -0.25em;
-}
-div.founder main p img[alt='Verified Person'] {
-  aspect-ratio: auto 1 / 1;
 }
 /* ===== Founder: founder.html ===== */
 
@@ -269,11 +265,7 @@ div.founder main p img[alt='Verified Person'] {
 div.index main p img {
   width: 1.125em;
   margin-left: 0.25em;
-  pointer-events: none;
   margin-bottom: -0.25em;
-}
-div.index main p img[alt='Verified Agency'] {
-  aspect-ratio: auto 1 / 1;
 }
 div.index main div[image] {
   gap: 0.35em;
@@ -282,16 +274,9 @@ div.index main div[image] {
 }
 div.index main div[image] img {
   width: 100%;
-  pointer-events: none;
   border-radius: 0.25em;
   max-width: max-content;
   border: 1px solid var(--border-color);
-}
-div.index main div[image] img[alt='RT Logo'] {
-  aspect-ratio: auto 1 / 1;
-}
-div.index main div[image] img[alt='R Logo Rayatiga'] {
-  aspect-ratio: auto 16 / 9;
 }
 /* ===== Index: index.html ===== */
 
@@ -338,13 +323,9 @@ div.invoice main div.invoice-information p code#invoice-status[status='failed'] 
 div.invoice main div.invoice-information img {
   width: 100%;
   max-width: 25em;
-  pointer-events: none;
   border-radius: 0.25em;
   background-color: var(--light);
   border: 1px solid var(--border-color);
-}
-div.invoice main div.invoice-information img[alt='Rayatiga QRIS Code'] {
-  aspect-ratio: auto 1 / 1;
 }
 /* ===== Invoice: invoice.html ===== */
 
@@ -355,13 +336,9 @@ div.invoice main div.invoice-information img[alt='Rayatiga QRIS Code'] {
 div.payment main img {
   width: 100%;
   max-width: 25em;
-  pointer-events: none;
   border-radius: 0.25em;
   background-color: var(--light);
   border: 1px solid var(--border-color);
-}
-div.payment main img[alt='Rayatiga QRIS Code'] {
-  aspect-ratio: auto 1 / 1;
 }
 /* ===== Payment: payment.html ===== */
 

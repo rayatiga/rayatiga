@@ -46,31 +46,31 @@ if (formPage) {
   let formStatus = document.getElementById('form-status')
   function radioChecked() {
     if (radioContact.checked == 1) {
-      inputSubject.placeholder = `Enter your subject...`
-      textareaMessage.placeholder = `Enter your message...`
+      inputSubject.placeholder = 'Enter your subject...'
+      textareaMessage.placeholder = 'Enter your message...'
     } else if (radioSupport.checked == 1) {
-      inputSubject.placeholder = `I need support for...`
-      textareaMessage.placeholder = `Hello, I need support for...`
+      inputSubject.placeholder = 'I need support for...'
+      textareaMessage.placeholder = 'Hello, I need support for...'
     } else if (radioByol.checked == 1) {
-      inputSubject.placeholder = `I bring with my own properties...`
-      textareaMessage.placeholder = `Hello, I have lab with specifications...`
+      inputSubject.placeholder = 'I bring with my own properties...'
+      textareaMessage.placeholder = 'Hello, I have lab with specifications...'
     } else if (radioProof.checked == 1) {
-      inputSubject.placeholder = `My invoice 12345 is already paid`
-      textareaMessage.placeholder = `Hello, I have payed for invoice no 12345 with bank transfer...`
+      inputSubject.placeholder = 'My invoice 12345 is already paid'
+      textareaMessage.placeholder = 'Hello, I have payed for invoice no 12345 with bank transfer...'
     }
   }
   function formReset() {
-    inputSubject.placeholder = `Enter your subject...`
-    textareaMessage.placeholder = `Please select type first or enter message...`
-    formStatus.innerHTML = `Form resseted.`
+    inputSubject.placeholder = 'Enter your subject...'
+    textareaMessage.placeholder = 'Please select type first or enter message...'
+    formStatus.innerHTML = 'Form resseted.'
     setTimeout(function () {
-      formStatus.innerHTML = ``
+      formStatus.innerHTML = ''
     }, 2500)
   }
   function formSubmit() {
-    formStatus.innerHTML = `Form submit triggered.`
+    formStatus.innerHTML = 'Form submit triggered.'
     setTimeout(function () {
-      formStatus.innerHTML = ``
+      formStatus.innerHTML = ''
     }, 2500)
   }
 }
@@ -79,7 +79,7 @@ if (formPage) {
 /* ===== Invoice: invoice.html ===== */
 let invoicePage = document.getElementsByClassName('invoice')[0]
 if (invoicePage) {
-  let invoiceDataApi = `/asset/json/invoiceDataList.json`
+  let invoiceDataApi = '/asset/json/invoiceDataList.json'
   let invoiceForm = document.getElementById('invoice-form')
   let invoiceInput = document.getElementById('invoice-input')
   let invoiceSubmitButton = document.getElementById('invoice-input-button')
@@ -127,7 +127,7 @@ if (invoicePage) {
         let invoiceInputValue = invoiceInput.value
         let invI = invoiceDataList.findIndex((item) => item.no == invoiceInputValue)
         if (invoiceInputValue.length < 5 || invoiceInputValue.length > 5) {
-          invoiceStatusReturn.innerHTML = `Please enter invoice number in <strong>5 digit only</strong>.`
+          invoiceStatusReturn.innerHTML = 'Please enter invoice number in <strong>5 digit only</strong>.'
         } else {
           if (invI == -1) {
             invoiceNoDataFound(invoiceInputValue)
@@ -152,7 +152,7 @@ if (invoicePage) {
       })
       .then(function (invoiceDataList) {
         if (invoiceUrlParamId.length < 5 || invoiceUrlParamId.length > 5) {
-          invoiceStatusReturn.innerHTML = `Please enter invoice number in <strong>5 digit only</strong>.`
+          invoiceStatusReturn.innerHTML = 'Please enter invoice number in <strong>5 digit only</strong>.'
         } else {
           InvoiceSearchParam(invoiceDataList, invoiceUrlParamId)
         }
@@ -179,25 +179,25 @@ if (invoicePage) {
   }
   function invoiceNoDataFound(invoiceValue) {
     invoiceStatusReturn.innerHTML = `<strong>No data found</strong> for invoice #${invoiceValue}, please enter invoice number correctly.`
-    invoiceTag.innerHTML = ``
+    invoiceTag.innerHTML = ''
     invoiceInformation.style.display = 'none'
-    no.innerHTML = ``
-    due.innerHTML = ``
-    submitted.innerHTML = ``
-    paymentoption.innerHTML = ``
+    no.innerHTML = ''
+    due.innerHTML = ''
+    submitted.innerHTML = ''
+    paymentoption.innerHTML = ''
     status.setAttribute('status', '')
-    lastupdated.innerHTML = ``
-    name.innerHTML = ``
-    company.innerHTML = ``
-    phone.innerHTML = ``
-    email.innerHTML = ``
-    service.innerHTML = ``
-    paid.innerHTML = ``
-    discountother.innerHTML = ``
-    total.innerHTML = ``
+    lastupdated.innerHTML = ''
+    name.innerHTML = ''
+    company.innerHTML = ''
+    phone.innerHTML = ''
+    email.innerHTML = ''
+    service.innerHTML = ''
+    paid.innerHTML = ''
+    discountother.innerHTML = ''
+    total.innerHTML = ''
   }
   function invoiceDisplay(invoiceDataList, invoiceInputValue, invI) {
-    invoiceStatusReturn.innerHTML = ``
+    invoiceStatusReturn.innerHTML = ''
     invoiceTag.innerHTML = `#${invoiceInputValue}`
     invoiceInformation.style.display = 'block'
     no.innerHTML = invoiceDataList[invI].no
@@ -227,11 +227,11 @@ if (invoicePage) {
 /* ===== Service: service.html ===== */
 let servicePage = document.getElementsByClassName('service')[0]
 if (servicePage) {
-  let serviceDataApi = `/asset/json/serviceDataList.json`
+  let serviceDataApi = '/asset/json/serviceDataList.json'
   fetch(serviceDataApi)
     .then(function (serviceResponse) {
       if (!serviceResponse.ok && onLocal()) {
-        console.error(`Network response was not ok.`)
+        console.error('Network response was not ok.')
       }
       return serviceResponse.json()
     })
@@ -258,10 +258,70 @@ if (servicePage) {
 }
 /* ===== Service: service.html ===== */
 
+/* ===== Ticket: ticket.html ===== */
+let ticketPage = document.getElementsByClassName('ticket')[0]
+if (ticketPage) {
+  let ticketDataApi = '/asset/json/ticketDataList.json'
+  let ticketTable = document.getElementById('ticket-table')
+  let ticketPlaceholder = document.getElementById('ticket-placeholder')
+  let ticketLastUpdated = document.getElementById('ticket-last-updated')
+  fetch(ticketDataApi)
+    .then(function (ticketResponse) {
+      if (!ticketResponse.ok && onLocal()) {
+        console.error('Network response was not ok.')
+      }
+      return ticketResponse.json()
+    })
+    .then(function (ticketDataList) {
+      let ticketUrlParam = new URLSearchParams(window.location.search)
+      let ticketUrlParamId = ticketUrlParam.get('id')
+      if (ticketUrlParamId) {
+        ticketSearchParam(ticketDataList, ticketUrlParamId)
+      } else {
+        ticketTable.rows[1].outerHTML = `
+        <tr>
+        <td style="text-align: center" colspan=4>No query parameter found.</td>
+        </tr>
+        `
+      }
+    })
+    .catch(function (error) {
+      if (onLocal()) {
+        console.error(`There was a problem with the fetch operation: ${error}`)
+      }
+    })
+  function ticketSearchParam(ticketDataList, ticketUrlParamId) {
+    let tktI = ticketDataList.findIndex((item) => item.id == ticketUrlParamId)
+    if (tktI == -1) {
+      ticketTable.rows[1].outerHTML = `
+      <tr>
+      <td style="text-align: center" colspan=4>No data found for ticket that param id. Please check again.</td>
+      </tr>
+      `
+    } else {
+      ticketPlaceholder.remove()
+      let i = 0
+      while (i < ticketDataList[tktI].ticket.length) {
+        ticketTable.rows[i].outerHTML += `
+        <tr>
+        <td><a href="/workflow.html?id=${ticketDataList[tktI].ticket[i].id}">${ticketDataList[tktI].ticket[i].id}</a></td>
+        <td>${ticketDataList[tktI].ticket[i].subject}</td>
+        <td><a href="/founder.html">${ticketDataList[tktI].ticket[i].pic}</a></td>
+        <td><code status="${ticketDataList[tktI].ticket[i].status}"></code></td>
+        </tr>
+        `
+        i++
+      }
+      ticketLastUpdated.innerHTML = ticketDataList[tktI].lastUpdated
+    }
+  }
+}
+/* ===== Ticket: ticket.html ===== */
+
 /* ===== Workflow: workflow.html ===== */
 let workflowPage = document.getElementsByClassName('workflow')[0]
 if (workflowPage) {
-  let workflowDataApi = `/asset/json/workflowDataList.json`
+  let workflowDataApi = '/asset/json/workflowDataList.json'
   let workflowForm = document.getElementById('workflow-form')
   let workflowInput = document.getElementById('workflow-input')
   let workflowSubmitButton = document.getElementById('workflow-input-button')
@@ -298,7 +358,7 @@ if (workflowPage) {
       .then(function (workflowDataList) {
         let workflowInputValue = workflowInput.value
         if (workflowInputValue.length < 10 || workflowInputValue.length > 10) {
-          workflowStatusReturn.innerHTML = `Please enter workflow id in <strong>10 digit only</strong>.`
+          workflowStatusReturn.innerHTML = 'Please enter workflow id in <strong>10 digit only</strong>.'
         } else {
           let wflI = workflowDataList.findIndex((item) => item.id == workflowInputValue)
           if (wflI == -1) {
@@ -324,7 +384,7 @@ if (workflowPage) {
       })
       .then(function (workflowDataList) {
         if (workflowUrlParamId.length < 10 || workflowUrlParamId.length > 10) {
-          workflowStatusReturn.innerHTML = `Please enter workflow id in <strong>10 digit only</strong>.`
+          workflowStatusReturn.innerHTML = 'Please enter workflow id in <strong>10 digit only</strong>.'
         } else {
           workflowSearchParam(workflowDataList, workflowUrlParamId)
         }
@@ -352,15 +412,15 @@ if (workflowPage) {
   function workflowNoDataFound(workflowInputValue) {
     workflowStatusReturn.innerHTML = `<strong>No data found</strong> for workflow #${workflowInputValue}, please enter workflow id correctly.`
     workflowInformation.style.display = 'none'
-    tag.innerHTML = ``
-    id.innerHTML = ``
-    subject.innerHTML = ``
-    pic.innerHTML = ``
-    status.innerHTML = ``
+    tag.innerHTML = ''
+    id.innerHTML = ''
+    subject.innerHTML = ''
+    pic.innerHTML = ''
+    status.innerHTML = ''
   }
   function workflowDispay(workflowDataList, workflowInputValue, wflI) {
     workflowInformation.style.display = 'block'
-    workflowStatusReturn.innerHTML = ``
+    workflowStatusReturn.innerHTML = ''
     tag.innerHTML = `#${workflowInputValue}`
     id.innerHTML = workflowDataList[wflI].id
     subject.innerHTML = workflowDataList[wflI].subject
@@ -385,10 +445,10 @@ if (onLocal()) {
   let navdev = document.getElementsByClassName('navigation-sitemap')[0]
   let navlist = {
     href: ['/404.html', '/about.html', '/cdn.html', '/contact.html', '/documentation.html', '/form.html', '/founder.html', '/index.html', '/invoice.html', '/maintenance.html', '/payment.html', '/privacy-policy.html', '/project.html', '/service.html', '/sitemap.html', '/template.html', '/ticket.html', '/workflow.html'],
-    name: ['404', 'About', 'CDN', 'Contact', 'Documentation', 'Form', 'Founder', 'Index', 'Invoice', 'Maintenance', 'Payment', 'Privacy Policy', 'Project', 'Service', 'Sitemap', 'Template', 'Ticket', 'Workflow'],
+    name: ['404', 'About', 'CDN', 'Contact', 'Documentation', 'Form+', 'Founder', 'Index', 'Invoice+', 'Maintenance', 'Payment', 'Privacy Policy', 'Project', 'Service+', 'Sitemap', 'Template', 'Ticket', 'Workflow+'],
   }
-  navdev.innerHTML = `<!-- main.js: Developer Navigation -->`
   let count = 0
+  navdev.innerHTML = ''
   for (let i = 0; i < navlist.href.length; i++) {
     navdev.innerHTML += `<li><a href="${navlist.href[i]}">${navlist.name[i]}</a></li>`
     count++

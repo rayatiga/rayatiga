@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Google Analytics: gtag.js -->
+    <!-- ES: Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-E94958W4T7"></script>
     <script>
       window.dataLayer = window.dataLayer || []
@@ -11,7 +11,7 @@
       gtag('js', new Date())
       gtag('config', 'G-E94958W4T7')
     </script>
-    <!-- Google Analytics: gtag.js -->
+    <!-- ES: Google Analytics -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Form - Rayatiga</title>
@@ -20,6 +20,9 @@
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="/asset/css/main.css" />
     <script defer src="/asset/js/main.js"></script>
+    <!-- ES: Cloudflare Turnstile -->
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+    <!-- ES: Cloudflare Turnstile -->
   </head>
   <body>
     <div class="container form">
@@ -31,6 +34,7 @@
       <main>
         <h1>Form Submission</h1>
         <p>Send us a message for more information regarding your feedback. We will be delighted to assist you, and all responses and information will be conveyed through email. Kindly complete the form with accurate details, ensuring that all required fields are filled in.</p>
+        <!-- ES: Formspree -->
         <form action="https://formspree.io/f/xknavynp" method="post">
           <h2>Type</h2>
           <input type="radio" name="type" id="form-contact" value="contact" onclick="radioChecked()" required />
@@ -56,12 +60,21 @@
           <textarea name="message" id="form-message" placeholder="Please select type first or enter message..." maxlength="500" required></textarea>
           <input type="checkbox" name="agreement" id="form-agreement" value="ok" required />
           <label for="form-agreement">I agree to the privacy policy on this site<sup>*</sup></label>
+          <!-- ES: Cloudflare Turnstile -->
+          <div style="margin-top: 1em" class="cf-turnstile" data-sitekey="0x4AAAAAAAKev6ojS7hjlICd" data-theme="light"></div>
+          <script>
+            let t = localStorage.getItem('rayatiga-scheme')
+            let w = document.getElementsByClassName('cf-turnstile')[0]
+            t == 'light' ? w.setAttribute('data-theme', 'light') : w.setAttribute('data-theme', 'dark')
+          </script>
+          <!-- ES: Cloudflare Turnstile -->
           <div class="button">
             <button type="reset" onclick="formReset()">Reset</button>
             <button type="submit" onclick="formSubmit()">Submit</button>
           </div>
           <span id="form-status"></span>
         </form>
+        <!-- ES: Formspree -->
       </main>
       <footer>
         <hr />

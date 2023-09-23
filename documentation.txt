@@ -1,0 +1,13 @@
+HTML
+<!-- ES: Title of Feature -->
+ES is abbreviation of "External Script".
+
+CSS, JavaScript
+/* ===== [Title (e.g. Global)] ===== */
+...
+// Feature one
+Code one
+// Feature two
+Code two
+...
+/* ===== [Title (e.g. Global)] ===== */

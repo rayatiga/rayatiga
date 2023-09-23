@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Google Analytics: gtag.js -->
+    <!-- ES: Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-E94958W4T7"></script>
     <script>
       window.dataLayer = window.dataLayer || []
@@ -11,7 +11,7 @@
       gtag('js', new Date())
       gtag('config', 'G-E94958W4T7')
     </script>
-    <!-- Google Analytics: gtag.js -->
+    <!-- ES: Google Analytics -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ticket - Rayatiga</title>
@@ -32,36 +32,23 @@
         <h1>Ticket</h1>
         <p>Ticket Page displays the problem inputs you have submitted on the form. On this page, you can view the ticket code, issue subject, PIC code, and status.</p>
         <div class="table-overflow">
-          <p>Below is table version.</p>
-          <table>
+          <table id="ticket-table">
             <tr>
               <th>ID</th>
               <th>Subject</th>
               <th>PIC</th>
               <th>Status</th>
             </tr>
-            <tr>
-              <td><a href="/workflow.html?id=2308251137">2308251137</a></td>
-              <td>Front Page Displayed Not Properly</td>
+            <tr id="ticket-placeholder">
+              <td><a href="/workflow.html?id=1234567890">1234567890</a></td>
+              <td>Example Ticket Subject</td>
               <td><a href="/founder.html">R01</a></td>
               <td><code status="resolved"></code></td>
-            </tr>
-            <tr>
-              <td><a href="/workflow.html?id=2308251457">2308251457</a></td>
-              <td>AJAX Shopping Cart Not Working</td>
-              <td><a href="/founder.html">R01</a></td>
-              <td><code status="pending"></code></td>
-            </tr>
-            <tr>
-              <td><a href="/workflow.html?id=2308251534">2308251534</a></td>
-              <td>My Payment Gateway Error</td>
-              <td><a href="/founder.html">R01</a></td>
-              <td><code status="unresolved"></code></td>
             </tr>
           </table>
         </div>
         <u>Table only displayed on screen larger than 336px</u>
-        <p>Last updated: <code>08/25/2023, 03:58 PM</code></p>
+        <p>Last updated: <code id="ticket-last-updated">12/30/2020, 02:30 PM</code></p>
       </main>
       <footer>
         <hr />
