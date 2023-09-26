@@ -213,3 +213,12 @@ v5.0
 v5.1
 - Update cdn page adding the json list file
 - Delete developer navigation on the main.js
+
+v5.2
+- Update and arranging documentation text
+- Create and add google analytics and google tag
+- Create anchor skip to content main
+- Update navigation and aria current page
+
+v5.3
+- Create condition window location href for inserting aria current page

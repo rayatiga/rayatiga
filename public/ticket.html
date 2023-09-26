@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ticket - Rayatiga</title>
+    <meta name="description" content="Empowering web solutions for a digital future." />
+    <meta property="og:image" content="https://rayatiga.com/asset/img/rayatiga-og.jpg" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <!-- ES: Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-E94958W4T7"></script>
     <script>
@@ -12,20 +18,37 @@
       gtag('config', 'G-E94958W4T7')
     </script>
     <!-- ES: Google Analytics -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ticket - Rayatiga</title>
-    <meta name="description" content="Empowering web solutions for a digital future." />
-    <meta property="og:image" content="https://rayatiga.com/asset/img/rayatiga-og.jpg" />
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <!-- ES: Google Tag Manager -->
+    <script>
+      ;(function (w, d, s, l, i) {
+        w[l] = w[l] || []
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' })
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : ''
+        j.async = true
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl
+        f.parentNode.insertBefore(j, f)
+      })(window, document, 'script', 'dataLayer', 'GTM-PBN37CL2')
+    </script>
+    <!-- ES: Google Tag Manager -->
     <link rel="stylesheet" href="/asset/css/main.css" />
     <script defer src="/asset/js/main.js"></script>
   </head>
   <body>
+    <!-- ES: Google Tag Manager -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PBN37CL2" height="0" width="0" style="display: none; visibility: hidden"></iframe></noscript>
+    <!-- ES: Google Tag Manager -->
     <div class="container ticket">
       <header>
         <h1>Rayatiga</h1>
         <p>Crafting cutting-edge websites to elevate your digital presence.</p>
+        <hr />
+        <nav>
+          <ul>
+            <span class="navigation"></span>
+          </ul>
+        </nav>
         <hr />
       </header>
       <main>
@@ -40,30 +63,22 @@
               <th>Status</th>
             </tr>
             <tr id="ticket-placeholder">
-              <td><a href="/workflow.html?id=1234567890">1234567890</a></td>
-              <td>Example Ticket Subject</td>
-              <td><a href="/founder.html">R01</a></td>
-              <td><code status="resolved"></code></td>
+              <td colspan="4">No data.</td>
             </tr>
           </table>
         </div>
         <u>Table only displayed on screen larger than 336px</u>
-        <p>Last updated: <code id="ticket-last-updated">12/30/2020, 02:30 PM</code></p>
+        <p>Last updated: <code id="ticket-last-updated">No data.</code></p>
       </main>
       <footer>
         <hr />
         <p>Navigation & Sitemap</p>
-        <ul class="navigation-sitemap">
-          <li><a href="/">Home</a></li>
-          <li><a href="/about.html">About</a></li>
-          <li><a href="/service.html">Service</a></li>
-          <li><a href="/project.html">Project</a></li>
-          <li><a href="/contact.html">Contact</a></li>
-          <li><a href="/sitemap.html">Sitemap</a></li>
+        <ul>
+          <span class="navigation"></span>
         </ul>
         <p>Location: <span id="location"></span></p>
         <hr />
-        <p>Your native theme is <span id="native-scheme"></span>. Switch scheme to <span onclick="switchScheme()" class="scheme"></span>.</p>
+        <p>Your native theme is <span id="native-scheme"></span>. Switch scheme to <button onclick="switchScheme()" class="scheme"></button>.</p>
         <hr />
         <p class="copyright">Copyright &copy; 2020-2023 Rayatiga Agency. All Rights Reserved.</p>
       </footer>

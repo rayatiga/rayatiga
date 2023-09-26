@@ -1,32 +1,81 @@
 /* ===== Global ===== */
+// Skip to main content
+document.getElementsByTagName('main')[0].setAttribute('id', 'main-content')
+document.body.insertAdjacentHTML('afterbegin', `<a href="#main-content">Skip to main content</a>`)
+// Navigation
+let navigationHeaderFooter = document.querySelectorAll('.navigation')
+let navigationList = `
+<li><a href="/">Home</a></li>
+<li><a href="/about.html">About</a></li>
+<li><a href="/service.html">Service</a></li>
+<li><a href="/project.html">Project</a></li>
+<li><a href="/form.html">Form</a></li>
+<li><a href="/contact.html">Contact</a></li>
+<li><a href="/privacy-policy.html">Privacy & Policy</a></li>`
+let navigationListFull = `
+<li><a href="/">Home</a></li>
+<li><a href="/about.html">About</a></li>
+<li><a href="/service.html">Service</a></li>
+<li><a href="/project.html">Project</a></li>
+<li><a href="/form.html">Form</a></li>
+<li><a href="/contact.html">Contact</a></li>
+<li><a href="/privacy-policy.html">Privacy & Policy</a></li>
+<li>&mdash;</li>
+<li><a href="/cdn.html">CDN</a></li>
+<li><a href="/documentation.html">Documentation</a></li>
+<li><a href="/founder.html">Founder</a></li>
+<li><a href="/invoice.html">Invoice</a></li>
+<li><a href="/payment.html">Payment</a></li>
+<li><a href="/sitemap.html">Sitemap</a></li>
+<li><a href="/template.html">Template</a></li>
+<li><a href="/ticket.html">Ticket</a></li>
+<li><a href="/workflow.html">Workflow</a></li>`
+navigationHeaderFooter[0].outerHTML = navigationList
+navigationHeaderFooter[1].outerHTML = navigationListFull
+document.querySelectorAll('header ul li a').forEach((navigationListHeader) => {
+  if (navigationListHeader.href == window.location.href || navigationListHeader.href == window.location.href + '.html') {
+    navigationListHeader.setAttribute('aria-current', 'page')
+  }
+})
+document.querySelectorAll('footer ul li a').forEach((navigationListFooter) => {
+  if (navigationListFooter.href == window.location.href || navigationListFooter.href == window.location.href + '.html') {
+    navigationListFooter.setAttribute('aria-current', 'page')
+  }
+})
 // Location
 let locationPath = document.getElementById('location')
-locationPath.innerHTML = window.location.pathname
+locationPath.innerText = window.location.pathname
 // Scheme
-let preferScheme = window.matchMedia('(prefers-color-scheme: light)').matches
-let currentScheme = localStorage.getItem('rayatiga-scheme')
-let nativeScheme = document.getElementById('native-scheme')
-if (currentScheme == null && preferScheme) {
-  currentScheme = 'light'
-} else if (currentScheme == null && !preferScheme) {
-  currentScheme = 'dark'
+let schemePrefer = window.matchMedia('(prefers-color-scheme: light)').matches
+let schemeCurrent = localStorage.getItem('rayatiga-scheme')
+let schemeNative = document.getElementById('native-scheme')
+let schemeButton = document.getElementsByClassName('scheme')[0]
+if (schemeCurrent == null && schemePrefer) {
+  schemeCurrent = 'light'
+  schemeButton.innerText = 'light'
+} else if (schemeCurrent == null && !schemePrefer) {
+  schemeCurrent = 'dark'
+  schemeButton.innerText = 'dark'
 }
-localStorage.setItem('rayatiga-scheme', currentScheme)
-document.body.setAttribute('rayatiga-scheme', currentScheme)
-nativeScheme.innerHTML = preferScheme == true ? 'light' : 'dark'
+localStorage.setItem('rayatiga-scheme', schemeCurrent)
+document.body.setAttribute('rayatiga-scheme', schemeCurrent)
+schemeNative.innerText = schemePrefer == true ? 'light' : 'dark'
+schemeButton.innerText = schemeCurrent
 function switchScheme() {
   const toLight = () => {
     localStorage.setItem('rayatiga-scheme', 'light')
     document.body.setAttribute('rayatiga-scheme', 'light')
+    schemeButton.innerText = 'light'
   }
   const toDark = () => {
     localStorage.setItem('rayatiga-scheme', 'dark')
     document.body.setAttribute('rayatiga-scheme', 'dark')
+    schemeButton.innerText = 'dark'
   }
-  let currentScheme = localStorage.getItem('rayatiga-scheme')
-  if (currentScheme == 'dark') {
+  let schemeCurrent = localStorage.getItem('rayatiga-scheme')
+  if (schemeCurrent == 'dark') {
     toLight()
-  } else if (currentScheme == 'light') {
+  } else if (schemeCurrent == 'light') {
     toDark()
   } else {
     toLight()
@@ -62,15 +111,15 @@ if (formPage) {
   function formReset() {
     inputSubject.placeholder = 'Enter your subject...'
     textareaMessage.placeholder = 'Please select type first or enter message...'
-    formStatus.innerHTML = 'Form resseted.'
+    formStatus.innerText = 'Form resseted.'
     setTimeout(function () {
-      formStatus.innerHTML = ''
+      formStatus.innerText = ''
     }, 2500)
   }
   function formSubmit() {
-    formStatus.innerHTML = 'Form submit triggered.'
+    formStatus.innerText = 'Form submit triggered.'
     setTimeout(function () {
-      formStatus.innerHTML = ''
+      formStatus.innerText = ''
     }, 2500)
   }
 }
@@ -79,7 +128,7 @@ if (formPage) {
 /* ===== Invoice: invoice.html ===== */
 let invoicePage = document.getElementsByClassName('invoice')[0]
 if (invoicePage) {
-  let invoiceDataApi = '/asset/json/invoiceDataList.json'
+  let invoiceDataApi = 'https://cdn.rayatiga.com/invoiceDataList.json'
   let invoiceForm = document.getElementById('invoice-form')
   let invoiceInput = document.getElementById('invoice-input')
   let invoiceSubmitButton = document.getElementById('invoice-input-button')
@@ -179,38 +228,38 @@ if (invoicePage) {
   }
   function invoiceNoDataFound(invoiceValue) {
     invoiceStatusReturn.innerHTML = `<strong>No data found</strong> for invoice #${invoiceValue}, please enter invoice number correctly.`
-    invoiceTag.innerHTML = ''
+    invoiceTag.innerText = ''
     invoiceInformation.style.display = 'none'
-    no.innerHTML = ''
-    due.innerHTML = ''
-    submitted.innerHTML = ''
-    paymentoption.innerHTML = ''
+    no.innerText = ''
+    due.innerText = ''
+    submitted.innerText = ''
+    paymentoption.innerText = ''
     status.setAttribute('status', '')
-    lastupdated.innerHTML = ''
-    name.innerHTML = ''
-    company.innerHTML = ''
-    phone.innerHTML = ''
-    email.innerHTML = ''
-    service.innerHTML = ''
-    paid.innerHTML = ''
-    discountother.innerHTML = ''
-    total.innerHTML = ''
+    lastupdated.innerText = ''
+    name.innerText = ''
+    company.innerText = ''
+    phone.innerText = ''
+    email.innerText = ''
+    service.innerText = ''
+    paid.innerText = ''
+    discountother.innerText = ''
+    total.innerText = ''
   }
   function invoiceDisplay(invoiceDataList, invoiceInputValue, invI) {
-    invoiceStatusReturn.innerHTML = ''
-    invoiceTag.innerHTML = `#${invoiceInputValue}`
+    invoiceStatusReturn.innerText = ''
+    invoiceTag.innerText = `#${invoiceInputValue}`
     invoiceInformation.style.display = 'block'
-    no.innerHTML = invoiceDataList[invI].no
-    due.innerHTML = invoiceDataList[invI].due
-    submitted.innerHTML = invoiceDataList[invI].submitted
-    paymentoption.innerHTML = invoiceDataList[invI].paymentoption
+    no.innerText = invoiceDataList[invI].no
+    due.innerText = invoiceDataList[invI].due
+    submitted.innerText = invoiceDataList[invI].submitted
+    paymentoption.innerText = invoiceDataList[invI].paymentoption
     status.setAttribute('status', invoiceDataList[invI].status)
-    lastupdated.innerHTML = invoiceDataList[invI].lastupdated
-    name.innerHTML = invoiceDataList[invI].name
-    company.innerHTML = invoiceDataList[invI].company
-    phone.innerHTML = invoiceDataList[invI].phone
+    lastupdated.innerText = invoiceDataList[invI].lastupdated
+    name.innerText = invoiceDataList[invI].name
+    company.innerText = invoiceDataList[invI].company
+    phone.innerText = invoiceDataList[invI].phone
     email.innerHTML = `<a href="${invoiceDataList[invI].email}">${invoiceDataList[invI].email}</a>`
-    service.innerHTML = invoiceDataList[invI].service
+    service.innerText = invoiceDataList[invI].service
     while (paidI < invoiceDataList[invI].paid.length) {
       paid.innerHTML += `<li>${invoiceDataList[invI].paid[paidI]}</li>`
       paidI++
@@ -219,7 +268,7 @@ if (invoicePage) {
       discountother.innerHTML += `<li>${invoiceDataList[invI].discountother[discountotherI]}</li>`
       discountotherI++
     }
-    total.innerHTML = invoiceDataList[invI].total
+    total.innerText = invoiceDataList[invI].total
   }
 }
 /* ===== Invoice: invoice.html ===== */
@@ -227,7 +276,7 @@ if (invoicePage) {
 /* ===== Service: service.html ===== */
 let servicePage = document.getElementsByClassName('service')[0]
 if (servicePage) {
-  let serviceDataApi = '/asset/json/serviceDataList.json'
+  let serviceDataApi = 'https://cdn.rayatiga.com/serviceDataList.json'
   fetch(serviceDataApi)
     .then(function (serviceResponse) {
       if (!serviceResponse.ok && onLocal()) {
@@ -244,12 +293,12 @@ if (servicePage) {
     })
     .catch(function (error) {
       if (onLocal()) {
-        console.error(`There was a problem with the fetch operation: ${error}`)
+        console.error(`LOG ERROR (main.js): ${error}`)
       }
     })
   function serviceSearchParam(serviceDataList, serviceUrlParamId) {
     let svcI = serviceDataList.findIndex((item) => item.checkout == serviceUrlParamId)
-    if (svcI == -1 && onLocal()) {
+    if (svcI == -1) {
       console.error(`No data found for id: ${serviceUrlParamId}.`)
     } else {
       window.location.replace(serviceDataList[svcI].link)
@@ -261,14 +310,17 @@ if (servicePage) {
 /* ===== Ticket: ticket.html ===== */
 let ticketPage = document.getElementsByClassName('ticket')[0]
 if (ticketPage) {
-  let ticketDataApi = '/asset/json/ticketDataList.json'
+  let ticketDataApi = 'https://cdn.rayatiga.com/ticketDataList.json'
   let ticketTable = document.getElementById('ticket-table')
   let ticketPlaceholder = document.getElementById('ticket-placeholder')
   let ticketLastUpdated = document.getElementById('ticket-last-updated')
   fetch(ticketDataApi)
     .then(function (ticketResponse) {
-      if (!ticketResponse.ok && onLocal()) {
-        console.error('Network response was not ok.')
+      if (!ticketResponse.ok) {
+        ticketTable.rows[1].outerHTML = `
+        <tr>
+        <td colspan=4>An error has occurred. Please contact the administrator.</td>
+        </tr>`
       }
       return ticketResponse.json()
     })
@@ -280,14 +332,17 @@ if (ticketPage) {
       } else {
         ticketTable.rows[1].outerHTML = `
         <tr>
-        <td style="text-align: center" colspan=4>No query parameter found.</td>
-        </tr>
-        `
+        <td colspan=4>No query parameter found.</td>
+        </tr>`
       }
     })
     .catch(function (error) {
+      ticketTable.rows[1].outerHTML = `
+        <tr>
+        <td colspan=4>An error has occurred. Please contact the administrator</td>
+        </tr>`
       if (onLocal()) {
-        console.error(`There was a problem with the fetch operation: ${error}`)
+        console.error(`LOG ERROR (main.js): ${error}`)
       }
     })
   function ticketSearchParam(ticketDataList, ticketUrlParamId) {
@@ -295,9 +350,8 @@ if (ticketPage) {
     if (tktI == -1) {
       ticketTable.rows[1].outerHTML = `
       <tr>
-      <td style="text-align: center" colspan=4>No data found for ticket that param id. Please check again.</td>
-      </tr>
-      `
+      <td colspan=4>No data found for ticket that param id. Please check again.</td>
+      </tr>`
     } else {
       ticketPlaceholder.remove()
       let i = 0
@@ -308,11 +362,10 @@ if (ticketPage) {
         <td>${ticketDataList[tktI].ticket[i].subject}</td>
         <td><a href="/founder.html">${ticketDataList[tktI].ticket[i].pic}</a></td>
         <td><code status="${ticketDataList[tktI].ticket[i].status}"></code></td>
-        </tr>
-        `
+        </tr>`
         i++
       }
-      ticketLastUpdated.innerHTML = ticketDataList[tktI].lastUpdated
+      ticketLastUpdated.innerText = ticketDataList[tktI].lastUpdated
     }
   }
 }
@@ -321,7 +374,7 @@ if (ticketPage) {
 /* ===== Workflow: workflow.html ===== */
 let workflowPage = document.getElementsByClassName('workflow')[0]
 if (workflowPage) {
-  let workflowDataApi = '/asset/json/workflowDataList.json'
+  let workflowDataApi = 'https://cdn.rayatiga.com/workflowDataList.json'
   let workflowForm = document.getElementById('workflow-form')
   let workflowInput = document.getElementById('workflow-input')
   let workflowSubmitButton = document.getElementById('workflow-input-button')
@@ -412,18 +465,18 @@ if (workflowPage) {
   function workflowNoDataFound(workflowInputValue) {
     workflowStatusReturn.innerHTML = `<strong>No data found</strong> for workflow #${workflowInputValue}, please enter workflow id correctly.`
     workflowInformation.style.display = 'none'
-    tag.innerHTML = ''
-    id.innerHTML = ''
-    subject.innerHTML = ''
-    pic.innerHTML = ''
-    status.innerHTML = ''
+    tag.innerText = ''
+    id.innerText = ''
+    subject.innerText = ''
+    pic.innerText = ''
+    status.innerText = ''
   }
   function workflowDispay(workflowDataList, workflowInputValue, wflI) {
     workflowInformation.style.display = 'block'
-    workflowStatusReturn.innerHTML = ''
-    tag.innerHTML = `#${workflowInputValue}`
-    id.innerHTML = workflowDataList[wflI].id
-    subject.innerHTML = workflowDataList[wflI].subject
+    workflowStatusReturn.innerText = ''
+    tag.innerText = `#${workflowInputValue}`
+    id.innerText = workflowDataList[wflI].id
+    subject.innerText = workflowDataList[wflI].subject
     pic.innerHTML = `<a href="/founder.html">${workflowDataList[wflI].pic}</a>`
     status.setAttribute('status', workflowDataList[wflI].status)
     while (stepotherI < workflowDataList[wflI].step.length) {

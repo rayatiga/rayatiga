@@ -1,13 +1,25 @@
 HTML
-<!-- ES: Title of Feature -->
-ES is abbreviation of "External Script".
+[Doc 1 - Any HTML Mark]
+<!-- MK: Title of Mark -->
+[Doc 2 - Internal Script]
+<!-- IS: Title of Script -->
+[Doc 3 - External Script]
+<!-- ES: Title of Script -->
 
 CSS, JavaScript
-/* ===== [Title (e.g. Global)] ===== */
+[Doc 1 - Global]
+/* ===== [Title] ===== */
 ...
 // Feature one
-Code one
-// Feature two
-Code two
 ...
-/* ===== [Title (e.g. Global)] ===== */
+// Feature two
+...
+/* ===== [Title] ===== */
+[Doc 2 - Specific File]
+/* ===== File: file.html ===== */
+...
+// Feature one
+...
+// Feature two
+...
+/* ===== File: file.html ===== */
