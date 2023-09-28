@@ -222,3 +222,5 @@ v5.2
 
 v5.3
 - Create condition window location href for inserting aria current page
+- Update the heading and adjusting text style
+- Update font family to inter from system ui
