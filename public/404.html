@@ -3,69 +3,61 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>404 Not Found - Rayatiga</title>
-    <meta name="description" content="Empowering web solutions for a digital future." />
-    <meta property="og:image" content="https://rayatiga.com/asset/img/rayatiga-og.jpg" />
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-    <!-- ES: Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-E94958W4T7"></script>
-    <script>
-      window.dataLayer = window.dataLayer || []
-      function gtag() {
-        dataLayer.push(arguments)
-      }
-      gtag('js', new Date())
-      gtag('config', 'G-E94958W4T7')
-    </script>
-    <!-- ES: Google Analytics -->
-    <!-- ES: Google Tag Manager -->
-    <script>
-      ;(function (w, d, s, l, i) {
-        w[l] = w[l] || []
-        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' })
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != 'dataLayer' ? '&l=' + l : ''
-        j.async = true
-        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl
-        f.parentNode.insertBefore(j, f)
-      })(window, document, 'script', 'dataLayer', 'GTM-PBN37CL2')
-    </script>
-    <!-- ES: Google Tag Manager -->
+    <meta name="description" content="Crafting cutting-edge websites to elevate your digital presence." />
     <link rel="stylesheet" href="/asset/css/main.css" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <script defer src="/asset/js/main.js"></script>
+    <title>404 Not Found - Rayatiga</title>
   </head>
-  <body>
-    <!-- ES: Google Tag Manager -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PBN37CL2" height="0" width="0" style="display: none; visibility: hidden"></iframe></noscript>
-    <!-- ES: Google Tag Manager -->
-    <div class="container not-found">
+  <body class="index">
+    <div class="wrapper">
       <header>
-        <h1>Rayatiga</h1>
-        <p>Crafting cutting-edge websites to elevate your digital presence.</p>
-        <hr />
         <nav>
-          <ul>
-            <span class="navigation"></span>
-          </ul>
+          <div class="container">
+            <div class="navigation">
+              <a href="/">Rayatiga</a>
+              <ul>
+                <li><a href="/">Home</a></li>
+              </ul>
+              <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+          </div>
         </nav>
-        <hr />
       </header>
       <main>
-        <h1>404 Not Found</h1>
-        <p>Oops! It looks like you've reached a dead end. The page you're trying to access is nowhere to be found. But don't worry, you're not alone in this digital wilderness. Let's get you back on track — you can return to our <a href="/">homepage</a> or <a onclick="window.history.back()">previous page</a>.</p>
+        <div class="container">
+          <div class="content">
+            <h1><span>404</span> <span>Not Found</span></h1>
+            <p>Sorry, the page you are looking for could not be found.</p>
+            <div class="button-group">
+              <a href="/"
+                ><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-home">
+                  <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                  <polyline points="9 22 9 12 15 12 15 22" />
+                </svg>
+                Homepage</a
+              >
+              <a href="#" onclick="history.back()"
+                ><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-undo-2">
+                  <path d="M9 14 4 9l5-5" />
+                  <path d="M4 9h10.5a5.5 5.5 0 0 1 5.5 5.5v0a5.5 5.5 0 0 1-5.5 5.5H11" />
+                </svg>
+                Back</a
+              >
+            </div>
+          </div>
+        </div>
       </main>
       <footer>
-        <hr />
-        <p>Navigation & Sitemap</p>
-        <ul>
-          <span class="navigation"></span>
-        </ul>
-        <p>Location: <span id="location"></span></p>
-        <hr />
-        <p>Your native theme is <span id="native-scheme"></span>. Switch scheme to <button onclick="switchScheme()" class="scheme"></button>.</p>
-        <hr />
-        <p class="copyright">Copyright &copy; 2020-2023 Rayatiga Agency. All Rights Reserved.</p>
+        <div class="container">
+          <div class="footer">
+            <p>Copyright &copy; 2020-2023 Rayatiga. All Rights Reserved.</p>
+          </div>
+        </div>
       </footer>
     </div>
   </body>

@@ -1,0 +1,5 @@
+echo "Deploy to: rayatiga"
+read -p "Commit message: " commitMessage
+sleep 2
+echo "Deploy directory public/ and commit message $commitMessage"
+wrangler pages deploy public/ --project-name "rayatiga" --commit-message "$commitMessage"
