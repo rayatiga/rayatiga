@@ -1,0 +1,560 @@
+/* ===== Global ===== */
+/* Inter Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+:root {
+  --red: #ff0000;
+  --gray: #787878;
+  --blue: #0000cc;
+  --dark: #131313;
+  --white: #ffffff;
+  --light: #fdfdfd;
+  --black: #000000;
+  --ocean: #00aeff;
+  /* Applied Color (color, bg) */
+  --code-bg: #eeeeee;
+  --thumb-bg: #aaaaaa;
+  --body-bg: var(--light);
+  --track-bg: var(--light);
+  --body-color: var(--black);
+  --anchor-color: var(--blue);
+  --selection-bg: var(--blue);
+  --thumb-hover-bg: #999999;
+  --border-color: var(--black);
+  --code-status-0-bg: #ffff0077;
+  --code-status-1-bg: #00ff0077;
+  --code-status-2-bg: #ff000077;
+  --selection-color: var(--white);
+  --input-textarea-bg: var(--light);
+  --table-border-color: var(--gray);
+  --input-textarea-color: var(--black);
+  --code-status-border-color: var(--dark);
+  --input-textarea-border-color: var(--gray);
+  /* Applied Unit (size, width, padding, family) */
+  --font-size: 1em;
+  --box-width: 45em;
+  --font-weight: 400;
+  --line-height: 1.5;
+  --box-padding: 1em;
+  --border-radius: 0.25em;
+  --scrollbar-width: 12px;
+  --body-font-family: 'Inter', 'system-ui', sans-serif;
+}
+::selection {
+  color: var(--selection-color);
+  background-color: var(--selection-bg);
+}
+::-webkit-scrollbar {
+  width: var(--scrollbar-width);
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--thumb-bg);
+}
+::-webkit-scrollbar-track {
+  background-color: var(--track-bg);
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--thumb-hover-bg);
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  overflow-y: auto;
+  overflow-x: hidden;
+  line-height: var(--line-height);
+}
+body {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--body-color);
+  font-size: var(--font-size);
+  font-weight: var(--font-weight);
+  background-color: var(--body-bg);
+  font-family: var(--body-font-family);
+}
+.container {
+  padding: var(--box-padding);
+  max-width: var(--box-width);
+}
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+a,
+a:visited {
+  color: var(--anchor-color);
+}
+a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+}
+a[aria-current='page'] {
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+}
+a[href='#main-content'] {
+  top: 16px;
+  left: 16px;
+  position: absolute;
+  transition: 0.35s all;
+  transform: translateY(-170%);
+}
+a[href='#main-content']:focus {
+  transform: translateY(0);
+}
+button {
+  cursor: pointer;
+  border-radius: var(--border-radius);
+  padding: 0.15em 0.35em;
+  color: var(--body-color);
+  background-color: var(--body-bg);
+  border: 1px solid var(--input-textarea-border-color);
+}
+button,
+input,
+textarea {
+  font-size: 1em;
+  font-family: inherit;
+}
+button.scheme {
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  color: var(--anchor-color);
+}
+button.scheme:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+}
+code {
+  font-weight: 400;
+  font-size: 0.85em;
+  display: inline-block;
+  padding: 0.05em 0.25em;
+  border-radius: var(--border-radius);
+  vertical-align: middle;
+  background-color: var(--code-bg);
+  font-family: inherit;
+}
+code[status] {
+  border: 1px solid var(--code-status-border-color);
+}
+footer ul {
+  gap: 1em;
+  padding: 0;
+  display: flex;
+  row-gap: 0.25em;
+  flex-wrap: wrap;
+  list-style: none;
+}
+h1,
+h2 {
+  font-weight: 400;
+}
+header h1 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+header p {
+  margin-top: 0.75em;
+}
+hr {
+  border: 0;
+  border-top: 0.07em solid var(--border-color);
+}
+main h1 {
+  font-size: 1.75em;
+}
+main h2 {
+  font-size: 1.25em;
+}
+nav ul {
+  gap: 1em;
+  padding: 0;
+  display: flex;
+  row-gap: 0.25em;
+  flex-wrap: wrap;
+  list-style: none;
+}
+p {
+  letter-spacing: 0.025em;
+}
+p.copyright {
+  margin-bottom: 0;
+}
+small.development {
+  color: var(--red);
+}
+span.navigation {
+  height: 1.5em;
+}
+strong {
+  font-weight: 600;
+}
+ul {
+  padding-left: 1.25em;
+  list-style-type: square;
+}
+/* ===== Global ===== */
+
+/* ===== 404: 404.html ===== */
+/* ===== 404: 404.html ===== */
+
+/* ===== About: about.html ===== */
+/* ===== About: about.html ===== */
+
+/* ===== CDN: cdn.html ===== */
+div.cdn main p code[status='3']::before {
+  content: 'Serving';
+}
+div.cdn main p code[status='3'] {
+  background-color: var(--code-status-1-bg);
+  animation: glow 0.35s ease-in-out alternate infinite;
+}
+div.cdn main p code[status='4']::before {
+  content: 'Unserving';
+}
+div.cdn main p code[status='4'] {
+  background-color: var(--code-status-2-bg);
+}
+/* ===== CDN: cdn.html ===== */
+
+/* ===== Contact: contact.html ===== */
+/* ===== Contact: contact.html ===== */
+
+/* ===== Documentation: documentation.html ===== */
+div.documentation main div.info-detail {
+  padding-left: 1.5em;
+}
+div.documentation main div.info-detail p {
+  font-weight: bold;
+}
+/* ===== Documentation: documentation.html ===== */
+
+/* ===== Form: form.html ===== */
+div.form main form input::placeholder,
+div.form main form textarea::placeholder {
+  font-size: 1em;
+}
+div.form main form label sup {
+  color: var(--red);
+  margin-left: 0.15em;
+}
+div.form main form textarea {
+  width: 100%;
+  height: 10em;
+  max-height: 20em;
+  resize: vertical;
+}
+div.form main form label {
+  margin-right: 1em;
+}
+div.form main form input#form-name,
+div.form main form input#form-subject {
+  margin-bottom: 1em;
+}
+div.form main form input#form-name,
+div.form main form input#form-email,
+div.form main form input#form-subject,
+div.form main form textarea#form-message {
+  width: 100%;
+  margin-top: 0.25em;
+  box-sizing: border-box;
+}
+div.form main form input[type='checkbox'] {
+  margin-top: 1em;
+}
+div.form main form div.button {
+  padding: 0;
+}
+div.form main form div.button button {
+  margin: 1em 0;
+  display: inline-block;
+}
+div.form main form div.button button:first-child {
+  margin-right: 0.25em;
+}
+div.form main form input,
+div.form main form textarea {
+  padding: 0.25em 0.5em;
+  border-radius: var(--border-radius);
+  color: var(--input-textarea-color);
+  background-color: var(--input-textarea-bg);
+  border: 1px solid var(--input-textarea-border-color);
+}
+/* ===== Form: form.html ===== */
+
+/* ===== Founder: founder.html ===== */
+div.founder main p img {
+  width: 1.125em;
+  margin-left: 0.25em;
+  margin-bottom: -0.25em;
+}
+/* ===== Founder: founder.html ===== */
+
+/* ===== Index: index.html ===== */
+div.index main p img {
+  width: 1.125em;
+  margin-left: 0.25em;
+  margin-bottom: -0.25em;
+}
+div.index main div[image] {
+  gap: 0.35em;
+  display: flex;
+  flex-wrap: wrap;
+}
+div.index main div[image] img {
+  width: 100%;
+  border-radius: var(--border-radius);
+  max-width: max-content;
+  border: 1px solid var(--border-color);
+}
+/* ===== Index: index.html ===== */
+
+/* ===== Invoice: invoice.html ===== */
+div.invoice main form#invoice-form {
+  gap: 0.25em;
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+}
+div.invoice main form#invoice-form input {
+  width: 100%;
+  padding: 0.25em 0.5em;
+  border-radius: var(--border-radius);
+  box-sizing: border-box;
+  color: var(--input-textarea-color);
+  background-color: var(--input-textarea-bg);
+  border: 1px solid var(--input-textarea-border-color);
+}
+div.invoice main div.invoice-status p {
+  color: var(--red);
+}
+div.invoice main div.invoice-information {
+  display: none;
+}
+div.invoice main div.invoice-information p code#invoice-status[status='unpaid']::before {
+  content: 'Unpaid';
+}
+div.invoice main div.invoice-information p code#invoice-status[status='unpaid'] {
+  background-color: var(--code-status-0-bg);
+}
+div.invoice main div.invoice-information p code#invoice-status[status='paid']::before {
+  content: 'Paid';
+}
+div.invoice main div.invoice-information p code#invoice-status[status='paid'] {
+  background-color: var(--code-status-1-bg);
+}
+div.invoice main div.invoice-information p code#invoice-status[status='failed']::before {
+  content: 'Failed';
+}
+div.invoice main div.invoice-information p code#invoice-status[status='failed'] {
+  background-color: var(--code-status-2-bg);
+}
+div.invoice main div.invoice-information img {
+  width: 100%;
+  max-width: 25em;
+  border-radius: var(--border-radius);
+  background-color: var(--light);
+  border: 1px solid var(--border-color);
+}
+/* ===== Invoice: invoice.html ===== */
+
+/* ===== Maintenance: maintenance.html ===== */
+/* ===== Maintenance: maintenance.html ===== */
+
+/* ===== Payment: payment.html ===== */
+div.payment main img {
+  width: 100%;
+  max-width: 25em;
+  border-radius: var(--border-radius);
+  background-color: var(--light);
+  border: 1px solid var(--border-color);
+}
+/* ===== Payment: payment.html ===== */
+
+/* ===== Privacy & Policy: privacy-policy.html ===== */
+/* ===== Privacy & Policy: privacy-policy.html ===== */
+
+/* ===== Project: project.html ===== */
+/* ===== Project: project.html ===== */
+
+/* ===== Service: service.html ===== */
+div.service main div.table-overflow table {
+  width: 100%;
+  border-collapse: collapse;
+}
+div.service main div.table-overflow table th,
+div.service main div.table-overflow table td {
+  padding: 0.4em;
+  text-align: left;
+  border: 1px solid var(--table-border-color);
+}
+@media (max-width: 441px) {
+  div.service main div.table-overflow {
+    display: none;
+  }
+}
+/* ===== Service: service.html ===== */
+
+/* ===== Sitemap: sitemap.html ===== */
+/* ===== Sitemap: sitemap.html ===== */
+
+/* ===== Template: template.html ===== */
+/* ===== Template: template.html ===== */
+
+/* ===== Ticket: ticket.html ===== */
+div.ticket main div.table-overflow table {
+  width: 100%;
+  border-collapse: collapse;
+}
+div.ticket main div.table-overflow table th,
+div.ticket main div.table-overflow table td {
+  padding: 0.4em;
+  text-align: left;
+  border: 1px solid var(--table-border-color);
+}
+div.ticket main div.table-overflow table td[colspan] {
+  text-align: center;
+}
+div.ticket main div.table-overflow table tr td code[status='pending']::before {
+  content: 'Pending';
+}
+div.ticket main div.table-overflow table tr td code[status='pending'] {
+  background-color: var(--code-status-0-bg);
+}
+div.ticket main div.table-overflow table tr td code[status='resolved']::before {
+  content: 'Resolved';
+}
+div.ticket main div.table-overflow table tr td code[status='resolved'] {
+  background-color: var(--code-status-1-bg);
+}
+div.ticket main div.table-overflow table tr td code[status='unresolved']::before {
+  content: 'Unresolved';
+}
+div.ticket main div.table-overflow table tr td code[status='unresolved'] {
+  background-color: var(--code-status-2-bg);
+}
+div.ticket main u {
+  display: none;
+}
+@media (max-width: 336px) {
+  div.ticket main div.table-overflow {
+    display: none;
+  }
+  div.ticket main u {
+    display: block;
+  }
+}
+/* ===== Ticket: ticket.html ===== */
+
+/* ===== Workflow: workflow.html ===== */
+div.workflow main input {
+  width: 100%;
+  margin: 0.25em 0;
+  padding: 0.25em 0.5em;
+  border-radius: var(--border-radius);
+  color: var(--input-textarea-color);
+  background-color: var(--input-textarea-bg);
+  border: 1px solid var(--input-textarea-border-color);
+}
+div.workflow main div.workflow-status p {
+  color: var(--red);
+}
+div.workflow main div.workflow-information {
+  display: none;
+}
+div.workflow main div.workflow-information p code#workflow-status[status='pending']::before {
+  content: 'Pending';
+}
+div.workflow main div.workflow-information p code#workflow-status[status='pending'] {
+  background-color: var(--code-status-0-bg);
+}
+div.workflow main div.workflow-information p code#workflow-status[status='resolved']::before {
+  content: 'Resolved';
+}
+div.workflow main div.workflow-information p code#workflow-status[status='resolved'] {
+  background-color: var(--code-status-1-bg);
+}
+div.workflow main div.workflow-information p code#workflow-status[status='unresolved']::before {
+  content: 'Unresolved';
+}
+div.workflow main div.workflow-information p code#workflow-status[status='unresolved'] {
+  background-color: var(--code-status-2-bg);
+}
+/* ===== Workflow: workflow.html ===== */
+
+/* ===== Keyframe ===== */
+@keyframes glow {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.75;
+  }
+}
+/* ===== Keyframe ===== */
+
+/* ===== Scheme ===== */
+[rayatiga-scheme='light'] {
+  --code-bg: #eeeeee;
+  --thumb-bg: #aaaaaa;
+  --body-bg: var(--light);
+  --track-bg: var(--light);
+  --body-color: var(--black);
+  --anchor-color: var(--blue);
+  --thumb-hover-bg: #999999;
+  --border-color: var(--black);
+  --input-textarea-bg: var(--light);
+  --input-textarea-color: var(--black);
+  --code-status-border-color: var(--dark);
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    --code-bg: #eeeeee;
+    --thumb-bg: #aaaaaa;
+    --body-bg: var(--light);
+    --track-bg: var(--light);
+    --body-color: var(--black);
+    --anchor-color: var(--blue);
+    --thumb-hover-bg: #999999;
+    --border-color: var(--black);
+    --input-textarea-bg: var(--light);
+    --input-textarea-color: var(--black);
+    --code-status-border-color: var(--dark);
+  }
+}
+[rayatiga-scheme='dark'] {
+  --code-bg: #333333;
+  --thumb-bg: #333333;
+  --body-bg: var(--dark);
+  --track-bg: var(--dark);
+  --body-color: var(--white);
+  --anchor-color: var(--ocean);
+  --thumb-hover-bg: #444444;
+  --border-color: var(--white);
+  --input-textarea-bg: var(--dark);
+  --input-textarea-color: var(--white);
+  --code-status-border-color: var(--gray);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --code-bg: #333333;
+    --thumb-bg: #333333;
+    --body-bg: var(--dark);
+    --track-bg: var(--dark);
+    --body-color: var(--white);
+    --anchor-color: var(--ocean);
+    --thumb-hover-bg: #444444;
+    --border-color: var(--white);
+    --input-textarea-bg: var(--dark);
+    --input-textarea-color: var(--white);
+    --code-status-border-color: var(--gray);
+  }
+}
+/* ===== Scheme ===== */
+
+/* ===== Other ===== */
+/* ===== Other ===== */
