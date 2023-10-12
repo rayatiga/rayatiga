@@ -155,7 +155,6 @@ main .content h1 {
 }
 main .content h1 span {
   font-weight: 400;
-  display: inline-block;
 }
 main .content h1 span:last-child {
   font-weight: inherit;
