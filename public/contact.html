@@ -4,7 +4,7 @@
     <!-- Document -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rayatiga</title>
+    <title>Contact - Rayatiga</title>
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <meta name="description" content="Rayatiga is an agency engaged in the field of information technology. Rayatiga provides web services such as domain name reservation, static website development, WordPress website development, cloud service establishment, and other technology custom services." />
     <meta property="og:image" content="https://rayatiga.com/asset/img/rayatiga-og.jpg" />
@@ -39,7 +39,7 @@
           <div class="collapse navbar-collapse flex-grow-0" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/">Home</a>
+                <a class="nav-link" href="/">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="/about.html">About</a>
@@ -55,7 +55,7 @@
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/contact.html">Contact</a>
+                <a class="nav-link active" aria-current="page" href="/contact.html">Contact</a>
               </li>
               <!-- Scheme: Toggle -->
               <li class="nav-item py-2 py-lg-1 col-12 col-lg-auto">
@@ -98,15 +98,34 @@
     </header>
     <!-- Main -->
     <main class="d-flex justify-content-center align-items-center rayatiga-main-height">
-      <!-- Section: index -->
-      <section id="index" class="mt-5 py-5">
+      <!-- Section: contact -->
+      <section id="contact" class="mt-5 py-5">
         <div class="container d-flex flex-column gap-2">
-          <h1 class="display-4 animate__animated animate__fadeInUp animate__faster"><span class="text-danger">Empowering</span> your <span class="text-success">Digital Presence</span></h1>
-          <p class="lead animate__animated animate__fadeInUp animate__faster animate__delay-1s">Rayatiga is an agency engaged in the field of information technology. Rayatiga provides web services such as domain name reservation, static website development, WordPress website development, cloud service establishment, and other technology custom services. All the services include for maintenance until the subscription of services reach end date.</p>
-          <div class="d-flex flex-wrap gap-2">
-            <a class="btn btn-dark animate__animated animate__fadeInUp animate__faster animate__delay-2s" href="/service.html" data-bs-toggle="modal" data-bs-target="#underDevelopmentModal"><i class="bi-diagram-3 me-2"></i>Service</a>
-            <a class="btn btn-outline-success animate__animated animate__fadeInUp animate__faster animate__delay-3s" href="/about.html"><i class="bi-blockquote-right me-2"></i>Learn More</a>
-          </div>
+          <h1 class="display-4 animate__animated animate__fadeInUp animate__faster">Get in <span class="text-success">Touch</span></h1>
+          <p class="lead animate__animated animate__fadeInUp animate__faster animate__delay-1s">We appreciate your business and we're here to make sure you're happy with our products and services. If you have any questions or concerns, please don't hesitate to contact us.</p>
+          <form action="https://formspree.io/f/xknavynp" class="needs-validation row g-3 animate__animated animate__fadeIn animate__faster animate__delay-2s" method="post" target="_blank" novalidate>
+            <div class="col-md-6 col-sm-12">
+              <label for="name">Name</label>
+              <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name..." minlength="2" maxlength="60" required />
+              <div class="valid-feedback">Looks good.</div>
+              <div class="invalid-feedback">Please enter your name.</div>
+            </div>
+            <div class="col-md-6 col-sm-12">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email..." minlength="6" maxlength="60" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" required />
+              <div class="valid-feedback">Your email looks good.</div>
+              <div class="invalid-feedback">Please enter valid email.</div>
+            </div>
+            <div class="col-12">
+              <label for="message">Message</label>
+              <textarea class="form-control" placeholder="Enter your message..." id="message" name="Message" minlength="10" maxlength="2500" required></textarea>
+              <div class="valid-feedback">Your message looks good.</div>
+              <div class="invalid-feedback">Please enter your meessage more than 15 character.</div>
+            </div>
+            <div class="col-12">
+              <button type="submit" class="btn btn-dark"><i class="bi-send me-2"></i>Submit</button>
+            </div>
+          </form>
         </div>
       </section>
     </main>
