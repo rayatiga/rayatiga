@@ -10,6 +10,12 @@
   --animate-delay: 0.25s;
 }
 
+/* When user select the element */
+::selection {
+  color: var(--bs-white);
+  background: var(--bs-primary);
+}
+
 /* Prevent anchor overlap inside navbar */
 html {
   scroll-padding-top: calc(56px + 24px);
@@ -126,5 +132,8 @@ footer {
   .img-fluid {
     width: 100%;
     max-width: 240px;
+  }
+  #index .animate__delay-4s {
+    --animate-delay: 0s;
   }
 }
