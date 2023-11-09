@@ -1,0 +1,34 @@
+[
+  {
+    "title": "Domain .COM",
+    "price": "15",
+    "description": "Reservation for domain with extension .com with managed DNS and maintenance from Rayatiga.",
+    "link": "#domain",
+    "tag": "domain-com",
+    "featured": true
+  },
+  {
+    "title": "Domain .ID",
+    "price": "25",
+    "description": "Reservation for domain with extension .id with managed DNS and maintenance from Rayatiga.",
+    "link": "#domain",
+    "tag": "domain-id",
+    "featured": false
+  },
+  {
+    "title": "Domain .CO.ID",
+    "price": "55",
+    "description": "Reservation for domain with extension .co.id with managed DNS and maintenance from Rayatiga.",
+    "link": "#domain",
+    "tag": "domain-coid",
+    "featured": false
+  },
+  {
+    "title": "Domain Custom",
+    "price": "Custom",
+    "description": "Reservation for domain with custom extension with managed DNS and maintenance from Rayatiga.",
+    "link": "/contact.html",
+    "tag": "",
+    "featured": false
+  }
+]
