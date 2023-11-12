@@ -1,53 +1,53 @@
 // Dynamic main height to minimum height 100vh
-const main = document.querySelector('main')
-const header = document.querySelector('header')
-const footer = document.querySelector('footer')
-main.style.minHeight = `calc(100vh - ${header.offsetHeight}px - ${footer.offsetHeight}px)`
-window.addEventListener('resize', () => {
-  main.style.minHeight = `calc(100vh - ${header.offsetHeight}px - ${footer.offsetHeight}px)`
-})
+const main = document.querySelector("main");
+const header = document.querySelector("header");
+const footer = document.querySelector("footer");
+main.style.minHeight = `calc(100vh - ${header.offsetHeight}px - ${footer.offsetHeight}px)`;
+window.addEventListener("resize", () => {
+  main.style.minHeight = `calc(100vh - ${header.offsetHeight}px - ${footer.offsetHeight}px)`;
+});
 
 // Popover trigger
-const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]')
-const popoverList = [...popoverTriggerList].map((popoverTriggerEl) => new bootstrap.Popover(popoverTriggerEl))
+const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
+const popoverList = [...popoverTriggerList].map((popoverTriggerEl) => new bootstrap.Popover(popoverTriggerEl));
 popoverTriggerList.forEach((popoverTriggerEl) => {
-  popoverTriggerEl.style.cursor = 'pointer'
-})
+  popoverTriggerEl.style.cursor = "pointer";
+});
 
 // Tooltip trigger
-const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
-const tooltipList = [...tooltipTriggerList].map((tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl))
+const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+const tooltipList = [...tooltipTriggerList].map((tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl));
 
 // Form validation
-;(() => {
-  'use strict'
-  const forms = document.querySelectorAll('.needs-validation')
+(() => {
+  "use strict";
+  const forms = document.querySelectorAll(".needs-validation");
   Array.from(forms).forEach((form) => {
     form.addEventListener(
-      'submit',
+      "submit",
       (event) => {
         if (!form.checkValidity()) {
-          event.preventDefault()
-          event.stopPropagation()
+          event.preventDefault();
+          event.stopPropagation();
         }
-        form.classList.add('was-validated')
+        form.classList.add("was-validated");
       },
       false
-    )
-  })
-})()
+    );
+  });
+})();
 
 // Navigation
-const navigation = document.getElementById('navigation')
+const navigation = document.getElementById("navigation");
 navigation.outerHTML = `
 <li class="nav-item">
-<a class="nav-link ${document.querySelector('section#index') ? 'active' : ''}" href="/">Home</a>
+<a class="nav-link ${document.querySelector("section#index") ? "active" : ""}" href="/">Home</a>
 </li>
 <li class="nav-item">
-<a class="nav-link ${document.querySelector('section#about') ? 'active' : ''}" href="/about.html">About</a>
+<a class="nav-link ${document.querySelector("section#about") ? "active" : ""}" href="/about.html">About</a>
 </li>
 <li class="nav-item dropdown">
-<a class="nav-link dropdown-toggle ${document.querySelector('section#service') ? 'active' : ''}" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Service</a>
+<a class="nav-link dropdown-toggle ${document.querySelector("section#service") ? "active" : ""}" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Service</a>
 <ul class="dropdown-menu">
 <li><a class="dropdown-item" href="/service.html">All Service</a></li>
 <li><hr class="dropdown-divider" /></li>
@@ -60,16 +60,16 @@ navigation.outerHTML = `
 </ul>
 </li>
 <li class="nav-item">
-<a class="nav-link ${document.querySelector('section#contact') ? 'active' : ''}" href="/contact.html">Contact</a>
+<a class="nav-link ${document.querySelector("section#contact") ? "active" : ""}" href="/contact.html">Contact</a>
 </li>
-`
-let activeNav = document.querySelector('.nav-item .active')
+`;
+let activeNav = document.querySelector(".nav-item .active");
 if (activeNav) {
-  activeNav.setAttribute('aria-current', 'page')
+  activeNav.setAttribute("aria-current", "page");
 }
 
 // Scheme toggle
-const schemeToggle = document.getElementById('scheme-toggle')
+const schemeToggle = document.getElementById("scheme-toggle");
 schemeToggle.outerHTML = `
 <li class="nav-item py-2 py-lg-1 col-12 col-lg-auto">
 <div class="vr d-none d-lg-flex h-100 mx-lg-2 text-dark-50"></div>
@@ -104,10 +104,10 @@ Auto
 </li>
 </ul>
 </li>
-`
+`;
 
 // Scheme utility
-const schemeUtility = document.getElementById('scheme-utility')
+const schemeUtility = document.getElementById("scheme-utility");
 schemeUtility.outerHTML = `
 <style>
 .bi {
@@ -135,4 +135,4 @@ display: block !important;
 <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
 </symbol>
 </svg>
-`
+`;
