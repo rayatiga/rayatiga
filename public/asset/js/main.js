@@ -60,6 +60,9 @@ navigation.outerHTML = `
 </ul>
 </li>
 <li class="nav-item">
+<a class="nav-link ${document.querySelector("section#career") ? "active" : ""}" href="/career.html">Career</a>
+</li>
+<li class="nav-item">
 <a class="nav-link ${document.querySelector("section#contact") ? "active" : ""}" href="/contact.html">Contact</a>
 </li>
 `;
