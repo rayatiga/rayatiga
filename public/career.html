@@ -54,7 +54,23 @@
         <div class="container d-flex flex-column gap-2">
           <h1 class="fw-bold animate__animated animate__fadeInUp animate__faster">Shape the Future</h1>
           <p class="animate__animated animate__fadeInUp animate__faster animate__delay-1s">The future is full of possibilities, and we at Rayatiga are excited to be at the forefront of innovation. We are looking for talented and passionate people to join our team and help us shape the future. We offer a variety of opportunities in a wide range of fields, so you can find the perfect fit for your skills and interests.</p>
-          <div class="row row-cols-1 row-cols-md-2 g-4">
+          <div class="row row-cols-1 row-cols-md-2 g-4 animate__animated animate__fadeInUp animate__faster animate__delay-2s">
+            <div class="col">
+              <div class="card h-100">
+                <div class="card-header">
+                  <span class="badge bg-secondary fw-normal">Remote Work</span>
+                  <span class="badge bg-secondary fw-normal">One-time Position</span>
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Google Ads Copywriter</h5>
+                  <p class="card-text">Google Ads Copywriter responsibilities include conducting SEO and keyword research, updating product descriptions and writing promotional text.</p>
+                  <button class="btn btn-dark" data-bs-target="#applyPosition" data-bs-toggle="modal">Apply Position</button>
+                </div>
+                <div class="card-footer">
+                  <small class="text-body-secondary">Posted on March 18, 2022</small>
+                </div>
+              </div>
+            </div>
             <div class="col">
               <div class="card h-100">
                 <div class="card-header">
@@ -92,8 +108,11 @@
             <h5>Google Ads Copywriter</h5>
             <hr />
             <ul class="list-unstyled mt-3">
-              <li>Average Work time 09:00 - 17.00</li>
-              <li>Salary range <span class="fw-medium">Rp1.500.000 - Rp3.500.000</span></li>
+              <li><i class="bi-clock me-2"></i>09:00 - 17.00</li>
+              <li>
+                <i class="bi-calendar-range me-2"></i><span class="fw-medium" data-bs-toggle="popover" data-bs-title="One-time Position" data-bs-content="Contract signed for working in range, usualy no extended except with proposal.">One-time<sup>?</sup></span> position
+              </li>
+              <li><i class="bi-cash-stack me-2"></i>Rp2.500.000 - Rp4.500.000</li>
             </ul>
             <hr />
             <p>Google Ads Copywriter responsibilities include conducting SEO and keyword research, updating product descriptions and writing promotional text for banners and online ads.</p>
@@ -101,7 +120,7 @@
           </div>
           <div class="modal-footer">
             <button class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button class="btn btn-dark" data-bs-target="#applyForm" data-bs-toggle="modal">Apply Now</button>
+            <button class="btn btn-dark" data-bs-target="#applyFormDISABLED" data-bs-toggle="modal" disabled>Apply Now</button>
           </div>
         </div>
       </div>
@@ -114,7 +133,7 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <form id="applyFormSubmit" action="https://formspree.io/f/xknavynpX" class="needs-validation row g-3" method="post" target="_blank" novalidate>
+            <form id="applyFormSubmit" action="https://rayatiga.com/career" class="needs-validation row g-3" method="post" target="_blank" novalidate>
               <div class="col-12">
                 <label for="name">Name</label>
                 <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name..." minlength="2" maxlength="60" required />
