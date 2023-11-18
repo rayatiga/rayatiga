@@ -51,10 +51,10 @@ navigation.outerHTML = `
 <ul class="dropdown-menu">
 <li><a class="dropdown-item" href="/service.html">All Service</a></li>
 <li><hr class="dropdown-divider" /></li>
-<li><a class="dropdown-item" href="/service.html#domain">Domain Name</a></li>
-<li><a class="dropdown-item" href="/service.html#static">Static Website</a></li>
-<li><a class="dropdown-item" href="/service.html#wordpress">WordPress Website</a></li>
-<li><a class="dropdown-item" href="/service.html#cloud">Cloud Service & Server</a></li>
+<li><a class="dropdown-item" href="/service#domain">Domain Name</a></li>
+<li><a class="dropdown-item" href="/service#static">Static Website</a></li>
+<li><a class="dropdown-item" href="/service#wordpress">WordPress Website</a></li>
+<li><a class="dropdown-item" href="/service#cloud">Cloud Service & Server</a></li>
 <li><hr class="dropdown-divider" /></li>
 <li><a class="dropdown-item" href="/privacy-policy.html">Privacy Policy</a></li>
 </ul>
