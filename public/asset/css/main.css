@@ -5,9 +5,9 @@
   src: url('/asset/font/inter.ttf');
 }
 
-/* Set animate delay between 1, 2, until 5 by 0.25 second */
+/* Set animate delay between 1, 2, until 5 by 0.125 second */
 :root {
-  --animate-delay: 0.25s;
+  --animate-delay: 0.125s;
 }
 
 /* When user select the element */
