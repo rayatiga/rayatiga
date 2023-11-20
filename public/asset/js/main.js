@@ -139,3 +139,51 @@ display: block !important;
 </symbol>
 </svg>
 `;
+
+// WhatsApp sticky button
+const whatsapp = document.getElementById("whatsapp");
+whatsapp.outerHTML = `
+<style>
+.whatsapp {
+right: 32px;
+bottom: 32px;
+width: 64px;
+height: 64px;
+border-radius: 999px;
+display: flex;
+justify-content: center;
+align-items: center;
+background: #25d366;
+cursor: pointer;
+transition: background 0.25s ease-in-out;
+animation: beatWave 2s ease-in-out infinite;
+}
+.whatsapp:hover {
+background: #1fb656;
+}
+@media (max-width: 575px) {
+.whatsapp {
+  right: 16px;
+  bottom: 16px;
+}
+}
+.whatsapp button {
+font-size: 32px;
+}
+@keyframes beatWave {
+0% {
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.25);
+}
+75% {
+  box-shadow: 0 0 0 16px rgba(0, 0, 0, 0);
+}
+}
+</style>
+<div class="whatsapp position-fixed" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-title="WhatsApp us">
+<button class="text-white btn" onclick="whatsappClick()"><i class="bi-whatsapp"></i></button>
+</div>`;
+
+// WhatsApp button click redirect
+function whatsappClick() {
+  return window.open("https://wa.me/6282122220362?text=Hello+Rayatiga.");
+}
