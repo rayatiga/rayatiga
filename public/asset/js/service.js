@@ -42,25 +42,6 @@ function selectService(service) {
   }
 }
 
-// Domain data
-fetch("/asset/json/domain.json")
-  .then((response) => response.json())
-  .then((data) => {
-    let html = document.getElementById("domain-data");
-    for (let i = 0; i < data.length; i++) {
-      html.innerHTML += `
-        <div class="col">
-        <div class="card">
-        <div class="card-header ${data[i].featured ? "bg-primary text-white" : ""}">
-        <p class="mb-0">${data[i].featured ? '<i class="bi-star-fill me-2"></i>' : ""}${data[i].title}</p>
-        </div>
-        <div class="card-body">
-        <h2 class="card-title pricing-card-title">$${data[i].price}<small class="text-body-secondary fw-light">/yr.</small></h2>
-        <p>${data[i].description}</p>
-        <a class="w-100 btn ${data[i].featured ? "btn-primary" : "btn-outline-dark"}" href="#domain" onclick="selectService('domain-com')">Select Service</a>
-        </div>
-        </div>
-        </div>
-      `;
-    }
-  });
+const popover = new bootstrap.Popover(".popover-dismiss", {
+  trigger: "focus",
+});
