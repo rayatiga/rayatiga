@@ -1,8 +1,8 @@
 /* Importing Inter font */
 @font-face {
   font-display: swap;
-  font-family: 'Inter';
-  src: url('/asset/font/inter.ttf');
+  font-family: "Inter";
+  src: url("/asset/font/inter.ttf");
 }
 
 /* Set animate delay between 1, 2, until 5 by 0.125 second */
@@ -23,7 +23,7 @@ html {
 
 /* Set font family to all inside body with Inter */
 body {
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: "Inter", system-ui, sans-serif;
 }
 
 /* Specify the min height for navbar */
@@ -47,7 +47,7 @@ footer {
 }
 
 /* Set button dark with button light variable in dark scheme  */
-[data-bs-theme='dark'] .btn-dark {
+[data-bs-theme="dark"] .btn-dark {
   --bs-btn-color: var(--bs-black);
   --bs-btn-bg: var(--bs-light);
   --bs-btn-border-color: var(--bs-light);
@@ -65,7 +65,7 @@ footer {
 }
 
 /* Add border light subtle to <badge> with background dark  */
-[data-bs-theme='dark'] .badge.bg-dark {
+[data-bs-theme="dark"] .badge.bg-dark {
   border: 1px solid var(--bs-light-border-subtle);
 }
 
@@ -104,7 +104,7 @@ footer {
 }
 
 /* Set button outline dark with button outline light variable in dark scheme */
-[data-bs-theme='dark'] .btn-outline-dark {
+[data-bs-theme="dark"] .btn-outline-dark {
   --bs-btn-color: #f8f9fa;
   --bs-btn-border-color: #f8f9fa;
   --bs-btn-hover-color: #000;
