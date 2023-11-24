@@ -42,6 +42,9 @@ function selectService(service) {
   }
 }
 
-const popover = new bootstrap.Popover(".popover-dismiss", {
-  trigger: "focus",
-});
+if (!window.location.href.includes("127.0.0.1" || "localhost")) {
+  document.querySelector("a[href='/service.html#domain']").href = "/service#domain";
+  document.querySelector("a[href='/service.html#static']").href = "/service#static";
+  document.querySelector("a[href='/service.html#wordpress']").href = "/service#wordpress";
+  document.querySelector("a[href='/service.html#cloud']").href = "/service#cloud";
+}
