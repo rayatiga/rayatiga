@@ -30,7 +30,7 @@
     <!-- Header -->
     <header>
       <!-- Navigation -->
-      <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top border-bottom">
+      <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
           <a class="navbar-brand fw-medium" href="/"><i class="bi bi-cloud-haze2-fill me-2"></i>Rayatiga</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -102,6 +102,14 @@
         </div>
       </nav>
     </header>
+    <!-- Video -->
+    <div class="position-fixed top-0 start-0 w-100 h-100 bg-body-tertiary d-flex justify-content-center align-items-center">
+      <video class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover" src="/asset/video/home.mp4" autoplay muted loop></video>
+    </div>
+    <!-- Video overlay -->
+    <div class="position-fixed top-0 start-0 w-100 h-100 bg-body-tertiary d-flex justify-content-center align-items-center opacity-50">
+      <div class="position-absolute top-0 start-0 w-100 h-100 bg-gradient"></div>
+    </div>
     <!-- Main -->
     <main class="d-flex justify-content-center align-items-center rayatiga-main-height">
       <!-- Section: Index -->
@@ -126,7 +134,7 @@
       </section>
     </main>
     <!-- Footer -->
-    <footer class="bg-body-tertiary border-top">
+    <footer class="position-relative w-100">
       <div class="container">
         <p class="m-0 py-3 text-center">Copyright <i class="bi bi-c-circle"></i> 2020 - 2023 <a class="text-body text-decoration-none" href="https://rayatiga.com">Rayatiga</a>. All Rights Reserved.</p>
       </div>
@@ -163,5 +171,13 @@
     <script src="/asset/js/bootstrap-theme.js"></script>
     <!-- Main JS -->
     <script src="/asset/js/main.js"></script>
+    <!-- Navigation Toggle -->
+    <script>
+      const navbar = document.querySelector(".navbar");
+      const navToggle = document.querySelector(".navbar-toggler");
+      navToggle.onclick = function () {
+        navbar.classList.toggle("bg-body-tertiary");
+      };
+    </script>
   </body>
 </html>
