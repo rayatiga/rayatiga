@@ -30,7 +30,7 @@
     <!-- Header -->
     <header>
       <!-- Navigation -->
-      <nav class="navbar navbar-expand-lg fixed-top">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top border-bottom">
         <div class="container">
           <a class="navbar-brand fw-medium" href="/"><i class="bi bi-cloud-haze2-fill me-2"></i>Rayatiga</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -107,8 +107,8 @@
       <video class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover" src="/asset/video/home.mp4" autoplay muted loop></video>
     </div>
     <!-- Video overlay -->
-    <div class="position-fixed top-0 start-0 w-100 h-100 bg-body-tertiary d-flex justify-content-center align-items-center opacity-50">
-      <div class="position-absolute top-0 start-0 w-100 h-100 bg-gradient"></div>
+    <div class="position-fixed top-0 start-0 w-100 h-100 bg-body-tertiary d-flex justify-content-center align-items-center opacity-75">
+      <div class="position-absolute top-0 start-0 w-100 h-100"></div>
     </div>
     <!-- Main -->
     <main class="d-flex justify-content-center align-items-center rayatiga-main-height">
@@ -134,7 +134,7 @@
       </section>
     </main>
     <!-- Footer -->
-    <footer class="position-relative w-100">
+    <footer class="bg-body-tertiary border-top">
       <div class="container">
         <p class="m-0 py-3 text-center">Copyright <i class="bi bi-c-circle"></i> 2020 - 2023 <a class="text-body text-decoration-none" href="https://rayatiga.com">Rayatiga</a>. All Rights Reserved.</p>
       </div>
@@ -174,10 +174,22 @@
     <!-- Navigation Toggle -->
     <script>
       const navbar = document.querySelector(".navbar");
-      const navToggle = document.querySelector(".navbar-toggler");
-      navToggle.onclick = function () {
-        navbar.classList.toggle("bg-body-tertiary");
-      };
+      navbar.classList.remove("bg-body-tertiary");
+      navbar.classList.remove("border-bottom");
+      const video = document.querySelector("video");
+      window.addEventListener("resize", () => {
+        if (window.innerWidth < 992) {
+          navbar.style.backgroundColor = "rgba(255, 255, 255, 0.90)";
+          video.attributes.src.value = "/asset/video/home-mobile.mp4";
+        } else {
+          navbar.style.backgroundColor = "transparent";
+          video.attributes.src.value = "/asset/video/home.mp4";
+        }
+      });
+      const foot = document.querySelector("footer");
+      foot.classList.remove("bg-body-tertiary");
+      foot.classList.remove("border-top");
+      foot.style.position = "relative";
     </script>
   </body>
 </html>
