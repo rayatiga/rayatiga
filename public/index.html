@@ -177,15 +177,11 @@
       navbar.classList.remove("bg-body-tertiary");
       navbar.classList.remove("border-bottom");
       const video = document.querySelector("video");
-      window.addEventListener("resize", () => {
-        if (window.innerWidth < 992) {
-          navbar.style.backgroundColor = "rgba(255, 255, 255, 0.90)";
-          video.attributes.src.value = "/asset/video/home-mobile.mp4";
-        } else {
-          navbar.style.backgroundColor = "transparent";
-          video.attributes.src.value = "/asset/video/home.mp4";
-        }
-      });
+      if (window.innerWidth < 992) {
+        navbar.classList.add("bg-body-tertiary");
+        navbar.classList.add("border-bottom");
+        video.attributes.src.value = "/asset/video/home-mobile.mp4";
+      }
       const foot = document.querySelector("footer");
       foot.classList.remove("bg-body-tertiary");
       foot.classList.remove("border-top");
