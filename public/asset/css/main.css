@@ -137,3 +137,14 @@ footer {
     --animate-delay: 0s;
   }
 }
+
+/* Scheme utility class */
+.bi {
+  width: 1em;
+  height: 1em;
+  fill: currentcolor;
+  vertical-align: -0.125em;
+}
+.navbar .dropdown-menu .active .bi {
+  display: block !important;
+}
