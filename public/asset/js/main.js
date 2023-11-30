@@ -1,10 +1,10 @@
-// Dynamic main height to minimum height 100vh
+// Dynamic main height to minimum height 100dvh
 const main = document.querySelector("main");
 const header = document.querySelector("header");
 const footer = document.querySelector("footer");
-main.style.minHeight = `calc(100vh - ${header.offsetHeight}px - ${footer.offsetHeight}px)`;
+main.style.minHeight = `calc(100dvh - ${header.offsetHeight}px - ${footer.offsetHeight}px)`;
 window.addEventListener("resize", () => {
-  main.style.minHeight = `calc(100vh - ${header.offsetHeight}px - ${footer.offsetHeight}px)`;
+  main.style.minHeight = `calc(100dvh - ${header.offsetHeight}px - ${footer.offsetHeight}px)`;
 });
 
 // Popover trigger
