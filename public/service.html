@@ -44,6 +44,9 @@
               <li class="nav-item">
                 <a class="nav-link" href="/about.html">About</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/blog.html">Blog</a>
+              </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle active" aria-current="page" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Service</a>
                 <ul class="dropdown-menu">
@@ -120,9 +123,9 @@
             <!-- Section: Domain Data -->
             <div class="row row-cols-1 row-cols-md-2 row-cols-xl-4 g-2">
               <div class="col">
-                <div class="card">
+                <div class="card border-primary shadow-sm">
                   <div class="card-header bg-primary text-white">
-                    <p class="mb-0"><i class="bi bi-star-fill me-2"></i>Domain .COM</p>
+                    <p class="mb-0"><i class="bi bi-star-fill align-baseline me-2"></i>Domain .COM</p>
                   </div>
                   <div class="card-body">
                     <h2 class="card-title pricing-card-title">$15<small class="text-body-secondary fw-light">/yr.</small></h2>
@@ -177,8 +180,8 @@
                 </div>
               </div>
               <div class="col">
-                <div class="card">
-                  <div class="card-header">
+                <div class="card border-warning shadow-sm">
+                  <div class="card-header bg-warning text-dark">
                     <p class="mb-0">Domain Custom<i class="bi bi-question-circle ms-1 align-baseline" data-bs-toggle="popover" tabindex="0" data-bs-trigger="focus" data-bs-title="Charges hourly" data-bs-content="Additional charges of work calculated hourly by development process."></i></p>
                   </div>
                   <div class="card-body">
@@ -191,7 +194,7 @@
                       <li><i class="bi bi-check me-2"></i>Email Support</li>
                       <li><i class="bi bi-check me-2"></i>Maintenance</li>
                     </ul>
-                    <a class="w-100 btn btn-outline-dark" href="/contact.html">Contact</a>
+                    <button class="w-100 btn btn-warning" onclick="selectService('domain-custom')">Contact</button>
                   </div>
                 </div>
               </div>
@@ -228,9 +231,9 @@
                 </div>
               </div>
               <div class="col">
-                <div class="card">
+                <div class="card border-primary shadow-sm">
                   <div class="card-header bg-primary text-white">
-                    <p class="mb-0"><i class="bi bi-star-fill me-2"></i>Static B</p>
+                    <p class="mb-0"><i class="bi bi-star-fill align-baseline me-2"></i>Static B</p>
                   </div>
                   <div class="card-body">
                     <h2 class="card-title pricing-card-title">$275<small class="text-body-secondary fw-light">/yr.</small></h2>
@@ -268,8 +271,8 @@
                 </div>
               </div>
               <div class="col">
-                <div class="card">
-                  <div class="card-header">
+                <div class="card border-warning shadow-sm">
+                  <div class="card-header bg-warning text-dark">
                     <p class="mb-0">Static Custom<i class="bi bi-question-circle ms-1 align-baseline" data-bs-toggle="popover" tabindex="0" data-bs-trigger="focus" data-bs-title="Charges hourly" data-bs-content="Additional charges of work calculated hourly by development process."></i></p>
                   </div>
                   <div class="card-body">
@@ -283,7 +286,7 @@
                       <li><i class="bi bi-check me-2"></i>Email Support</li>
                       <li><i class="bi bi-check me-2"></i>Maintenance</li>
                     </ul>
-                    <a class="w-100 btn btn-outline-dark" href="/contact.html">Contact</a>
+                    <button class="w-100 btn btn-warning" onclick="selectService('static-custom')">Contact</button>
                   </div>
                 </div>
               </div>
@@ -348,9 +351,9 @@
                 </div>
               </div>
               <div class="col">
-                <div class="card">
+                <div class="card border-primary shadow-sm">
                   <div class="card-header bg-primary text-white">
-                    <p class="mb-0"><i class="bi bi-star-fill me-2"></i>WordPress C</p>
+                    <p class="mb-0"><i class="bi bi-star-fill align-baseline me-2"></i>WordPress C</p>
                   </div>
                   <div class="card-body">
                     <h2 class="card-title pricing-card-title">$800<small class="text-body-secondary fw-light">/yr.</small></h2>
@@ -371,8 +374,8 @@
                 </div>
               </div>
               <div class="col">
-                <div class="card">
-                  <div class="card-header">
+                <div class="card border-warning shadow-sm">
+                  <div class="card-header bg-warning text-dark">
                     <p class="mb-0">WordPress Custom<i class="bi bi-question-circle ms-1 align-baseline" data-bs-toggle="popover" tabindex="0" data-bs-trigger="focus" data-bs-title="Charges by complexity" data-bs-content="Additional charges of work calculated by the project complexity level."></i></p>
                   </div>
                   <div class="card-body">
@@ -389,7 +392,7 @@
                       <li><i class="bi bi-check me-2"></i>Email Support</li>
                       <li><i class="bi bi-check me-2"></i>Maintenance</li>
                     </ul>
-                    <a class="w-100 btn btn-outline-dark" href="/contact.html">Contact</a>
+                    <button class="w-100 btn btn-warning" onclick="selectService('wordpress-custom')">Contact</button>
                   </div>
                 </div>
               </div>
@@ -443,9 +446,9 @@
                 </div>
               </div>
               <div class="col">
-                <div class="card">
+                <div class="card border-primary shadow-sm">
                   <div class="card-header bg-primary text-white">
-                    <p class="mb-0"><i class="bi bi-star-fill me-2"></i>Cloud B</p>
+                    <p class="mb-0"><i class="bi bi-star-fill align-baseline me-2"></i>Cloud B</p>
                   </div>
                   <div class="card-body">
                     <h2 class="card-title pricing-card-title">$135<small class="text-body-secondary fw-light">/mo.</small></h2>
@@ -507,9 +510,9 @@
                 </div>
               </div>
               <div class="col">
-                <div class="card">
-                  <div class="card-header">
-                    <p class="mb-0">Cloud Custom<i class="bi bi-question-circle ms-1 align-baseline" data-bs-toggle="popover" tabindex="0" data-bs-trigger="focus" data-bs-title="Charges by complexity" data-bs-content="Additional charges of work calculated by the project complexity level."></i></p>
+                <div class="card border-warning shadow-sm">
+                  <div class="card-header bg-warning text-dark">
+                    <p class="mb-0">Cloud Custom<i class="bi bi-question-circle ms-1 align-baseline" data-bs-toggle="popover" tabindex="0" data-bs-trigger="focus" data-bs-title="Charges by specification" data-bs-content="Additional charges of work calculated by the server specifications."></i></p>
                   </div>
                   <div class="card-body">
                     <h2 class="card-title pricing-card-title">Custom<small class="text-body-secondary fw-light">/yr.</small></h2>
@@ -534,7 +537,7 @@
                       <li><i class="bi bi-check me-2"></i>Email Support</li>
                       <li><i class="bi bi-check me-2"></i>Maintenance</li>
                     </ul>
-                    <a class="w-100 btn btn-outline-dark" href="/contact.html">Contact</a>
+                    <button class="w-100 btn btn-warning" onclick="selectService('cloud-custom')">Contact</button>
                   </div>
                 </div>
               </div>
