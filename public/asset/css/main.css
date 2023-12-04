@@ -148,3 +148,14 @@ footer {
 .navbar .dropdown-menu .active .bi {
   display: block !important;
 }
+
+/* Blog post featured image */
+#blog .rayatiga-featured-image {
+  width: 100%;
+}
+@media (min-width: 768px) {
+  #blog .rayatiga-featured-image {
+    max-height: 300px;
+    object-fit: cover;
+  }
+}
