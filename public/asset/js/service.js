@@ -10,6 +10,9 @@ function selectService(service) {
     case "domain-coid":
       window.open("https://api.whatsapp.com/send/?phone=6282122220362&text=Hello+Rayatiga.+I+want+domain+.CO.ID+package.");
       break;
+    case "domain-custom":
+      window.open("https://api.whatsapp.com/send/?phone=6282122220362&text=Hello+Rayatiga.+I+want+Domain+Custom+package.");
+      break;
     case "static-a":
       window.open("https://api.whatsapp.com/send/?phone=6282122220362&text=Hello+Rayatiga.+I+want+Static+A+package.");
       break;
@@ -18,6 +21,9 @@ function selectService(service) {
       break;
     case "static-c":
       window.open("https://api.whatsapp.com/send/?phone=6282122220362&text=Hello+Rayatiga.+I+want+Static+C+package.");
+      break;
+    case "static-custom":
+      window.open("https://api.whatsapp.com/send/?phone=6282122220362&text=Hello+Rayatiga.+I+want+Static+Custom+package.");
       break;
     case "wordpress-a":
       window.open("https://api.whatsapp.com/send/?phone=6282122220362&text=Hello+Rayatiga.+I+want+WordPress+A+package.");
@@ -28,6 +34,9 @@ function selectService(service) {
     case "wordpress-c":
       window.open("https://api.whatsapp.com/send/?phone=6282122220362&text=Hello+Rayatiga.+I+want+WordPress+C+package.");
       break;
+    case "wordpress-custom":
+      window.open("https://api.whatsapp.com/send/?phone=6282122220362&text=Hello+Rayatiga.+I+want+WordPress+Custom+package.");
+      break;
     case "cloud-a":
       window.open("https://api.whatsapp.com/send/?phone=6282122220362&text=Hello+Rayatiga.+I+want+Cloud+A+package.");
       break;
@@ -36,6 +45,9 @@ function selectService(service) {
       break;
     case "cloud-c":
       window.open("https://api.whatsapp.com/send/?phone=6282122220362&text=Hello+Rayatiga.+I+want+Cloud+C+package.");
+      break;
+    case "cloud-custom":
+      window.open("https://api.whatsapp.com/send/?phone=6282122220362&text=Hello+Rayatiga.+I+want+Cloud+Custom+package.");
       break;
     default:
       break;
