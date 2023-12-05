@@ -36,8 +36,3 @@ const tooltipList = [...tooltipTriggerList].map((tooltipTriggerEl) => new bootst
     );
   });
 })();
-
-// WhatsApp button click redirect
-function whatsappClick() {
-  return window.open("https://api.whatsapp.com/send/?phone=6282122220362&text=Hello+Rayatiga.");
-}
