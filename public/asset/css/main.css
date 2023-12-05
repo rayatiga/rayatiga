@@ -159,3 +159,53 @@ footer {
     object-fit: cover;
   }
 }
+
+/* Single post */
+#post article {
+  line-height: 1.7;
+  background-color: #fdfdfd;
+  flex: 1;
+}
+#post article h1 {
+  font-size: 2em;
+  font-weight: 700;
+  line-height: 1.5;
+}
+#post article h2 {
+  font-size: 1.25em;
+  font-weight: 700;
+  margin-top: 2rem;
+}
+#post aside {
+  max-width: 350px;
+}
+#post aside .aside-card {
+  line-height: 1.7;
+  background-color: #fdfdfd;
+  flex: 1;
+}
+#post aside .aside-card h4 {
+  font-size: 1.25em;
+  font-weight: 700;
+}
+#post aside .aside-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+}
+#post article img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+[data-bs-theme="dark"] #post article {
+  background-color: #222222;
+}
+[data-bs-theme="dark"] #post aside .aside-card {
+  background-color: #222222;
+}
+@media (max-width: 991px) {
+  #post aside {
+    max-width: none;
+    width: 100%;
+  }
+}
