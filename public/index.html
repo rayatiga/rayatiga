@@ -6,15 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rayatiga</title>
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-    <meta name="description" content="Rayatiga is an agency engaged in the field of information technology. Rayatiga provides web services such as domain name reservation, static website development, WordPress website development, cloud service establishment, and other technology custom services." />
+    <meta name="description" content="Rayatiga is an IT agency providing web services like domain name reservation, static website development, WordPress website development, cloud service, server establishment, and other custom technology services. Free maintenance is included until the subscription ends." />
     <meta property="og:image" content="https://rayatiga.com/asset/img/rayatiga-og.png" />
     <!-- Bootstrap -->
     <link rel="stylesheet" href="/asset/css/bootstrap.css" />
     <link rel="stylesheet" href="/asset/css/bootstrap-icons.css" />
     <!-- Animate Style -->
     <link rel="stylesheet" href="/asset/css/animate.css" />
+    <!-- Driver CSS -->
+    <link rel="stylesheet" href="/asset/css/driver.css" />
     <!-- Main CSS -->
     <link rel="stylesheet" href="/asset/css/main.css" />
+    <!-- Index CSS -->
+    <link rel="stylesheet" href="/asset/css/index.css" />
     <!-- External: Google Analytic -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-E94958W4T7"></script>
     <script>
@@ -26,11 +30,11 @@
       gtag("config", "G-E94958W4T7");
     </script>
   </head>
-  <body class="bg-body-tertiary">
+  <body>
     <!-- Header -->
     <header>
       <!-- Navigation -->
-      <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top border-bottom">
+      <nav class="navbar navbar-expand-lg bg-white fixed-top border-bottom">
         <div class="container">
           <a class="navbar-brand fw-medium" href="/"><i class="bi bi-cloud-haze2-fill me-2"></i>Rayatiga</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -114,22 +118,26 @@
             <div class="col-lg-8">
               <a class="badge bg-primary text-decoration-none fw-medium text-wrap mb-2 animate__animated animate__fadeInUp animate__faster" href="/service.html#cloud"><i class="bi bi-info-circle align-baseline me-1"></i>New cloud specification</a>
               <h1 class="fw-bold animate__animated animate__fadeInUp animate__faster">Empowering your Digital Presence</h1>
-              <p class="animate__animated animate__fadeInUp animate__faster animate__delay-1s">Rayatiga is an agency engaged in the field of information technology provides web services such as <a class="d-inline-block text-body text-decoration-none fw-semibold" href="/service.html#domain" data-bs-toggle="tooltip" data-bs-title="Go to domain pricing">domain name</a> reservation, <a class="d-inline-block text-body text-decoration-none fw-semibold" href="/service.html#static" data-bs-toggle="tooltip" data-bs-title="Go to static website pricing">static website</a> development, <a class="d-inline-block text-body text-decoration-none fw-semibold" href="/service.html#wordpress" data-bs-toggle="tooltip" data-bs-title="Go to WordPress website pricing">WordPress website</a> development, <a class="text-body text-decoration-none fw-semibold" href="/service.html#cloud" data-bs-toggle="tooltip" data-bs-title="Go to cloud pricing">cloud service</a> and server establishment, also other technology custom services include for free maintenance until the subscription of services reach end date.</p>
+              <p class="animate__animated animate__fadeInUp animate__faster animate__delay-1s">
+                Rayatiga is an agency engaged in the field of information technology provides web services such as <a class="d-inline-block text-body text-decoration-none fw-semibold" href="/service.html#domain" data-bs-toggle="tooltip" data-bs-title="Go to domain pricing">domain name</a> reservation, <a class="d-inline-block text-body text-decoration-none fw-semibold" href="/service.html#static" data-bs-toggle="tooltip" data-bs-title="Go to static website pricing">static website</a> development, <a class="d-inline-block text-body text-decoration-none fw-semibold" href="/service.html#wordpress" data-bs-toggle="tooltip" data-bs-title="Go to WordPress website pricing">WordPress website</a> development, <a class="text-body text-decoration-none fw-semibold" href="/service.html#cloud" data-bs-toggle="tooltip" data-bs-title="Go to cloud pricing">cloud service</a> and server establishment, also other technology custom services include for free maintenance until the subscription of services
+                reach end date.
+              </p>
               <p class="animate__animated animate__fadeInUp animate__faster animate__delay-2s">Rayatiga has been used by <span class="fw-bold" data-rayatiga-monthly-user="721">700+</span> users and <span class="fw-bold" data-rayatiga-monthly-holder="62">60+</span> holders.</p>
               <div class="d-flex flex-wrap gap-2">
-                <a class="btn btn-dark animate__animated animate__fadeInUp animate__faster animate__delay-2s" href="/service.html"><i class="bi bi-diagram-3 me-2"></i>Service</a>
-                <a class="btn btn-outline-dark animate__animated animate__fadeInUp animate__faster animate__delay-3s" href="/about.html"><i class="bi bi-blockquote-right me-2"></i>Learn More</a>
+                <a class="btn btn-dark animate__animated animate__fadeInUp animate__faster animate__delay-2s" href="/service.html"><i class="bi bi-diagram-3 align-baseline me-2"></i>Service</a>
+                <a class="btn btn-outline-dark animate__animated animate__fadeInUp animate__faster animate__delay-3s" href="/about.html"><i class="bi bi-blockquote-right align-baseline me-2"></i>Learn More</a>
+                <button class="btn btn-outline-dark animate__animated animate__fadeInUp animate__faster animate__delay-4s" onclick="startTour()" style="display: none"><i class="bi bi-backpack2 align-baseline me-2"></i>Start Tour</button>
               </div>
             </div>
             <div class="col-lg-4 d-none d-lg-block">
-              <img src="/asset/svg/hero.svg" alt="Hero" class="img-fluid animate__animated animate__fadeInUp animate__faster animate__delay-4s" />
+              <img src="/asset/svg/hero.svg" alt="Hero" class="img-fluid animate__animated animate__fadeInUp animate__faster animate__delay-5s" />
             </div>
           </div>
         </div>
       </section>
     </main>
     <!-- Footer -->
-    <footer class="bg-body-tertiary border-top">
+    <footer class="bg-white border-top">
       <div class="container">
         <p class="m-0 py-3 text-center">Copyright <i class="bi bi-c-circle"></i> 2020 - 2023 <a class="text-body text-decoration-none" href="https://rayatiga.com">Rayatiga</a>. All Rights Reserved.</p>
       </div>
@@ -164,7 +172,11 @@
     <!-- Bootstrap -->
     <script src="/asset/js/bootstrap.bundle.js"></script>
     <script src="/asset/js/bootstrap-theme.js"></script>
+    <!-- Driver JS -->
+    <script src="/asset/js/driver.js"></script>
     <!-- Main JS -->
     <script src="/asset/js/main.js"></script>
+    <!-- Index JS -->
+    <script src="/asset/js/index.js"></script>
   </body>
 </html>

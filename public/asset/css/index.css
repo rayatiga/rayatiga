@@ -1,0 +1,4 @@
+.driver-popover *,
+.driver-popover-footer button {
+  font-family: "Inter", system-ui, sans-serif;
+}
