@@ -1,52 +1,43 @@
-/* Importing Inter font */
 @font-face {
   font-display: swap;
   font-family: "Inter";
   src: url("/asset/font/inter.ttf");
 }
 
-/* Set animate delay between 1, 2, until 5 by 0.125 second */
 :root {
   --animate-delay: 0.125s;
 }
 
-/* When user select the element */
 ::selection {
   color: var(--bs-white);
   background: var(--bs-primary);
 }
 
-/* Prevent anchor overlap inside navbar */
 html {
   scroll-padding-top: calc(56px + 24px);
 }
 
-/* Set font family to all inside body with Inter */
 body {
   font-family: "Inter", system-ui, sans-serif;
 }
 
-/* Specify the min height for navbar */
 header nav {
   min-height: 56px;
 }
 
-/* Set height fit to screen (reducing cumulative shift layout) */
 main.rayatiga-main-height {
   min-height: calc(100vh - (56px + 1px));
 }
 
-/* Adjust height of text area inside contact page */
-main #contact form #message {
-  min-height: 250px;
-}
-
-/* Specify the min height for footer */
 footer {
   min-height: 56px;
 }
 
-/* Set button dark with button light variable in dark scheme  */
+[data-bs-theme="dark"] .bg-white {
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important;
+}
+
 [data-bs-theme="dark"] .btn-dark {
   --bs-btn-color: var(--bs-black);
   --bs-btn-bg: var(--bs-light);
@@ -64,46 +55,10 @@ footer {
   --bs-btn-disabled-border-color: #f8f9fa;
 }
 
-/* Add border light subtle to <badge> with background dark  */
 [data-bs-theme="dark"] .badge.bg-dark {
   border: 1px solid var(--bs-light-border-subtle);
 }
 
-/* Change size to 0.55em the checkmark on valid input background */
-.was-validated .form-control:valid,
-.form-control.is-valid {
-  background-size: calc(0.75em + 0.375rem) calc(0.55em + 0.375rem);
-}
-
-/* Adjust fade in up translate 3d to 0.5em */
-@-webkit-keyframes fadeInUp {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(0, 0.5em, 0);
-    transform: translate3d(0, 0.5em, 0);
-  }
-
-  to {
-    opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-}
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(0, 0.5em, 0);
-    transform: translate3d(0, 0.5em, 0);
-  }
-
-  to {
-    opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-/* Set button outline dark with button outline light variable in dark scheme */
 [data-bs-theme="dark"] .btn-outline-dark {
   --bs-btn-color: #f8f9fa;
   --bs-btn-border-color: #f8f9fa;
@@ -121,91 +76,90 @@ footer {
   --bs-gradient: none;
 }
 
-/* Form control focus change color */
+.was-validated .form-control:valid,
+.form-control.is-valid {
+  background-size: calc(0.75em + 0.375rem) calc(0.55em + 0.375rem);
+}
+
+.animate__animated.animate__delay-6s {
+  -webkit-animation-delay: 6s;
+  animation-delay: 6s;
+  -webkit-animation-delay: calc(var(--animate-delay) * 6);
+  animation-delay: calc(var(--animate-delay) * 6);
+}
+
+.animate__animated.animate__delay-7s {
+  -webkit-animation-delay: 7s;
+  animation-delay: 7s;
+  -webkit-animation-delay: calc(var(--animate-delay) * 7);
+  animation-delay: calc(var(--animate-delay) * 7);
+}
+
+.animate__animated.animate__delay-8s {
+  -webkit-animation-delay: 8s;
+  animation-delay: 8s;
+  -webkit-animation-delay: calc(var(--animate-delay) * 8);
+  animation-delay: calc(var(--animate-delay) * 8);
+}
+
+.animate__animated.animate__delay-9s {
+  -webkit-animation-delay: 9s;
+  animation-delay: 9s;
+  -webkit-animation-delay: calc(var(--animate-delay) * 9);
+  animation-delay: calc(var(--animate-delay) * 9);
+}
+
+.animate__animated.animate__delay-10s {
+  -webkit-animation-delay: 10s;
+  animation-delay: 10s;
+  -webkit-animation-delay: calc(var(--animate-delay) * 10);
+  animation-delay: calc(var(--animate-delay) * 10);
+}
+
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 0.5em, 0);
+    transform: translate3d(0, 0.5em, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 0.5em, 0);
+    transform: translate3d(0, 0.5em, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
 .form-control:focus {
   border-color: #aaaaaa;
   box-shadow: 0 0 0 0.25rem rgba(153, 153, 153, 0.333);
 }
 
-/* Image fluid when in md size */
-@media (max-width: 991px) {
-  .img-fluid {
-    width: 100%;
-    max-width: 240px;
-  }
-  #index .animate__delay-4s {
-    --animate-delay: 0s;
-  }
-}
-
-/* Scheme utility class */
 .bi {
   width: 1em;
   height: 1em;
   fill: currentcolor;
   vertical-align: -0.125em;
 }
+
 .navbar .dropdown-menu .active .bi {
   display: block !important;
 }
 
-/* Blog post featured image */
-#blog .rayatiga-featured-image {
-  width: 100%;
-}
-@media (min-width: 768px) {
-  #blog .rayatiga-featured-image {
-    max-height: 300px;
-    object-fit: cover;
-  }
-}
-
-/* Single post */
-#post article {
-  line-height: 1.7;
-  background-color: #fdfdfd;
-  flex: 1;
-}
-#post article h1 {
-  font-size: 2em;
-  font-weight: 700;
-  line-height: 1.5;
-}
-#post article h2 {
-  font-size: 1.25em;
-  font-weight: 700;
-  margin-top: 2rem;
-}
-#post aside {
-  max-width: 350px;
-}
-#post aside .aside-card {
-  line-height: 1.7;
-  background-color: #fdfdfd;
-  flex: 1;
-}
-#post aside .aside-card h4 {
-  font-size: 1.25em;
-  font-weight: 700;
-}
-#post aside .aside-card img {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-}
-#post article img {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-}
-[data-bs-theme="dark"] #post article {
-  background-color: #222222;
-}
-[data-bs-theme="dark"] #post aside .aside-card {
-  background-color: #222222;
-}
-@media (max-width: 991px) {
-  #post aside {
-    max-width: none;
-    width: 100%;
-  }
+.icon-link {
+  text-decoration: none;
 }
