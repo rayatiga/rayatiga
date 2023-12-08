@@ -33,7 +33,21 @@ footer {
   min-height: 56px;
 }
 
-[data-bs-theme="dark"] .bg-white {
+nav.bg-body-tertiary,
+footer.bg-body-tertiary {
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-white-rgb), var(--bs-bg-opacity)) !important;
+}
+
+[data-bs-theme=dark] {
+  color-scheme: dark;
+  --bs-body-color: #ffffff;
+  --bs-body-color-rgb: 255,255,255;
+  --bs-body-bg: #212529;
+}
+
+[data-bs-theme="dark"] nav.bg-body-tertiary,
+[data-bs-theme="dark"] footer.bg-body-tertiary {
   --bs-bg-opacity: 1;
   background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important;
 }
