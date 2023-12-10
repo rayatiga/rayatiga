@@ -6,7 +6,6 @@ function readingTime() {
   document.getElementById("time").innerText = time;
 }
 readingTime();
-
 const copyArticleBtn = document.getElementById("copy");
 const copyArticleBtnText = document.getElementById("copy-text");
 const articleTitle = document.querySelector("article h1").textContent;
@@ -20,7 +19,6 @@ copyArticleBtn.addEventListener("click", () => {
     copyArticleBtnText.textContent = originalText;
   }, 2000);
 });
-
 const shareArticleBtn = document.getElementById("share");
 shareArticleBtn.addEventListener("click", () => {
   if (navigator.share) {
