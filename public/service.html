@@ -5,18 +5,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Service - Rayatiga</title>
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link type="image/x-icon" href="/favicon.ico" rel="shortcut icon" />
     <meta name="description" content="Grow your business with our high-quality, affordable IT services that include comprehensive maintenance. We handle all technical aspects, so you can focus on your business goals." />
     <meta property="og:image" content="https://rayatiga.com/asset/img/rayatiga-og.png" />
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="/asset/css/bootstrap.css" />
-    <link rel="stylesheet" href="/asset/css/bootstrap-icons.css" />
+    <link href="/asset/css/bootstrap.css" rel="stylesheet" />
+    <link href="/asset/css/bootstrap-icons.css" rel="stylesheet" />
     <!-- Animate Style -->
-    <link rel="stylesheet" href="/asset/css/animate.css" />
+    <link href="/asset/css/animate.css" rel="stylesheet" />
     <!-- Main CSS -->
-    <link rel="stylesheet" href="/asset/css/main.css" />
+    <link href="/asset/css/main.css" rel="stylesheet" />
     <!-- External: Google Analytic -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-E94958W4T7"></script>
+    <script src="https://www.googletagmanager.com/gtag/js?id=G-E94958W4T7" async></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
@@ -33,7 +33,7 @@
       <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top border-bottom">
         <div class="container">
           <a class="navbar-brand fw-medium" href="/"><i class="bi bi-cloud-haze2-fill align-baseline me-2"></i>Rayatiga</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler" data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse flex-grow-0" id="navbarSupportedContent">
@@ -48,7 +48,7 @@
                 <a class="nav-link" href="/blog.html">Blog</a>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle active" aria-current="page" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Service</a>
+                <a class="nav-link dropdown-toggle active" data-bs-toggle="dropdown" href="#" role="button" aria-current="page" aria-expanded="false">Service</a>
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item active" href="/service.html">All Service</a></li>
                   <li><hr class="dropdown-divider" /></li>
@@ -72,27 +72,27 @@
                 <hr class="d-lg-none my-2 text-dark-50" />
               </li>
               <li class="nav-item dropdown">
-                <button class="btn btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle d-flex w-100 align-items-center" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static" aria-label="Toggle theme (auto)">
+                <button class="btn btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle d-flex w-100 align-items-center" id="bd-theme" data-bs-display="static" data-bs-toggle="dropdown" type="button" aria-expanded="false" aria-label="Toggle theme (auto)">
                   <svg class="bi my-1 theme-icon-active"><use href="#circle-half"></use></svg>
                   <span class="d-lg-none ms-2" id="bd-theme-text">Toggle theme</span>
                 </button>
                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme-text">
                   <li>
-                    <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+                    <button class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" type="button" aria-pressed="false">
                       <svg class="bi me-2 opacity-50 theme-icon"><use href="#sun-fill"></use></svg>
                       Light
                       <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
                     </button>
                   </li>
                   <li>
-                    <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+                    <button class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" type="button" aria-pressed="false">
                       <svg class="bi me-2 opacity-50 theme-icon"><use href="#moon-stars-fill"></use></svg>
                       Dark
                       <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
                     </button>
                   </li>
                   <li>
-                    <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+                    <button class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" type="button" aria-pressed="true">
                       <svg class="bi me-2 opacity-50 theme-icon"><use href="#circle-half"></use></svg>
                       Auto
                       <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
@@ -106,18 +106,18 @@
       </nav>
     </header>
     <!-- Main -->
-    <main class="d-flex justify-content-center align-items-center rayatiga-main-height">
+    <main class="d-flex justify-content-center align-items-center">
       <!-- Section: Service -->
-      <section id="service" class="mt-5 py-5">
+      <section class="mt-5 py-5" id="service">
         <div class="container d-flex flex-column gap-2">
           <h1 class="fw-bold animate__animated animate__fadeInUp animate__faster">Our Service</h1>
           <p class="animate__animated animate__fadeInUp animate__faster animate__delay-1s">We are dedicated to providing our clients with high-quality, affordable services that help them grow their businesses. All of our services come with included maintenance. This means that we will take care of all the technical aspects of your website or IT infrastructure, so you can focus on running your business.</p>
           <!-- Section: Domain -->
-          <section id="domain" class="my-3 animate__animated animate__fadeInUp animate__faster animate__delay-2s">
+          <section class="my-3 animate__animated animate__fadeInUp animate__faster animate__delay-2s" id="domain">
             <h1 class="fs-5 py-2 px-3 d-inline-block bg-dark border text-white rounded mb-3"><i class="bi bi-globe align-baseline me-2"></i> Domain Name</h1>
             <div class="d-flex flex-wrap align-items-center gap-1 mb-2">
               <span class="w-100">Powered by:</span>
-              <img height="36" class="d-inline-block badge p-2 border bg-light" src="/asset/svg/cloudflare-logo.svg" alt="Cloudflare Logo" />
+              <img class="d-inline-block badge p-2 border bg-light" src="/asset/svg/cloudflare-logo.svg" alt="Cloudflare Logo" height="36" />
             </div>
             <p>Domain name reservation service makes it easy for you to find and register the perfect domain name for your website. We offer a variety of domain extensions to choose from, and our experienced team can help you find the right one for your needs.</p>
             <!-- Section: Domain Data -->
@@ -182,7 +182,7 @@
               <div class="col">
                 <div class="card border-warning shadow-sm">
                   <div class="card-header bg-warning text-dark">
-                    <p class="mb-0">Domain Custom<i class="bi bi-question-circle ms-1 align-baseline" data-bs-toggle="popover" tabindex="0" data-bs-trigger="focus" data-bs-title="Charges hourly" data-bs-content="Additional charges of work calculated hourly by development process."></i></p>
+                    <p class="mb-0">Domain Custom<i class="bi bi-question-circle ms-1 align-baseline" data-bs-content="Additional charges of work calculated hourly by development process." data-bs-title="Charges hourly" data-bs-toggle="popover" data-bs-trigger="focus" tabindex="0"></i></p>
                   </div>
                   <div class="card-body">
                     <h2 class="card-title pricing-card-title">Custom<small class="text-body-secondary fw-light">/yr.</small></h2>
@@ -201,12 +201,12 @@
             </div>
           </section>
           <!-- Section: Static -->
-          <section id="static" class="my-3 animate__animated animate__fadeInUp animate__faster animate__delay-3s">
+          <section class="my-3 animate__animated animate__fadeInUp animate__faster animate__delay-3s" id="static">
             <h1 class="fs-5 py-2 px-3 d-inline-block bg-dark border text-white rounded mb-3"><i class="bi bi-globe-americas align-baseline me-2"></i> Static Website</h1>
             <div class="d-flex flex-wrap align-items-center gap-1 mb-2">
               <span class="w-100">Powered by:</span>
-              <img height="36" class="d-inline-block badge p-2 border bg-light" src="/asset/svg/google-firebase-logo.svg" alt="Google Firebase Logo" />
-              <img height="36" class="d-inline-block badge p-2 border bg-light" src="/asset/svg/cloudflare-logo.svg" alt="Cloudflare Logo" />
+              <img class="d-inline-block badge p-2 border bg-light" src="/asset/svg/google-firebase-logo.svg" alt="Google Firebase Logo" height="36" />
+              <img class="d-inline-block badge p-2 border bg-light" src="/asset/svg/cloudflare-logo.svg" alt="Cloudflare Logo" height="36" />
             </div>
             <p>Static website service is a great option for businesses that need a simple, yet effective website. Static websites are easy to maintain and update, and they can be loaded quickly. We can create a static website for your business that is tailored to your specific needs.</p>
             <div class="row row-cols-1 row-cols-md-2 row-cols-xl-4 g-2">
@@ -273,7 +273,7 @@
               <div class="col">
                 <div class="card border-warning shadow-sm">
                   <div class="card-header bg-warning text-dark">
-                    <p class="mb-0">Static Custom<i class="bi bi-question-circle ms-1 align-baseline" data-bs-toggle="popover" tabindex="0" data-bs-trigger="focus" data-bs-title="Charges hourly" data-bs-content="Additional charges of work calculated hourly by development process."></i></p>
+                    <p class="mb-0">Static Custom<i class="bi bi-question-circle ms-1 align-baseline" data-bs-content="Additional charges of work calculated hourly by development process." data-bs-title="Charges hourly" data-bs-toggle="popover" data-bs-trigger="focus" tabindex="0"></i></p>
                   </div>
                   <div class="card-body">
                     <h2 class="card-title pricing-card-title">Custom<small class="text-body-secondary fw-light">/yr.</small></h2>
@@ -293,14 +293,14 @@
             </div>
           </section>
           <!-- Section: WordPress -->
-          <section id="wordpress" class="my-3 animate__animated animate__fadeInUp animate__faster animate__delay-4s">
+          <section class="my-3 animate__animated animate__fadeInUp animate__faster animate__delay-4s" id="wordpress">
             <h1 class="fs-5 py-2 px-3 d-inline-block bg-dark border text-white rounded mb-3"><i class="bi bi-wordpress align-baseline me-2"></i> WordPress Website</h1>
             <div class="d-flex flex-wrap align-items-center gap-1 mb-2">
               <span class="w-100">Powered by:</span>
-              <img height="36" class="d-inline-block badge p-2 border bg-light" src="/asset/svg/google-cloud-logo.svg" alt="Google Cloud Logo" />
-              <img height="36" class="d-inline-block badge p-2 border bg-light" src="/asset/svg/google-cloud-compute-engine-logo.svg" alt="Google Cloud Compute Engine Logo" />
-              <img height="36" class="d-inline-block badge p-2 border bg-light" src="/asset/svg/google-cloud-cloud-monitoring-logo.svg" alt="Google Cloud Cloud Monitoring Logo" />
-              <img height="36" class="d-inline-block badge p-2 border bg-light" src="/asset/svg/cloudflare-logo.svg" alt="Cloudflare Logo" />
+              <img class="d-inline-block badge p-2 border bg-light" src="/asset/svg/google-cloud-logo.svg" alt="Google Cloud Logo" height="36" />
+              <img class="d-inline-block badge p-2 border bg-light" src="/asset/svg/google-cloud-compute-engine-logo.svg" alt="Google Cloud Compute Engine Logo" height="36" />
+              <img class="d-inline-block badge p-2 border bg-light" src="/asset/svg/google-cloud-cloud-monitoring-logo.svg" alt="Google Cloud Cloud Monitoring Logo" height="36" />
+              <img class="d-inline-block badge p-2 border bg-light" src="/asset/svg/cloudflare-logo.svg" alt="Cloudflare Logo" height="36" />
             </div>
             <p>WordPress hosting service is perfect for businesses of all sizes. WordPress is the most popular content management system (CMS) in the world, and our WordPress hosting service makes it easy to create and manage your WordPress website. We offer a variety of hosting plans to choose from, so you can find one that fits your budget and needs.</p>
             <div class="row row-cols-1 row-cols-md-2 row-cols-xl-4 g-2">
@@ -376,7 +376,7 @@
               <div class="col">
                 <div class="card border-warning shadow-sm">
                   <div class="card-header bg-warning text-dark">
-                    <p class="mb-0">WordPress Custom<i class="bi bi-question-circle ms-1 align-baseline" data-bs-toggle="popover" tabindex="0" data-bs-trigger="focus" data-bs-title="Charges by complexity" data-bs-content="Additional charges of work calculated by the project complexity level."></i></p>
+                    <p class="mb-0">WordPress Custom<i class="bi bi-question-circle ms-1 align-baseline" data-bs-content="Additional charges of work calculated by the project complexity level." data-bs-title="Charges by complexity" data-bs-toggle="popover" data-bs-trigger="focus" tabindex="0"></i></p>
                   </div>
                   <div class="card-body">
                     <h2 class="card-title pricing-card-title">Custom<small class="text-body-secondary fw-light">/yr.</small></h2>
@@ -399,16 +399,16 @@
             </div>
           </section>
           <!-- Section: Cloud -->
-          <section id="cloud" class="my-3 animate__animated animate__fadeInUp animate__faster animate__delay-5s">
+          <section class="my-3 animate__animated animate__fadeInUp animate__faster animate__delay-5s" id="cloud">
             <h1 class="fs-5 py-2 px-3 d-inline-block bg-dark border text-white rounded mb-3"><i class="bi bi-cloud-fog2 align-baseline me-2"></i> Cloud Service</h1>
             <div class="d-flex flex-wrap align-items-center gap-1 mb-2">
               <span class="w-100">Powered by:</span>
-              <img height="36" class="d-inline-block badge p-2 border bg-light" src="/asset/svg/google-cloud-logo.svg" alt="Google Cloud Logo" />
-              <img height="36" class="d-inline-block badge p-2 border bg-light" src="/asset/svg/google-cloud-compute-engine-logo.svg" alt="Google Cloud Compute Engine Logo" />
-              <img height="36" class="d-inline-block badge p-2 border bg-light" src="/asset/svg/google-cloud-cloud-storage-logo.svg" alt="Google Cloud Cloud Storage Logo" />
-              <img height="36" class="d-inline-block badge p-2 border bg-light" src="/asset/svg/google-cloud-virtual-private-cloud-logo.svg" alt="Google Cloud Virtual Private Cloud Logo" />
-              <img height="36" class="d-inline-block badge p-2 border bg-light" src="/asset/svg/google-cloud-cloud-monitoring-logo.svg" alt="Google Cloud Cloud Monitoring Logo" />
-              <img height="36" class="d-inline-block badge p-2 border bg-light" src="/asset/svg/cloudflare-logo.svg" alt="Cloudflare Logo" />
+              <img class="d-inline-block badge p-2 border bg-light" src="/asset/svg/google-cloud-logo.svg" alt="Google Cloud Logo" height="36" />
+              <img class="d-inline-block badge p-2 border bg-light" src="/asset/svg/google-cloud-compute-engine-logo.svg" alt="Google Cloud Compute Engine Logo" height="36" />
+              <img class="d-inline-block badge p-2 border bg-light" src="/asset/svg/google-cloud-cloud-storage-logo.svg" alt="Google Cloud Cloud Storage Logo" height="36" />
+              <img class="d-inline-block badge p-2 border bg-light" src="/asset/svg/google-cloud-virtual-private-cloud-logo.svg" alt="Google Cloud Virtual Private Cloud Logo" height="36" />
+              <img class="d-inline-block badge p-2 border bg-light" src="/asset/svg/google-cloud-cloud-monitoring-logo.svg" alt="Google Cloud Cloud Monitoring Logo" height="36" />
+              <img class="d-inline-block badge p-2 border bg-light" src="/asset/svg/cloudflare-logo.svg" alt="Cloudflare Logo" height="36" />
             </div>
             <p>The cloud services are powered by Google Cloud. Google Cloud is a leading provider of cloud computing services, and their cloud platform is used by some of the world's largest companies. Their cloud platform is secure, reliable, and scalable.</p>
             <p>This offer a variety of benefits for businesses of all sizes. Cloud services are scalable, reliable, and cost-effective. We offer a variety of cloud services to choose from, including virtual private servers (VPS), cloud storage, and cloud computing.</p>
@@ -512,7 +512,7 @@
               <div class="col">
                 <div class="card border-warning shadow-sm">
                   <div class="card-header bg-warning text-dark">
-                    <p class="mb-0">Cloud Custom<i class="bi bi-question-circle ms-1 align-baseline" data-bs-toggle="popover" tabindex="0" data-bs-trigger="focus" data-bs-title="Charges by specification" data-bs-content="Additional charges of work calculated by the server specifications."></i></p>
+                    <p class="mb-0">Cloud Custom<i class="bi bi-question-circle ms-1 align-baseline" data-bs-content="Additional charges of work calculated by the server specifications." data-bs-title="Charges by specification" data-bs-toggle="popover" data-bs-trigger="focus" tabindex="0"></i></p>
                   </div>
                   <div class="card-body">
                     <h2 class="card-title pricing-card-title">Custom<small class="text-body-secondary fw-light">/yr.</small></h2>
@@ -553,19 +553,19 @@
       </div>
     </footer>
     <!-- Scheme: Utility -->
-    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+    <svg class="d-none" xmlns="http://www.w3.org/2000/svg">
       <symbol id="check2" viewBox="0 0 16 16">
-        <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
+        <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"></path>
       </symbol>
       <symbol id="circle-half" viewBox="0 0 16 16">
-        <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z" />
+        <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"></path>
       </symbol>
       <symbol id="moon-stars-fill" viewBox="0 0 16 16">
-        <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z" />
-        <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z" />
+        <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"></path>
+        <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"></path>
       </symbol>
       <symbol id="sun-fill" viewBox="0 0 16 16">
-        <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z" />
+        <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
       </symbol>
     </svg>
     <!-- Bootstrap -->
