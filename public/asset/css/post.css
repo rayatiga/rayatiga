@@ -17,6 +17,11 @@
 #post article strong {
   font-weight: 600;
 }
+#post article img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
 #post aside {
   max-width: 350px;
 }
@@ -32,11 +37,6 @@
 #post aside .aside-card img {
   width: 100%;
   aspect-ratio: 1 / 1;
-}
-#post article img {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
 }
 [data-bs-theme="dark"] #post article {
   background-color: #222222;
