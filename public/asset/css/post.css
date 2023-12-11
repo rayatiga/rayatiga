@@ -36,7 +36,9 @@
 }
 #post aside .aside-card img {
   width: 100%;
+  max-width: 64px;
   aspect-ratio: 1 / 1;
+  border-radius: 999px;
 }
 [data-bs-theme="dark"] #post article {
   background-color: #222222;
