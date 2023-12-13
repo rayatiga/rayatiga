@@ -272,25 +272,27 @@
             <button class="btn-close" data-bs-dismiss="modal" type="button" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <form class="needs-validation row g-3" id="applyFormSubmit" action method="post" target="_blank" novalidate>
+            <form class="needs-validation row g-3" id="applyFormSubmit" action="https://formspree.io/f/xknavynp" method="post" target="_blank" novalidate>
               <div class="col-12">
                 <label for="name">Name</label>
-                <input class="form-control" id="name" name="name" type="text" placeholder="Enter your name..." minlength="2" maxlength="60" required disabled />
+                <input class="form-control" id="name" name="name" type="text" placeholder="Enter your name..." minlength="2" maxlength="60" required />
                 <div class="valid-feedback">Looks good.</div>
                 <div class="invalid-feedback">Please enter your name.</div>
               </div>
               <div class="col-12">
                 <label for="email">Email</label>
-                <input class="form-control" id="email" name="email" type="email" placeholder="Enter your email..." minlength="6" maxlength="60" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" required disabled />
+                <input class="form-control" id="email" name="email" type="email" placeholder="Enter your email..." minlength="6" maxlength="60" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" required />
                 <div class="valid-feedback">Your email looks good.</div>
                 <div class="invalid-feedback">Please enter valid email.</div>
               </div>
               <div class="col-12">
                 <label for="url">URL Link to Resume</label>
-                <input class="form-control" id="url" name="url" type="url" placeholder="Enter resume url link..." required disabled />
+                <input class="form-control" id="url" name="url" type="url" placeholder="Enter resume url link..." required />
                 <div class="valid-feedback">Please make sure the url link is work.</div>
                 <div class="invalid-feedback">Please enter resume url link.</div>
               </div>
+              <input name="_gotcha" type="text" style="display: none" />
+              <span class="small text-body-secondary">Powered by <a href="https://formspree.io/" target="_blank" rel="nofollow noopener noreferrer">Formspree</a>.</span>
               <div>
                 <p>You're applying <span class="fw-medium">Local Inventory Ads</span> position. Double check and submit the data to send directly to Rayatiga. Good luck!</p>
                 <p>After you apply, there will be an email reply from <span class="fw-medium">contact@rayatiga.com</span> regarding the contents of the data you applied for.</p>
@@ -298,9 +300,9 @@
             </form>
           </div>
           <div class="modal-footer">
-            <span class="small me-2">Sorry, this position is not currently open.</span>
+            <span class="small me-2 d-none">Sorry, this position is not currently open.</span>
             <button class="btn btn-secondary" data-bs-target="#applyPosition" data-bs-toggle="modal">Back</button>
-            <button class="btn btn-dark" form="applyFormSubmit" disabled>Submit Data</button>
+            <button class="btn btn-dark" type="submit" form="applyFormSubmit">Submit Data</button>
           </div>
         </div>
       </div>
