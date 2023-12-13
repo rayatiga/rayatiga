@@ -58,3 +58,32 @@ if (!window.location.href.includes("127.0.0.1" || "localhost")) {
   document.querySelector("a[href='/service.html#wordpress']").href = "/service#wordpress";
   document.querySelector("a[href='/service.html#cloud']").href = "/service#cloud";
 }
+let vcpuValue = parseInt(document.getElementById("cloud-vcpu").value);
+let ramValue = parseInt(document.getElementById("cloud-ram").value);
+let diskValue = parseInt(document.getElementById("cloud-disk").value);
+let price = document.getElementById("price");
+price.style.display = "none";
+cloudPriceTotal();
+document.getElementById("cloud-vcpu").addEventListener("input", function () {
+  document.getElementById("cloud-vcpu-value").innerText = this.value;
+  vcpuValue = parseInt(this.value);
+  cloudPriceTotal();
+});
+document.getElementById("cloud-ram").addEventListener("input", function () {
+  document.getElementById("cloud-ram-value").innerText = this.value;
+  ramValue = parseInt(this.value);
+  cloudPriceTotal();
+});
+document.getElementById("cloud-disk").addEventListener("input", function () {
+  document.getElementById("cloud-disk-value").innerText = this.value;
+  diskValue = parseInt(this.value);
+  cloudPriceTotal();
+});
+function cloudPriceTotal() {
+  let vcpuPrice = vcpuValue * 15;
+  let ramPrice = ramValue * 15;
+  let diskPrice = diskValue * 0.75;
+  let cloudPriceTotal = parseInt(vcpuPrice + ramPrice + diskPrice);
+  document.getElementById("cloud-price-total").innerText = cloudPriceTotal;
+  price.value = cloudPriceTotal;
+}
