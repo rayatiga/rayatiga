@@ -14,6 +14,10 @@
   font-weight: 700;
   margin-top: 2rem;
 }
+#post article ol,
+#post article ul {
+  margin-top: 1rem;
+}
 #post article strong {
   font-weight: 600;
 }
