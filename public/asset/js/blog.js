@@ -5,11 +5,14 @@ function trimText(text, maxLength) {
     return text.substring(0, maxLength) + "...";
   }
 }
-const cardPostTitle = document.querySelector("#blog .card h5");
-const cardPostTitleText = document.querySelector("#blog .card h5").textContent;
-const trimmedTitleText = trimText(cardPostTitleText, 64);
-cardPostTitle.textContent = trimmedTitleText;
-const cardPostDescription = document.querySelector("#blog .card p");
-const cardPostDescriptionText = document.querySelector("#blog .card p").textContent;
-const trimmedDescriptionText = trimText(cardPostDescriptionText, 192);
-cardPostDescription.textContent = trimmedDescriptionText;
+const cardPostTitle = document.querySelectorAll("#blog .card h5");
+for (let i = 0; i < cardPostTitle.length; i++) {
+  const trimmedTitleText = trimText(cardPostTitle[i].textContent, 64);
+  cardPostTitle[i].textContent = trimmedTitleText;
+}
+const cardPostDescription = document.querySelectorAll("#blog .card p");
+for (let i = 0; i < cardPostDescription.length; i++) {
+  const trimmedDescriptionText = trimText(cardPostDescription[i].textContent, 192);
+  cardPostDescription[i].textContent = trimmedDescriptionText;
+}
+
