@@ -1,35 +1,46 @@
+/* Main CSS */
+/* Default: Font Face: Inter */
 @font-face {
   font-display: swap;
   font-family: "Inter";
   src: url("/asset/font/inter.ttf");
 }
+/* Default: Root */
 :root {
   --animate-delay: 0.125s;
 }
+/* Default: Selection */
 ::selection {
   color: var(--bs-white);
   background: var(--bs-primary);
 }
+/* Default: HTML */
 html {
   scroll-padding-top: calc(56px + 24px);
 }
+/* Default: Body */
 body {
   font-family: "Inter", system-ui, sans-serif;
 }
+/* Default: Header */
 header nav {
   min-height: 56px;
 }
+/* Default: Main */
 main {
-  min-height: calc(100vh - (56px + 1px));
+  min-height: calc(100dvh - (56px + 1px));
 }
+/* Default: Footer */
 footer {
   min-height: 56px;
 }
-nav.bg-body-tertiary,
-footer.bg-body-tertiary {
-  --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-white-rgb), var(--bs-bg-opacity)) !important;
+/* Default: Media: Main */
+@media (max-width: 447px) {
+  main {
+    min-height: calc(100dvh - (80px + 1px));
+  }
 }
+/* Bootstrap: Icons */
 .bi {
   width: 1em;
   height: 1em;
@@ -39,6 +50,13 @@ footer.bg-body-tertiary {
 .navbar .dropdown-menu .active .bi {
   display: block !important;
 }
+/* Bootstrap: Header and Footer */
+nav.bg-body-tertiary,
+footer.bg-body-tertiary {
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-white-rgb), var(--bs-bg-opacity)) !important;
+}
+/* Bootstrap: Form Control */
 .form-control:focus {
   border-color: #aaaaaa;
   box-shadow: 0 0 0 0.25rem rgba(153, 153, 153, 0.333);
@@ -47,6 +65,7 @@ footer.bg-body-tertiary {
 .form-control.is-valid {
   background-size: calc(0.75em + 0.375rem) calc(0.55em + 0.375rem);
 }
+/* Bootstrap: Scheme: Dark */
 [data-bs-theme="dark"] {
   color-scheme: dark;
   --bs-body-color: #ffffff;
@@ -93,6 +112,7 @@ footer.bg-body-tertiary {
   --bs-btn-disabled-border-color: #f8f9fa;
   --bs-gradient: none;
 }
+/* Animate CSS: Animation Delay */
 .animate__animated.animate__delay-6s {
   -webkit-animation-delay: 6s;
   animation-delay: 6s;
@@ -123,6 +143,7 @@ footer.bg-body-tertiary {
   -webkit-animation-delay: calc(var(--animate-delay) * 10);
   animation-delay: calc(var(--animate-delay) * 10);
 }
+/* Animate CSS: Keyframe */
 @-webkit-keyframes fadeInUp {
   from {
     opacity: 0;

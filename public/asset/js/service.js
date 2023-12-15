@@ -1,3 +1,5 @@
+// Service JS
+// Default: Function Select Service
 function selectService(service) {
   switch (service) {
     case "domain-com":
@@ -52,12 +54,14 @@ function selectService(service) {
       break;
   }
 }
+// Default: Routing Rule Between Cloudflare Pages and Localhost
 if (!window.location.href.includes("127.0.0.1" || "localhost")) {
   document.querySelector("a[href='/service.html#domain']").href = "/service#domain";
   document.querySelector("a[href='/service.html#static']").href = "/service#static";
   document.querySelector("a[href='/service.html#wordpress']").href = "/service#wordpress";
   document.querySelector("a[href='/service.html#cloud']").href = "/service#cloud";
 }
+// Default: Custom Preference
 let vcpuValue = parseInt(document.getElementById("cloud-vcpu").value);
 let ramValue = parseInt(document.getElementById("cloud-ram").value);
 let diskValue = parseInt(document.getElementById("cloud-disk").value);
@@ -79,6 +83,7 @@ document.getElementById("cloud-disk").addEventListener("input", function () {
   diskValue = parseInt(this.value);
   cloudPriceTotal();
 });
+// Default: Custom Preference Price Calcualtion
 function cloudPriceTotal() {
   let vcpuPrice = vcpuValue * 15;
   let ramPrice = ramValue * 15;

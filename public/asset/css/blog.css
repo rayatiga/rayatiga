@@ -1,7 +1,10 @@
+/* Blog CSS */
+/* Default: Blog Image */
 #blog img {
   aspect-ratio: 16 / 9;
   object-fit: cover;
 }
+/* Bootstrap: Icon Link */
 #blog .icon-link {
   text-decoration: none;
 }

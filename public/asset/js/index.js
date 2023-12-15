@@ -1,4 +1,7 @@
+// Index CSS
+// Driver JS: Initializing
 const driver = window.driver.js.driver;
+// Driver JS: Creating Object Step
 const driverObj = driver({
   showProgress: true,
   showButtons: ["next", "previous", "close"],
@@ -14,11 +17,13 @@ const driverObj = driver({
     { element: "#index .badge", popover: { title: "Service Update", description: "Information about updates to our services.", side: "bottom", align: "start" } },
   ],
 });
+// Default: Start Tour Button
 const startTourButton = document.querySelector("button[onclick='startTour()']");
 checkButtonVisibility();
 window.addEventListener("resize", function () {
   checkButtonVisibility();
 });
+// Default: Button Visibility Based on Local Storage
 function checkButtonVisibility() {
   if (window.localStorage.getItem("startTour") == null && window.innerWidth >= 992) {
     startTourButton.style.display = "block";
@@ -26,6 +31,7 @@ function checkButtonVisibility() {
     startTourButton.style.display = "none";
   }
 }
+// Default: Function Start Tour
 function startTour() {
   startTourButton.style.display = "none";
   window.localStorage.setItem("startTour", "started");

@@ -1,3 +1,5 @@
+/* Post CSS */
+/* Default: Post Article */
 #post article {
   font-size: 1.125rem;
   line-height: 1.7;
@@ -26,6 +28,7 @@
   aspect-ratio: 16 / 9;
   object-fit: cover;
 }
+/* Default: Post Aside */
 #post aside {
   max-width: 350px;
 }
@@ -44,15 +47,15 @@
   aspect-ratio: 1 / 1;
   border-radius: 999px;
 }
-[data-bs-theme="dark"] #post article {
-  background-color: #222222;
-}
-[data-bs-theme="dark"] #post aside .aside-card {
-  background-color: #222222;
-}
+/* Default: Media: Aside */
 @media (max-width: 991px) {
   #post aside {
     max-width: none;
     width: 100%;
   }
+}
+/* Bootstrap: Scheme: Dark Article and Aside */
+[data-bs-theme="dark"] #post article,
+[data-bs-theme="dark"] #post aside .aside-card {
+  background-color: #222222;
 }
