@@ -114,50 +114,6 @@
         <div class="container d-flex flex-column gap-2">
           <h1 class="fw-bold animate__animated animate__fadeInUp animate__faster">Our Service</h1>
           <p class="animate__animated animate__fadeInUp animate__faster animate__delay-1s">We are dedicated to providing our clients with high-quality, affordable services that help them grow their businesses. All of our services come with included maintenance. This means that we will take care of all the technical aspects of your website or IT infrastructure, so you can focus on running your business.</p>
-          <!-- Section: Cloud Custom -->
-          <section class="my-3 animate__animated animate__fadeInUp animate__faster animate__delay-2s" id="cloud-custom">
-            <div class="border border-primary rounded shadow-sm p-3">
-              <span class="badge bg-dark fw-normal me-1 align-middle">New</span>
-              <span class="fs-4 align-middle">Adjust to Your Preferences</span>
-              <span class="text-body-secondary d-block">The price may differ from the <a class="text-decoration-none" href="#cloud">cloud packages below</a>.</span>
-              <form class="row needs-validation row g-3 mt-2" id="cloud-custom-form" action="https://formspree.io/f/xknavynp" method="post" target="_blank" novalidate>
-                <div class="col-12 col-sm-6">
-                  <label class="form-label" for="name">Name</label>
-                  <input class="form-control" id="name" name="name" type="text" placeholder="Enter your name..." minlength="2" maxlength="60" required />
-                  <div class="valid-feedback">Looks good.</div>
-                  <div class="invalid-feedback">Please enter your name.</div>
-                </div>
-                <div class="col-12 col-sm-6">
-                  <label class="form-label" for="email">Email</label>
-                  <input class="form-control" id="email" name="email" type="email" placeholder="Enter your email..." minlength="6" maxlength="60" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" required form="cloud-custom-form" />
-                  <div class="valid-feedback">Your email looks good.</div>
-                  <div class="invalid-feedback">Please enter valid email.</div>
-                </div>
-                <div class="col-12 col-sm-6">
-                  <label class="form-label" for="vcpu"><span class="fw-semibold">vCPU</span>: <span id="cloud-vcpu-value">2</span> Core</label>
-                  <input class="col form-range" id="cloud-vcpu" name="vcpu" type="range" min="1" max="8" value="2" />
-                </div>
-                <div class="col-12 col-sm-6">
-                  <label class="form-label" for="ram"><span class="fw-semibold">RAM</span>: <span id="cloud-ram-value">2</span> GB</label>
-                  <input class="col form-range" id="cloud-ram" name="ram" type="range" min="1" max="8" value="2" />
-                </div>
-                <div class="col-12">
-                  <label class="form-label" for="disk"><span class="fw-semibold">Disk</span>: <span id="cloud-disk-value">50</span> GB</label>
-                  <input class="col form-range" id="cloud-disk" name="disk" type="range" min="30" max="100" value="50" step="5" />
-                </div>
-                <div class="col-12">
-                  <div class="d-flex justify-content-end gap-2 align-items-start">
-                    <div>
-                      <label class="form-label" for="price"><span class="fs-6">Total:</span> <span class="fw-medium fs-3">$</span><span class="fw-medium fs-3" id="cloud-price-total">97</span><span class="text-body-secondary fw-light fs-3">/mo.</span></label>
-                      <input id="price" name="price" type="number" min="0" max="1000" value="97" />
-                    </div>
-                    <button class="btn btn-primary shadow-sm icon-link icon-link-hover" type="submit">Proceed<i class="bi bi-arrow-right ms-2 align-top"></i></button>
-                  </div>
-                </div>
-                <input name="_gotcha" type="text" style="display: none" />
-              </form>
-            </div>
-          </section>
           <!-- Section: Domain -->
           <section class="my-3 animate__animated animate__fadeInUp animate__faster animate__delay-2s" id="domain">
             <h1 class="fs-5 py-2 px-3 d-inline-block bg-dark border text-white rounded mb-3"><i class="bi bi-globe align-baseline me-2"></i> Domain Name</h1>
@@ -587,6 +543,51 @@
                   </div>
                 </div>
               </div>
+            </div>
+          </section>
+          <!-- Section: Cloud Custom -->
+          <section class="animate__animated animate__fadeInUp animate__faster animate__delay-2s" id="cloud-custom">
+            <p>Or, you can adjust the specific requirement based on your needs.</p>
+            <div class="border border-primary rounded shadow-sm p-3">
+              <span class="badge bg-dark fw-normal me-1 align-middle">New</span>
+              <span class="fs-4 align-middle">Adjust to Your Preferences</span>
+              <span class="text-body-secondary d-block">The price may differ from the <a class="text-decoration-none" href="#cloud">cloud service packages</a>.</span>
+              <form class="row needs-validation row g-3 mt-2" id="cloud-custom-form" action="https://formspree.io/f/xknavynp" method="post" target="_blank" novalidate>
+                <div class="col-12 col-sm-6">
+                  <label class="form-label" for="name">Name</label>
+                  <input class="form-control" id="name" name="name" type="text" placeholder="Enter your name..." minlength="2" maxlength="60" required />
+                  <div class="valid-feedback">Looks good.</div>
+                  <div class="invalid-feedback">Please enter your name.</div>
+                </div>
+                <div class="col-12 col-sm-6">
+                  <label class="form-label" for="email">Email</label>
+                  <input class="form-control" id="email" name="email" type="email" placeholder="Enter your email..." minlength="6" maxlength="60" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" required form="cloud-custom-form" />
+                  <div class="valid-feedback">Your email looks good.</div>
+                  <div class="invalid-feedback">Please enter valid email.</div>
+                </div>
+                <div class="col-12 col-sm-6">
+                  <label class="form-label" for="vcpu"><span class="fw-semibold">vCPU</span>: <span id="cloud-vcpu-value">2</span> Core</label>
+                  <input class="col form-range" id="cloud-vcpu" name="vcpu" type="range" min="1" max="8" value="2" />
+                </div>
+                <div class="col-12 col-sm-6">
+                  <label class="form-label" for="ram"><span class="fw-semibold">RAM</span>: <span id="cloud-ram-value">2</span> GB</label>
+                  <input class="col form-range" id="cloud-ram" name="ram" type="range" min="1" max="8" value="2" />
+                </div>
+                <div class="col-12">
+                  <label class="form-label" for="disk"><span class="fw-semibold">Disk</span>: <span id="cloud-disk-value">50</span> GB</label>
+                  <input class="col form-range" id="cloud-disk" name="disk" type="range" min="30" max="100" value="50" step="5" />
+                </div>
+                <div class="col-12">
+                  <div class="d-flex justify-content-end gap-2 align-items-start">
+                    <div>
+                      <label class="form-label" for="price"><span class="fs-6">Total:</span> <span class="fw-medium fs-3">$</span><span class="fw-medium fs-3" id="cloud-price-total">97</span><span class="text-body-secondary fw-light fs-3">/mo.</span></label>
+                      <input id="price" name="price" type="number" min="0" max="1000" value="97" />
+                    </div>
+                    <button class="btn btn-primary shadow-sm icon-link icon-link-hover" type="submit">Proceed<i class="bi bi-arrow-right ms-2 align-top"></i></button>
+                  </div>
+                </div>
+                <input name="_gotcha" type="text" style="display: none" />
+              </form>
             </div>
           </section>
         </div>
