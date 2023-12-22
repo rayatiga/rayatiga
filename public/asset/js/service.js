@@ -1,4 +1,4 @@
-// Service JS
+/* Service JS */
 // Default: Function Select Service
 function selectService(service) {
   switch (service) {

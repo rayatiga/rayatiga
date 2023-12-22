@@ -1,4 +1,4 @@
-// Index CSS
+/* Index CSS */
 // Driver JS: Initializing
 const driver = window.driver.js.driver;
 // Driver JS: Creating Object Step

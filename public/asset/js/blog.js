@@ -1,4 +1,4 @@
-// Blog JS
+/* Blog JS */
 // Default: Function Trim Text
 function trimText(text, maxLength) {
   if (text.length <= maxLength) {

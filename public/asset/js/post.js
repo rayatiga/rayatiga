@@ -1,4 +1,4 @@
-// Post JS
+/* Post JS */
 // Default: Function Measuring Reading Time
 function readingTime() {
   const text = document.querySelector("article").innerText;
