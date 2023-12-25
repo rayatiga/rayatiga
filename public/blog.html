@@ -109,12 +109,18 @@
       </nav>
     </header>
     <!-- Main -->
-    <main class="d-flex justify-content-center align-items-center">
+    <main class="d-flex flex-column justify-content-center align-items-center" id="blog">
       <!-- Section: Blog -->
-      <section class="mt-5 py-5" id="blog">
-        <div class="container d-flex flex-column gap-2">
-          <h1 class="fw-bold animate__animated animate__fadeInUp animate__faster">Latest Posts</h1>
+      <section class="pt-5 pb-4 d-flex flex-column justify-content-center w-100" style="min-height: 48vh; background: url('/asset/img/blog.jpg') center">
+        <div class="position-absolute w-100 h-100 bg-body opacity-75 top-0 left-0"></div>
+        <div class="container pt-5 d-flex flex-column gap-2">
+          <h1 class="fw-bold animate__animated animate__fadeInUp animate__faster">Fresh Off the Press</h1>
           <p class="animate__animated animate__fadeInUp animate__faster animate__delay-1s">In our latest blog post, we share some essential troubleshooting tips to help you fix common problems with your devices and software. Whether you're dealing with a slow computer, a wonky internet connection, or a malfunctioning app, these simple steps can help you get back on track in no time.</p>
+        </div>
+      </section>
+      <!-- Section -->
+      <section class="py-5">
+        <div class="container d-flex flex-column gap-2">
           <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-2 animate__animated animate__fadeInUp animate__faster animate__delay-2s">
             <div class="col">
               <div class="card h-100">
