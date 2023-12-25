@@ -1,0 +1,5 @@
+/* Support CSS */
+/* Default: Support Form Message */
+#support form #message {
+  min-height: 150px;
+}
