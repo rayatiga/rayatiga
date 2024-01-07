@@ -1,0 +1,11 @@
+/* About CSS */
+/* Default: Section */
+#about section:nth-child(1) {
+  min-height: 32vh;
+  padding: 4rem 0;
+  background-color: #a3c0ff;
+}
+/* Default: Dark: Section */
+[data-bs-theme='dark'] #about section:nth-child(1) {
+    background-color: #a3c0ff55;
+}
