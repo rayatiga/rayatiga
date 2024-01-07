@@ -4,6 +4,16 @@
   width: 100%;
   height: 100%;
 }
+/* Default: Section */
+#contact > section:nth-child(1) {
+  min-height: 32vh;
+  padding: 4rem 0;
+  background-color: #a3d4ff;
+}
+/* Default: Dark: Section */
+[data-bs-theme="dark"] #contact > section:nth-child(1) {
+  background-color: #a3d4ff55;
+}
 /* Default: Contact Form Message */
 #contact form #message {
   min-height: 150px;

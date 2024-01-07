@@ -3,3 +3,13 @@
 .modal form textarea {
   min-height: 150px;
 }
+/* Default: Section */
+#career > section:nth-child(1) {
+  min-height: 32vh;
+  padding: 4rem 0;
+  background-color: #daa3ff;
+}
+/* Default: Dark: Section */
+[data-bs-theme="dark"] #career > section:nth-child(1) {
+  background-color: #daa3ff55;
+}
