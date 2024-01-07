@@ -1,10 +1,4 @@
 /* Main CSS */
-/* Default: Font Face: Inter */
-@font-face {
-  font-display: swap;
-  font-family: "Inter";
-  src: url("/asset/font/inter.ttf");
-}
 /* Default: Root */
 :root {
   --animate-delay: 0.125s;
@@ -20,7 +14,7 @@ html {
 }
 /* Default: Body */
 body {
-  font-family: "Inter", system-ui, sans-serif;
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 /* Default: Header */
 header nav {
@@ -28,7 +22,7 @@ header nav {
 }
 /* Default: Main */
 main {
-  min-height: calc(100vh - (56px + 1px));
+  min-height: calc(100vh - ((56px * 2) + (1px * 2)));
 }
 /* Default: Footer */
 footer {
@@ -37,7 +31,7 @@ footer {
 /* Default: Media: Main */
 @media (max-width: 447px) {
   main {
-    min-height: calc(100vh - (80px + 1px));
+    min-height: calc(100vh - ((80px + 56px) + (1px * 2)));
   }
 }
 /* Bootstrap: Icons */
