@@ -2,6 +2,14 @@
 /* Default: Root */
 :root {
   --animate-delay: 0.125s;
+  --blue: #c1d5ff;
+  --darkblue: #c1d5ff55;
+  --orange: #fff1c1;
+  --darkorange: #fff1c155;
+  --green: #c7ffc1;
+  --darkgreen: #c7ffc155;
+  --purple: #dba3ff;
+  --darkpurple: #dba3ff55;
 }
 /* Default: Selection */
 ::selection {
