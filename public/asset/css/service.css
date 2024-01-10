@@ -8,9 +8,9 @@
 #service > section:nth-child(1) {
   min-height: 32vh;
   padding: 4rem 0;
-  background-color: #a3ddff;
+  background-color: var(--blue);
 }
 /* Default: Dark: Section */
 [data-bs-theme="dark"] #service > section:nth-child(1) {
-  background-color: #a3ddff55;
+  background-color: var(--darkblue);
 }

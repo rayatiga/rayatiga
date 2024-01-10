@@ -7,9 +7,9 @@
 #support > section:nth-child(1) {
   min-height: 32vh;
   padding: 4rem 0;
-  background-color: #a3ffad;
+  background-color: var(--blue);
 }
 /* Default: Dark: Section */
 [data-bs-theme="dark"] #support > section:nth-child(1) {
-  background-color: #a3ffad55;
+  background-color: var(--darkblue);
 }

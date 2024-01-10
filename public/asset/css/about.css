@@ -3,9 +3,9 @@
 #about section:nth-child(1) {
   min-height: 32vh;
   padding: 4rem 0;
-  background-color: #a3c0ff;
+  background-color: var(--blue);
 }
 /* Default: Dark: Section */
 [data-bs-theme='dark'] #about section:nth-child(1) {
-    background-color: #a3c0ff55;
+    background-color: var(--darkblue);
 }

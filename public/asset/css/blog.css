@@ -8,9 +8,9 @@
 #blog > section:nth-child(1) {
   min-height: 32vh;
   padding: 4rem 0;
-  background-color: #ffdfa3;
+  background-color: var(--orange);
 }
 /* Default: Dark: Section */
 [data-bs-theme="dark"] #blog > section:nth-child(1) {
-  background-color: #ffdfa355;
+  background-color: var(--darkorange);
 }
