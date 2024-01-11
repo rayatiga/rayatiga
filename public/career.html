@@ -17,6 +17,19 @@
     <link href="/asset/css/main.css" rel="stylesheet" />
     <!-- Career CSS -->
     <link href="/asset/css/career.css" rel="stylesheet" />
+    <!-- External: Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-PBN37CL2");
+    </script>
     <!-- External: Google Analytic -->
     <script src="https://www.googletagmanager.com/gtag/js?id=G-E94958W4T7" async></script>
     <script>
@@ -29,91 +42,90 @@
     </script>
   </head>
   <body>
+    <!-- External: Google Tag Manager -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PBN37CL2" height="0" width="0" style="display: none; visibility: hidden"></iframe></noscript>
     <!-- Header -->
-    <header class="sticky-top">
-      <!-- Navigation -->
-      <nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom">
-        <div class="container">
-          <a class="navbar-brand fw-medium" href="/"><i class="bi bi-cloud-haze2-fill align-baseline me-2"></i>Rayatiga</a>
-          <button class="navbar-toggler" data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse flex-grow-0" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link" href="/">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/about.html">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/blog.html">Blog</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Service</a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="/service.html">All Service</a></li>
-                  <li><hr class="dropdown-divider" /></li>
-                  <li><a class="dropdown-item" href="/service.html#domain">Domain Name</a></li>
-                  <li><a class="dropdown-item" href="/service.html#static">Static Website</a></li>
-                  <li><a class="dropdown-item" href="/service.html#wordpress">WordPress Website</a></li>
-                  <li><a class="dropdown-item" href="/service.html#cloud">Cloud Service & Server</a></li>
-                  <li><hr class="dropdown-divider" /></li>
-                  <li><a class="dropdown-item" href="/support.html">Support</a></li>
-                  <li><a class="dropdown-item" href="/privacy-policy.html">Privacy Policy</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" href="/career.html" aria-current="page">Career</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/contact.html">Contact</a>
-              </li>
-              <!-- Scheme: Toggle -->
-              <li class="nav-item py-2 py-lg-1 col-12 col-lg-auto">
-                <div class="vr d-none d-lg-flex h-100 mx-lg-2 text-dark-50"></div>
-                <hr class="d-lg-none my-2 text-dark-50" />
-              </li>
-              <li class="nav-item dropdown">
-                <button class="btn btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle d-flex w-100 align-items-center" id="bd-theme" data-bs-display="static" data-bs-toggle="dropdown" type="button" aria-expanded="false" aria-label="Toggle theme (auto)">
-                  <svg class="bi my-1 theme-icon-active"><use href="#circle-half"></use></svg>
-                  <span class="d-lg-none ms-2" id="bd-theme-text">Toggle theme</span>
-                </button>
-                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme-text">
-                  <li>
-                    <button class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" type="button" aria-pressed="false">
-                      <svg class="bi me-2 opacity-50 theme-icon"><use href="#sun-fill"></use></svg>
-                      Light
-                      <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
-                    </button>
-                  </li>
-                  <li>
-                    <button class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" type="button" aria-pressed="false">
-                      <svg class="bi me-2 opacity-50 theme-icon"><use href="#moon-stars-fill"></use></svg>
-                      Dark
-                      <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
-                    </button>
-                  </li>
-                  <li>
-                    <button class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" type="button" aria-pressed="true">
-                      <svg class="bi me-2 opacity-50 theme-icon"><use href="#circle-half"></use></svg>
-                      Auto
-                      <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
-                    </button>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </div>
+    <header class="navbar navbar-expand-lg bg-body-tertiary border-bottom sticky-top" role="navigation">
+      <div class="container">
+        <a class="navbar-brand fw-medium" href="/"><i class="bi bi-cloud-haze2-fill align-baseline me-2"></i>Rayatiga</a>
+        <button class="navbar-toggler" data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse flex-grow-0" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/blog.html">Blog</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Service</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="/service.html">All Service</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="/service.html#domain">Domain Name</a></li>
+                <li><a class="dropdown-item" href="/service.html#static">Static Website</a></li>
+                <li><a class="dropdown-item" href="/service.html#wordpress">WordPress Website</a></li>
+                <li><a class="dropdown-item" href="/service.html#cloud">Cloud Service & Server</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="/support.html">Support</a></li>
+                <li><a class="dropdown-item" href="/privacy-policy.html">Privacy Policy</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="/career.html" aria-current="page">Career</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/contact.html">Contact</a>
+            </li>
+            <!-- Scheme: Toggle -->
+            <li class="nav-item py-2 py-lg-1 col-12 col-lg-auto">
+              <div class="vr d-none d-lg-flex h-100 mx-lg-2 text-dark-50"></div>
+              <hr class="d-lg-none my-2 text-dark-50" />
+            </li>
+            <li class="nav-item dropdown">
+              <button class="btn btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle d-flex w-100 align-items-center" id="bd-theme" data-bs-display="static" data-bs-toggle="dropdown" type="button" aria-expanded="false" aria-label="Toggle theme (auto)">
+                <svg class="bi my-1 theme-icon-active"><use href="#circle-half"></use></svg>
+                <span class="d-lg-none ms-2" id="bd-theme-text">Toggle theme</span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme-text">
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" type="button" aria-pressed="false">
+                    <svg class="bi me-2 opacity-50 theme-icon"><use href="#sun-fill"></use></svg>
+                    Light
+                    <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
+                  </button>
+                </li>
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" type="button" aria-pressed="false">
+                    <svg class="bi me-2 opacity-50 theme-icon"><use href="#moon-stars-fill"></use></svg>
+                    Dark
+                    <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
+                  </button>
+                </li>
+                <li>
+                  <button class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" type="button" aria-pressed="true">
+                    <svg class="bi me-2 opacity-50 theme-icon"><use href="#circle-half"></use></svg>
+                    Auto
+                    <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
+                  </button>
+                </li>
+              </ul>
+            </li>
+          </ul>
         </div>
-      </nav>
+      </div>
     </header>
     <!-- Main: Career -->
     <main class="d-flex flex-column align-items-center" id="career">
       <!-- Section -->
       <section class="d-flex flex-column justify-content-center w-100">
         <div class="container d-flex flex-column gap-2">
-          <h1 class="fw-semibold animate__animated animate__fadeInUp animate__faster">Career</h1>
+          <h1 class="display-4 animate__animated animate__fadeInUp animate__faster">Career</h1>
           <p class="m-0 animate__animated animate__fadeInUp animate__faster animate__delay-1s">The future is full of possibilities, and we at Rayatiga are excited to be at the forefront of innovation. We are looking for talented and passionate people to join our team and help us shape the future. We offer a variety of opportunities in a wide range of fields, so you can find the perfect fit for your skills and interests.</p>
         </div>
       </section>

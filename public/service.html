@@ -17,6 +17,19 @@
     <link href="/asset/css/main.css" rel="stylesheet" />
     <!-- Service CSS -->
     <link href="/asset/css/service.css" rel="stylesheet" />
+    <!-- External: Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-PBN37CL2");
+    </script>
     <!-- External: Google Analytic -->
     <script src="https://www.googletagmanager.com/gtag/js?id=G-E94958W4T7" async></script>
     <script>
@@ -29,91 +42,90 @@
     </script>
   </head>
   <body>
+    <!-- External: Google Tag Manager -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PBN37CL2" height="0" width="0" style="display: none; visibility: hidden"></iframe></noscript>
     <!-- Header -->
-    <header class="sticky-top">
-      <!-- Navigation -->
-      <nav class="navbar navbar-expand-lg bg-body-tertiary border-bottom">
-        <div class="container">
-          <a class="navbar-brand fw-medium" href="/"><i class="bi bi-cloud-haze2-fill align-baseline me-2"></i>Rayatiga</a>
-          <button class="navbar-toggler" data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse flex-grow-0" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link" href="/">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/about.html">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/blog.html">Blog</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle active" data-bs-toggle="dropdown" href="#" role="button" aria-current="page" aria-expanded="false">Service</a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item active" href="/service.html">All Service</a></li>
-                  <li><hr class="dropdown-divider" /></li>
-                  <li><a class="dropdown-item" href="/service.html#domain">Domain Name</a></li>
-                  <li><a class="dropdown-item" href="/service.html#static">Static Website</a></li>
-                  <li><a class="dropdown-item" href="/service.html#wordpress">WordPress Website</a></li>
-                  <li><a class="dropdown-item" href="/service.html#cloud">Cloud Service & Server</a></li>
-                  <li><hr class="dropdown-divider" /></li>
-                  <li><a class="dropdown-item" href="/support.html">Support</a></li>
-                  <li><a class="dropdown-item" href="/privacy-policy.html">Privacy Policy</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/career.html">Career</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/contact.html">Contact</a>
-              </li>
-              <!-- Scheme: Toggle -->
-              <li class="nav-item py-2 py-lg-1 col-12 col-lg-auto">
-                <div class="vr d-none d-lg-flex h-100 mx-lg-2 text-dark-50"></div>
-                <hr class="d-lg-none my-2 text-dark-50" />
-              </li>
-              <li class="nav-item dropdown">
-                <button class="btn btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle d-flex w-100 align-items-center" id="bd-theme" data-bs-display="static" data-bs-toggle="dropdown" type="button" aria-expanded="false" aria-label="Toggle theme (auto)">
-                  <svg class="bi my-1 theme-icon-active"><use href="#circle-half"></use></svg>
-                  <span class="d-lg-none ms-2" id="bd-theme-text">Toggle theme</span>
-                </button>
-                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme-text">
-                  <li>
-                    <button class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" type="button" aria-pressed="false">
-                      <svg class="bi me-2 opacity-50 theme-icon"><use href="#sun-fill"></use></svg>
-                      Light
-                      <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
-                    </button>
-                  </li>
-                  <li>
-                    <button class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" type="button" aria-pressed="false">
-                      <svg class="bi me-2 opacity-50 theme-icon"><use href="#moon-stars-fill"></use></svg>
-                      Dark
-                      <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
-                    </button>
-                  </li>
-                  <li>
-                    <button class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" type="button" aria-pressed="true">
-                      <svg class="bi me-2 opacity-50 theme-icon"><use href="#circle-half"></use></svg>
-                      Auto
-                      <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
-                    </button>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </div>
+    <header class="navbar navbar-expand-lg bg-body-tertiary border-bottom sticky-top" role="navigation">
+      <div class="container">
+        <a class="navbar-brand fw-medium" href="/"><i class="bi bi-cloud-haze2-fill align-baseline me-2"></i>Rayatiga</a>
+        <button class="navbar-toggler" data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse flex-grow-0" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/blog.html">Blog</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle active" data-bs-toggle="dropdown" href="#" role="button" aria-current="page" aria-expanded="false">Service</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item active" href="/service.html">All Service</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="/service.html#domain">Domain Name</a></li>
+                <li><a class="dropdown-item" href="/service.html#static">Static Website</a></li>
+                <li><a class="dropdown-item" href="/service.html#wordpress">WordPress Website</a></li>
+                <li><a class="dropdown-item" href="/service.html#cloud">Cloud Service & Server</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="/support.html">Support</a></li>
+                <li><a class="dropdown-item" href="/privacy-policy.html">Privacy Policy</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/career.html">Career</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/contact.html">Contact</a>
+            </li>
+            <!-- Scheme: Toggle -->
+            <li class="nav-item py-2 py-lg-1 col-12 col-lg-auto">
+              <div class="vr d-none d-lg-flex h-100 mx-lg-2 text-dark-50"></div>
+              <hr class="d-lg-none my-2 text-dark-50" />
+            </li>
+            <li class="nav-item dropdown">
+              <button class="btn btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle d-flex w-100 align-items-center" id="bd-theme" data-bs-display="static" data-bs-toggle="dropdown" type="button" aria-expanded="false" aria-label="Toggle theme (auto)">
+                <svg class="bi my-1 theme-icon-active"><use href="#circle-half"></use></svg>
+                <span class="d-lg-none ms-2" id="bd-theme-text">Toggle theme</span>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme-text">
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" type="button" aria-pressed="false">
+                    <svg class="bi me-2 opacity-50 theme-icon"><use href="#sun-fill"></use></svg>
+                    Light
+                    <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
+                  </button>
+                </li>
+                <li>
+                  <button class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" type="button" aria-pressed="false">
+                    <svg class="bi me-2 opacity-50 theme-icon"><use href="#moon-stars-fill"></use></svg>
+                    Dark
+                    <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
+                  </button>
+                </li>
+                <li>
+                  <button class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" type="button" aria-pressed="true">
+                    <svg class="bi me-2 opacity-50 theme-icon"><use href="#circle-half"></use></svg>
+                    Auto
+                    <svg class="bi ms-auto d-none"><use href="#check2"></use></svg>
+                  </button>
+                </li>
+              </ul>
+            </li>
+          </ul>
         </div>
-      </nav>
+      </div>
     </header>
     <!-- Main: Service -->
     <main class="d-flex flex-column align-items-center" id="service">
       <!-- Section -->
       <section class="d-flex flex-column justify-content-center w-100">
         <div class="container d-flex flex-column gap-2">
-          <h1 class="fw-semibold animate__animated animate__fadeInUp animate__faster">Service</h1>
+          <h1 class="display-4 animate__animated animate__fadeInUp animate__faster">Service</h1>
           <p class="m-0 animate__animated animate__fadeInUp animate__faster animate__delay-1s">We are dedicated to providing our clients with high-quality, affordable services that help them grow their businesses. All of our services come with included maintenance. This means that we will take care of all the technical aspects of your website or IT infrastructure, so you can focus on running your business.</p>
         </div>
       </section>
@@ -123,8 +135,8 @@
           <!-- Section: Domain -->
           <section class="my-3 animate__animated animate__fadeInUp animate__faster animate__delay-2s d-flex flex-column align-items-center" id="domain">
             <div class="d-flex flex-column align-items-center col-lg-10 mb-4">
-              <h1 class="display-4 py-2 px-3 d-inline-block mb-3">Domain Name</h1>
-              <div class="d-flex flex-wrap align-items-center gap-2 mb-2">
+              <h1 class="display-5 py-2 px-3 d-inline-block mb-3">Domain Name</h1>
+              <div class="d-flex flex-wrap justify-content-center align-items-center gap-2 mb-2">
                 <span>Powered by:</span>
                 <img class="d-inline-block badge p-2 border bg-light" src="/asset/svg/cloudflare-logo.svg" alt="Cloudflare Logo" height="36" />
               </div>
@@ -133,77 +145,85 @@
             <!-- Section: Domain Data -->
             <div class="row row-cols-1 row-cols-md-2 row-cols-xl-4 g-2 w-100">
               <div class="col">
-                <div class="card border-primary shadow-sm">
+                <div class="card border-primary shadow-sm h-100">
                   <div class="card-header bg-primary text-white">
                     <p class="mb-0"><i class="bi bi-star-fill align-baseline me-2"></i>Domain .COM</p>
                   </div>
-                  <div class="card-body">
-                    <h2 class="card-title pricing-card-title">$15<small class="text-body-secondary fw-light">/yr.</small></h2>
-                    <p>Reservation for domain with extension .com with managed DNS and maintenance from Rayatiga.</p>
-                    <ul class="list-unstyled">
-                      <li><i class="bi bi-check align-baseline me-2"></i>Professional Email</li>
-                      <li><i class="bi bi-check align-baseline me-2"></i>DNS Record Support</li>
-                      <hr />
-                      <li><i class="bi bi-check align-baseline me-2"></i>Email Support</li>
-                      <li><i class="bi bi-check align-baseline me-2"></i>Maintenance</li>
-                    </ul>
+                  <div class="card-body d-flex flex-column justify-content-between">
+                    <div>
+                      <h2 class="card-title pricing-card-title">$15<small class="text-body-secondary fw-light">/yr.</small></h2>
+                      <p>Reservation for domain with extension .com with managed DNS and maintenance from Rayatiga.</p>
+                      <ul class="list-unstyled">
+                        <li><i class="bi bi-check align-baseline me-2"></i>Professional Email</li>
+                        <li><i class="bi bi-check align-baseline me-2"></i>DNS Record Support</li>
+                        <hr />
+                        <li><i class="bi bi-check align-baseline me-2"></i>Email Support</li>
+                        <li><i class="bi bi-check align-baseline me-2"></i>Maintenance</li>
+                      </ul>
+                    </div>
                     <button class="w-100 btn btn-primary" onclick="selectService('domain-com')">Select Service</button>
                   </div>
                 </div>
               </div>
               <div class="col">
-                <div class="card">
+                <div class="card h-100">
                   <div class="card-header">
                     <p class="mb-0">Domain .ID</p>
                   </div>
-                  <div class="card-body">
-                    <h2 class="card-title pricing-card-title">$25<small class="text-body-secondary fw-light">/yr.</small></h2>
-                    <p>Reservation for domain with extension .id with managed DNS and maintenance from Rayatiga.</p>
-                    <ul class="list-unstyled">
-                      <li><i class="bi bi-check align-baseline me-2"></i>Professional Email</li>
-                      <li><i class="bi bi-check align-baseline me-2"></i>DNS Record Support</li>
-                      <hr />
-                      <li><i class="bi bi-check align-baseline me-2"></i>Email Support</li>
-                      <li><i class="bi bi-check align-baseline me-2"></i>Maintenance</li>
-                    </ul>
+                  <div class="card-body d-flex flex-column justify-content-between">
+                    <div>
+                      <h2 class="card-title pricing-card-title">$25<small class="text-body-secondary fw-light">/yr.</small></h2>
+                      <p>Reservation for domain with extension .id with managed DNS and maintenance from Rayatiga.</p>
+                      <ul class="list-unstyled">
+                        <li><i class="bi bi-check align-baseline me-2"></i>Professional Email</li>
+                        <li><i class="bi bi-check align-baseline me-2"></i>DNS Record Support</li>
+                        <hr />
+                        <li><i class="bi bi-check align-baseline me-2"></i>Email Support</li>
+                        <li><i class="bi bi-check align-baseline me-2"></i>Maintenance</li>
+                      </ul>
+                    </div>
                     <button class="w-100 btn btn-outline-dark" onclick="selectService('domain-id')">Select Service</button>
                   </div>
                 </div>
               </div>
               <div class="col">
-                <div class="card">
+                <div class="card h-100">
                   <div class="card-header">
                     <p class="mb-0">Domain .CO.ID</p>
                   </div>
-                  <div class="card-body">
-                    <h2 class="card-title pricing-card-title">$55<small class="text-body-secondary fw-light">/yr.</small></h2>
-                    <p>Reservation for domain with extension .co.id with managed DNS and maintenance from Rayatiga.</p>
-                    <ul class="list-unstyled">
-                      <li><i class="bi bi-check align-baseline me-2"></i>Professional Email</li>
-                      <li><i class="bi bi-check align-baseline me-2"></i>DNS Record Support</li>
-                      <hr />
-                      <li><i class="bi bi-check align-baseline me-2"></i>Email Support</li>
-                      <li><i class="bi bi-check align-baseline me-2"></i>Maintenance</li>
-                    </ul>
+                  <div class="card-body d-flex flex-column justify-content-between">
+                    <div>
+                      <h2 class="card-title pricing-card-title">$55<small class="text-body-secondary fw-light">/yr.</small></h2>
+                      <p>Reservation for domain with extension .co.id with managed DNS and maintenance from Rayatiga.</p>
+                      <ul class="list-unstyled">
+                        <li><i class="bi bi-check align-baseline me-2"></i>Professional Email</li>
+                        <li><i class="bi bi-check align-baseline me-2"></i>DNS Record Support</li>
+                        <hr />
+                        <li><i class="bi bi-check align-baseline me-2"></i>Email Support</li>
+                        <li><i class="bi bi-check align-baseline me-2"></i>Maintenance</li>
+                      </ul>
+                    </div>
                     <button class="w-100 btn btn-outline-dark" onclick="selectService('domain-coid')">Select Service</button>
                   </div>
                 </div>
               </div>
               <div class="col">
-                <div class="card border-warning shadow-sm">
+                <div class="card border-warning shadow-sm h-100">
                   <div class="card-header bg-warning text-dark">
                     <p class="mb-0">Domain Custom<i class="bi bi-question-circle ms-1 align-baseline" data-bs-content="Additional charges of work calculated hourly by development process." data-bs-title="Charges hourly" data-bs-toggle="popover"></i></p>
                   </div>
-                  <div class="card-body">
-                    <h2 class="card-title pricing-card-title">Custom<small class="text-body-secondary fw-light">/yr.</small></h2>
-                    <p>Reservation for domain with custom extension with managed DNS and maintenance from Rayatiga.</p>
-                    <ul class="list-unstyled">
-                      <li><i class="bi bi-check align-baseline me-2"></i>Custom Professional Email</li>
-                      <li><i class="bi bi-check align-baseline me-2"></i>DNS Record Support</li>
-                      <hr />
-                      <li><i class="bi bi-check align-baseline me-2"></i>Email Support</li>
-                      <li><i class="bi bi-check align-baseline me-2"></i>Maintenance</li>
-                    </ul>
+                  <div class="card-body d-flex flex-column justify-content-between">
+                    <div>
+                      <h2 class="card-title pricing-card-title">Custom<small class="text-body-secondary fw-light">/yr.</small></h2>
+                      <p>Reservation for domain with custom extension with managed DNS and maintenance from Rayatiga.</p>
+                      <ul class="list-unstyled">
+                        <li><i class="bi bi-check align-baseline me-2"></i>Custom Professional Email</li>
+                        <li><i class="bi bi-check align-baseline me-2"></i>DNS Record Support</li>
+                        <hr />
+                        <li><i class="bi bi-check align-baseline me-2"></i>Email Support</li>
+                        <li><i class="bi bi-check align-baseline me-2"></i>Maintenance</li>
+                      </ul>
+                    </div>
                     <button class="w-100 btn btn-warning" onclick="selectService('domain-custom')">Contact</button>
                   </div>
                 </div>
@@ -213,8 +233,8 @@
           <!-- Section: Static -->
           <section class="my-3 animate__animated animate__fadeInUp animate__faster animate__delay-3s d-flex flex-column align-items-center" id="static">
             <div class="d-flex flex-column align-items-center col-lg-10 mb-4">
-              <h1 class="display-4 py-2 px-3 d-inline-block mb-3">Static Website</h1>
-              <div class="d-flex flex-wrap align-items-center gap-2 mb-2">
+              <h1 class="display-5 py-2 px-3 d-inline-block mb-3">Static Website</h1>
+              <div class="d-flex flex-wrap justify-content-center align-items-center gap-2 mb-2">
                 <span>Powered by:</span>
                 <img class="d-inline-block badge p-2 border bg-light" src="/asset/svg/google-firebase-logo.svg" alt="Google Firebase Logo" height="36" />
                 <img class="d-inline-block badge p-2 border bg-light" src="/asset/svg/cloudflare-logo.svg" alt="Cloudflare Logo" height="36" />
@@ -223,81 +243,89 @@
             </div>
             <div class="row row-cols-1 row-cols-md-2 row-cols-xl-4 g-2 w-100">
               <div class="col">
-                <div class="card">
+                <div class="card h-100">
                   <div class="card-header">
                     <p class="mb-0">Static A</p>
                   </div>
-                  <div class="card-body">
-                    <h2 class="card-title pricing-card-title">$145<small class="text-body-secondary fw-light">/yr.</small></h2>
-                    <p>Suitable for build static website with strong niche market for conversions.</p>
-                    <ul class="list-unstyled">
-                      <li><i class="bi bi-check align-baseline me-2"></i>1 Landing Page</li>
-                      <li><i class="bi bi-check align-baseline me-2"></i>1 Free Domain</li>
-                      <li><i class="bi bi-check align-baseline me-2"></i>2 Professional Email</li>
-                      <hr />
-                      <li><i class="bi bi-check align-baseline me-2"></i>Email Support</li>
-                      <li><i class="bi bi-check align-baseline me-2"></i>Maintenance</li>
-                    </ul>
+                  <div class="card-body d-flex flex-column justify-content-between">
+                    <div>
+                      <h2 class="card-title pricing-card-title">$145<small class="text-body-secondary fw-light">/yr.</small></h2>
+                      <p>Suitable for build static website with strong niche market for conversions.</p>
+                      <ul class="list-unstyled">
+                        <li><i class="bi bi-check align-baseline me-2"></i>1 Landing Page</li>
+                        <li><i class="bi bi-check align-baseline me-2"></i>1 Free Domain</li>
+                        <li><i class="bi bi-check align-baseline me-2"></i>2 Professional Email</li>
+                        <hr />
+                        <li><i class="bi bi-check align-baseline me-2"></i>Email Support</li>
+                        <li><i class="bi bi-check align-baseline me-2"></i>Maintenance</li>
+                      </ul>
+                    </div>
                     <button class="w-100 btn btn-outline-dark" onclick="selectService('static-a')">Select Service</button>
                   </div>
                 </div>
               </div>
               <div class="col">
-                <div class="card border-primary shadow-sm">
+                <div class="card border-primary shadow-sm h-100">
                   <div class="card-header bg-primary text-white">
                     <p class="mb-0"><i class="bi bi-star-fill align-baseline me-2"></i>Static B</p>
                   </div>
-                  <div class="card-body">
-                    <h2 class="card-title pricing-card-title">$275<small class="text-body-secondary fw-light">/yr.</small></h2>
-                    <p>Suitable for general purposes such as portfolio to a company profile.</p>
-                    <ul class="list-unstyled">
-                      <li><i class="bi bi-check align-baseline me-2"></i>4 Page</li>
-                      <li><i class="bi bi-check align-baseline me-2"></i>1 Free Domain</li>
-                      <li><i class="bi bi-check align-baseline me-2"></i>5 Professional Email</li>
-                      <hr />
-                      <li><i class="bi bi-check align-baseline me-2"></i>Email Support</li>
-                      <li><i class="bi bi-check align-baseline me-2"></i>Maintenance</li>
-                    </ul>
+                  <div class="card-body d-flex flex-column justify-content-between">
+                    <div>
+                      <h2 class="card-title pricing-card-title">$275<small class="text-body-secondary fw-light">/yr.</small></h2>
+                      <p>Suitable for general purposes such as portfolio to a company profile.</p>
+                      <ul class="list-unstyled">
+                        <li><i class="bi bi-check align-baseline me-2"></i>4 Page</li>
+                        <li><i class="bi bi-check align-baseline me-2"></i>1 Free Domain</li>
+                        <li><i class="bi bi-check align-baseline me-2"></i>5 Professional Email</li>
+                        <hr />
+                        <li><i class="bi bi-check align-baseline me-2"></i>Email Support</li>
+                        <li><i class="bi bi-check align-baseline me-2"></i>Maintenance</li>
+                      </ul>
+                    </div>
                     <button class="w-100 btn btn-primary" onclick="selectService('static-b')">Select Service</button>
                   </div>
                 </div>
               </div>
               <div class="col">
-                <div class="card">
+                <div class="card h-100">
                   <div class="card-header">
                     <p class="mb-0">Static C</p>
                   </div>
-                  <div class="card-body">
-                    <h2 class="card-title pricing-card-title">$425<small class="text-body-secondary fw-light">/yr.</small></h2>
-                    <p>Suitable for complex with many functions and business process.</p>
-                    <ul class="list-unstyled">
-                      <li><i class="bi bi-check align-baseline me-2"></i>7 Page</li>
-                      <li><i class="bi bi-check align-baseline me-2"></i>1 Free Domain</li>
-                      <li><i class="bi bi-check align-baseline me-2"></i>10 Professional Email</li>
-                      <hr />
-                      <li><i class="bi bi-check align-baseline me-2"></i>Email Support</li>
-                      <li><i class="bi bi-check align-baseline me-2"></i>Maintenance</li>
-                    </ul>
+                  <div class="card-body d-flex flex-column justify-content-between">
+                    <div>
+                      <h2 class="card-title pricing-card-title">$425<small class="text-body-secondary fw-light">/yr.</small></h2>
+                      <p>Suitable for complex with many functions and business process.</p>
+                      <ul class="list-unstyled">
+                        <li><i class="bi bi-check align-baseline me-2"></i>7 Page</li>
+                        <li><i class="bi bi-check align-baseline me-2"></i>1 Free Domain</li>
+                        <li><i class="bi bi-check align-baseline me-2"></i>10 Professional Email</li>
+                        <hr />
+                        <li><i class="bi bi-check align-baseline me-2"></i>Email Support</li>
+                        <li><i class="bi bi-check align-baseline me-2"></i>Maintenance</li>
+                      </ul>
+                    </div>
                     <button class="w-100 btn btn-outline-dark" onclick="selectService('static-c')">Select Service</button>
                   </div>
                 </div>
               </div>
               <div class="col">
-                <div class="card border-warning shadow-sm">
+                <div class="card border-warning shadow-sm h-100">
                   <div class="card-header bg-warning text-dark">
                     <p class="mb-0">Static Custom<i class="bi bi-question-circle ms-1 align-baseline" data-bs-content="Additional charges of work calculated hourly by development process." data-bs-title="Charges hourly" data-bs-toggle="popover"></i></p>
                   </div>
-                  <div class="card-body">
-                    <h2 class="card-title pricing-card-title">Custom<small class="text-body-secondary fw-light">/yr.</small></h2>
-                    <p>Suitable for any business, function, and environtment purposes.</p>
-                    <ul class="list-unstyled">
-                      <li><i class="bi bi-check align-baseline me-2"></i>Custom Page</li>
-                      <li><i class="bi bi-check align-baseline me-2"></i>Custom Domain</li>
-                      <li><i class="bi bi-check align-baseline me-2"></i>Custom Professional Email</li>
-                      <hr />
-                      <li><i class="bi bi-check align-baseline me-2"></i>Email Support</li>
-                      <li><i class="bi bi-check align-baseline me-2"></i>Maintenance</li>
-                    </ul>
+                  <div class="card-body d-flex flex-column justify-content-between">
+                    <div>
+                      <h2 class="card-title pricing-card-title">Custom<small class="text-body-secondary fw-light">/yr.</small></h2>
+                      <p>Suitable for any business, function, and environtment purposes.</p>
+                      <ul class="list-unstyled">
+                        <li><i class="bi bi-check align-baseline me-2"></i>Custom Page</li>
+                        <li><i class="bi bi-check align-baseline me-2"></i>Custom Domain</li>
+                        <li><i class="bi bi-check align-baseline me-2"></i>Custom Professional Email</li>
+                        <hr />
+                        <li><i class="bi bi-check align-baseline me-2"></i>Email Support</li>
+                        <li><i class="bi bi-check align-baseline me-2"></i>Maintenance</li>
+                      </ul>
+                    </div>
                     <button class="w-100 btn btn-warning" onclick="selectService('static-custom')">Contact</button>
                   </div>
                 </div>
@@ -307,9 +335,9 @@
           <!-- Section: WordPress -->
           <section class="my-3 animate__animated animate__fadeInUp animate__faster animate__delay-4s d-flex flex-column align-items-center" id="wordpress">
             <div class="d-flex flex-column align-items-center col-lg-10 mb-4">
-              <h1 class="display-4 py-2 px-3 d-inline-block mb-3">WordPress Website</h1>
-              <div class="d-flex align-items-center gap-2 mb-2">
-                <span class="w-100">Powered by:</span>
+              <h1 class="display-5 py-2 px-3 d-inline-block mb-3">WordPress Website</h1>
+              <div class="d-flex flex-wrap justify-content-center align-items-center gap-2 mb-2">
+                <span>Powered by:</span>
                 <img class="d-inline-block badge p-2 border bg-light" src="/asset/svg/google-cloud-logo.svg" alt="Google Cloud Logo" height="36" />
                 <img class="d-inline-block badge p-2 border bg-light" src="/asset/svg/google-cloud-compute-engine-logo.svg" alt="Google Cloud Compute Engine Logo" height="36" />
                 <img class="d-inline-block badge p-2 border bg-light" src="/asset/svg/google-cloud-cloud-monitoring-logo.svg" alt="Google Cloud Cloud Monitoring Logo" height="36" />
@@ -319,93 +347,101 @@
             </div>
             <div class="row row-cols-1 row-cols-md-2 row-cols-xl-4 g-2 w-100">
               <div class="col">
-                <div class="card">
+                <div class="card h-100">
                   <div class="card-header">
                     <p class="mb-0">WordPress A</p>
                   </div>
-                  <div class="card-body">
-                    <h2 class="card-title pricing-card-title">$600<small class="text-body-secondary fw-light">/yr.</small></h2>
-                    <ul class="list-unstyled">
-                      <li><i class="bi bi-check align-baseline me-2"></i>1 Website</li>
-                      <li><i class="bi bi-check align-baseline me-2"></i>1 Free Domain</li>
-                      <li><i class="bi bi-check align-baseline me-2"></i>5 Professional Email</li>
-                      <hr />
-                      <li class="text-body-secondary"><i class="bi bi-x align-baseline me-2"></i>Subdomain</li>
-                      <li class="text-body-secondary"><i class="bi bi-x align-baseline me-2"></i>Elementor Pro</li>
-                      <li class="text-body-secondary"><i class="bi bi-x align-baseline me-2"></i>Enterprise Email</li>
-                      <hr />
-                      <li><i class="bi bi-check align-baseline me-2"></i>Email Support</li>
-                      <li><i class="bi bi-check align-baseline me-2"></i>Maintenance</li>
-                    </ul>
+                  <div class="card-body d-flex flex-column justify-content-between">
+                    <div>
+                      <h2 class="card-title pricing-card-title">$600<small class="text-body-secondary fw-light">/yr.</small></h2>
+                      <ul class="list-unstyled">
+                        <li><i class="bi bi-check align-baseline me-2"></i>1 Website</li>
+                        <li><i class="bi bi-check align-baseline me-2"></i>1 Free Domain</li>
+                        <li><i class="bi bi-check align-baseline me-2"></i>5 Professional Email</li>
+                        <hr />
+                        <li class="text-body-secondary"><i class="bi bi-x align-baseline me-2"></i>Subdomain</li>
+                        <li class="text-body-secondary"><i class="bi bi-x align-baseline me-2"></i>Elementor Pro</li>
+                        <li class="text-body-secondary"><i class="bi bi-x align-baseline me-2"></i>Enterprise Email</li>
+                        <hr />
+                        <li><i class="bi bi-check align-baseline me-2"></i>Email Support</li>
+                        <li><i class="bi bi-check align-baseline me-2"></i>Maintenance</li>
+                      </ul>
+                    </div>
                     <button class="w-100 btn btn-outline-dark" onclick="selectService('wordpress-a')">Select Service</button>
                   </div>
                 </div>
               </div>
               <div class="col">
-                <div class="card">
+                <div class="card h-100">
                   <div class="card-header">
                     <p class="mb-0">WordPress B</p>
                   </div>
-                  <div class="card-body">
-                    <h2 class="card-title pricing-card-title">$725<small class="text-body-secondary fw-light">/yr.</small></h2>
-                    <ul class="list-unstyled">
-                      <li><i class="bi bi-check align-baseline me-2"></i>2 Website</li>
-                      <li><i class="bi bi-check align-baseline me-2"></i>1 Free Domain</li>
-                      <li><i class="bi bi-check align-baseline me-2"></i>7 Professional Email</li>
-                      <hr />
-                      <li><i class="bi bi-check align-baseline me-2"></i>1 Subdomain</li>
-                      <li><i class="bi bi-check align-baseline me-2"></i>Elementor Pro</li>
-                      <li class="text-body-secondary"><i class="bi bi-x align-baseline me-2"></i>Enterprise Email</li>
-                      <hr />
-                      <li><i class="bi bi-check align-baseline me-2"></i>Email Support</li>
-                      <li><i class="bi bi-check align-baseline me-2"></i>Maintenance</li>
-                    </ul>
+                  <div class="card-body d-flex flex-column justify-content-between">
+                    <div>
+                      <h2 class="card-title pricing-card-title">$725<small class="text-body-secondary fw-light">/yr.</small></h2>
+                      <ul class="list-unstyled">
+                        <li><i class="bi bi-check align-baseline me-2"></i>2 Website</li>
+                        <li><i class="bi bi-check align-baseline me-2"></i>1 Free Domain</li>
+                        <li><i class="bi bi-check align-baseline me-2"></i>7 Professional Email</li>
+                        <hr />
+                        <li><i class="bi bi-check align-baseline me-2"></i>1 Subdomain</li>
+                        <li><i class="bi bi-check align-baseline me-2"></i>Elementor Pro</li>
+                        <li class="text-body-secondary"><i class="bi bi-x align-baseline me-2"></i>Enterprise Email</li>
+                        <hr />
+                        <li><i class="bi bi-check align-baseline me-2"></i>Email Support</li>
+                        <li><i class="bi bi-check align-baseline me-2"></i>Maintenance</li>
+                      </ul>
+                    </div>
                     <button class="w-100 btn btn-outline-dark" onclick="selectService('wordpress-b')">Select Service</button>
                   </div>
                 </div>
               </div>
               <div class="col">
-                <div class="card border-primary shadow-sm">
+                <div class="card border-primary shadow-sm h-100">
                   <div class="card-header bg-primary text-white">
                     <p class="mb-0"><i class="bi bi-star-fill align-baseline me-2"></i>WordPress C</p>
                   </div>
-                  <div class="card-body">
-                    <h2 class="card-title pricing-card-title">$800<small class="text-body-secondary fw-light">/yr.</small></h2>
-                    <ul class="list-unstyled">
-                      <li><i class="bi bi-check align-baseline me-2"></i>3 Website</li>
-                      <li><i class="bi bi-check align-baseline me-2"></i>1 Free Domain</li>
-                      <li><i class="bi bi-check align-baseline me-2"></i>15 Professional Email</li>
-                      <hr />
-                      <li><i class="bi bi-check align-baseline me-2"></i>2 Subdomain</li>
-                      <li><i class="bi bi-check align-baseline me-2"></i>Elementor Pro</li>
-                      <li><i class="bi bi-check align-baseline me-2"></i>Enterprise Email</li>
-                      <hr />
-                      <li><i class="bi bi-check align-baseline me-2"></i>Email Support</li>
-                      <li><i class="bi bi-check align-baseline me-2"></i>Maintenance</li>
-                    </ul>
+                  <div class="card-body d-flex flex-column justify-content-between">
+                    <div>
+                      <h2 class="card-title pricing-card-title">$800<small class="text-body-secondary fw-light">/yr.</small></h2>
+                      <ul class="list-unstyled">
+                        <li><i class="bi bi-check align-baseline me-2"></i>3 Website</li>
+                        <li><i class="bi bi-check align-baseline me-2"></i>1 Free Domain</li>
+                        <li><i class="bi bi-check align-baseline me-2"></i>15 Professional Email</li>
+                        <hr />
+                        <li><i class="bi bi-check align-baseline me-2"></i>2 Subdomain</li>
+                        <li><i class="bi bi-check align-baseline me-2"></i>Elementor Pro</li>
+                        <li><i class="bi bi-check align-baseline me-2"></i>Enterprise Email</li>
+                        <hr />
+                        <li><i class="bi bi-check align-baseline me-2"></i>Email Support</li>
+                        <li><i class="bi bi-check align-baseline me-2"></i>Maintenance</li>
+                      </ul>
+                    </div>
                     <button class="w-100 btn btn-primary" onclick="selectService('wordpress-c')">Select Service</button>
                   </div>
                 </div>
               </div>
               <div class="col">
-                <div class="card border-warning shadow-sm">
+                <div class="card border-warning shadow-sm h-100">
                   <div class="card-header bg-warning text-dark">
                     <p class="mb-0">WordPress Custom<i class="bi bi-question-circle ms-1 align-baseline" data-bs-content="Additional charges of work calculated by the project complexity level." data-bs-title="Charges by complexity" data-bs-toggle="popover"></i></p>
                   </div>
-                  <div class="card-body">
-                    <h2 class="card-title pricing-card-title">Custom<small class="text-body-secondary fw-light">/yr.</small></h2>
-                    <ul class="list-unstyled">
-                      <li><i class="bi bi-check align-baseline me-2"></i>Custom Website</li>
-                      <li><i class="bi bi-check align-baseline me-2"></i>Custom Domain</li>
-                      <li><i class="bi bi-check align-baseline me-2"></i>Custom Professional Email</li>
-                      <hr />
-                      <li><i class="bi bi-check align-baseline me-2"></i>Custom Subdomain</li>
-                      <li><i class="bi bi-check align-baseline me-2"></i>Elementor Pro</li>
-                      <li><i class="bi bi-check align-baseline me-2"></i>Enterprise Email</li>
-                      <hr />
-                      <li><i class="bi bi-check align-baseline me-2"></i>Email Support</li>
-                      <li><i class="bi bi-check align-baseline me-2"></i>Maintenance</li>
-                    </ul>
+                  <div class="card-body d-flex flex-column justify-content-between">
+                    <div>
+                      <h2 class="card-title pricing-card-title">Custom<small class="text-body-secondary fw-light">/yr.</small></h2>
+                      <ul class="list-unstyled">
+                        <li><i class="bi bi-check align-baseline me-2"></i>Custom Website</li>
+                        <li><i class="bi bi-check align-baseline me-2"></i>Custom Domain</li>
+                        <li><i class="bi bi-check align-baseline me-2"></i>Custom Professional Email</li>
+                        <hr />
+                        <li><i class="bi bi-check align-baseline me-2"></i>Custom Subdomain</li>
+                        <li><i class="bi bi-check align-baseline me-2"></i>Elementor Pro</li>
+                        <li><i class="bi bi-check align-baseline me-2"></i>Enterprise Email</li>
+                        <hr />
+                        <li><i class="bi bi-check align-baseline me-2"></i>Email Support</li>
+                        <li><i class="bi bi-check align-baseline me-2"></i>Maintenance</li>
+                      </ul>
+                    </div>
                     <button class="w-100 btn btn-warning" onclick="selectService('wordpress-custom')">Contact</button>
                   </div>
                 </div>
@@ -414,10 +450,9 @@
           </section>
           <!-- Section: Cloud -->
           <section class="mt-3 mb-2 animate__animated animate__fadeInUp animate__faster animate__delay-5s d-flex flex-column align-items-center" id="cloud">
-
             <div class="d-flex flex-column align-items-center col-lg-10 mb-4">
-              <h1 class="display-4 py-2 px-3 d-inline-block mb-3">Cloud Service</h1>
-              <div class="d-flex align-items-center gap-2 mb-2">
+              <h1 class="display-5 py-2 px-3 d-inline-block mb-3">Cloud Service</h1>
+              <div class="d-flex flex-wrap justify-content-center align-items-center gap-2 mb-2">
                 <span>Powered by:</span>
                 <img class="d-inline-block badge p-2 border bg-light" src="/asset/svg/google-cloud-logo.svg" alt="Google Cloud Logo" height="36" />
                 <img class="d-inline-block badge p-2 border bg-light" src="/asset/svg/google-cloud-compute-engine-logo.svg" alt="Google Cloud Compute Engine Logo" height="36" />
@@ -431,129 +466,137 @@
             </div>
             <div class="row row-cols-1 row-cols-md-2 row-cols-xl-4 g-2 w-100">
               <div class="col">
-                <div class="card">
+                <div class="card h-100">
                   <div class="card-header">
                     <p class="mb-0">Cloud A</p>
                   </div>
-                  <div class="card-body">
-                    <h2 class="card-title pricing-card-title">$80<small class="text-body-secondary fw-light">/mo.</small></h2>
-                    <ul class="list-unstyled">
-                      <li><i class="bi bi-check align-baseline me-2"></i>1 Instance</li>
-                      <li><i class="bi bi-check align-baseline me-2"></i>1 Public IP</li>
-                      <li><i class="bi bi-check align-baseline me-2"></i>Singapore Region</li>
-                      <li><i class="bi bi-check align-baseline me-2"></i>Regular Provisioning</li>
-                      <li><i class="bi bi-check align-baseline me-2"></i>Balance Presistent Disk</li>
-                      <li><i class="bi bi-check align-baseline me-2"></i>Ubuntu Operating System</li>
-                      <li><i class="bi bi-check align-baseline me-2"></i>Google Cloud Server</li>
-                      <hr />
-                      <li><i class="bi bi-check align-baseline me-2"></i>1 vCPU</li>
-                      <li><i class="bi bi-check align-baseline me-2"></i>3.75 GB RAM</li>
-                      <li><i class="bi bi-check align-baseline me-2"></i>30 GB Disk</li>
-                      <li class="text-body-secondary"><i class="bi bi-x align-baseline me-2"></i>Thread Per Core</li>
-                      <hr />
-                      <li><i class="bi bi-check align-baseline me-2"></i>Cloud Agent</li>
-                      <li><i class="bi bi-check align-baseline me-2"></i>Load Monitoring</li>
-                      <li class="text-body-secondary"><i class="bi bi-x align-baseline me-2"></i>Health Monitoring</li>
-                      <hr />
-                      <li><i class="bi bi-check align-baseline me-2"></i>Email Support</li>
-                      <li><i class="bi bi-check align-baseline me-2"></i>Maintenance</li>
-                    </ul>
+                  <div class="card-body d-flex flex-column justify-content-between">
+                    <div>
+                      <h2 class="card-title pricing-card-title">$80<small class="text-body-secondary fw-light">/mo.</small></h2>
+                      <ul class="list-unstyled">
+                        <li><i class="bi bi-check align-baseline me-2"></i>1 Instance</li>
+                        <li><i class="bi bi-check align-baseline me-2"></i>1 Public IP</li>
+                        <li><i class="bi bi-check align-baseline me-2"></i>Singapore Region</li>
+                        <li><i class="bi bi-check align-baseline me-2"></i>Regular Provisioning</li>
+                        <li><i class="bi bi-check align-baseline me-2"></i>Balance Presistent Disk</li>
+                        <li><i class="bi bi-check align-baseline me-2"></i>Ubuntu Operating System</li>
+                        <li><i class="bi bi-check align-baseline me-2"></i>Google Cloud Server</li>
+                        <hr />
+                        <li><i class="bi bi-check align-baseline me-2"></i>1 vCPU</li>
+                        <li><i class="bi bi-check align-baseline me-2"></i>3.75 GB RAM</li>
+                        <li><i class="bi bi-check align-baseline me-2"></i>30 GB Disk</li>
+                        <li class="text-body-secondary"><i class="bi bi-x align-baseline me-2"></i>Thread Per Core</li>
+                        <hr />
+                        <li><i class="bi bi-check align-baseline me-2"></i>Cloud Agent</li>
+                        <li><i class="bi bi-check align-baseline me-2"></i>Load Monitoring</li>
+                        <li class="text-body-secondary"><i class="bi bi-x align-baseline me-2"></i>Health Monitoring</li>
+                        <hr />
+                        <li><i class="bi bi-check align-baseline me-2"></i>Email Support</li>
+                        <li><i class="bi bi-check align-baseline me-2"></i>Maintenance</li>
+                      </ul>
+                    </div>
                     <button class="w-100 btn btn-outline-dark" onclick="selectService('cloud-a')">Select Service</button>
                   </div>
                 </div>
               </div>
               <div class="col">
-                <div class="card border-primary shadow-sm">
+                <div class="card border-primary shadow-sm h-100">
                   <div class="card-header bg-primary text-white">
                     <p class="mb-0"><i class="bi bi-star-fill align-baseline me-2"></i>Cloud B</p>
                   </div>
-                  <div class="card-body">
-                    <h2 class="card-title pricing-card-title">$135<small class="text-body-secondary fw-light">/mo.</small></h2>
-                    <ul class="list-unstyled">
-                      <li><i class="bi bi-check align-baseline me-2"></i>1 Instance</li>
-                      <li><i class="bi bi-check align-baseline me-2"></i>1 Public IP</li>
-                      <li><i class="bi bi-check align-baseline me-2"></i>Singapore Region</li>
-                      <li><i class="bi bi-check align-baseline me-2"></i>Regular Provisioning</li>
-                      <li><i class="bi bi-check align-baseline me-2"></i>Balance Presistent Disk</li>
-                      <li><i class="bi bi-check align-baseline me-2"></i>Ubuntu Operating System</li>
-                      <li><i class="bi bi-check align-baseline me-2"></i>Google Cloud Server</li>
-                      <hr />
-                      <li><i class="bi bi-check align-baseline me-2"></i>2 vCPUs</li>
-                      <li><i class="bi bi-check align-baseline me-2"></i>8 GB RAM</li>
-                      <li><i class="bi bi-check align-baseline me-2"></i>100 GB Disk</li>
-                      <li><i class="bi bi-check align-baseline me-2"></i>2 Threads Per Core</li>
-                      <hr />
-                      <li><i class="bi bi-check align-baseline me-2"></i>Cloud Agent</li>
-                      <li><i class="bi bi-check align-baseline me-2"></i>Load Monitoring</li>
-                      <li><i class="bi bi-check align-baseline me-2"></i>Health Monitoring</li>
-                      <hr />
-                      <li><i class="bi bi-check align-baseline me-2"></i>Email Support</li>
-                      <li><i class="bi bi-check align-baseline me-2"></i>Maintenance</li>
-                    </ul>
+                  <div class="card-body d-flex flex-column justify-content-between">
+                    <div>
+                      <h2 class="card-title pricing-card-title">$135<small class="text-body-secondary fw-light">/mo.</small></h2>
+                      <ul class="list-unstyled">
+                        <li><i class="bi bi-check align-baseline me-2"></i>1 Instance</li>
+                        <li><i class="bi bi-check align-baseline me-2"></i>1 Public IP</li>
+                        <li><i class="bi bi-check align-baseline me-2"></i>Singapore Region</li>
+                        <li><i class="bi bi-check align-baseline me-2"></i>Regular Provisioning</li>
+                        <li><i class="bi bi-check align-baseline me-2"></i>Balance Presistent Disk</li>
+                        <li><i class="bi bi-check align-baseline me-2"></i>Ubuntu Operating System</li>
+                        <li><i class="bi bi-check align-baseline me-2"></i>Google Cloud Server</li>
+                        <hr />
+                        <li><i class="bi bi-check align-baseline me-2"></i>2 vCPUs</li>
+                        <li><i class="bi bi-check align-baseline me-2"></i>8 GB RAM</li>
+                        <li><i class="bi bi-check align-baseline me-2"></i>100 GB Disk</li>
+                        <li><i class="bi bi-check align-baseline me-2"></i>2 Threads Per Core</li>
+                        <hr />
+                        <li><i class="bi bi-check align-baseline me-2"></i>Cloud Agent</li>
+                        <li><i class="bi bi-check align-baseline me-2"></i>Load Monitoring</li>
+                        <li><i class="bi bi-check align-baseline me-2"></i>Health Monitoring</li>
+                        <hr />
+                        <li><i class="bi bi-check align-baseline me-2"></i>Email Support</li>
+                        <li><i class="bi bi-check align-baseline me-2"></i>Maintenance</li>
+                      </ul>
+                    </div>
                     <button class="w-100 btn btn-primary" onclick="selectService('cloud-b')">Select Service</button>
                   </div>
                 </div>
               </div>
               <div class="col">
-                <div class="card">
+                <div class="card h-100">
                   <div class="card-header">
                     <p class="mb-0">Cloud C</p>
                   </div>
-                  <div class="card-body">
+                  <div class="card-body d-flex flex-column justify-content-between">
                     <h2 class="card-title pricing-card-title">$245<small class="text-body-secondary fw-light">/mo.</small></h2>
-                    <ul class="list-unstyled">
-                      <li><i class="bi bi-check align-baseline me-2"></i>1 Instance</li>
-                      <li><i class="bi bi-check align-baseline me-2"></i>1 Public IP</li>
-                      <li><i class="bi bi-check align-baseline me-2"></i>Singapore Region</li>
-                      <li><i class="bi bi-check align-baseline me-2"></i>Compute Provisioning</li>
-                      <li><i class="bi bi-check align-baseline me-2"></i>Balance Presistent Disk</li>
-                      <li><i class="bi bi-check align-baseline me-2"></i>Ubuntu Operating System</li>
-                      <li><i class="bi bi-check align-baseline me-2"></i>Google Cloud Server</li>
-                      <hr />
-                      <li><i class="bi bi-check align-baseline me-2"></i>8 vCPUs</li>
-                      <li><i class="bi bi-check align-baseline me-2"></i>8 GB RAM</li>
-                      <li><i class="bi bi-check align-baseline me-2"></i>100 GB Disk</li>
-                      <li><i class="bi bi-check align-baseline me-2"></i>2 Threads Per Core</li>
-                      <hr />
-                      <li><i class="bi bi-check align-baseline me-2"></i>Cloud Agent</li>
-                      <li><i class="bi bi-check align-baseline me-2"></i>Load Monitoring</li>
-                      <li><i class="bi bi-check align-baseline me-2"></i>Health Monitoring</li>
-                      <hr />
-                      <li><i class="bi bi-check align-baseline me-2"></i>Email Support</li>
-                      <li><i class="bi bi-check align-baseline me-2"></i>Maintenance</li>
-                    </ul>
+                    <div>
+                      <ul class="list-unstyled">
+                        <li><i class="bi bi-check align-baseline me-2"></i>1 Instance</li>
+                        <li><i class="bi bi-check align-baseline me-2"></i>1 Public IP</li>
+                        <li><i class="bi bi-check align-baseline me-2"></i>Singapore Region</li>
+                        <li><i class="bi bi-check align-baseline me-2"></i>Compute Provisioning</li>
+                        <li><i class="bi bi-check align-baseline me-2"></i>Balance Presistent Disk</li>
+                        <li><i class="bi bi-check align-baseline me-2"></i>Ubuntu Operating System</li>
+                        <li><i class="bi bi-check align-baseline me-2"></i>Google Cloud Server</li>
+                        <hr />
+                        <li><i class="bi bi-check align-baseline me-2"></i>8 vCPUs</li>
+                        <li><i class="bi bi-check align-baseline me-2"></i>8 GB RAM</li>
+                        <li><i class="bi bi-check align-baseline me-2"></i>100 GB Disk</li>
+                        <li><i class="bi bi-check align-baseline me-2"></i>2 Threads Per Core</li>
+                        <hr />
+                        <li><i class="bi bi-check align-baseline me-2"></i>Cloud Agent</li>
+                        <li><i class="bi bi-check align-baseline me-2"></i>Load Monitoring</li>
+                        <li><i class="bi bi-check align-baseline me-2"></i>Health Monitoring</li>
+                        <hr />
+                        <li><i class="bi bi-check align-baseline me-2"></i>Email Support</li>
+                        <li><i class="bi bi-check align-baseline me-2"></i>Maintenance</li>
+                      </ul>
+                    </div>
                     <button class="w-100 btn btn-outline-dark" onclick="selectService('cloud-c')">Select Service</button>
                   </div>
                 </div>
               </div>
               <div class="col">
-                <div class="card border-warning shadow-sm">
+                <div class="card border-warning shadow-sm h-100">
                   <div class="card-header bg-warning text-dark">
                     <p class="mb-0">Cloud Custom<i class="bi bi-question-circle ms-1 align-baseline" data-bs-content="Additional charges of work calculated by the server specifications." data-bs-title="Charges by specification" data-bs-toggle="popover"></i></p>
                   </div>
-                  <div class="card-body">
-                    <h2 class="card-title pricing-card-title">Custom<small class="text-body-secondary fw-light">/yr.</small></h2>
-                    <ul class="list-unstyled">
-                      <li><i class="bi bi-check align-baseline me-2"></i>Custom Instance</li>
-                      <li><i class="bi bi-check align-baseline me-2"></i>Custom Public IP</li>
-                      <li><i class="bi bi-check align-baseline me-2"></i>Custom Region</li>
-                      <li><i class="bi bi-check align-baseline me-2"></i>Custom Provisioning</li>
-                      <li><i class="bi bi-check align-baseline me-2"></i>Custom Presistent Disk</li>
-                      <li><i class="bi bi-check align-baseline me-2"></i>Custom Operating System</li>
-                      <li><i class="bi bi-check align-baseline me-2"></i>Google Cloud Server</li>
-                      <hr />
-                      <li><i class="bi bi-check align-baseline me-2"></i>Custom vCPUs</li>
-                      <li><i class="bi bi-check align-baseline me-2"></i>Custom RAM</li>
-                      <li><i class="bi bi-check align-baseline me-2"></i>Custom Disk</li>
-                      <li><i class="bi bi-check align-baseline me-2"></i>Custom Thread</li>
-                      <hr />
-                      <li><i class="bi bi-check align-baseline me-2"></i>Cloud Agent</li>
-                      <li><i class="bi bi-check align-baseline me-2"></i>Load Monitoring</li>
-                      <li><i class="bi bi-check align-baseline me-2"></i>Health Monitoring</li>
-                      <hr />
-                      <li><i class="bi bi-check align-baseline me-2"></i>Email Support</li>
-                      <li><i class="bi bi-check align-baseline me-2"></i>Maintenance</li>
-                    </ul>
+                  <div class="card-body d-flex flex-column justify-content-between">
+                    <div>
+                      <h2 class="card-title pricing-card-title">Custom<small class="text-body-secondary fw-light">/yr.</small></h2>
+                      <ul class="list-unstyled">
+                        <li><i class="bi bi-check align-baseline me-2"></i>Custom Instance</li>
+                        <li><i class="bi bi-check align-baseline me-2"></i>Custom Public IP</li>
+                        <li><i class="bi bi-check align-baseline me-2"></i>Custom Region</li>
+                        <li><i class="bi bi-check align-baseline me-2"></i>Custom Provisioning</li>
+                        <li><i class="bi bi-check align-baseline me-2"></i>Custom Presistent Disk</li>
+                        <li><i class="bi bi-check align-baseline me-2"></i>Custom Operating System</li>
+                        <li><i class="bi bi-check align-baseline me-2"></i>Google Cloud Server</li>
+                        <hr />
+                        <li><i class="bi bi-check align-baseline me-2"></i>Custom vCPUs</li>
+                        <li><i class="bi bi-check align-baseline me-2"></i>Custom RAM</li>
+                        <li><i class="bi bi-check align-baseline me-2"></i>Custom Disk</li>
+                        <li><i class="bi bi-check align-baseline me-2"></i>Custom Thread</li>
+                        <hr />
+                        <li><i class="bi bi-check align-baseline me-2"></i>Cloud Agent</li>
+                        <li><i class="bi bi-check align-baseline me-2"></i>Load Monitoring</li>
+                        <li><i class="bi bi-check align-baseline me-2"></i>Health Monitoring</li>
+                        <hr />
+                        <li><i class="bi bi-check align-baseline me-2"></i>Email Support</li>
+                        <li><i class="bi bi-check align-baseline me-2"></i>Maintenance</li>
+                      </ul>
+                    </div>
                     <button class="w-100 btn btn-warning" onclick="selectService('cloud-custom')">Contact</button>
                   </div>
                 </div>
