@@ -24,22 +24,40 @@ html {
 body {
   font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
+/* Default Elements */
+p,
+a,
+ul,
+i,
+b,
+li,
+span,
+label,
+input,
+button {
+  font-size: 18px !important;
+}
+a.badge,
+a.badge > i,
+.card-header span {
+  font-size: 14px !important;
+}
 /* Default: Header */
-header nav {
-  min-height: 56px;
+header {
+  min-height: 60px;
 }
 /* Default: Main */
 main {
-  min-height: calc(100vh - ((56px * 2) + (1px * 2)));
+  min-height: calc(100vh - ((60px * 2) + (1px * 2)));
 }
 /* Default: Footer */
 footer {
-  min-height: 56px;
+  min-height: 60px;
 }
 /* Default: Media: Main */
 @media (max-width: 447px) {
   main {
-    min-height: calc(100vh - ((80px + 56px) + (1px * 2)));
+    min-height: calc(100vh - ((86px + 60px) + (1px * 2)));
   }
 }
 /* Bootstrap: Icons */
@@ -53,7 +71,7 @@ footer {
   display: block !important;
 }
 /* Bootstrap: Header and Footer */
-nav.bg-body-tertiary,
+header.bg-body-tertiary,
 footer.bg-body-tertiary {
   --bs-bg-opacity: 1;
   background-color: rgba(var(--bs-white-rgb), var(--bs-bg-opacity)) !important;
@@ -74,7 +92,7 @@ footer.bg-body-tertiary {
   --bs-body-color-rgb: 255, 255, 255;
   --bs-body-bg: #212529;
 }
-[data-bs-theme="dark"] nav.bg-body-tertiary,
+[data-bs-theme="dark"] header.bg-body-tertiary,
 [data-bs-theme="dark"] footer.bg-body-tertiary {
   --bs-bg-opacity: 1;
   background-color: rgba(var(--bs-dark-rgb), var(--bs-bg-opacity)) !important;
