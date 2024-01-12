@@ -37,8 +37,8 @@ input,
 button {
   font-size: 18px !important;
 }
-a.badge,
-a.badge > i,
+.badge,
+.badge > i,
 .card-header span {
   font-size: 14px !important;
 }
