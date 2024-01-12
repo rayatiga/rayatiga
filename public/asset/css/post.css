@@ -1,18 +1,15 @@
 /* Post CSS */
 /* Default: Post Article */
 #post article {
-  font-size: 1.125rem;
-  line-height: 1.7;
-  background-color: #fefefe;
+  line-height: 1.75;
   flex: 1;
 }
 #post article h1 {
-  font-size: 1.75em;
-  font-weight: 700;
+  font-weight: 800;
   line-height: 1.25;
 }
 #post article h2 {
-  font-size: 1.25em;
+  font-size: 1.5em;
   font-weight: 700;
   margin-top: 2rem;
 }
@@ -34,7 +31,6 @@
 }
 #post aside .aside-card {
   line-height: 1.7;
-  background-color: #fefefe;
   flex: 1;
 }
 #post aside .aside-card h4 {
@@ -53,9 +49,4 @@
     max-width: none;
     width: 100%;
   }
-}
-/* Bootstrap: Scheme: Dark Article and Aside */
-[data-bs-theme="dark"] #post article,
-[data-bs-theme="dark"] #post aside .aside-card {
-  background-color: #222222;
 }

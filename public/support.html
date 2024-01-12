@@ -4,15 +4,13 @@
     <!-- Document -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Support - Rayatiga</title>
+    <title>Support</title>
     <link type="image/x-icon" href="/favicon.ico" rel="shortcut icon" />
     <meta name="description" content=" dedicated support team is ready to assist you with any questions or issues you may have. To get started, simply raise a support ticket by filling out the form." />
     <meta property="og:image" content="https://rayatiga.com/asset/img/rayatiga-og.png" />
     <!-- Bootstrap -->
     <link href="/asset/css/bootstrap.css" rel="stylesheet" />
     <link href="/asset/css/bootstrap-icons.css" rel="stylesheet" />
-    <!-- Animate Style -->
-    <link href="/asset/css/animate.css" rel="stylesheet" />
     <!-- Main CSS -->
     <link href="/asset/css/main.css" rel="stylesheet" />
     <!-- Support CSS -->
@@ -45,7 +43,7 @@
     <!-- External: Google Tag Manager -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PBN37CL2" height="0" width="0" style="display: none; visibility: hidden"></iframe></noscript>
     <!-- Header -->
-    <header class="navbar navbar-expand-lg bg-body-tertiary border-bottom sticky-top" role="navigation">
+    <header class="navbar navbar-expand-lg bg-body border-bottom fixed-top" role="navigation">
       <div class="container">
         <a class="navbar-brand fw-medium" href="/"><i class="bi bi-cloud-haze2-fill align-baseline me-2"></i>Rayatiga</a>
         <button class="navbar-toggler" data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -63,7 +61,7 @@
               <a class="nav-link" href="/blog.html">Blog</a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Service</a>
+              <a class="nav-link dropdown-toggle active" data-bs-toggle="dropdown" href="#" role="button" aria-current="page" aria-expanded="false">Service</a>
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="/service.html">All Service</a></li>
                 <li><hr class="dropdown-divider" /></li>
@@ -72,7 +70,7 @@
                 <li><a class="dropdown-item" href="/service.html#wordpress">WordPress Website</a></li>
                 <li><a class="dropdown-item" href="/service.html#cloud">Cloud Service & Server</a></li>
                 <li><hr class="dropdown-divider" /></li>
-                <li><a class="dropdown-item active" href="/support.html" aria-current="page">Support</a></li>
+                <li><a class="dropdown-item active" href="/support.html">Support</a></li>
                 <li><a class="dropdown-item" href="/privacy-policy.html">Privacy Policy</a></li>
               </ul>
             </li>
@@ -123,29 +121,29 @@
     <!-- Main: Support -->
     <main class="d-flex flex-column align-items-center" id="support">
       <!-- Section -->
-      <section class="d-flex flex-column justify-content-center w-100">
+      <section class="d-flex flex-column justify-content-center border-bottom w-100">
         <div class="container d-flex flex-column gap-2">
-          <h1 class="display-4 animate__animated animate__fadeInUp animate__faster">Support</h1>
-          <p class="m-0 animate__animated animate__fadeInUp animate__faster animate__delay-1s">Our dedicated support team is ready to assist you with any questions or issues you may have. To get started, simply raise a support ticket by filling out the form below. We'll respond as quickly as possible to get you back on track.</p>
+          <h1 class="fw-bold">Support</h1>
+          <p class="m-0">Our dedicated support team is ready to assist you with any questions or issues you may have. To get started, simply raise a support ticket by filling out the form below. We'll respond as quickly as possible to get you back on track.</p>
         </div>
       </section>
       <!-- Section -->
       <section class="py-5">
         <div class="container d-flex flex-column gap-2">
           <form class="row g-3 needs-validation" action="https://formspree.io/f/xknavynp" method="post" target="_blank" novalidate>
-            <div class="col-12 col-lg-6 animate__animated animate__fadeInUp animate__faster animate__delay-2s">
+            <div class="col-12 col-lg-6">
               <label for="name">Name</label>
               <input class="form-control" id="name" name="name" type="text" placeholder="Enter your name..." minlength="2" maxlength="60" required />
               <div class="valid-feedback">Looks good.</div>
               <div class="invalid-feedback">Please enter your name.</div>
             </div>
-            <div class="col-12 col-lg-6 animate__animated animate__fadeInUp animate__faster animate__delay-3s">
+            <div class="col-12 col-lg-6">
               <label for="email">Email</label>
               <input class="form-control" id="email" name="email" type="email" placeholder="Enter your email..." minlength="6" maxlength="60" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" required />
               <div class="valid-feedback">Your email looks good.</div>
               <div class="invalid-feedback">Please enter valid email.</div>
             </div>
-            <div class="col-12 col-lg-6 animate__animated animate__fadeInUp animate__faster animate__delay-4s">
+            <div class="col-12 col-lg-6">
               <label for="support-area">Support Area</label>
               <select class="form-select" aria-label="Support area" required>
                 <option class="d-none" value selected>Select support area</option>
@@ -156,21 +154,21 @@
                 <option value="Other">Other Issue</option>
               </select>
             </div>
-            <div class="col-12 col-lg-6 animate__animated animate__fadeInUp animate__faster animate__delay-5s">
+            <div class="col-12 col-lg-6">
               <label for="subject">Subject</label>
               <input class="form-control" id="subject" name="subject" type="text" placeholder="Enter your subject..." minlength="2" maxlength="60" required />
               <div class="valid-feedback">Looks good.</div>
               <div class="invalid-feedback">Please enter your subject.</div>
             </div>
-            <div class="col-12 animate__animated animate__fadeInUp animate__faster animate__delay-6s">
+            <div class="col-12">
               <label for="message">Message</label>
               <textarea class="form-control" id="message" name="message" placeholder="Enter your message..." minlength="15" maxlength="2500" required></textarea>
               <div class="valid-feedback">Your message looks good.</div>
               <div class="invalid-feedback">Please enter your meessage more than 15 character.</div>
             </div>
             <input name="_gotcha" type="text" style="display: none" />
-            <span class="col-12 small text-body-secondary animate__animated animate__fadeInUp animate__faster animate__delay-7s">Powered by <a class="text-decoration-none" href="https://formspree.io/" target="_blank" rel="nofollow noopener noreferrer">Formspree</a>.</span>
-            <div class="col-12 animate__animated animate__fadeInUp animate__faster animate__delay-7s">
+            <span class="col-12 small text-body-secondary">Powered by <a class="text-decoration-none" href="https://formspree.io/" target="_blank" rel="nofollow noopener noreferrer">Formspree</a>.</span>
+            <div class="col-12">
               <button class="btn btn-dark" type="submit"><i class="bi bi-send align-baseline me-2"></i>Submit</button>
             </div>
           </form>
@@ -178,7 +176,7 @@
       </section>
     </main>
     <!-- Footer -->
-    <footer class="bg-body-tertiary border-top">
+    <footer class="bg-body border-top">
       <div class="container">
         <p class="m-0 py-3 text-center">Copyright <i class="bi bi-c-circle align-baseline"></i> 2020 - 2023 <a class="text-body text-decoration-none" href="https://rayatiga.com">Rayatiga</a>. All Rights Reserved.</p>
       </div>

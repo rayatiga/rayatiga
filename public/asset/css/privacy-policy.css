@@ -3,9 +3,9 @@
 #privacy-policy > section:nth-child(1) {
   min-height: 32vh;
   padding: 4rem 0;
-  background-color: var(--orange);
+  background-color: var(--blue);
 }
 /* Default: Dark: Section */
 [data-bs-theme="dark"] #privacy-policy > section:nth-child(1) {
-  background-color: var(--darkorange);
+  background-color: var(--darkblue);
 }

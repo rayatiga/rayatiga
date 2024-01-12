@@ -4,15 +4,13 @@
     <!-- Document -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blog - Rayatiga</title>
+    <title>Blog</title>
     <link type="image/x-icon" href="/favicon.ico" rel="shortcut icon" />
     <meta name="description" content="Troubleshoot common device and software problems with these essential tips. Fix slow computers, wonky internet connections, and malfunctioning apps in no time." />
     <meta property="og:image" content="https://rayatiga.com/asset/img/rayatiga-og.png" />
     <!-- Bootstrap -->
     <link href="/asset/css/bootstrap.css" rel="stylesheet" />
     <link href="/asset/css/bootstrap-icons.css" rel="stylesheet" />
-    <!-- Animate Style -->
-    <link href="/asset/css/animate.css" rel="stylesheet" />
     <!-- Main CSS -->
     <link href="/asset/css/main.css" rel="stylesheet" />
     <!-- Blog CSS -->
@@ -45,7 +43,7 @@
     <!-- External: Google Tag Manager -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PBN37CL2" height="0" width="0" style="display: none; visibility: hidden"></iframe></noscript>
     <!-- Header -->
-    <header class="navbar navbar-expand-lg bg-body-tertiary border-bottom sticky-top" role="navigation">
+    <header class="navbar navbar-expand-lg bg-body border-bottom fixed-top" role="navigation">
       <div class="container">
         <a class="navbar-brand fw-medium" href="/"><i class="bi bi-cloud-haze2-fill align-baseline me-2"></i>Rayatiga</a>
         <button class="navbar-toggler" data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse" type="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -123,22 +121,23 @@
     <!-- Main: Blog -->
     <main class="d-flex flex-column align-items-center" id="blog">
       <!-- Section -->
-      <section class="d-flex flex-column justify-content-center w-100">
+      <section class="d-flex flex-column justify-content-center border-bottom w-100">
         <div class="container d-flex flex-column gap-2">
-          <h1 class="display-4 animate__animated animate__fadeInUp animate__faster">Blog</h1>
-          <p class="m-0 animate__animated animate__fadeInUp animate__faster animate__delay-1s">In our latest blog post, we share some essential troubleshooting tips to help you fix common problems with your devices and software. Whether you're dealing with a slow computer, a wonky internet connection, or a malfunctioning app, these simple steps can help you get back on track in no time.</p>
+          <h1 class="fw-bold">Blog</h1>
+          <p class="m-0">In our latest blog post, we share some essential troubleshooting tips to help you fix common problems with your devices and software. Whether you're dealing with a slow computer, a wonky internet connection, or a malfunctioning app, these simple steps can help you get back on track in no time.</p>
         </div>
       </section>
       <!-- Section -->
       <section class="py-5">
         <div class="container d-flex flex-column gap-2">
-          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-2 animate__animated animate__fadeInUp animate__faster animate__delay-2s">
+          <h2 class="fs-5 fw-bolder">Latest Post</h2>
+          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-2">
             <div class="col">
               <div class="card h-100">
-                <img class="card-img-top border-bottom" src="/asset/img/post/navigating-the-digital-landscape-a-comprehensive-guide-to-domain-names.jpg" alt="Navigating the Digital Landscape: A Comprehensive Guide to Domain Names" />
+                <img class="card-img-top border-bottom" src="/asset/img/post/domain-names.jpg" alt="Domain Names" />
                 <div class="card-body">
-                  <a class="fs-5 fw-medium text-decoration-none card-title lh-base stretched-link" href="/post/navigating-the-digital-landscape-a-comprehensive-guide-to-domain-names.html">Navigating the Digital Landscape: A Comprehensive Guide to Domain Names</a>
-                  <p class="card-text">In the vast expanse of the internet, where websites are the virtual storefronts of businesses and individuals alike, domain names serve as the unique addresses that guide users to these online destinations. Just as a house address directs visitors to a physical location, a domain name plays a crucial role in directing internet traffic to the intended website. This comprehensive guide delves into the world of domain names, explaining their significance, providing tips for choosing an appropriate domain name, and outlining the domain registration and management process. Whether you're a seasoned web developer or a novice just starting out, this guide will equip you with the knowledge and insights necessary to navigate the digital landscape effectively.</p>
+                  <a class="fs-5 fw-bolder text-decoration-none card-title lh-base stretched-link" href="/post/domain-names.html">Navigating the Digital Landscape: A Comprehensive Guide to Domain Names</a>
+                  <p class="card-text mt-2">In the vast expanse of the internet, where websites are the virtual storefronts of businesses and individuals alike, domain names serve as the unique addresses that guide users to these online destinations. Just as a house address directs visitors to a physical location, a domain name plays a crucial role in directing internet traffic to the intended website. This comprehensive guide delves into the world of domain names, explaining their significance, providing tips for choosing an appropriate domain name, and outlining the domain registration and management process. Whether you're a seasoned web developer or a novice just starting out, this guide will equip you with the knowledge and insights necessary to navigate the digital landscape effectively.</p>
                 </div>
                 <div class="card-footer d-flex justify-content-between align-items-center">
                   <small class="text-body-secondary">Last updated 12/5/2023</small>
@@ -147,10 +146,10 @@
             </div>
             <div class="col">
               <div class="card h-100">
-                <img class="card-img-top border-bottom" src="/asset/img/post/cloudflare-pages-deploying-your-first-site-with-ease.png" alt="Cloudflare Pages: Deploying Your First Site with Ease" />
+                <img class="card-img-top border-bottom" src="/asset/img/post/cloudflare-pages.png" alt="Cloudflare Pages" />
                 <div class="card-body">
-                  <a class="fs-5 fw-medium text-decoration-none card-title lh-base stretched-link card-title lh-base" href="/post/cloudflare-pages-deploying-your-first-site-with-ease.html">Cloudflare Pages: Deploying Your First Site with Ease</a>
-                  <p class="card-text">Cloudflare Pages has emerged as a popular platform for front-end developers looking to build and deploy websites quickly and efficiently. This JAMstack platform offers a seamless workflow, integrating Git for collaboration and leveraging the power of Cloudflare's network for global edge delivery and security.</p>
+                  <a class="fs-5 fw-bolder text-decoration-none card-title lh-base stretched-link" href="/post/cloudflare-pages.html">Cloudflare Pages: Deploying Your First Site with Ease</a>
+                  <p class="card-text mt-2">Cloudflare Pages has emerged as a popular platform for front-end developers looking to build and deploy websites quickly and efficiently. This JAMstack platform offers a seamless workflow, integrating Git for collaboration and leveraging the power of Cloudflare's network for global edge delivery and security.</p>
                 </div>
                 <div class="card-footer d-flex justify-content-between align-items-center">
                   <small class="text-body-secondary">Last updated 12/13/2023</small>

@@ -8,11 +8,11 @@
 #contact > section:nth-child(1) {
   min-height: 32vh;
   padding: 4rem 0;
-  background-color: var(--purple);
+  background-color: var(--blue);
 }
 /* Default: Dark: Section */
 [data-bs-theme="dark"] #contact > section:nth-child(1) {
-  background-color: var(--darkpurple);
+  background-color: var(--darkblue);
 }
 /* Default: Contact Form Message */
 #contact form #message {

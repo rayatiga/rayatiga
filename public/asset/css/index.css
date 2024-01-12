@@ -1,0 +1,9 @@
+/* Index CSS */
+/* Driver.js: Font */
+.driver-popover .driver-popover-title,
+.driver-popover .driver-popover-description,
+.driver-popover .driver-popover-next-btn,
+.driver-popover .driver-popover-prev-btn,
+.driver-popover .driver-popover-progress-text {
+  font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif !important;
+}

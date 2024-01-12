@@ -8,14 +8,14 @@ function trimText(text, maxLength) {
   }
 }
 // Default: Trim Card Post Title
-const cardPostTitle = document.querySelectorAll("#blog .card h5");
+const cardPostTitle = document.querySelectorAll("#blog .card a");
 for (let i = 0; i < cardPostTitle.length; i++) {
-  const trimmedTitleText = trimText(cardPostTitle[i].textContent, 64);
+  const trimmedTitleText = trimText(cardPostTitle[i].textContent, 32);
   cardPostTitle[i].textContent = trimmedTitleText;
 }
 // Default: Trim Card Post Description
 const cardPostDescription = document.querySelectorAll("#blog .card p");
 for (let i = 0; i < cardPostDescription.length; i++) {
-  const trimmedDescriptionText = trimText(cardPostDescription[i].textContent, 192);
+  const trimmedDescriptionText = trimText(cardPostDescription[i].textContent, 128);
   cardPostDescription[i].textContent = trimmedDescriptionText;
 }

@@ -7,9 +7,9 @@
 #career > section:nth-child(1) {
   min-height: 32vh;
   padding: 4rem 0;
-  background-color: var(--green);
+  background-color: var(--blue);
 }
 /* Default: Dark: Section */
 [data-bs-theme="dark"] #career > section:nth-child(1) {
-  background-color: var(--darkgreen);
+  background-color: var(--darkblue);
 }
