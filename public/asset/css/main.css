@@ -49,8 +49,18 @@ footer {
   }
 }
 /* Bootstrap: Header Active */
-header .active {
-  font-weight: 600;
+header .nav-link.active {
+  border-radius: var(--bs-border-radius);
+  background-color: var(--bs-secondary-bg);
+}
+@media (max-width: 992px) {
+  header .nav-link {
+    padding-left: 1rem !important;
+    padding-left: 1rem !important;
+  }
+  header .nav-link[href='/'] {
+    margin-top: 1rem;
+  }
 }
 /* Bootstrap: Icons */
 .bi {
