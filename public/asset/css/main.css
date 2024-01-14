@@ -32,11 +32,7 @@ header {
 /* Default: Main */
 main {
   margin-top: 57px;
-  background-size: 52px 52px;
-  background-position: 0 0, 26px 26px;
   min-height: calc(100vh - (58px * 2));
-  background-image: radial-gradient(#0d6efd33 1px, transparent 1px), radial-gradient(#0d6efd33 1px, transparent 1px);
-  background-attachment: fixed;
 }
 /* Default: Footer */
 footer {
