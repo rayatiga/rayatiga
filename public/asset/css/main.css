@@ -72,6 +72,10 @@ header .nav-link.active {
 .fw-bold {
   font-weight: 800 !important;
 }
+/* Bootstrap: Popover */
+.popover {
+  font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+}
 /* Bootstrap: Form Control */
 .form-control:focus {
   border-color: #aaaaaa;
