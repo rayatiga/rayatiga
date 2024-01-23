@@ -5,8 +5,7 @@
 }
 /* Default: Section */
 #career > section:nth-child(1) {
-  min-height: 32vh;
-  padding: 4rem 0;
+  padding: 6rem 0;
   background-color: var(--blue);
 }
 /* Default: Dark: Section */
