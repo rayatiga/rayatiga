@@ -120,14 +120,12 @@
         </div>
       </div>
     </header>
-    <img src="/asset/img/rayatiga-index.jpg" alt="Rayatiga" class="position-fixed w-100 h-100 top-0 left-0" style="z-index: -1; object-fit: cover; object-position: 32.5% 45%" />
-    <div class="position-fixed w-100 h-100 top-0 left-0 bg-body opacity-50" style="z-index: -1"></div>
     <!-- Main: Index -->
-    <main class="d-flex justify-content-center align-items-center" id="index">
+    <main class="d-flex flex-column justify-content-center align-items-center" id="index">
       <!-- Section -->
-      <section class="py-5">
+      <section class="py-5 d-flex align-items-center" style="min-height: calc(100vh - 57px)">
         <div class="container d-flex flex-column align-items-center gap-2">
-          <div class="d-flex flex-wrap gap-1 row-gap-1 justify-content-center mb-2" style="margin-top: -2rem">
+          <div class="d-flex flex-wrap gap-1 row-gap-1 justify-content-center mb-2" style="margin-top: -4rem">
             <a class="badge bg-light-subtle text-decoration-none fw-medium text-wrap text-body border lh-base" href="/service.html#cloud-custom">New cloud custom specification</a>
             <a class="badge bg-light-subtle text-decoration-none fw-medium text-wrap text-body border lh-base" href="/career.html">Apply job: local inventory ads</a>
           </div>
@@ -140,6 +138,183 @@
             <a class="btn btn-dark" href="/service.html"><i class="bi bi-diagram-3 align-baseline me-2"></i>Service</a>
             <a class="btn btn-outline-dark" href="/about.html"><i class="bi bi-blockquote-right align-baseline me-2"></i>About</a>
             <button class="btn btn-outline-dark" onclick="startTour()" style="display: none"><i class="bi bi-backpack2 align-baseline me-2"></i>Start Tour</button>
+          </div>
+        </div>
+        <div class="position-absolute" style="left: calc(50% - 20px); bottom: 8vh">
+          <a class="btn fs-5 px-3 py-2 border rounded" href="#service"><i class="bi bi-arrow-down"></i></a>
+        </div>
+      </section>
+      <section class="bg-body-tertiary d-flex flex-column align-items-center w-100 border-top border-bottom" style="padding: 5rem 0" id="service">
+        <div class="container text-center justify-content-center row row-cols-1 row-cols-lg-3 gy-4">
+          <div class="d-flex flex-column align-items-center col-lg-10">
+            <h2 class="fw-bold py-2 px-3 d-inline-block mb-2">Main Services</h2>
+            <p class="text-center">The following are our three main services that we provide for your needs.</p>
+          </div>
+          <div class="col">
+            <div class="bg-dark text-white fs-2 border rounded d-inline-block px-5 py-2"><i class="bi bi-globe-americas align-baseline"></i></div>
+            <h2 class="fs-5 fw-bold mt-3">Domain Name</h2>
+            <p>The domain name reservations for your website, starting from the extension .com, .id, .co.id and other custom valid extensions.</p>
+            <a class="text-decoration-none" href="/service.html#domain">Domain Service <i class="bi bi-arrow-right"></i></a>
+          </div>
+          <div class="col">
+            <div class="bg-dark text-white fs-2 border rounded d-inline-block px-5 py-2"><i class="bi bi-window-sidebar align-baseline"></i></div>
+            <h2 class="fs-5 fw-bold mt-3">Website Establishment</h2>
+            <p>Website establishment service that includes a free domain for extension .com or .id and is free from monthly maintenance fees.</p>
+            <a class="text-decoration-none" href="/service.html#static">Website Service <i class="bi bi-arrow-right"></i></a>
+          </div>
+          <div class="col">
+            <div class="bg-dark text-white fs-2 border rounded d-inline-block px-5 py-2"><i class="bi bi-clouds align-baseline"></i></div>
+            <h2 class="fs-5 fw-bold mt-3">Cloud Services</h2>
+            <p>Cloud computing services to support technology specifications in your business which you can adjust based on your needs.</p>
+            <a class="text-decoration-none" href="/service.html#cloud">Cloud Service <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </section>
+      <section class="container d-flex flex-column align-items-center" style="padding: 5rem 0">
+        <div class="container d-flex flex-column align-items-center col-lg-10">
+          <h2 class="fw-bold py-2 px-3 d-inline-block mb-2">Top Services</h2>
+          <div class="d-flex flex-wrap justify-content-center align-items-center gap-2 mb-2">
+            <span>Powered by:</span>
+            <img class="d-inline-block badge p-2 border bg-light" src="/asset/svg/cloudflare-logo.svg" alt="Cloudflare Logo" height="36" />
+            <img class="d-inline-block badge p-2 border bg-light" src="/asset/svg/google-cloud-logo.svg" alt="Cloudflare Logo" height="36" />
+          </div>
+          <p class="text-center">The following are our superior services in each domain name, static website, WordPress website, and cloud service. For specific services, you can see more details on the service page.</p>
+        </div>
+        <div class="row row-cols-1 row-cols-md-2 row-cols-xl-4 g-2 w-100">
+          <div class="col">
+            <div class="card border h-100">
+              <div class="card-header">
+                <p class="mb-0"><i class="bi bi-star-fill align-baseline me-2"></i>Domain .COM</p>
+              </div>
+              <div class="card-body d-flex flex-column justify-content-between">
+                <div>
+                  <h2 class="card-title pricing-card-title">$15<small class="text-body-secondary fw-light">/yr.</small></h2>
+                  <p>Reservation for domain with extension .com with managed DNS and maintenance from Rayatiga.</p>
+                  <ul class="list-unstyled">
+                    <li><i class="bi bi-check align-baseline me-2"></i>Professional Email</li>
+                    <li><i class="bi bi-check align-baseline me-2"></i>DNS Record Support</li>
+                    <hr />
+                    <li><i class="bi bi-check align-baseline me-2"></i>Email Support</li>
+                    <li><i class="bi bi-check align-baseline me-2"></i>Maintenance</li>
+                  </ul>
+                </div>
+                <a class="w-100 btn btn-outline-dark" href="/service.html">Go to Services</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card border h-100">
+              <div class="card-header">
+                <p class="mb-0"><i class="bi bi-star-fill align-baseline me-2"></i>Static B</p>
+              </div>
+              <div class="card-body d-flex flex-column justify-content-between">
+                <div>
+                  <h2 class="card-title pricing-card-title">$275<small class="text-body-secondary fw-light">/yr.</small></h2>
+                  <p>Suitable for general purposes such as portfolio to a company profile.</p>
+                  <ul class="list-unstyled">
+                    <li><i class="bi bi-check align-baseline me-2"></i>4 Page</li>
+                    <li><i class="bi bi-check align-baseline me-2"></i>1 Free Domain</li>
+                    <li><i class="bi bi-check align-baseline me-2"></i>5 Professional Email</li>
+                    <hr />
+                    <li><i class="bi bi-check align-baseline me-2"></i>Email Support</li>
+                    <li><i class="bi bi-check align-baseline me-2"></i>Maintenance</li>
+                  </ul>
+                </div>
+                <a class="w-100 btn btn-outline-dark" href="/service.html">Go to Services</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card border h-100">
+              <div class="card-header">
+                <p class="mb-0"><i class="bi bi-star-fill align-baseline me-2"></i>WordPress C</p>
+              </div>
+              <div class="card-body d-flex flex-column justify-content-between">
+                <div>
+                  <h2 class="card-title pricing-card-title">$800<small class="text-body-secondary fw-light">/yr.</small></h2>
+                  <ul class="list-unstyled">
+                    <li><i class="bi bi-check align-baseline me-2"></i>3 Website</li>
+                    <li><i class="bi bi-check align-baseline me-2"></i>1 Free Domain</li>
+                    <li><i class="bi bi-check align-baseline me-2"></i>15 Professional Email</li>
+                    <hr />
+                    <li><i class="bi bi-check align-baseline me-2"></i>2 Subdomain</li>
+                    <li><i class="bi bi-check align-baseline me-2"></i>Elementor Pro</li>
+                    <li><i class="bi bi-check align-baseline me-2"></i>Enterprise Email</li>
+                    <hr />
+                    <li><i class="bi bi-check align-baseline me-2"></i>Email Support</li>
+                    <li><i class="bi bi-check align-baseline me-2"></i>Maintenance</li>
+                  </ul>
+                </div>
+                <a class="w-100 btn btn-outline-dark" href="/service.html">Go to Services</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card border h-100">
+              <div class="card-header">
+                <p class="mb-0"><i class="bi bi-star-fill align-baseline me-2"></i>Cloud B</p>
+              </div>
+              <div class="card-body d-flex flex-column justify-content-between">
+                <div>
+                  <h2 class="card-title pricing-card-title">$135<small class="text-body-secondary fw-light">/mo.</small></h2>
+                  <ul class="list-unstyled">
+                    <li><i class="bi bi-check align-baseline me-2"></i>1 Instance</li>
+                    <li><i class="bi bi-check align-baseline me-2"></i>1 Public IP</li>
+                    <li><i class="bi bi-check align-baseline me-2"></i>Singapore Region</li>
+                    <li><i class="bi bi-check align-baseline me-2"></i>Regular Provisioning</li>
+                    <li><i class="bi bi-check align-baseline me-2"></i>Balance Presistent Disk</li>
+                    <li><i class="bi bi-check align-baseline me-2"></i>Ubuntu Operating System</li>
+                    <li><i class="bi bi-check align-baseline me-2"></i>Google Cloud Server</li>
+                    <hr />
+                    <li><i class="bi bi-check align-baseline me-2"></i>2 vCPUs</li>
+                    <li><i class="bi bi-check align-baseline me-2"></i>8 GB RAM</li>
+                    <li><i class="bi bi-check align-baseline me-2"></i>100 GB Disk</li>
+                    <li><i class="bi bi-check align-baseline me-2"></i>2 Threads Per Core</li>
+                    <hr />
+                    <li><i class="bi bi-check align-baseline me-2"></i>Cloud Agent</li>
+                    <li><i class="bi bi-check align-baseline me-2"></i>Load Monitoring</li>
+                    <li><i class="bi bi-check align-baseline me-2"></i>Health Monitoring</li>
+                    <hr />
+                    <li><i class="bi bi-check align-baseline me-2"></i>Email Support</li>
+                    <li><i class="bi bi-check align-baseline me-2"></i>Maintenance</li>
+                  </ul>
+                </div>
+                <a class="w-100 btn btn-outline-dark" href="/service.html">Go to Services</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="bg-body-tertiary d-flex flex-column align-items-center w-100 border-top border-bottom" style="padding: 5rem 0">
+        <div class="container justify-content-center row row-cols-1 gy-4">
+          <div class="d-flex flex-column align-items-center col-lg-10">
+            <h2 class="fw-bold py-2 px-3 d-inline-block mb-2">User Testimonial</h2>
+            <p class="text-center">Some impressions and messages from those who have used Rayatiga services.</p>
+          </div>
+          <div class="col d-flex py-4 border rounded px-4 bg-light-subtle">
+            <i class="bi bi-chat-right-quote fs-1 me-4"></i>
+            <div>
+              <p>I have used Rayatiga services in creating UI/UX on a website. Not long after that I was interested in developing my website online. During the work, we were given an idea of the process of how Rayatiga does it. I had hosting, and switched to another plan that was serviced quickly.</p>
+              <span class="text-secondary">- Prasetyo Adi, Surabaya, ID.</span>
+            </div>
+          </div>
+          <div class="col d-flex py-4 border rounded px-4 bg-light-subtle">
+            <i class="bi bi-chat-right-quote fs-1 me-4"></i>
+            <div>
+              <p>I have used Rayatiga services for my e-commerce site at karetwarna.id. Very fast and efficient work. I received the best offer and best hosting specifications from Rayatiga. Not only that, Rayatiga also helps us in dealing with website problems. Thank you very much!</p>
+              <span class="text-secondary">- Tetesanwarna, Yogyakarta, ID.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="d-flex flex-column align-items-center w-100" style="padding: 5rem 0">
+        <div class="container justify-content-center row row-cols-1 gy-4">
+          <div class="d-flex flex-column align-items-center col-lg-10">
+            <h2 class="fw-bold py-2 px-3 d-inline-block mb-2">Get Started</h2>
+            <p class="text-center">Carry out digital transformation for all your needs in Rayatiga. Click the button below and fill out the form to contact us further.</p>
+          </div>
+          <div class="col-12 d-flex justify-content-center">
+            <a class="btn btn-dark" href="/contact.html"><i class="bi bi-envelope-at align-baseline me-2"></i>Contact</a>
           </div>
         </div>
       </section>
