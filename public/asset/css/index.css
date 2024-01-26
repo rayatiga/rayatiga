@@ -1,5 +1,3 @@
-/* Index CSS */
-/* Driver.js: Font */
 .driver-popover .driver-popover-title,
 .driver-popover .driver-popover-description,
 .driver-popover .driver-popover-next-btn,
@@ -7,12 +5,29 @@
 .driver-popover .driver-popover-progress-text {
   font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif !important;
 }
-/* Default: Hero */
 .hero {
-  padding: calc(12rem + 57px) 0rem 12rem 0rem;
+  padding: calc(16rem + 57px) 0rem 16rem 0rem;
 }
 @media (max-width: 767px) {
   .hero {
     padding: calc(6rem + 57px) 0rem 6rem 0rem;
   }
+}
+.badge-group {
+  margin-top: -4rem;
+}
+[onclick="startTour()"] {
+  display: none;
+}
+#service {
+  padding: 6rem 0;
+}
+.top-services {
+  padding: 6rem 0;
+}
+.user-testimonial {
+  padding: 6rem 0;
+}
+.get-started {
+  padding: 6rem 0;
 }
