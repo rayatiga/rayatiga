@@ -31,3 +31,9 @@
 .get-started {
   padding: 6rem 0;
 }
+:root {
+  --bs-tertiary-bg-rgb: 251, 251, 253;
+}
+[data-bs-theme="dark"]:root {
+  --bs-tertiary-bg-rgb: 38, 43, 48;
+}
