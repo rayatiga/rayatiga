@@ -26,3 +26,17 @@ const tooltipList = [...tooltipTriggerList].map((tooltipTriggerEl) => new bootst
     );
   });
 })();
+// Default: Scroll to Top
+document.body.insertAdjacentHTML("beforeend", '<button class="btn bg-body border position-fixed shadow-sm" id="scroll-to-top" style="bottom: 24px; right: 24px;" title="Scroll to Top"><i class="bi bi-arrow-up"></i></button>');
+const scrollTopBtn = document.getElementById("scroll-to-top");
+scrollTopBtn.style.display = "none";
+scrollTopBtn.addEventListener("click", function () {
+  window.scrollTo(0, 0);
+});
+window.addEventListener("scroll", function () {
+  if (window.scrollY > 128) {
+    scrollTopBtn.style.display = "block";
+  } else {
+    scrollTopBtn.style.display = "none";
+  }
+});
