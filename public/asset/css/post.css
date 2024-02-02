@@ -25,6 +25,9 @@
   aspect-ratio: 16 / 9;
   object-fit: cover;
 }
+#post article a {
+  word-break: break-all;
+}
 /* Default: Post Aside */
 #post aside {
   max-width: 350px;
