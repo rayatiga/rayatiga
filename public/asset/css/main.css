@@ -29,7 +29,7 @@ main {
 footer {
   min-height: 57px;
 }
-@media (max-width: 447px) {
+@media (max-width: 450px) {
   main {
     min-height: calc(100vh - (81px + 57px));
   }
