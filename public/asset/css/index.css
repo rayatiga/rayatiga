@@ -6,11 +6,11 @@
   font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif !important;
 }
 .hero {
-  padding: calc(16rem + 57px) 0rem 16rem 0rem;
+  padding: calc(12rem + 57px) 0 12rem 0;
 }
 @media (max-width: 767px) {
   .hero {
-    padding: calc(6rem + 57px) 0rem 6rem 0rem;
+    padding: calc(6rem + 57px) 0 6rem 0;
   }
 }
 .badge-group {
