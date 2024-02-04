@@ -6,11 +6,11 @@
   font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif !important;
 }
 .hero {
-  padding: calc(12rem + 57px) 0 12rem 0;
+  padding: calc(8rem + 57px) 0 8rem 0;
 }
 @media (max-width: 767px) {
   .hero {
-    padding: calc(6rem + 57px) 0 6rem 0;
+    padding: calc(4rem + 57px) 0 4rem 0;
   }
 }
 .badge-group {
@@ -19,7 +19,7 @@
 [onclick="startTour()"] {
   display: none;
 }
-#service {
+.featured {
   padding: 6rem 0;
 }
 .top-services {
