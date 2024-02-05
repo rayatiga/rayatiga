@@ -1,15 +1,16 @@
 /* Post CSS */
 /* Default: Post Article */
 #post article {
-  line-height: 1.75;
+  line-height: 1.875;
   flex: 1;
+  font-size: 18px;
 }
 #post article h1 {
   font-weight: 800;
-  line-height: 1.25;
+  line-height: 1.5;
 }
 #post article h2 {
-  font-size: 1.5em;
+  font-size: 1.3em;
   font-weight: 700;
   margin-top: 2rem;
 }
@@ -33,11 +34,11 @@
   max-width: 350px;
 }
 #post aside .aside-card {
-  line-height: 1.7;
+  line-height: 1.875;
   flex: 1;
 }
 #post aside .aside-card h4 {
-  font-size: 1.25em;
+  font-size: 1.15em;
   font-weight: 700;
 }
 #post aside .aside-card img {
