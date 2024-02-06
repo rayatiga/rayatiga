@@ -18,6 +18,12 @@
 #post article ul {
   margin-top: 1rem;
 }
+#post article ol li ul,
+#post article ol li ol,
+#post article ul li ul,
+#post article ul li ol {
+  margin-top: 0;
+}
 #post article strong {
   font-weight: 600;
 }
