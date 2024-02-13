@@ -62,7 +62,22 @@ if (params.has("service")) {
         perks.domain.style.display = "none";
         perks.ssl.style.display = "block";
         perks.whois.style.display = "block";
-        domainExt.removeAttribute("disabled");
+        domainExt.setAttribute("disabled", "");
+        switch (value) {
+          case 0:
+            domainExt.value = "com";
+            break;
+          case 1:
+            domainExt.value = "id";
+            break;
+          case 2:
+            domainExt.value = "co.id";
+            break;
+          case 3:
+            domainExt.removeAttribute("disabled");
+            domainExt.value = "com";
+            break;
+        }
       }
       function staticCheckout(value) {
         selectedService.value = data[0].static[value].name;
@@ -118,6 +133,9 @@ if (params.has("service")) {
           break;
         case data[0].domain[2].sku:
           domainCheckout(2);
+          break;
+        case data[0].domain[3].sku:
+          domainCheckout(3);
           break;
         case data[0].static[0].sku:
           staticCheckout(0);
