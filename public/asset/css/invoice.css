@@ -1,0 +1,163 @@
+@font-face {
+  font-display: swap;
+  font-family: "Plus Jakarta Sans";
+  src: url("/asset/font/roboto-mono.ttf");
+}
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  font-size: 14px;
+  font-family: "Plus Jakarta Sans", monospace;
+  margin: 0;
+  padding: 1rem 0;
+}
+div.container {
+  max-width: 780px;
+  width: 100%;
+  max-height: 100vh;
+}
+div.container hr {
+  height: 16px;
+  border: 0;
+  background-color: #283592;
+  margin-top: 0;
+}
+div.container header {
+  display: flex;
+  justify-content: space-between;
+}
+div.container header div.from,
+div.container header div.pay {
+  display: flex;
+  flex-direction: column;
+}
+div.container header div.from h1 {
+  color: #283592;
+  font-weight: 800;
+  margin-bottom: 4px;
+}
+div.container header span {
+  display: block;
+}
+div.container header div.pay {
+  text-align: right;
+}
+div.container header div.pay h1 {
+  color: #e01b84;
+  font-weight: 800;
+  margin-bottom: 4px;
+}
+div.container main div.info {
+  display: flex;
+  justify-content: space-between;
+}
+div.container main span {
+  display: block;
+}
+div.container main div.title h1 {
+  color: #283592;
+  font-weight: 800;
+  font-size: 40px;
+  margin-bottom: 4px;
+}
+div.container main div.title span {
+  color: #e01b84;
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+div.container main div.info h1 {
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+div.container main table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 24px;
+}
+div.container main table td,
+div.container main table th {
+  padding: 8px 0;
+}
+div.container main table th {
+  text-align: left;
+  color: #283592;
+}
+div.container main table tr {
+  border-bottom: 1px solid #dddddd;
+}
+div.container main table th:nth-child(2),
+div.container main table th:nth-child(3),
+div.container main table th:nth-child(4),
+div.container main table td:nth-child(2),
+div.container main table td:nth-child(3),
+div.container main table td:nth-child(4) {
+  text-align: right;
+}
+div.container main table tr:nth-child(even) {
+  background-color: #fbfbfb;
+}
+div.container main table tbody tr:nth-child(11) td:nth-child(4) {
+  color: #e01b84;
+  font-size: 20px;
+  font-weight: 800;
+}
+div.container footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+  align-items: start;
+}
+div.container footer span {
+  color: #aaaaaa;
+  font-size: 12px;
+}
+div.container footer button {
+  background-color: #283592;
+  color: #ffffff;
+  border: 0;
+  padding: 4px 8px;
+  cursor: pointer;
+  font-family: "Plus Jakarta Sans", monospace;
+  font-size: 14px;
+}
+div.container footer button:active {
+  background-color: #283592aa;
+}
+@media print {
+  div.container footer button {
+    display: none;
+  }
+}
+
+.template {
+  top: 25em;
+  opacity: 0;
+  scale: 0.95;
+  padding: 2em 3em;
+  position: absolute;
+  text-align: center;
+  border: 0.25em solid red;
+  background-color: #fbfbfb;
+  animation: showUp 500ms ease-in-out 1s forwards;
+}
+.template span {
+  color: yellow;
+  padding: 0.25em;
+  font-weight: 600;
+  background-color: darkred;
+}
+@keyframes showUp {
+  from {
+    opacity: 0;
+    scale: 0.95;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}

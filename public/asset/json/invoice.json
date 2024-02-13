@@ -1,0 +1,42 @@
+[
+    {
+        "id": "R-INV-02202020-123-DMN",
+        "for-name": "Sultan Kautsar",
+        "for-company": "Rayatiga",
+        "for-phone": "+62 812 2545 9071",
+        "for-email": "contact@sultankautsar.com",
+        "due": "02/27/2020",
+        "payable": "Rayatiga.com",
+        "service": "Domain sultankautsar.com",
+        "list-order": [
+            {
+                "desc": "Domain sultankautsar.com",
+                "qty": 1,
+                "unit-price": 178
+            },
+            {
+                "desc": "CloudFlare",
+                "qty": 1,
+                "unit-price": 0
+            },
+            {
+                "desc": "Maintenance",
+                "qty": 1,
+                "unit-price": 75
+            }
+        ],
+        "tax": {
+            "desc": "International Tax",
+            "qty": 1
+        },
+        "list-discounted": [
+            {
+                "desc": "Discounted Maintenance",
+                "unit-price": 75
+            },
+            {
+                "desc": "Discounted International Tax"
+            }
+        ]
+    }
+]
