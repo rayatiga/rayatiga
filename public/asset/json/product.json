@@ -29,7 +29,7 @@
                 "sku": "rt-d-custom",
                 "name": "Domain Custom",
                 "desc": "Reservation for domain with custom extension with managed DNS and maintenance from Rayatiga.",
-                "price": null,
+                "price": "Custom",
                 "subscription": "year",
                 "star": false
             }
