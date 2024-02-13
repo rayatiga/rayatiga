@@ -119,6 +119,7 @@
       <section class="py-5">
         <div class="container d-flex flex-wrap">
           <form class="row g-3 needs-validation col-lg-6 col-12 order-1 order-lg-0 mt-0" action="https://formspree.io/f/xknavynp" method="post" target="_blank" novalidate>
+          <!-- <form class="row g-3 needs-validation col-lg-6 col-12 order-1 order-lg-0 mt-0" action="mailto:contact@rayatiga.com" method="post" target="_blank" enctype="text/plain" novalidate> -->
             <h2 class="fs-5 fw-bolder m-0">Checkout Form</h2>
             <div class="col-12">
               <label for="checkout-service">Service</label>
@@ -145,9 +146,9 @@
             <div class="col-12">
               <label for="domain-name">Domain Name</label>
               <div class="input-group">
-                <input id="domain-name" name="domain-name" type="text" class="form-control" style="flex-basis: 35%;" placeholder="Enter domain name..." aria-label="Enter your domain..." />
+                <input id="domain-name" name="Domain Name" type="text" class="form-control" style="flex-basis: 35%" placeholder="Enter domain name..." aria-label="Enter your domain..." />
                 <span class="input-group-text">.</span>
-                <select id="domain-extension" type="text" class="form-control" value="{data}" aria-label="Domain extension">
+                <select id="domain-extension" name="Domain Name" type="text" class="form-control" value="{data}" aria-label="Domain Name">
                   <optgroup label="Default">
                     <option value="com">com</option>
                     <option value="id">id</option>
@@ -163,31 +164,31 @@
             </div>
             <div class="col-12">
               <label for="name">Name</label>
-              <input class="form-control" id="name" name="name" type="text" placeholder="Enter your name..." minlength="2" maxlength="60" required />
+              <input class="form-control" id="name" name="Name" type="text" placeholder="Enter your name..." minlength="2" maxlength="60" required />
               <div class="valid-feedback">Looks good.</div>
               <div class="invalid-feedback">Please enter your name.</div>
             </div>
             <div class="col-12">
               <label for="company">Company</label>
-              <input class="form-control" id="company" name="company" type="text" placeholder="Enter your company..." minlength="2" maxlength="60" required />
+              <input class="form-control" id="company" name="Company" type="text" placeholder="Enter your company..." minlength="2" maxlength="60" required />
               <div class="valid-feedback">Looks good.</div>
               <div class="invalid-feedback">Please enter your company.</div>
             </div>
             <div class="col-12">
               <label for="email">Email</label>
-              <input class="form-control" id="email" name="email" type="email" placeholder="Enter your email..." minlength="6" maxlength="60" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" required />
+              <input class="form-control" id="email" name="Email" type="email" placeholder="Enter your email..." minlength="6" maxlength="60" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" required />
               <div class="valid-feedback">Your email looks good.</div>
               <div class="invalid-feedback">Please enter valid email.</div>
             </div>
             <div class="col-12">
               <label for="phone">Phone Number</label>
-              <input class="form-control" id="phone" name="phone" type="text" placeholder="Enter your phone..." minlength="3" maxlength="60" required />
+              <input class="form-control" id="phone" name="Phone Number" type="text" placeholder="Enter your phone..." minlength="3" maxlength="60" required />
               <div class="valid-feedback">Your phone looks good.</div>
               <div class="invalid-feedback">Please enter valid phone.</div>
             </div>
             <div class="col-12">
               <label for="address">Address</label>
-              <textarea class="form-control" id="address" name="address" type="text" placeholder="Enter your address..." minlength="2" maxlength="60" required></textarea>
+              <textarea class="form-control" id="address" name="Address" type="text" placeholder="Enter your address..." minlength="2" maxlength="256" required></textarea>
               <div class="valid-feedback">Looks good.</div>
               <div class="invalid-feedback">Please enter your address.</div>
             </div>
