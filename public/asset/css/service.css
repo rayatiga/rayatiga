@@ -13,3 +13,14 @@
 [data-bs-theme="dark"] #service > section:nth-child(1) {
   background-color: var(--darkblue);
 }
+/* Default: Dark: Card Header */
+[data-bs-theme="dark"] #service .card-header.bg-dark {
+  background-color: var(--bs-light) !important;
+}
+[data-bs-theme="dark"] #service .card-header.bg-dark.text-white {
+  color: var(--bs-dark) !important;
+}
+/* Default: Dark: Card Border */
+[data-bs-theme="dark"] #service .border-dark {
+  border-color: rgba(var(--bs-white-rgb), var(--bs-border-opacity)) !important;
+}
