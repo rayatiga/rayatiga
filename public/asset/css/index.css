@@ -30,15 +30,15 @@
 #index :root {
   --bs-tertiary-bg-rgb: 251, 251, 253;
 }
-#index [data-bs-theme="dark"]:root {
+[data-bs-theme="dark"] #index :root {
   --bs-tertiary-bg-rgb: 38, 43, 48;
 }
-#index [data-bs-theme="dark"] .card-header.bg-dark {
+[data-bs-theme="dark"] #index .card-header.bg-dark {
   background-color: var(--bs-light) !important;
 }
-#index [data-bs-theme="dark"] .card-header.bg-dark.text-white {
+[data-bs-theme="dark"] #index .card-header.bg-dark.text-white {
   color: var(--bs-dark) !important;
 }
-#index [data-bs-theme="dark"] .border-dark {
+[data-bs-theme="dark"] #index .border-dark {
   border-color: rgba(var(--bs-body-rgb), var(--bs-border-opacity)) !important;
 }
