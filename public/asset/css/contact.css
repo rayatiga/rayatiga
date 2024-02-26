@@ -1,23 +1,17 @@
-/* Contact CSS */
-/* Default: Contact Iframe Google Maps */
 #contact iframe {
   width: 100%;
   height: 100%;
 }
-/* Default: Section */
 #contact > section:nth-child(1) {
   padding: 6rem 0;
   background-color: var(--blue);
 }
-/* Default: Dark: Section */
 [data-bs-theme="dark"] #contact > section:nth-child(1) {
   background-color: var(--darkblue);
 }
-/* Default: Contact Form Message */
 #contact form #message {
   min-height: 150px;
 }
-/* Bootstrap: Scheme: Dark */
 [data-bs-theme="dark"] #contact iframe {
   filter: invert(90%) hue-rotate(180deg);
 }

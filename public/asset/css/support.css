@@ -1,15 +1,11 @@
-/* Support CSS */
-/* Default: Support Form Message */
 #support form #message {
   min-height: 150px;
 }
-/* Default: Section */
 #support > section:nth-child(1) {
   min-height: 32vh;
   padding: 4rem 0;
   background-color: var(--blue);
 }
-/* Default: Dark: Section */
 [data-bs-theme="dark"] #support > section:nth-child(1) {
   background-color: var(--darkblue);
 }

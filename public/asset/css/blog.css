@@ -1,15 +1,11 @@
-/* Blog CSS */
-/* Default: Blog Image */
 #blog img {
   aspect-ratio: 16 / 9;
   object-fit: cover;
 }
-/* Default: Section */
 #blog > section:nth-child(1) {
   padding: 6rem 0;
   background-color: var(--blue);
 }
-/* Default: Dark: Section */
 [data-bs-theme="dark"] #blog > section:nth-child(1) {
   background-color: var(--darkblue);
 }

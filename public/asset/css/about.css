@@ -1,10 +1,7 @@
-/* About CSS */
-/* Default: Section */
 #about section:nth-child(1) {
   padding: 6rem 0;
   background-color: var(--blue);
 }
-/* Default: Dark: Section */
 [data-bs-theme='dark'] #about section:nth-child(1) {
     background-color: var(--darkblue);
 }

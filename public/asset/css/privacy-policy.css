@@ -1,11 +1,8 @@
-/* Privacy Policy CSS */
-/* Default: Section */
 #privacy-policy > section:nth-child(1) {
   min-height: 32vh;
   padding: 4rem 0;
   background-color: var(--blue);
 }
-/* Default: Dark: Section */
 [data-bs-theme="dark"] #privacy-policy > section:nth-child(1) {
   background-color: var(--darkblue);
 }

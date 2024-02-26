@@ -1,14 +1,10 @@
-/* Checkout CSS */
-/* Default: Checkout Form Message */
 #checkout form #address {
   min-height: 150px;
 }
-/* Default: Section */
 #checkout > section:nth-child(1) {
   padding: 4rem 0;
   background-color: var(--blue);
 }
-/* Default: Dark: Section */
 [data-bs-theme="dark"] #checkout > section:nth-child(1) {
   background-color: var(--darkblue);
 }

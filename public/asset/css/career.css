@@ -1,14 +1,10 @@
-/* Career CSS */
-/* Default: Modal Form Textarea */
 .modal form textarea {
   min-height: 150px;
 }
-/* Default: Section */
 #career > section:nth-child(1) {
   padding: 6rem 0;
   background-color: var(--blue);
 }
-/* Default: Dark: Section */
 [data-bs-theme="dark"] #career > section:nth-child(1) {
   background-color: var(--darkblue);
 }
