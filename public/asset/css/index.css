@@ -5,31 +5,40 @@
 .driver-popover .driver-popover-progress-text {
   font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif !important;
 }
-.hero {
+#index .hero {
   padding: calc(6rem + 57px) 0 6rem 0;
   min-height: 42rem;
 }
-.badge-group {
+#index .badge-group {
   margin-top: -4rem;
 }
 [onclick="startTour()"] {
   display: none;
 }
-.featured {
+#index .featured {
   padding: 6rem 0;
 }
-.top-services {
+#index .top-services {
   padding: 6rem 0;
 }
-.user-testimonial {
+#index .user-testimonial {
   padding: 6rem 0;
 }
-.get-started {
+#index .get-started {
   padding: 6rem 0;
 }
-:root {
+#index :root {
   --bs-tertiary-bg-rgb: 251, 251, 253;
 }
-[data-bs-theme="dark"]:root {
+#index [data-bs-theme="dark"]:root {
   --bs-tertiary-bg-rgb: 38, 43, 48;
+}
+#index [data-bs-theme="dark"] .card-header.bg-dark {
+  background-color: var(--bs-light) !important;
+}
+#index [data-bs-theme="dark"] .card-header.bg-dark.text-white {
+  color: var(--bs-dark) !important;
+}
+#index [data-bs-theme="dark"] .border-dark {
+  border-color: rgba(var(--bs-body-rgb), var(--bs-border-opacity)) !important;
 }
