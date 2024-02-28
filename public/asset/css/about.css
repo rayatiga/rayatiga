@@ -1,7 +1,10 @@
+/* File: About CSS */
+/* Default: Section One */
 #about section:nth-child(1) {
   padding: 6rem 0;
   background-color: var(--blue);
 }
+/* Framework: Bootstrap: Section One Dark Mode */
 [data-bs-theme='dark'] #about section:nth-child(1) {
     background-color: var(--darkblue);
 }
