@@ -1,5 +1,5 @@
 /* Contact JS */
-// Default: Function Contact Action
+/* Default: Function Contact Action */
 function contactAction(action) {
   switch (action) {
     case "whatsapp-button":
