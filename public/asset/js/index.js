@@ -1,37 +1,35 @@
 /* Index CSS */
-// Driver JS: Initializing
+/* Framework: Driver.js: Initialization */
 const driver = window.driver.js.driver;
-// Driver JS: Creating Object Step
+/* Framework: Driver.js: Element Object Steps */
 const driverObj = driver({
   showProgress: true,
   showButtons: ["next", "previous", "close"],
   steps: [
     { element: "header .navbar-brand", popover: { title: "Welcome", description: "Welcome to Rayatiga! Begin our navigation and information tour.", side: "bottom", align: "start" } },
-    { element: "header .nav-item:nth-child(1)", popover: { title: "Navigate to Home", description: "Navigate to the home page like the current page.", side: "bottom", align: "start" } },
-    { element: "header .nav-item:nth-child(2)", popover: { title: "Learn More", description: "Learn more about us on the about page.", side: "bottom", align: "start" } },
-    { element: "header .nav-item:nth-child(3)", popover: { title: "Our Article", description: "List of our latest articles about technology.", side: "bottom", align: "start" } },
-    { element: "header .nav-item:nth-child(4)", popover: { title: "Service Dropdown", description: "List of our services with transparent privacy policy.", side: "bottom", align: "start" } },
-    { element: "header .nav-item:nth-child(5)", popover: { title: "Work Opportunities", description: "See collaboration opportunities with us.", side: "bottom", align: "end" } },
-    { element: "header .nav-item:nth-child(6)", popover: { title: "Reach Us", description: "Send messages, feedback, and other inquiries to the contact page.", side: "bottom", align: "end" } },
-    { element: "header .nav-item:nth-child(8)", popover: { title: "Scheme Dropdown", description: "Adjust to dark or light theme as you prefer.", side: "bottom", align: "end" } },
-    { element: "#index .badge", popover: { title: "Service Update", description: "Information about updates to our services.", side: "bottom", align: "start" } },
+    { element: "header .navbar-collapse", popover: { title: "Navigation", description: "Click the text link to navigate pages.", side: "bottom", align: "start" } },
+    { element: "header #bd-theme", popover: { title: "Scheme", description: "Allow you to switch between dark and light schemes.", side: "bottom", align: "start" } },
+    { element: ".badge-group .badge:nth-child(1)", popover: { title: "New Services", description: "Information about new services.", side: "bottom", align: "start" } },
+    { element: ".badge-group .badge:nth-child(2)", popover: { title: "Job Open", description: "Information about new job opening.", side: "bottom", align: "start" } },
+    { element: "main a.btn.btn-dark", popover: { title: "Service Button", description: "Click to navigate to service page.", side: "bottom", align: "start" } },
+    { element: "main a.btn.btn-outline-dark", popover: { title: "Contact Button", description: "Click to navigate to contact page.", side: "bottom", align: "start" } },
   ],
 });
-// Default: Start Tour Button
+/* Default: Start Tour Button */
 const startTourButton = document.querySelector("button[onclick='startTour()']");
 checkButtonVisibility();
 window.addEventListener("resize", function () {
   checkButtonVisibility();
 });
-// Default: Button Visibility Based on Local Storage
+/* Default: Function Start Tour Button Visibility Check */
 function checkButtonVisibility() {
   if (window.localStorage.getItem("startTour") == null && window.innerWidth >= 992) {
     startTourButton.style.display = "block";
   } else {
-    startTourButton.style.display = "none";
+    startTourButton.style.display = "block";
   }
 }
-// Default: Function Start Tour
+/* Default: Function Run The Tour */
 function startTour() {
   startTourButton.style.display = "none";
   window.localStorage.setItem("startTour", "started");
