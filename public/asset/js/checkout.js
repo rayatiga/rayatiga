@@ -1,7 +1,9 @@
+/* File: checkout.js */
+/* Default: Service Parameter */
 const queryString = window.location.search;
 const params = new URLSearchParams(queryString);
 const value = params.get("service");
-
+/* Default: Service Parameter Check */
 if (params.has("service")) {
   const selectedService = document.getElementById("checkout-service");
   const serviceName = document.getElementById("service-name");
@@ -14,13 +16,12 @@ if (params.has("service")) {
   const serviceSubs = document.getElementById("service-subs");
   const serviceStar = document.getElementById("service-star");
   const domainExt = document.getElementById("domain-extension");
-
   const perks = {
     domain: document.getElementById("perk-domain"),
     ssl: document.getElementById("perk-ssl"),
     whois: document.getElementById("perk-whois"),
   };
-
+  /* Default: Function Subscription Period */
   function serviceSubscription(value) {
     if (value == "year") {
       serviceSubs.textContent = "yr";
@@ -28,6 +29,7 @@ if (params.has("service")) {
       serviceSubs.textContent = "mo";
     }
   }
+  /* Default: Function Starred Service Check */
   function isStarred(value) {
     if (value == true) {
       cardBorder.classList.add("border-primary");
@@ -47,9 +49,11 @@ if (params.has("service")) {
       serviceStar.style.display = "none";
     }
   }
+  /* Default: Fetch Product Data */
   fetch("/asset/json/product.json")
     .then((response) => response.json())
     .then((data) => {
+      /* Default: Function Domain Checkout */
       function domainCheckout(value) {
         selectedService.value = data[0].domain[value].name;
         serviceName.textContent = data[0].domain[value].name;
@@ -79,6 +83,7 @@ if (params.has("service")) {
             break;
         }
       }
+      /* Default: Function Static Checkout */
       function staticCheckout(value) {
         selectedService.value = data[0].static[value].name;
         serviceName.textContent = data[0].static[value].name;
@@ -94,6 +99,7 @@ if (params.has("service")) {
         domainExt.setAttribute("disabled", "");
         domainExt.value = "com";
       }
+      /* Default: Function WordPress Checkout */
       function wordpressCheckout(value) {
         selectedService.value = data[0].wordpress[value].name;
         serviceName.textContent = data[0].wordpress[value].name;
@@ -109,6 +115,7 @@ if (params.has("service")) {
         domainExt.setAttribute("disabled", "");
         domainExt.value = "com";
       }
+      /* Default: Function Cloud Checkout */
       function cloudCheckout(value) {
         selectedService.value = data[0].cloud[value].name;
         serviceName.textContent = data[0].cloud[value].name;
@@ -124,6 +131,7 @@ if (params.has("service")) {
         domainExt.setAttribute("disabled", "");
         domainExt.value = "com";
       }
+      /* Default: Run Function By SKU */
       switch (value) {
         case data[0].domain[0].sku:
           domainCheckout(0);
@@ -166,6 +174,7 @@ if (params.has("service")) {
           break;
       }
     })
+    /* Default: Print Error to Console */
     .catch((error) => {
       console.error("Error fetching data:", error);
     });
