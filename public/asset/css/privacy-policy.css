@@ -1,8 +1,11 @@
+/* File: privacy-policy.css */
+/* Default: Section One */
 #privacy-policy > section:nth-child(1) {
   min-height: 32vh;
   padding: 4rem 0;
   background-color: var(--blue);
 }
+/* Framework: Bootstrap: Dark Mode Section One */
 [data-bs-theme="dark"] #privacy-policy > section:nth-child(1) {
   background-color: var(--darkblue);
 }
