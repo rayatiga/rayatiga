@@ -3,6 +3,10 @@
 const queryString = window.location.search;
 const params = new URLSearchParams(queryString);
 const value = params.get("service");
+// Default: Null Parameter Check
+if (value == null) {
+  window.location.replace("/");
+}
 /* Default: Service Parameter Check */
 if (params.has("service")) {
   const selectedService = document.getElementById("checkout-service");
@@ -171,6 +175,9 @@ if (params.has("service")) {
           break;
         case data[0].cloud[2].sku:
           cloudCheckout(2);
+          break;
+        default:
+          window.location.replace("/");
           break;
       }
     })

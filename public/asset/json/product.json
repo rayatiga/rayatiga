@@ -21,7 +21,7 @@
                 "sku": "rt-d-coid",
                 "name": "Domain .CO.ID",
                 "desc": "Reservation for domain with extension .co.id with managed DNS and maintenance from Rayatiga.",
-                "price": 55,
+                "price": 45,
                 "subscription": "year",
                 "star": false
             },

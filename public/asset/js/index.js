@@ -26,7 +26,7 @@ function checkButtonVisibility() {
   if (window.localStorage.getItem("startTour") == null && window.innerWidth >= 992) {
     startTourButton.style.display = "block";
   } else {
-    startTourButton.style.display = "block";
+    startTourButton.style.display = "none";
   }
 }
 /* Default: Function Run The Tour */
