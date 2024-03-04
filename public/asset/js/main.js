@@ -15,7 +15,7 @@ window.addEventListener("scroll", function () {
 });
 /* Default: WhatsApp Button */
 document.body.insertAdjacentHTML("beforeend", `<button class="btn bg-body border position-fixed shadow-sm" onclick="whatsAppButton()" data-bs-title="WhatsApp Us" data-bs-toggle="tooltip" style="bottom: 12px; right: 12px;" title="WhatsApp Us"><i class="bi bi-whatsapp"></i></button>`);
-/* Default: Function Contact Action */
+/* Default: Function WhatsApp Button */
 function whatsAppButton() {
   window.open("https://api.whatsapp.com/send/?phone=6282122220362&text=Hello+Rayatiga!");
 }
