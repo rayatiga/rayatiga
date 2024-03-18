@@ -114,16 +114,16 @@
     <main class="d-flex flex-column align-items-center" id="checkout">
       <section class="d-flex flex-column justify-content-center border-bottom w-100">
         <div class="container d-flex flex-column gap-2">
-          <h1 class="fw-bold">Checkout</h1>
-          <p class="m-0">You will checkout service <strong id="service-name">{data}</strong>.</p>
+          <h1 class="fw-bold" data-aos="fade-up">Checkout</h1>
+          <p class="m-0" data-aos="fade-up">You will checkout service <strong id="service-name">{data}</strong>.</p>
         </div>
       </section>
       <section class="py-5">
         <div class="container d-flex flex-wrap">
           <form class="row g-3 needs-validation col-lg-6 col-12 order-1 order-lg-0 mt-0" action="https://formspree.io/f/xknavynp" method="post" target="_blank" novalidate>
-          <!-- <form class="row g-3 needs-validation col-lg-6 col-12 order-1 order-lg-0 mt-0" action="mailto:contact@rayatiga.com" method="post" target="_blank" enctype="text/plain" novalidate> -->
-            <h2 class="fs-5 fw-bolder m-0">Checkout Form</h2>
-            <div class="col-12">
+            <!-- <form class="row g-3 needs-validation col-lg-6 col-12 order-1 order-lg-0 mt-0" action="mailto:contact@rayatiga.com" method="post" target="_blank" enctype="text/plain" novalidate> -->
+            <h2 class="fs-5 fw-bolder m-0" data-aos="fade-up">Checkout Form</h2>
+            <div class="col-12" data-aos="fade-up">
               <label for="checkout-service">Service</label>
               <select class="form-select border-primary" id="checkout-service" aria-label="Service" required disabled>
                 <option class="d-none" value selected>Select service</option>
@@ -145,7 +145,7 @@
                 <option value="Cloud Custom">Cloud Custom</option>
               </select>
             </div>
-            <div class="col-12">
+            <div class="col-12" data-aos="fade-up">
               <label for="domain-name">Domain Name</label>
               <div class="input-group">
                 <input id="domain-name" name="Domain Name" type="text" class="form-control" style="flex-basis: 35%" placeholder="Enter domain name..." aria-label="Enter your domain..." />
@@ -164,37 +164,37 @@
                 </select>
               </div>
             </div>
-            <div class="col-12">
+            <div class="col-12" data-aos="fade-up">
               <label for="name">Name</label>
               <input class="form-control" id="name" name="Name" type="text" placeholder="Enter your name..." minlength="2" maxlength="60" required />
               <div class="valid-feedback">Looks good.</div>
               <div class="invalid-feedback">Please enter your name.</div>
             </div>
-            <div class="col-12">
+            <div class="col-12" data-aos="fade-up">
               <label for="company">Company</label>
               <input class="form-control" id="company" name="Company" type="text" placeholder="Enter your company..." minlength="2" maxlength="60" required />
               <div class="valid-feedback">Looks good.</div>
               <div class="invalid-feedback">Please enter your company.</div>
             </div>
-            <div class="col-12">
+            <div class="col-12" data-aos="fade-up">
               <label for="email">Email</label>
               <input class="form-control" id="email" name="Email" type="email" placeholder="Enter your email..." minlength="6" maxlength="60" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" required />
               <div class="valid-feedback">Your email looks good.</div>
               <div class="invalid-feedback">Please enter valid email.</div>
             </div>
-            <div class="col-12">
+            <div class="col-12" data-aos="fade-up">
               <label for="phone">Phone Number</label>
               <input class="form-control" id="phone" name="Phone Number" type="text" placeholder="Enter your phone..." minlength="3" maxlength="60" required />
               <div class="valid-feedback">Your phone looks good.</div>
               <div class="invalid-feedback">Please enter valid phone.</div>
             </div>
-            <div class="col-12">
+            <div class="col-12" data-aos="fade-up">
               <label for="address">Address</label>
               <textarea class="form-control" id="address" name="Address" type="text" placeholder="Enter your address..." minlength="2" maxlength="256" required></textarea>
               <div class="valid-feedback">Looks good.</div>
               <div class="invalid-feedback">Please enter your address.</div>
             </div>
-            <div class="col-12">
+            <div class="col-12" data-aos="fade-up">
               <label for="price">Estimated Price</label>
               <div class="input-group mb-3">
                 <span class="input-group-text border-primary">$</span>
@@ -202,21 +202,21 @@
                 <span class="input-group-text border-primary">.00</span>
               </div>
             </div>
-            <div class="col-12">
+            <div class="col-12" data-aos="fade-up">
               <input class="form-check-input" type="checkbox" value="t&c" id="t&c" required checked />
               <label class="form-check-label ms-2" for="t&c">I agree and understand to the <a class="text-decoration-none" href="/privacy-policy.html" target="_blank">privacy policy</a>.</label>
             </div>
             <input name="_gotcha" type="text" style="display: none" />
-            <span class="col-12 small text-body-secondary">Powered by <a class="text-decoration-none" href="https://formspree.io/" target="_blank" rel="nofollow noopener noreferrer">Formspree</a>.</span>
+            <span class="col-12 small text-body-secondary" data-aos="fade-up">Powered by <a class="text-decoration-none" href="https://formspree.io/" target="_blank" rel="nofollow noopener noreferrer">Formspree</a>.</span>
             <div class="col-12">
-              <button class="btn btn-dark" type="submit"><i class="bi bi-send align-baseline me-2"></i>Submit</button>
+              <button class="btn btn-dark" type="submit" data-aos="fade-up"><i class="bi bi-send align-baseline me-2"></i>Submit</button>
             </div>
           </form>
           <div class="col-lg-6 col-12 order-0 order-lg-1 d-flex flex-column justify-content-start align-items-center">
             <div class="col-12 col-lg-8">
-              <h2 class="fs-5 fw-bolder">Selected Service</h2>
+              <h2 class="fs-5 fw-bolder" data-aos="fade-up">Selected Service</h2>
               <div class="mb-4">
-                <div id="card-style-border" class="card border-primary shadow-sm">
+                <div id="card-style-border" class="card border-primary shadow-sm" data-aos="fade-up">
                   <div id="card-style-bg" class="card-header bg-primary text-white">
                     <p class="mb-0 fw-bolder"><i id="service-star" class="bi bi-star-fill align-baseline me-2"></i><span id="selected-name">{data}</span></p>
                   </div>
@@ -230,7 +230,7 @@
                   </div>
                 </div>
               </div>
-              <h2 class="fs-5 fw-bolder">Bonus Perks <i class="bi bi-stars text-warning align-baseline"></i></h2>
+              <h2 class="fs-5 fw-bolder" data-aos="fade-up">Bonus Perks <i class="bi bi-stars text-warning align-baseline"></i></h2>
               <div id="perk-domain" class="mb-2">
                 <div class="card border-success shadow-sm">
                   <div class="card-header bg-success text-white">
@@ -243,7 +243,7 @@
                   </div>
                 </div>
               </div>
-              <div id="perk-ssl" class="mb-2">
+              <div id="perk-ssl" class="mb-2" data-aos="fade-up">
                 <div class="card border-success shadow-sm">
                   <div class="card-header bg-success text-white">
                     <p class="mb-0 fw-bolder"><i class="bi bi-lock align-baseline me-2"></i>SSL Certificate</p>
@@ -255,7 +255,7 @@
                   </div>
                 </div>
               </div>
-              <div id="perk-whois" class="mb-4">
+              <div id="perk-whois" class="mb-4" data-aos="fade-up">
                 <div class="card border-success shadow-sm">
                   <div class="card-header bg-success text-white">
                     <p class="mb-0 fw-bolder"><i class="bi bi-shield-check align-baseline me-2"></i>WHOIS Protector</p>
