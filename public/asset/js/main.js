@@ -48,6 +48,8 @@ const tooltipList = [...tooltipTriggerList].map((tooltipTriggerEl) => new bootst
 })();
 /* Framework: AOS: Initialization */
 AOS.init({
+  offset: 50,
   duration: 500,
-  disable: "mobile",
+  delay: 150,
+  once: true,
 });
