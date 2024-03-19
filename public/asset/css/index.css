@@ -10,7 +10,7 @@
 /* Default: Hero Section */
 #index .hero {
   padding: calc(6rem + 57px) 0 6rem 0;
-  min-height: 85vh;
+  min-height: calc(100vh - 57px);
 }
 /* Default: Badge Group */
 #index .badge-group {
@@ -22,20 +22,17 @@
 }
 /* Default: Scroll Down and Arrow */
 #index .arrow-down-animate {
-  animation: scrollDown 3s ease infinite;
+  animation: scrollDown 2s ease infinite;
 }
 /* Default: Keyframe: Scroll Down */
 @keyframes scrollDown {
   0% {
     padding-top: 0;
   }
-  15% {
-    padding-top: 10px;
-  }
   25% {
-    padding-top: 0;
+    padding-top: 12px;
   }
-  100% {
+  50% {
     padding-top: 0;
   }
 }
