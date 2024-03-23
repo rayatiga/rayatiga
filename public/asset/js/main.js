@@ -14,7 +14,7 @@ window.addEventListener("scroll", function () {
   }
 });
 /* Default: WhatsApp Button */
-document.body.insertAdjacentHTML("beforeend", `<button class="btn bg-body border position-fixed shadow-sm" onclick="whatsAppButton()" data-bs-title="WhatsApp Us" data-bs-toggle="tooltip" style="bottom: 12px; right: 12px;" title="WhatsApp Us" data-aos="fade-up" data-aos-delay="0" data-aos-offset="0"><i class="bi bi-whatsapp"></i></button>`);
+document.body.insertAdjacentHTML("beforeend", `<button class="btn bg-body border position-fixed shadow-sm" onclick="whatsAppButton()" data-bs-title="WhatsApp Us" data-bs-toggle="tooltip" style="bottom: 12px; right: 12px;" title="WhatsApp Us"><i class="bi bi-whatsapp"></i></button>`);
 /* Default: Function WhatsApp Button */
 function whatsAppButton() {
   window.open("https://api.whatsapp.com/send/?phone=6282122220362&text=Hello+Rayatiga!");
@@ -46,10 +46,3 @@ const tooltipList = [...tooltipTriggerList].map((tooltipTriggerEl) => new bootst
     );
   });
 })();
-/* Framework: AOS: Initialization */
-AOS.init({
-  offset: 50,
-  duration: 500,
-  delay: 150,
-  once: true,
-});
