@@ -64,3 +64,9 @@ node_modules/
 
 # dotenv environment variables file
 .env
+
+# Custom ignore
+public/_redirects
+public/documentation.txt
+public/sitemap.xml
+wrangler
