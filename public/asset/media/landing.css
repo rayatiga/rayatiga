@@ -16,7 +16,7 @@ body {
     font-family: "Inter", sans-serif;
 }
 a {
-    color: #7777ff;
+    color: #3333ff;
     text-decoration: none;
 }
 h1,
@@ -287,8 +287,4 @@ section {
 footer {
     padding: 24px 32px;
     text-align: center;
-}
-footer p {
-    color: #aaaaaa;
-    font-size: 14px;
 }
