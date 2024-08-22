@@ -1,3 +1,9 @@
+/*
+    Warning!
+    Copying and using this code without permission is strictly prohibited.
+    Please contact contact@rayatiga.com for permission before using this code.
+*/
+
 /* Toggle Menu */
 function toggleMenu() {
     const menu = document.querySelector("header div.header > ul");
