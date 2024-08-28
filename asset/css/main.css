@@ -1,0 +1,321 @@
+/* Main */
+/* Main: Font Face */
+@font-face {
+    font-display: swap;
+    src: url(/asset/media/inter.ttf);
+    font-family: "Inter", sans-serif;
+}
+/* Main: Reset */
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Main: Variable */
+:root {
+    --border: #cbd5e1;
+    --text-body: #0f172a;
+    --text-link: #2563eb;
+    --background: #ffffff;
+    --text-brand: #64748b;
+    --text-heading: #0f172a;
+    --text-linkhover: #1e40af;
+}
+/* Main: Body */
+body {
+    padding: 0 32px;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: -0.4px;
+    color: var(--text-body);
+    background: var(--background);
+    font-family: "Inter", sans-serif;
+}
+/* Main: Global */
+a {
+    text-decoration: none;
+    transition: color 0.3s;
+    color: var(--text-link);
+}
+a:hover {
+    color: var(--text-linkhover);
+}
+details:not(:last-child) {
+    margin-bottom: 16px;
+}
+h1 {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--text-heading);
+}
+h2 {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 12px;
+    color: var(--text-heading);
+}
+img {
+    max-width: 100%;
+}
+li {
+    padding-left: 4px;
+}
+li:not(:last-child) {
+    margin-bottom: 4px;
+}
+small {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--text-brand);
+}
+strong {
+    font-weight: 500;
+}
+summary {
+    cursor: pointer;
+    max-width: max-content;
+}
+ul {
+    padding-left: 20px;
+}
+header {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 606px;
+}
+main {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 606px;
+}
+footer {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 606px;
+}
+/* Main: Header */
+header {
+    padding-top: 80px;
+    padding-bottom: 24px;
+}
+header a {
+    font-weight: 500;
+    color: var(--text-brand);
+}
+header a:hover {
+    color: var(--text-brand);
+}
+header h1:has(div) {
+    cursor: default;
+    overflow: hidden;
+    max-height: 22px;
+    position: relative;
+    max-width: max-content;
+}
+header h1 div {
+    transition: transform 0.3s;
+}
+header h1:hover div {
+    transform: translateY(-50%);
+}
+header h1 div span {
+    display: block;
+    width: max-content;
+}
+header small a {
+    font-weight: 400;
+}
+/* Main: Main */
+main section:first-child {
+    margin-top: 8px;
+}
+main section:not(:first-child) {
+    margin-top: 32px;
+}
+main section:last-child {
+    margin-bottom: 8px;
+}
+main p:not(:last-child) {
+    margin-bottom: 16px;
+}
+main img {
+    object-fit: cover;
+    border-radius: 8px;
+    aspect-ratio: 9 / 6.75;
+    border: 1px solid var(--border);
+}
+main a[target="_blank"]::after {
+    content: "→";
+    margin-left: 2px;
+}
+/* Main: Footer */
+footer {
+    row-gap: 4px;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 16px;
+    padding-top: 24px;
+    padding-bottom: 80px;
+}
+footer a {
+    color: var(--text-brand);
+}
+footer a:hover {
+    color: var(--text-link);
+}
+/* Main: Media */
+@media (max-width: 480px) {
+    header {
+        padding-top: 48px;
+    }
+    footer {
+        padding-bottom: 48px;
+    }
+}
+@media (min-width: calc(480px + 1px)) {
+    main a {
+        position: relative;
+        display: inline-block;
+    }
+    main a::before {
+        left: 0;
+        width: 0%;
+        bottom: 0;
+        height: 1px;
+        content: "";
+        opacity: 0.75;
+        position: absolute;
+        background: var(--text-link);
+        transition: width 0.3s, background 0.3s;
+    }
+    main a:hover::before {
+        width: 100%;
+        background: var(--text-linkhover);
+    }
+}
+@media (prefers-color-scheme: dark) {
+    :root {
+        --border: #334155;
+        --text-body: #f1f5f9;
+        --text-link: #93c5fd;
+        --background: #111827;
+        --text-brand: #94a3b8;
+        --text-heading: #f1f5f9;
+        --text-linkhover: #dbeafe;
+    }
+    h1,
+    h2 {
+        color: var(--text-heading);
+    }
+}
+/* Main: Grid Card Portfolio */
+main .grid-portfolio {
+    gap: 8px;
+    display: grid;
+    margin-top: 16px;
+    grid-template-columns: repeat(2, 1fr);
+}
+main .card-portfolio {
+    display: flex;
+    overflow: hidden;
+    border-radius: 12px;
+    flex-direction: column;
+    border: 1px solid var(--border);
+}
+main .card-portfolio img {
+    border: none;
+    border-radius: 0;
+}
+main .card-portfolio .card-portfolio-body {
+    padding: 20px;
+}
+main .card-portfolio h2,
+main .card-portfolio p,
+main .card-portfolio a {
+    margin: 0;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.3px;
+}
+main .card-portfolio a {
+    margin-top: 8px;
+}
+@media (max-width: 480px) {
+    main .grid-portfolio {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+/* Main: Grid Card Pricing */
+main .grid-pricing {
+    gap: 8px;
+    display: grid;
+    margin-top: 16px;
+    grid-template-columns: repeat(1, 1fr);
+}
+main .card-pricing {
+    display: flex;
+    overflow: hidden;
+    border-radius: 12px;
+    flex-direction: column;
+    border: 1px solid var(--border);
+}
+main .card-pricing .card-pricing-body {
+    gap: 8px;
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+}
+main .card-pricing h2 {
+    margin: 0;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: -0.3px;
+}
+main .card-pricing p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.3px;
+}
+main .card-pricing .card-pricing-price {
+    margin: 8px 0;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: -0.3px;
+}
+main .card-pricing s {
+    display: block;
+    color: #ff5555;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+main .card-pricing ul {
+    padding: 0;
+    font-size: 14px;
+    list-style: none;
+}
+main .card-pricing ul li {
+    padding: 0;
+}
+@media (min-width: 670px) {
+    main .grid-pricing {
+        gap: 0;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    main .card-pricing:nth-child(1) {
+        border-right: 0;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    main .card-pricing:nth-child(2) {
+        border-radius: 0;
+    }
+    main .card-pricing:nth-child(3) {
+        border-left: 0;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+}
