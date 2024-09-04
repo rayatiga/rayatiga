@@ -22,23 +22,11 @@ h1 {
     line-height: 1.15;
 }
 
-header {
-    display: flex;
-    min-height: 70px;
-    align-items: center;
-    justify-content: center;
-}
-header a {
-    color: #757575;
-    font-size: 14px;
-    text-decoration: none;
-}
-
 main {
     display: flex;
     flex-direction: column;
-    min-height: calc(100vh - (70px + 70px));
-    min-height: calc(100dvh - (70px + 70px));
+    min-height: 100vh;
+    min-height: 100dvh;
 }
 main section {
     gap: 8px;
@@ -81,47 +69,25 @@ main section > span {
     text-decoration: none;
 }
 
-footer {
-    display: flex;
-    min-height: 70px;
-    align-items: center;
-    justify-content: center;
-}
-footer span {
-    color: #757575;
-    font-size: 14px;
-}
-footer span a {
-    color: #757575;
-    text-decoration: none;
-}
-
-@keyframes fadeInUp {
-    0% {
+@keyframes fadeIn {
+    from {
         opacity: 0;
-        transform: translateY(24px);
     }
-    50% {
-        opacity: 0.35;
-        transform: translateY(0);
-    }
-    100% {
+    to {
         opacity: 1;
-        transform: translateY(0);
     }
 }
 main section h1,
 main section p,
 main section > span {
     opacity: 0;
-    transform: translateY(24px);
 }
 main section h1 {
-    animation: fadeInUp forwards ease-in-out 1.75s 0s;
+    animation: fadeIn forwards ease-in-out 0.75s 0s;
 }
 main section p {
-    animation: fadeInUp forwards ease-in-out 1.75s 0.5s;
+    animation: fadeIn forwards ease-in-out 0.75s 0.25s;
 }
 main section > span {
-    animation: fadeInUp forwards ease-in-out 1.75s 1s;
+    animation: fadeIn forwards ease-in-out 0.75s 0.5s;
 }
