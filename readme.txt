@@ -1,1 +1,0 @@
-Rayatiga website.
