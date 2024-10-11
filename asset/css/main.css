@@ -174,36 +174,15 @@ footer a:hover {
         padding-bottom: 48px;
     }
 }
-@media (min-width: calc(480px + 1px)) {
-    main a {
-        position: relative;
-        display: inline-block;
-    }
-    main a::before {
-        left: 0;
-        width: 0%;
-        bottom: 0;
-        height: 1px;
-        content: "";
-        opacity: 0.75;
-        position: absolute;
-        background: var(--text-link);
-        transition: width 0.3s, background 0.3s;
-    }
-    main a:hover::before {
-        width: 100%;
-        background: var(--text-linkhover);
-    }
-}
 @media (prefers-color-scheme: dark) {
     :root {
         --border: #334155;
         --text-body: #f1f5f9;
-        --text-link: #93c5fd;
-        --background: #111827;
+        --text-link: #8b5cf6;
+        --background: #020617;
         --text-brand: #94a3b8;
         --text-heading: #f1f5f9;
-        --text-linkhover: #dbeafe;
+        --text-linkhover: #a78bfa;
     }
     h1,
     h2 {
