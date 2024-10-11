@@ -45,15 +45,11 @@ a:hover {
 details:not(:last-child) {
     margin-bottom: 16px;
 }
-h1 {
+h1,
+h2,
+h3 {
     font-size: 16px;
     font-weight: 500;
-    color: var(--text-heading);
-}
-h2 {
-    font-size: 16px;
-    font-weight: 500;
-    margin-bottom: 12px;
     color: var(--text-heading);
 }
 img {
@@ -137,6 +133,9 @@ main section:not(:first-child) {
 main section:last-child {
     margin-bottom: 8px;
 }
+main h2 {
+    margin-bottom: 12px;
+}
 main p:not(:last-child) {
     margin-bottom: 16px;
 }
@@ -147,7 +146,7 @@ main img {
     border: 1px solid var(--border);
 }
 main a[target="_blank"]::after {
-    content: "→";
+    content: "˺";
     margin-left: 2px;
 }
 /* Main: Footer */
@@ -174,20 +173,24 @@ footer a:hover {
         padding-bottom: 48px;
     }
 }
-@media (prefers-color-scheme: dark) {
-    :root {
-        --border: #334155;
-        --text-body: #f1f5f9;
-        --text-link: #8b5cf6;
-        --background: #020617;
-        --text-brand: #94a3b8;
-        --text-heading: #f1f5f9;
-        --text-linkhover: #a78bfa;
-    }
-    h1,
-    h2 {
-        color: var(--text-heading);
-    }
+/* Main: Details Content */
+main .details-content {
+    padding: 20px;
+    margin-top: 16px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+}
+main .details-content h3 {
+    margin: 12px 0;
+    font-size: 14px;
+}
+main .details-content p,
+main .details-content li,
+main .details-content a {
+    font-size: 14px;
+}
+main .details-content ul {
+    margin-bottom: 16px;
 }
 /* Main: Grid Card Portfolio */
 main .grid-portfolio {
