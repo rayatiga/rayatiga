@@ -2,8 +2,8 @@
 /* Main: Font Face */
 @font-face {
     font-display: swap;
+    font-family: "Inter";
     src: url(/asset/media/inter.ttf);
-    font-family: "Inter", sans-serif;
 }
 /* Main: Reset */
 *,
