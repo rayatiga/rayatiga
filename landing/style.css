@@ -15,6 +15,10 @@ body {
     letter-spacing: -0.4px;
     font-family: "Inter", sans-serif;
 }
+a {
+    color: #7777ff;
+    text-decoration: none;
+}
 h1,
 #action h2 {
     line-height: 1em;
@@ -22,9 +26,6 @@ h1,
 }
 img {
     max-width: 100%;
-}
-p {
-    text-wrap: pretty;
 }
 .container {
     padding: 32px;
@@ -100,13 +101,18 @@ section {
 }
 #hero h1 {
     font-size: 64px;
+    text-shadow: 1px 1px 0 #000000, 2px 2px 0 #ffffff;
     z-index: 1;
 }
 #hero mark {
+    opacity: 1;
     padding: 0;
     color: #7777ff;
     background-color: transparent;
     z-index: 1;
+}
+#hero mark.fade-out {
+    opacity: 0;
 }
 #hero p {
     font-size: 20px;
@@ -272,4 +278,12 @@ section {
 #action h2 {
     font-size: 32px;
     z-index: 1;
+}
+footer {
+    padding: 24px 32px;
+    text-align: center;
+}
+footer p {
+    color: #aaaaaa;
+    font-size: 14px;
 }

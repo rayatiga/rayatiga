@@ -20,6 +20,7 @@
     --text-link: #2563eb;
     --background: #ffffff;
     --text-brand: #64748b;
+    --color-light: #fbfbfb;
     --text-heading: #0f172a;
     --text-linkhover: #1e40af;
 }
@@ -27,7 +28,7 @@
 body {
     padding: 0 32px;
     font-size: 16px;
-    line-height: 22px;
+    line-height: 1.5;
     letter-spacing: -0.4px;
     color: var(--text-body);
     background: var(--background);
@@ -45,6 +46,9 @@ a:hover {
 details:not(:last-child) {
     margin-bottom: 16px;
 }
+details[open] summary {
+    margin-bottom: 12px;
+}
 h1,
 h2,
 h3 {
@@ -60,6 +64,17 @@ li {
 }
 li:not(:last-child) {
     margin-bottom: 4px;
+}
+mark {
+    padding: 2px 4px;
+    font-weight: 400;
+    line-height: 1.125;
+    border-radius: 4px;
+    display: inline-block;
+    color: var(--text-body);
+    background: var(--color-light);
+    border: 1px solid var(--border);
+    font-size: max(14px, calc(1em - 2px));
 }
 small {
     font-size: 14px;
@@ -160,6 +175,7 @@ footer {
 }
 footer a {
     color: var(--text-brand);
+    text-transform: lowercase;
 }
 footer a:hover {
     color: var(--text-link);
@@ -184,6 +200,9 @@ main .details-content h3 {
     margin: 12px 0;
     font-size: 14px;
 }
+main .details-content h3:first-child {
+    margin: 0 0 12px 0;
+}
 main .details-content p,
 main .details-content li,
 main .details-content a {
@@ -196,7 +215,6 @@ main .details-content ul {
 main .grid-portfolio {
     gap: 8px;
     display: grid;
-    margin-top: 16px;
     grid-template-columns: repeat(2, 1fr);
 }
 main .card-portfolio {
@@ -213,16 +231,18 @@ main .card-portfolio img {
 main .card-portfolio .card-portfolio-body {
     padding: 20px;
 }
-main .card-portfolio h2,
+main .card-portfolio h2 {
+    font-size: 14px;
+    margin-bottom: 4px;
+}
 main .card-portfolio p,
 main .card-portfolio a {
     margin: 0;
     font-size: 14px;
-    line-height: 20px;
-    letter-spacing: -0.3px;
 }
 main .card-portfolio a {
-    margin-top: 8px;
+    margin-top: 12px;
+    display: inline-block;
 }
 @media (max-width: 480px) {
     main .grid-portfolio {
@@ -233,7 +253,6 @@ main .card-portfolio a {
 main .grid-pricing {
     gap: 8px;
     display: grid;
-    margin-top: 16px;
     grid-template-columns: repeat(1, 1fr);
 }
 main .card-pricing {
@@ -249,23 +268,15 @@ main .card-pricing .card-pricing-body {
     padding: 20px;
     flex-direction: column;
 }
-main .card-pricing h2 {
-    margin: 0;
-    font-size: 16px;
-    line-height: 22px;
-    letter-spacing: -0.3px;
-}
+main .card-pricing h2,
 main .card-pricing p {
     margin: 0;
     font-size: 14px;
-    line-height: 20px;
-    letter-spacing: -0.3px;
 }
 main .card-pricing .card-pricing-price {
     margin: 8px 0;
     font-size: 20px;
     font-weight: 600;
-    letter-spacing: -0.3px;
 }
 main .card-pricing s {
     display: block;
