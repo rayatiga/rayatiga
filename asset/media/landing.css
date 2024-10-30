@@ -87,7 +87,7 @@ section {
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    background: center / cover no-repeat url(/landing/landing-hero.jpg) #ffffff;
+    background: center / cover no-repeat url(/asset/media/landing-hero.jpg) #ffffff;
 }
 #hero::before,
 #action::before {
@@ -160,13 +160,13 @@ section {
     background: #000000aa;
 }
 #feature .card:nth-child(1) {
-    background: center / cover no-repeat url(/landing/landing-domain.jpg) #ffffff;
+    background: center / cover no-repeat url(/asset/media/landing-domain.jpg) #ffffff;
 }
 #feature .card:nth-child(2) {
-    background: center / cover no-repeat url(/landing/landing-maintenance.jpg) #ffffff;
+    background: center / cover no-repeat url(/asset/media/landing-maintenance.jpg) #ffffff;
 }
 #feature .card:nth-child(3) {
-    background: center / cover no-repeat url(/landing/landing-consultation.jpg) #ffffff;
+    background: center / cover no-repeat url(/asset/media/landing-consultation.jpg) #ffffff;
 }
 #feature .card img {
     max-width: 40px;
@@ -270,7 +270,7 @@ section {
 }
 #action {
     min-height: 320px;
-    background: center / cover no-repeat url(/landing/landing-action.jpg) #ffffff;
+    background: center / cover no-repeat url(/asset/media/landing-action.jpg) #ffffff;
 }
 #action::before {
     background: #000000aa;
