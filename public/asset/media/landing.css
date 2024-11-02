@@ -53,6 +53,7 @@ img {
     z-index: 1;
 }
 .card p {
+    width: 100%;
     z-index: 1;
 }
 .button {
@@ -219,6 +220,7 @@ section {
 }
 #pricing .card small {
     font-size: 16px;
+    font-weight: 500;
 }
 #pricing .card s {
     color: #ff2222;
