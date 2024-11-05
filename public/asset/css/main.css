@@ -58,6 +58,9 @@ figure {
     display: flex;
     flex-direction: column;
 }
+figure:not(:last-child) {
+    margin-bottom: 16px;
+}
 h1,
 h2,
 h3 {
