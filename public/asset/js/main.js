@@ -1,9 +1,19 @@
 // Main
-// Main: Check local
+// Main: Check Local
 function checkLocal() {
     return window.location.href.includes("127.0.0.1") || window.location.href.includes("localhost") ? true : false;
 }
 checkLocal() && console.log("Message:\nLocal development.\nLog showed only in local mode.");
+// Main: HTML Extension
+function htmlExtLink() {
+    document.querySelectorAll('a:not([href^="http"])').forEach((anchor) => {
+        if (anchor.href !== `${window.location.protocol + "//" + window.location.host + "/"}` && !anchor.href.endsWith(".html")) {
+            anchor.href += ".html";
+        }
+    });
+    console.log("Message:\nhtmlExtLink() executed.\nLog showed only in local mode.");
+}
+checkLocal() && htmlExtLink();
 // Main: Kebab Case
 function toKebabCase(str) {
     return str
