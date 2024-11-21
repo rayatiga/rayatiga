@@ -62,17 +62,17 @@ img {
     transition: 0.25s;
     font-weight: 500;
     padding: 14px 32px;
-    background: #7777ff;
     border-radius: 12px;
     letter-spacing: 0.2px;
     text-decoration: none;
-    border: 1px solid #eeeeee;
+    border: 2px solid #eeeeee;
     text-transform: uppercase;
-    box-shadow: 0 6px 12px #7777ff77;
+    box-shadow: 0 0 16px #ffffff77;
+    background: linear-gradient(45deg, #5555ee, #ee5555, #ee55ff, #5555ee) #7777ff;
 }
 .button:hover {
-    border-color: #cccccc;
-    box-shadow: 0 6px 12px transparent;
+    filter: brightness(1.125);
+    box-shadow: 0 0 24px #ffffffaa;
 }
 section {
     padding: 32px;
@@ -102,7 +102,7 @@ section {
 }
 #hero h1 {
     font-size: 64px;
-    text-shadow: 1px 1px 0 #000000, 2px 2px 0 #ffffff;
+    font-weight: 800;
     z-index: 1;
 }
 #hero mark {
@@ -110,6 +110,9 @@ section {
     padding: 0;
     color: #7777ff;
     background-color: transparent;
+    background: -webkit-linear-gradient(45deg, #5555ee, #ee5555, #ee55ff, #5555ee) #ffffff;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     z-index: 1;
 }
 #hero mark.fade-out {
