@@ -21,8 +21,8 @@ a {
 }
 h1,
 #action h2 {
-    line-height: 1em;
     text-wrap: balance;
+    line-height: 1.25em;
 }
 img {
     max-width: 100%;
@@ -68,7 +68,7 @@ img {
     border: 2px solid #eeeeee;
     text-transform: uppercase;
     box-shadow: 0 0 16px #ffffff77;
-    background: linear-gradient(45deg, #5555ee, #ee5555, #ee55ff, #5555ee) #7777ff;
+    background: linear-gradient(45deg, #eeeeee, #ee5555, #ee55ff, #eeeeee) #7777ff;
 }
 .button:hover {
     filter: brightness(1.125);
@@ -110,7 +110,7 @@ section {
     padding: 0;
     color: #7777ff;
     background-color: transparent;
-    background: -webkit-linear-gradient(45deg, #5555ee, #ee5555, #ee55ff, #5555ee) #ffffff;
+    background: -webkit-linear-gradient(45deg, #eeeeee, #ee5555, #ee55ff, #eeeeee) #7777ff;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     z-index: 1;
@@ -120,6 +120,7 @@ section {
 }
 #hero p {
     font-size: 20px;
+    text-wrap: balance;
     z-index: 1;
 }
 #hero .button,
@@ -241,6 +242,9 @@ section {
     grid-template-columns: repeat(3, 1fr);
 }
 @media (max-width: 768px) {
+    #hero h1 {
+        font-size: 36px;
+    }
     #testimonial .grid {
         grid-template-columns: repeat(1, 1fr);
     }
