@@ -1,0 +1,99 @@
+main > section:nth-child(2) {
+    max-width: none;
+    background: var(--color-slight-dark);
+}
+main > section:nth-child(2) > div:nth-child(2) {
+    max-width: 1024px;
+    margin: 50px auto 0 auto;
+}
+main > section:nth-child(2) > div:nth-child(2) > form {
+    gap: 16px;
+    display: flex;
+    flex-direction: column;
+}
+main > section:nth-child(2) > div:nth-child(2) > form > div {
+    display: flex;
+    flex-direction: column;
+}
+main > section:nth-child(2) > div:nth-child(2) > form > div:not(:nth-child(1)) {
+    margin-top: 4px;
+}
+main > section:nth-child(2) > div:nth-child(2) > form > div > label {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--color-light);
+}
+main > section:nth-child(2) > div:nth-child(2) > form > div > span {
+    font-size: 16px;
+    margin-top: 2px;
+}
+main > section:nth-child(2) > div:nth-child(2) > form > div > input,
+main > section:nth-child(2) > div:nth-child(2) > form > div > select,
+main > section:nth-child(2) > div:nth-child(2) > form > div > textarea {
+    border: none;
+    padding: 12px;
+    font-size: 16px;
+    margin-top: 8px;
+    border-radius: 6px;
+    font-family: inherit;
+    color: var(--color-light);
+    background: var(--color-slight-dark);
+    transition: border 0.25s ease-in-out;
+    border: 1px solid var(--color-slight-light);
+}
+main > section:nth-child(2) > div:nth-child(2) > form > div > input:focus-visible,
+main > section:nth-child(2) > div:nth-child(2) > form > div > select:focus-visible,
+main > section:nth-child(2) > div:nth-child(2) > form > div > textarea:focus-visible {
+    outline: none;
+    border-color: var(--color-light);
+}
+main > section:nth-child(2) > div:nth-child(2) > form > div > textarea {
+    min-height: 240px;
+}
+main > section:nth-child(2) > div:nth-child(2) > form > div > div {
+    gap: 8px;
+    display: flex;
+    flex-wrap: wrap;
+}
+main > section:nth-child(2) > div:nth-child(2) > form > div > div > button {
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 8px;
+    padding: 12px 32px;
+    border-radius: 6px;
+    font-family: inherit;
+    align-self: flex-start;
+    color: var(--color-light);
+    background: var(--color-slight-dark);
+    border: 1px solid var(--color-slight-light);
+    transition: background 0.25s ease-in-out, color 0.25s ease-in-out, box-shadow 0.25s ease-in-out, border 0.25s ease-in-out;
+}
+main > section:nth-child(2) > div:nth-child(2) > form > div > div > button:nth-child(1):hover {
+    color: var(--color-dark);
+    background: var(--color-yellow);
+    border-color: var(--color-yellow);
+    box-shadow: 0 0 24px -12px var(--color-yellow);
+}
+main > section:nth-child(2) > div:nth-child(2) > form > div > div > button:nth-child(2) {
+    color: var(--color-red);
+    border-color: #e53c3877;
+}
+main > section:nth-child(2) > div:nth-child(2) > form > div > div > button:nth-child(2):hover {
+    color: var(--color-dark);
+    background: var(--color-red);
+    box-shadow: 0 0 24px -12px var(--color-red);
+}
+
+main > section:nth-child(2) > div:nth-child(2) > form > div:has(select#position),
+main > section:nth-child(2) > div:nth-child(2) > form > div:has(select#product) {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    main > section:nth-child(2) > div:nth-child(2) > form > div > label {
+        font-size: 16px;
+    }
+    main > section:nth-child(2) > div:nth-child(2) > form > div > span {
+        font-size: 14px;
+    }
+}
