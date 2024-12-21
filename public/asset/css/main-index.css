@@ -1,0 +1,416 @@
+main > section#index {
+    gap: 32px;
+    display: grid;
+    margin: 0 auto;
+    max-width: 1440px;
+    align-items: center;
+    grid-template-columns: 7fr 5fr;
+}
+main > section#index > div > h1 {
+    font-size: 52px;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+main > section#index > div > h1 > mark:nth-child(1) {
+    color: var(--color-yellow);
+}
+main > section#index > div > h1 > mark:nth-child(2) {
+    color: var(--color-blue);
+}
+main > section#index > div > p {
+    font-size: 20px;
+}
+main section#index > img {
+    aspect-ratio: auto;
+}
+main > section#index > div > div {
+    gap: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 24px;
+}
+main > section#index > div > div > a {
+    padding: 12px 32px;
+    border-radius: 6px;
+    border: 1px solid var(--color-dark-gray);
+    transition: background 0.25s ease-in-out, color 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
+}
+main > section#index > div > div > a:nth-child(1) {
+    border-color: #f8b10933;
+}
+main > section#index > div > div > a:nth-child(2) {
+    border-color: #3d7df033;
+}
+main > section#index > div > div > a:nth-child(1):hover {
+    color: var(--color-dark);
+    background: var(--color-yellow);
+    box-shadow: 0 0 24px -12px var(--color-yellow);
+}
+main > section#index > div > div > a:nth-child(2):hover {
+    color: var(--color-dark);
+    background: var(--color-blue);
+    box-shadow: 0 0 24px -12px var(--color-blue);
+}
+
+main > section#feature {
+    max-width: none;
+    padding: 100px 0;
+    background: var(--color-slight-dark);
+}
+main > section#feature > div:has(h2) {
+    padding: 0 32px;
+}
+main > section#feature > div:nth-child(2) {
+    gap: 12px;
+    display: grid;
+    padding: 0 32px;
+    max-width: 1440px;
+    margin: 50px auto 0 auto;
+    grid-template-columns: repeat(3, 1fr);
+}
+main > section#feature > div:nth-child(2) > div {
+    padding: 32px;
+    border-radius: 12px;
+    background: var(--color-dark);
+    border: 1px solid var(--color-dark-gray);
+    transition: box-shadow 0.25s ease-in-out, border 0.25s ease-in-out;
+}
+main > section#feature > div:nth-child(2) > div:nth-child(1) {
+    border-color: #f8b10933;
+}
+main > section#feature > div:nth-child(2) > div:nth-child(1):hover {
+    border-color: var(--color-yellow);
+    box-shadow: 0 0 24px -12px var(--color-yellow);
+}
+main > section#feature > div:nth-child(2) > div:nth-child(2) {
+    border-color: #3d7df033;
+}
+main > section#feature > div:nth-child(2) > div:nth-child(2):hover {
+    border-color: var(--color-blue);
+    box-shadow: 0 0 24px -12px var(--color-blue);
+}
+main > section#feature > div:nth-child(2) > div:nth-child(3) {
+    border-color: #3a9e4f33;
+}
+main > section#feature > div:nth-child(2) > div:nth-child(3):hover {
+    border-color: var(--color-green);
+    box-shadow: 0 0 24px -12px var(--color-green);
+}
+main > section#feature > div:nth-child(2) > div > img {
+    min-height: 32px;
+    margin-bottom: 18px;
+}
+main > section#feature > div:nth-child(2) > div > h3 {
+    margin-bottom: 12px;
+}
+
+main > section#package > div:nth-child(2) {
+    gap: 12px;
+    display: grid;
+    margin-top: 50px;
+    grid-template-columns: repeat(4, 1fr);
+}
+main > section#package > div:nth-child(2) > div {
+    display: flex;
+    padding: 32px;
+    border-radius: 12px;
+    flex-direction: column;
+    background: var(--color-dark);
+    justify-content: space-between;
+    border: 1px solid var(--color-dark-gray);
+    transition: box-shadow 0.25s ease-in-out, border 0.25s ease-in-out;
+}
+main > section#package > div:nth-child(2) > div:nth-child(1) {
+    border-color: #f8b10933;
+}
+main > section#package > div:nth-child(2) > div:nth-child(1):hover {
+    border-color: var(--color-yellow);
+    box-shadow: 0 0 24px -12px var(--color-yellow);
+}
+main > section#package > div:nth-child(2) > div:nth-child(2) {
+    border-color: #3d7df033;
+}
+main > section#package > div:nth-child(2) > div:nth-child(2):hover {
+    border-color: var(--color-blue);
+    box-shadow: 0 0 24px -12px var(--color-blue);
+}
+main > section#package > div:nth-child(2) > div:nth-child(3) {
+    border-color: #3a9e4f33;
+}
+main > section#package > div:nth-child(2) > div:nth-child(3):hover {
+    border-color: var(--color-green);
+    box-shadow: 0 0 24px -12px var(--color-green);
+}
+main > section#package > div:nth-child(2) > div:nth-child(4) {
+    border-color: #e53c3833;
+}
+main > section#package > div:nth-child(2) > div:nth-child(4):hover {
+    border-color: var(--color-red);
+    box-shadow: 0 0 24px -12px var(--color-red);
+}
+main > section#package > div:nth-child(2) > div > div > img {
+    min-height: 32px;
+    margin-bottom: 18px;
+}
+main > section#package > div:nth-child(2) > div > div > span {
+    color: var(--color-light);
+    display: block;
+    margin-bottom: 8px;
+}
+main > section#package > div:nth-child(2) > div > div > span > span {
+    color: #3d7df0;
+    font-weight: 600;
+}
+main > section#package > div:nth-child(2) > div > div > h3 {
+    margin-bottom: 12px;
+}
+main > section#package > div:nth-child(2) > div > div > p {
+    margin-bottom: 20px;
+}
+main > section#package > div:nth-child(2) > div > a {
+    color: var(--color-light-gray);
+    transition: color 0.25s ease-in-out;
+}
+main > section#package > div:nth-child(2) > div > a::after {
+    content: "→";
+    margin-left: 8px;
+    transition: margin 0.25s ease-in-out;
+}
+main > section#package > div:nth-child(2) > div > a:hover {
+    color: var(--color-light);
+}
+main > section#package > div:nth-child(2) > div > a:hover::after {
+    margin-left: 12px;
+}
+
+main > section#work {
+    max-width: none;
+    padding: 100px 0;
+    background: var(--color-slight-dark);
+}
+main > section#work > div:has(h2) {
+    padding: 0 32px;
+}
+main > section#work > div:nth-child(2) {
+    gap: 12px;
+    display: grid;
+    padding: 0 32px;
+    max-width: 1440px;
+    grid-auto-flow: column;
+    margin: 50px auto 0 auto;
+    grid-template-rows: repeat(3, 1fr);
+}
+main > section#work > div:nth-child(2) > div {
+    padding: 32px;
+    border-radius: 12px;
+    background: var(--color-dark);
+    border: 1px solid var(--color-dark-gray);
+    transition: box-shadow 0.25s ease-in-out, border 0.25s ease-in-out;
+}
+main > section#work > div:nth-child(2) > div:nth-child(1) {
+    border-color: #f8b10933;
+}
+main > section#work > div:nth-child(2) > div:nth-child(1):hover {
+    border-color: var(--color-yellow);
+    box-shadow: 0 0 24px -12px var(--color-yellow);
+}
+main > section#work > div:nth-child(2) > div:nth-child(2) {
+    border-color: #3d7df033;
+}
+main > section#work > div:nth-child(2) > div:nth-child(2):hover {
+    border-color: var(--color-blue);
+    box-shadow: 0 0 24px -12px var(--color-blue);
+}
+main > section#work > div:nth-child(2) > div:nth-child(3) {
+    border-color: #3a9e4f33;
+}
+main > section#work > div:nth-child(2) > div:nth-child(3):hover {
+    border-color: var(--color-green);
+    box-shadow: 0 0 24px -12px var(--color-green);
+}
+main > section#work > div:nth-child(2) > div:nth-child(4) {
+    border-color: #e53c3833;
+}
+main > section#work > div:nth-child(2) > div:nth-child(4):hover {
+    border-color: var(--color-red);
+    box-shadow: 0 0 24px -12px var(--color-red);
+}
+main > section#work > div:nth-child(2) > div:nth-child(5) {
+    border-color: #f8b10933;
+}
+main > section#work > div:nth-child(2) > div:nth-child(5):hover {
+    border-color: var(--color-yellow);
+    box-shadow: 0 0 24px -12px var(--color-yellow);
+}
+main > section#work > div:nth-child(2) > div:nth-child(6) {
+    border-color: #3d7df033;
+}
+main > section#work > div:nth-child(2) > div:nth-child(6):hover {
+    border-color: var(--color-blue);
+    box-shadow: 0 0 24px -12px var(--color-blue);
+}
+main > section#work > div:nth-child(2) > div > img {
+    min-height: 32px;
+}
+main > section#work > div:nth-child(2) > div {
+    gap: 32px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+main > section#work > div:nth-child(2) > div > div > h3 {
+    margin-bottom: 12px;
+}
+
+main > section#project > div:nth-child(2) {
+    gap: 32px;
+    display: grid;
+    margin-top: 50px;
+    grid-template-columns: repeat(2, 1fr);
+}
+main > section#project > div:nth-child(2) > div > h3 {
+    margin-bottom: 12px;
+}
+main > section#project > div:nth-child(2) > div > p {
+    min-height: 96px;
+}
+main > section#project > div:nth-child(2) > div > a {
+    margin-top: 12px;
+    color: var(--color-light-gray);
+    transition: color 0.25s ease-in-out;
+}
+main > section#project > div:nth-child(2) > div > a::after {
+    content: "→";
+    margin-left: 8px;
+    transition: margin 0.25s ease-in-out;
+}
+main > section#project > div:nth-child(2) > div > a:hover {
+    color: var(--color-light);
+}
+main > section#project > div:nth-child(2) > div > a:hover::after {
+    margin-left: 12px;
+}
+main > section#project > div:nth-child(2) > div > div {
+    margin-top: 24px;
+}
+main > section#project > div:nth-child(2) > div > div > span {
+    cursor: pointer;
+    padding: 8px 16px;
+    user-select: none;
+    border-radius: 8px;
+    display: inline-block;
+    border: 1px solid var(--color-dark-gray);
+    transition: color 0.25s ease-in-out, border 0.25s ease-in-out;
+}
+main > section#project > div:nth-child(2) > img {
+    width: 100%;
+    object-fit: cover;
+    max-height: 378px;
+    border-radius: 12px;
+    object-position: top;
+    aspect-ratio: 16 / 9;
+    border: 1px solid var(--color-light);
+    box-shadow: 0 0 24px -18px var(--color-slight-light);
+}
+main > section#project > div:nth-child(2) > div > div > span:hover {
+    color: var(--color-light);
+    border-color: var(--color-light);
+}
+
+main > section#testimonial {
+    display: flex;
+    max-width: none;
+    padding: 100px 0;
+    align-items: center;
+    flex-direction: column;
+    background: var(--color-slight-dark);
+}
+main > section#testimonial > div:has(h2) {
+    padding: 0 32px;
+}
+main > section#testimonial > div:nth-child(2) {
+    gap: 24px;
+    display: grid;
+    padding: 0 32px;
+    max-width: 1440px;
+    margin: 50px auto 0 auto;
+    grid-template-columns: repeat(3, 1fr);
+}
+main > section#testimonial > div:nth-child(2) > div > div {
+    gap: 4px;
+    display: flex;
+    margin-bottom: 12px;
+}
+main > section#testimonial > div:nth-child(2) > div > blockquote {
+    color: var(--color-light);
+    font-style: italic;
+}
+main > section#testimonial > a {
+    margin-top: 50px;
+    position: relative;
+    border-radius: 6px;
+    border: 1px solid #3a9e4f33;
+    padding: 12px 48px 12px 32px;
+    transition: background 0.25s ease-in-out, color 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
+}
+main > section#testimonial > a::after {
+    top: 50%;
+    content: "→";
+    margin-left: 8px;
+    position: absolute;
+    transform: translateY(-50%);
+    transition: margin 0.2s ease-in-out;
+}
+main > section#testimonial > a:hover {
+    color: var(--color-dark);
+    background: var(--color-green);
+    box-shadow: 0 0 24px -12px var(--color-green);
+}
+main > section#testimonial > a:hover::after {
+    margin-left: 12px;
+}
+
+@media (max-width: 1024px) {
+    main > section#package > div:nth-child(2) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    main > section#project > div:nth-child(2) {
+        grid-template-columns: 1fr;
+    }
+    main > section#project > div:nth-child(2) > div > p {
+        min-height: auto;
+    }
+}
+@media (max-width: 768px) {
+    main > section#index {
+        grid-template-columns: 1fr;
+    }
+    main > section#index > div > h1 {
+        font-size: 40px;
+    }
+    main > section#index > img {
+        display: none;
+    }
+    main > section#feature > div:nth-child(2) {
+        grid-template-columns: 1fr;
+    }
+    main > section#package > div:nth-child(2) {
+        grid-template-columns: 1fr;
+    }
+    main > section#work > div:nth-child(2) {
+        grid-auto-flow: row;
+        grid-template-columns: 1fr;
+    }
+    main > section#project > div:nth-child(2) > span {
+        font-size: 16px;
+    }
+    main > section#testimonial > div:nth-child(2) {
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width: 480px) {
+    main > section#work > div:nth-child(2) > div {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
