@@ -1,0 +1,23 @@
+main > section:nth-child(2) {
+    max-width: none;
+    background: var(--color-slight-dark);
+}
+main > section:nth-child(2) > div:nth-child(2) {
+    max-width: 1024px;
+    margin: 50px auto 0 auto;
+}
+main > section:nth-child(2) > div:nth-child(2) > h3 {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+main > section:nth-child(2) > div:nth-child(2) > h3:not(:nth-child(1)) {
+    margin-top: 24px;
+}
+main > section:nth-child(2) > div:nth-child(2) > p {
+    text-align: justify;
+}
+main > section:nth-child(2) > div:nth-child(2) > ul {
+    padding: 8px 0 8px 24px;
+    text-align: justify;
+}
