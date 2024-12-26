@@ -1,0 +1,113 @@
+main > section:nth-child(n + 2):not(#action) {
+    max-width: none;
+    background: var(--color-slight-dark);
+}
+main > section:nth-child(n + 2):not(#action):nth-child(odd) {
+    max-width: none;
+    background: var(--color-dark);
+}
+main > section:nth-child(n + 2):not(#action) > div:nth-child(2) {
+    gap: 12px;
+    display: grid;
+    max-width: max-content;
+    margin: 50px auto 0 auto;
+    grid-template-columns: repeat(3, 1fr);
+}
+main > section:nth-child(n + 2):not(#action) > div:nth-child(2) > div {
+    display: flex;
+    padding: 32px;
+    max-width: 360px;
+    border-radius: 12px;
+    flex-direction: column;
+    color: var(--color-light);
+    border: 1px solid #f8b10933;
+    background: var(--color-dark);
+    justify-content: space-between;
+    transition: border 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
+}
+main > section:nth-child(n + 2):not(#action) > div:nth-child(2) > div:hover {
+    border-color: var(--color-yellow);
+    box-shadow: 0 0 24px -18px var(--color-yellow);
+}
+main > section:nth-child(n + 2):not(#action) > div:nth-child(2) > div:hover > a {
+    color: var(--color-yellow);
+}
+main > section:nth-child(n + 2):not(#action) > div:nth-child(2) > div > div > h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+main > section:nth-child(n + 2):not(#action) > div:nth-child(2) > div > div > ul {
+    list-style: none;
+}
+main > section:nth-child(n + 2):not(#action) > div:nth-child(2) > div > div > ul > li > hr {
+    margin: 12px 0;
+}
+main > section:nth-child(n + 2):not(#action) > div:nth-child(2) > div > a {
+    margin-top: 24px;
+    text-align: center;
+    position: relative;
+    border-radius: 8px;
+    grid-column: span 2;
+    justify-self: center;
+    max-width: max-content;
+    transition: color 0.25s ease-in-out, background 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
+}
+main > section:nth-child(n + 2):not(#action) > div:nth-child(2) > div > a:hover {
+    color: var(--color-yellow);
+}
+main > section:nth-child(n + 2):not(#action) > div:nth-child(2) > div > a::after {
+    content: "→";
+    margin-left: 8px;
+    position: absolute;
+    transition: margin 0.25s ease-in-out;
+}
+main > section:nth-child(n + 2):not(#action) > div:nth-child(2) > div > a:hover::after {
+    content: "→";
+    margin-left: 12px;
+}
+main > section:nth-child(n + 2):not(#action) > div:nth-child(2) > div > div > div {
+    display: flex;
+    margin: 12px 0;
+    flex-direction: column;
+}
+main > section:nth-child(n + 2):not(#action) > div:nth-child(2) > div > div > div > s {
+    color: var(--color-red);
+}
+main > section:nth-child(n + 2):not(#action) > div:nth-child(2) > div > div > div > s::before {
+    content: "$";
+    font-size: 12px;
+}
+main > section:nth-child(n + 2):not(#action) > div:nth-child(2) > div > div > div > span {
+    font-size: 40px;
+    margin-top: -8px;
+    font-weight: 700;
+    color: var(--color-yellow);
+}
+main > section:nth-child(n + 2):not(#action) > div:nth-child(2) > div > div > div > span::before {
+    content: "$";
+    font-size: 28px;
+}
+main > section:nth-child(n + 2):not(#action) > div:nth-child(2) > div > div > div > span > small {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+main > section#custom > div > a {
+    margin-top: 32px;
+    position: relative;
+    border-radius: 6px;
+    padding: 12px 32px;
+    border: 1px solid #f8b10933;
+    transition: background 0.25s ease-in-out, color 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
+}
+main > section#custom > div > a:hover {
+    color: var(--color-dark);
+    background: var(--color-yellow);
+    box-shadow: 0 0 24px -12px var(--color-yellow);
+}
+
+@media (max-width: 1024px) {
+    main > section:nth-child(n + 2):not(#action) > div:nth-child(2) {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
