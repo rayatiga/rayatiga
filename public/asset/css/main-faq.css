@@ -1,0 +1,35 @@
+main > section:nth-child(2) {
+    max-width: none;
+    background: var(--color-slight-dark);
+}
+main > section:nth-child(2) > div:nth-child(2) {
+    max-width: 1024px;
+    margin: 50px auto 0 auto;
+}
+main > section:nth-child(2) > div:nth-child(2) > details {
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    border: 1px solid #f8b10933;
+    transition: border 0.25s ease-in-out;
+}
+main > section:nth-child(2) > div:nth-child(2) > details[open] {
+    border-color: var(--color-yellow);
+}
+main > section:nth-child(2) > div:nth-child(2) > details > summary {
+    cursor: pointer;
+    font-size: 16px;
+    transition: margin 0.25s ease-in-out;
+}
+main > section:nth-child(2) > div:nth-child(2) > details[open] > summary {
+    color: var(--color-light);
+}
+main > section:nth-child(2) > div:nth-child(2) > details > p {
+    margin-top: 8px;
+}
+main > section:nth-child(2) > div:nth-child(2) > p {
+    text-align: justify;
+}
+main > section:nth-child(2) > div:nth-child(2) > ul {
+    padding: 8px 0 8px 24px;
+}
