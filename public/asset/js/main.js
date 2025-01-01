@@ -1,8 +1,23 @@
-function openModal() {
-    const modal = document.querySelector(".modal");
-    if (!modal.classList.contains("show")) {
-        modal.classList.add("show");
-    } else {
-        modal.classList.remove("show");
+const toggleButton = document.querySelector("header > nav > div");
+const menu = document.querySelector("header > nav > ul");
+toggleButton.addEventListener("click", (event) => {
+    menu.classList.toggle("show");
+    event.stopPropagation();
+});
+document.addEventListener("click", (event) => {
+    if (!menu.contains(event.target)) {
+        menu.classList.remove("show");
     }
-}
+});
+
+const anchors = document.querySelectorAll("nav > ul > li > a");
+const currentPage = window.location.pathname.replace(/\.html$/, "").toLowerCase();
+anchors.forEach((anchor) => {
+    const anchorHref = anchor
+        .getAttribute("href")
+        .replace(/\.html$/, "")
+        .toLowerCase();
+    if (anchorHref === currentPage || (currentPage === "/" && anchorHref === "/")) {
+        anchor.setAttribute("aria-current", "page");
+    }
+});
