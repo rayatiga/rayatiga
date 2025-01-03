@@ -111,6 +111,7 @@ header > nav > div {
     cursor: pointer;
     position: relative;
     flex-direction: column;
+    width: 24px;
 }
 header > nav > div::before {
     top: -16px;
@@ -126,6 +127,13 @@ header > nav > div > span {
     height: 2px;
     border-radius: 999px;
     background: var(--color-light);
+    transition: transform 0.25s ease-in-out;
+}
+header > nav:has(ul.show) > div > span:nth-child(1) {
+    transform: translateX(10%);
+}
+header > nav:has(ul.show) > div > span:nth-child(2) {
+    transform: translateX(-10%);
 }
 
 main > section {
@@ -290,7 +298,8 @@ footer > div:nth-child(2) > p {
         grid-template-columns: 1fr;
     }
     main > section:nth-child(1):not(#index, #blog-post) > div:nth-child(1) > h1 {
-        font-size: 40px;
+        line-height: 1;
+        font-size: 44px;
     }
     main > section:nth-child(1):not(#index, #blog-post) > img {
         display: none;
