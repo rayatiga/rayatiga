@@ -196,9 +196,8 @@ main > section#work > div:nth-child(2) {
     display: grid;
     padding: 0 32px;
     max-width: 1440px;
-    grid-auto-flow: column;
     margin: 50px auto 0 auto;
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
 }
 main > section#work > div:nth-child(2) > div {
     padding: 32px;
@@ -398,7 +397,6 @@ main > section#testimonial > a:hover::after {
         grid-template-columns: 1fr;
     }
     main > section#work > div:nth-child(2) {
-        grid-auto-flow: row;
         grid-template-columns: 1fr;
     }
     main > section#project > div:nth-child(2) > span {
