@@ -6,6 +6,7 @@
         <meta name="title" content="Contact" />
         <meta name="description" content="We're here to help! Reach out to us for inquiries, support, or feedback, and we'll get back to you as soon as possible." />
         <meta property="og:image" content="https://rayatiga.com/asset/media/og.jpg" />
+        <meta name="theme-color" content="#1f1f1f" />
         <title>Contact | Rayatiga</title>
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
         <link rel="stylesheet" href="/asset/css/main.css" />
@@ -35,6 +36,9 @@
             })(window, document, "script", "dataLayer", "GTM-PBN37CL2");
         </script>
         <!-- External: End: Google Tag Manager -->
+        <!-- External: Start: reCAPTCHA -->
+        <script src="https://www.google.com/recaptcha/enterprise.js?render=6LeW5qwqAAAAAI_Ocn-rxYvmTdiJz6bTjhHJhUFw"></script>
+        <!-- External: End: reCAPTCHA -->
     </head>
     <body>
         <!-- External: Start: Google Tag Manager -->
@@ -74,7 +78,7 @@
                     <p>Fill out the form below, and our team will respond promptly to address your questions or concerns.</p>
                 </div>
                 <div>
-                    <form action="" method="post" id="contact-form">
+                    <form action="https://formspree.io/f/xknavynp" method="post" id="contact-form">
                         <div>
                             <label for="name">Name</label>
                             <span>Enter your full name to help us address you properly.</span>
@@ -131,9 +135,9 @@
                             <textarea name="message" id="message" required></textarea>
                         </div>
                         <div>
-                            <span for="submit">Click submit to send your message. We'll acknowledge your submission and respond as soon as possible.</span>
+                            <span>Click submit to send your message. We'll acknowledge your submission and respond as soon as possible.</span>
                             <div>
-                                <button type="submit">Submit</button>
+                                <button type="submit" class="g-recaptcha" data-sitekey="6LeW5qwqAAAAAI_Ocn-rxYvmTdiJz6bTjhHJhUFw" data-callback="onSubmit" data-action="submit">Submit</button>
                                 <button type="button" id="contact-reset">Reset</button>
                             </div>
                         </div>
@@ -177,7 +181,7 @@
                     </ul>
                 </div>
                 <div>
-                    <h2>Rayatiga International</h2>
+                    <h2>Rayatiga Data International</h2>
                     <ul>
                         <li><a href="https://maps.app.goo.gl/NRxFxFmpYsVHPvWPA" target="_blank">Rayatiga, 24 Menur Ave., Pahlawan St., Botton, Central Magelang, Magelang City, Central Java, 56117, ID.</a></li>
                         <li><a href="https://wa.me/6282122220362" target="_blank">+62 821 2222 0362</a></li>

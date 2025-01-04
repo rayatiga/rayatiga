@@ -71,3 +71,7 @@ subjectSelect.addEventListener("change", function () {
         careerSelect.removeAttribute("required");
     }
 });
+
+function onSubmit(token) {
+    document.getElementById("contact-form").submit();
+}

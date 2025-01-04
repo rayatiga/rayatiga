@@ -68,17 +68,20 @@ main > section:nth-child(2) > div:nth-child(2) > form > div > div > button {
     border: 1px solid var(--color-slight-light);
     transition: background 0.25s ease-in-out, color 0.25s ease-in-out, box-shadow 0.25s ease-in-out, border 0.25s ease-in-out;
 }
-main > section:nth-child(2) > div:nth-child(2) > form > div > div > button:nth-child(1):hover {
+main > section:nth-child(2) > div:nth-child(2) > form > div > div > div {
+    display: none;
+}
+main > section:nth-child(2) > div:nth-child(2) > form > div > div > button[type="submit"]:hover {
     color: var(--color-dark);
     background: var(--color-yellow);
     border-color: var(--color-yellow);
     box-shadow: 0 0 24px -12px var(--color-yellow);
 }
-main > section:nth-child(2) > div:nth-child(2) > form > div > div > button:nth-child(2) {
+main > section:nth-child(2) > div:nth-child(2) > form > div > div > button#contact-reset {
     color: var(--color-red);
     border-color: #e53c3877;
 }
-main > section:nth-child(2) > div:nth-child(2) > form > div > div > button:nth-child(2):hover {
+main > section:nth-child(2) > div:nth-child(2) > form > div > div > button#contact-reset:hover {
     color: var(--color-dark);
     background: var(--color-red);
     box-shadow: 0 0 24px -12px var(--color-red);
