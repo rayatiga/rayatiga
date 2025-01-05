@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    <!-- Main URL -->
     <url>
         <loc>https://rayatiga.com</loc>
         <lastmod>2025-01-02</lastmod>
@@ -35,11 +34,6 @@
     </url>
     <url>
         <loc>https://rayatiga.com/term-condition</loc>
-        <lastmod>2025-01-02</lastmod>
-    </url>
-    <!-- Blog URL -->
-    <url>
-        <loc>https://rayatiga.com/blog/welcome</loc>
         <lastmod>2025-01-02</lastmod>
     </url>
 </urlset>
