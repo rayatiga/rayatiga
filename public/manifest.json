@@ -1,0 +1,20 @@
+{
+    "name": "Rayatiga",
+    "short_name": "Rayatiga",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#fafafa",
+    "theme_color": "#1f1f1f",
+    "icons": [
+        {
+            "src": "/asset/media/icon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/asset/media/icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
