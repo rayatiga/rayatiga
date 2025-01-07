@@ -20,14 +20,14 @@ main > section:nth-child(n + 2):not(#action) > div:nth-child(2) > div {
     border-radius: 12px;
     flex-direction: column;
     color: var(--color-light);
-    border: 1px solid #f8b10933;
+    border: 1px solid var(--color-yellow-fade);
     background: var(--color-dark);
     justify-content: space-between;
     transition: border 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
 }
 main > section:nth-child(n + 2):not(#action) > div:nth-child(2) > div:hover {
     border-color: var(--color-yellow);
-    box-shadow: 0 0 24px -18px var(--color-yellow);
+    box-shadow: 0 0 24px -12px var(--color-yellow);
 }
 main > section:nth-child(n + 2):not(#action) > div:nth-child(2) > div:hover > a {
     color: var(--color-yellow);
@@ -97,7 +97,7 @@ main > section#custom > div > a {
     position: relative;
     border-radius: 6px;
     padding: 12px 32px;
-    border: 1px solid #f8b10933;
+    border: 1px solid var(--color-yellow-fade);
     transition: background 0.25s ease-in-out, color 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
 }
 main > section#custom > div > a:hover {

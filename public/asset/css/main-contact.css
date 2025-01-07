@@ -79,7 +79,7 @@ main > section:nth-child(2) > div:nth-child(2) > form > div > div > button[type=
 }
 main > section:nth-child(2) > div:nth-child(2) > form > div > div > button#contact-reset {
     color: var(--color-red);
-    border-color: #e53c3877;
+    border-color: var(--color-red-shade);
 }
 main > section:nth-child(2) > div:nth-child(2) > form > div > div > button#contact-reset:hover {
     color: var(--color-dark);
@@ -90,6 +90,10 @@ main > section:nth-child(2) > div:nth-child(2) > form > div > div > button#conta
 main > section:nth-child(2) > div:nth-child(2) > form > div:has(select#position),
 main > section:nth-child(2) > div:nth-child(2) > form > div:has(select#product) {
     display: none;
+}
+
+.grecaptcha-badge {
+    display: none !important;
 }
 
 @media (max-width: 768px) {

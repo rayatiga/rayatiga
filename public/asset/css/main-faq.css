@@ -10,7 +10,7 @@ main > section:nth-child(2) > div:nth-child(2) > details {
     padding: 16px;
     border-radius: 8px;
     margin-bottom: 12px;
-    border: 1px solid #f8b10933;
+    border: 1px solid var(--color-yellow-fade);
     transition: border 0.25s ease-in-out;
 }
 main > section:nth-child(2) > div:nth-child(2) > details[open] {

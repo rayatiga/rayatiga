@@ -23,18 +23,18 @@ main > section:nth-child(2) > div:nth-child(2) > div {
     transition: border 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
 }
 main > section:nth-child(2) > div:nth-child(2) > div:nth-child(1) {
-    border-color: #f8b10933;
+    border-color: var(--color-yellow-fade);
 }
 main > section:nth-child(2) > div:nth-child(2) > div:nth-child(1):hover {
     border-color: var(--color-yellow);
-    box-shadow: 0 0 24px -18px var(--color-yellow);
+    box-shadow: 0 0 24px -12px var(--color-yellow);
 }
 main > section:nth-child(2) > div:nth-child(2) > div:nth-child(2) {
-    border-color: #3d7df033;
+    border-color: var(--color-blue-fade);
 }
 main > section:nth-child(2) > div:nth-child(2) > div:nth-child(2):hover {
     border-color: var(--color-blue);
-    box-shadow: 0 0 24px -18px var(--color-blue);
+    box-shadow: 0 0 24px -12px var(--color-blue);
 }
 main > section:nth-child(2) > div:nth-child(2) > div > img {
     min-height: 32px;
@@ -58,13 +58,13 @@ main > section:nth-child(2) > div:nth-child(2) > a {
     grid-column: span 2;
     justify-self: center;
     max-width: max-content;
-    border: 1px solid #3a9e4f33;
+    border: 1px solid var(--color-green-fade);
     transition: color 0.25s ease-in-out, background 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
 }
 main > section:nth-child(2) > div:nth-child(2) > a:hover {
     color: var(--color-dark);
     background: var(--color-green);
-    box-shadow: 0 0 24px #3a9e4f55;
+    box-shadow: 0 0 24px var(--color-green-shade);
 }
 
 @media (max-width: 768px) {

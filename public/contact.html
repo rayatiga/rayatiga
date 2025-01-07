@@ -79,6 +79,8 @@
                 </div>
                 <div>
                     <form action="https://formspree.io/f/xknavynp" method="post" id="contact-form">
+                        <input name="subject" type="hidden" value="New Formspree submission from {{ name }}" />
+                        <input type="text" name="_gotcha" style="display: none" />
                         <div>
                             <label for="name">Name</label>
                             <span>Enter your full name to help us address you properly.</span>
@@ -90,9 +92,9 @@
                             <input type="email" name="email" id="email" required />
                         </div>
                         <div>
-                            <label for="subject">Subject</label>
+                            <label for="inquiry">Inquiry</label>
                             <span>Choose the purpose of your inquiry:</span>
-                            <select name="subject" id="subject" required>
+                            <select name="inquiry" id="inquiry" required>
                                 <option value="" disabled selected>-- Please select --</option>
                                 <option value="career">Career</option>
                                 <option value="service">Service</option>
@@ -193,6 +195,7 @@
                 <p>Copyright &copy; 2020 - 2025 Rayatiga. All Rights Reserved.</p>
             </div>
         </footer>
+        <a href="https://wa.me/6282122220362/?text=Hello,+Rayatiga." target="_blank" class="sticky-whatsapp"><div class="sticky-wahtsapp-data-image"></div></a>
         <script src="/asset/js/main.js"></script>
         <script src="/asset/js/main-contact.js"></script>
     </body>

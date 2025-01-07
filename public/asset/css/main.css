@@ -23,6 +23,16 @@
     --color-light-gray: #999999;
     --color-slight-dark: #252525;
     --color-slight-light: #777777;
+
+    --color-red-fade: #e53c3833;
+    --color-blue-fade: #3d7df033;
+    --color-green-fade: #3a9e4f33;
+    --color-yellow-fade: #f8b10933;
+
+    --color-red-shade: #e53c3855;
+    --color-blue-shade: #3d7df055;
+    --color-green-shade: #3a9e4f55;
+    --color-yellow-shade: #f8b10955;
 }
 
 body {
@@ -197,7 +207,7 @@ main > section#action > div > a {
     position: relative;
     padding: 12px 32px;
     border-radius: 6px;
-    border: 1px solid #3d7df033;
+    border: 1px solid var(--color-blue-fade);
     transition: background 0.25s ease-in-out, color 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
 }
 main > section#action > div > a:hover {
@@ -246,13 +256,52 @@ footer > div:nth-child(1) > div > ul > li > a:hover {
 }
 footer > div:nth-child(2) {
     padding: 24px 0;
-    background: #1f1f1f;
+    background: var(--color-dark);
 }
 footer > div:nth-child(2) > p {
     margin: 0 auto;
     font-size: 14px;
     padding: 0 32px;
     max-width: 1440px;
+}
+
+.sticky-whatsapp {
+    opacity: 0;
+    right: 24px;
+    bottom: 24px;
+    position: fixed;
+    z-index: 2147483647;
+    animation: fadeInUp 1s 1s forwards;
+    transition: scale 0.25s ease-in-out
+}
+.sticky-whatsapp:hover {
+    scale: 1.075;
+}
+.sticky-wahtsapp-data-image {
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+    border-radius: 999px;
+    box-sizing: border-box;
+    border: 1px solid var(--color-slight-light);
+    box-shadow: 0 8px 16px 0 var(--color-slight-dark);
+    background: var(--color-slight-dark) url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32"><path fill="%23fafafa" d="M3.516 3.516c4.686-4.686 12.284-4.686 16.97 0 4.686 4.686 4.686 12.283 0 16.97a12.004 12.004 0 01-13.754 2.299l-5.814.735a.392.392 0 01-.438-.44l.748-5.788A12.002 12.002 0 013.517 3.517zm3.61 17.043l.3.158a9.846 9.846 0 0011.534-1.758c3.843-3.843 3.843-10.074 0-13.918-3.843-3.843-10.075-3.843-13.918 0a9.846 9.846 0 00-1.747 11.554l.16.303-.51 3.942a.196.196 0 00.219.22l3.961-.501zm6.534-7.003l-.933 1.164a9.843 9.843 0 01-3.497-3.495l1.166-.933a.792.792 0 00.23-.94L9.561 6.96a.793.793 0 00-.924-.445 1291.6 1291.6 0 00-2.023.524.797.797 0 00-.588.88 11.754 11.754 0 0010.005 10.005.797.797 0 00.88-.587l.525-2.023a.793.793 0 00-.445-.923L14.6 13.327a.792.792 0 00-.94.23z"/></svg>') no-repeat center;
+}
+@media (max-width: 768px) {
+    .sticky-whatsapp {
+        right: 16px;
+        bottom: 16px;
+    }
+}
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(32px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
 }
 
 @media (max-width: 1024px) {
@@ -266,10 +315,10 @@ footer > div:nth-child(2) > p {
         position: fixed;
         min-width: 240px;
         overflow-x: auto;
-        background: #1f1f1f;
         flex-direction: column;
         height: calc(100dvh - 85px);
         transform: translateX(105%);
+        background: var(--color-dark);
         transition: transform 0.25s ease-in-out;
         border-left: 1px solid var(--color-dark-gray);
         flex-wrap: nowrap;
