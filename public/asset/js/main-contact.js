@@ -1,6 +1,6 @@
 const params = new URLSearchParams(window.location.search);
 const form = document.querySelector("#contact-form");
-const subjectSelect = document.querySelector("#subject");
+const inquirySelect = document.querySelector("#inquiry");
 const careerSelect = document.querySelector("#position");
 const serviceSelect = document.querySelector("#product");
 const careerDiv = document.querySelector("form > div:has(select#position)");
@@ -23,7 +23,7 @@ window.addEventListener("load", function () {
     resetForm();
     if (params.has("c")) {
         const careerValue = params.get("c");
-        subjectSelect.value = "career";
+        inquirySelect.value = "career";
         if (careerValue) {
             careerSelect.value = careerValue;
             serviceSelect.value = "";
@@ -33,7 +33,7 @@ window.addEventListener("load", function () {
         careerDiv.style.display = "flex";
     } else if (params.has("s")) {
         const serviceValue = params.get("s");
-        subjectSelect.value = "service";
+        inquirySelect.value = "service";
         if (serviceValue) {
             careerSelect.value = "";
             serviceSelect.value = serviceValue;
@@ -45,8 +45,8 @@ window.addEventListener("load", function () {
     }
 });
 
-subjectSelect.addEventListener("change", function () {
-    const selectedValue = subjectSelect.value;
+inquirySelect.addEventListener("change", function () {
+    const selectedValue = inquirySelect.value;
     if (selectedValue === "career") {
         serviceSelect.value = "";
         messageTextarea.value = "";
@@ -75,3 +75,9 @@ subjectSelect.addEventListener("change", function () {
 function onSubmit(token) {
     document.getElementById("contact-form").submit();
 }
+
+window.onbeforeunload = () => {
+    for (const form of document.getElementsByTagName("form")) {
+        form.reset();
+    }
+};
