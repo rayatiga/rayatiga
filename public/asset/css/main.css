@@ -15,13 +15,13 @@
 :root {
     --color-red: #e53c38;
     --color-blue: #3d7df0;
-    --color-dark: #1f1f1f;
+    --color-dark: #151515;
     --color-green: #3a9e4f;
     --color-light: #fafafa;
     --color-yellow: #f8b109;
     --color-dark-gray: #333333;
     --color-light-gray: #999999;
-    --color-slight-dark: #252525;
+    --color-slight-dark: #1b1b1b;
     --color-slight-light: #777777;
 
     --color-red-fade: #e53c3833;
@@ -76,7 +76,7 @@ header {
     z-index: 100;
     position: sticky;
     overflow-x: clip;
-    background: #1f1f1f;
+    background: var(--color-dark);
     border-bottom: 1px solid var(--color-dark-gray);
 }
 header > nav {
