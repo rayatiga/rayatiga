@@ -81,3 +81,10 @@ window.onbeforeunload = () => {
         form.reset();
     }
 };
+
+function onClick(e) {
+    e.preventDefault();
+    grecaptcha.enterprise.ready(async () => {
+        const token = await grecaptcha.enterprise.execute("6LeW5qwqAAAAAI_Ocn-rxYvmTdiJz6bTjhHJhUFw", { action: "LOGIN" });
+    });
+}
