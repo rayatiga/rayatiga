@@ -1,12 +1,3 @@
-if ("serviceWorker" in navigator) {
-    const isLocalhost = ["localhost", "127.0.0.1"].includes(window.location.hostname);
-    if (!isLocalhost) {
-        navigator.serviceWorker.register("/sw.js").catch((error) => {});
-    } else {
-        console.log("Service Worker not registered in local development.");
-    }
-}
-
 const toggleButton = document.querySelector("header > nav > div");
 const menu = document.querySelector("header > nav > ul");
 toggleButton.addEventListener("click", (event) => {
