@@ -21,3 +21,15 @@ anchors.forEach((anchor) => {
         anchor.setAttribute("aria-current", "page");
     }
 });
+
+if (window.location.href.includes("127.0.0.1")) {
+    document.querySelectorAll('a[href]:not([target="_blank"])').forEach((anchor) => {
+        let url = anchor.getAttribute("href");
+        if (url.startsWith("http")) return;
+        let [path, rest] = url.split(/([?#].*)/);
+        if (path !== "/" && !path.endsWith(".html")) {
+            path += ".html";
+        }
+        anchor.setAttribute("href", path + (rest || ""));
+    });
+}
