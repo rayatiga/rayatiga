@@ -1,6 +1,0 @@
-User-agent: *
-Allow: /
-Disallow: /blog/*
-Allow: /blog$
-
-Sitemap: https://rayatiga.com/sitemap.xml
