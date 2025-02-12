@@ -87,7 +87,6 @@
             fetch("https://page-counter.sultankautsar.workers.dev")
                 .then((res) => res.json())
                 .then((data) => {
-                    console.log(data);
                     document.getElementById("counter").textContent = data.views;
                 })
                 .catch(() => {});
