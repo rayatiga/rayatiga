@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Rayatiga</title>
+        <meta name="description" content="Rayatiga was a technology-focused SME specializing in digital solutions and innovation, operating until March 31, 2025.">
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+        <style>
+            @font-face {
+                font-display: swap;
+                font-family: "JetBrains Mono";
+                src: url(/jetbrains-mono.ttf);
+            }
+            *,
+            *::after,
+            *::before {
+                margin: 0;
+                padding: 0;
+            }
+            body {
+                color: #555555;
+                font-size: 14px;
+                line-height: 1.5;
+                background: #fafafa;
+                letter-spacing: -0.4px;
+                font-family: "JetBrains Mono", monospace;
+            }
+            main {
+                margin: 0 auto;
+                max-width: 640px;
+                padding: 48px 24px;
+            }
+            h1 {
+                color: #2f2f2f;
+                font-size: 20px;
+                margin-bottom: 24px;
+            }
+            p {
+                text-align: left;
+            }
+            span:not(.sign) {
+                display: block;
+                margin-bottom: 8px;
+            }
+            a {
+                color: #2f2f2f;
+                display: inline-block;
+            }
+            strong {
+                color: #2f2f2f;
+                font-weight: bold;
+            }
+            .greeting {
+                margin-top: 24px;
+            }
+            .sign {
+                color: #2f2f2f;
+                font-weight: bold;
+            }
+            .counter {
+                color: #aaaaaa;
+                font-size: 12px;
+                margin-top: 48px;
+            }
+            .counter span {
+                display: inline;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <h1>Terima Kasih</h1>
+            <p>
+                <span>Kepada pelanggan, mitra, dan semua yang telah mendukung Rayatiga,</span>
+                <span>Dengan berat hati, kami mengumumkan bahwa <strong>Rayatiga akan menghentikan operasionalnya mulai 31 Maret 2025</strong>.</span>
+                <span>Keputusan ini diambil setelah berbagai pertimbangan strategis. Terima kasih atas dukungan, kepercayaan, dan kerja sama yang telah Anda berikan.</span>
+                <span>Kami bangga pernah menjadi bagian dari perjalanan teknologi bersama Anda. Jika ada pertanyaan, silakan hubungi WhatsApp <a href="https://wa.me/6282122220362">+(62) 821 2222 0362</a>.</span>
+                <span class="greeting">Semoga kami dapat kembali melayani Anda di masa depan. Sampai jumpa.</span>
+                <span class="sign">Rayatiga</span>
+            </p>
+            <div class="counter">
+                <span><span>Dilihat:</span> <span id="counter">...</span> <span>kali</span></span>
+            </div>
+        </main>
+        <script>
+            fetch("https://page-counter.sultankautsar.workers.dev")
+                .then((res) => res.json())
+                .then((data) => {
+                    console.log(data);
+                    document.getElementById("counter").textContent = data.views;
+                })
+                .catch(() => {});
+        </script>
+    </body>
+</html>
