@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Welcome to the Rayatiga Employee Page! Here, you can easily search for any team member by entering their unique Employee ID." />
+        <meta property="og:image" content="https://rayatiga.com/asset/media/rayatiga-og.jpg" />
+        <title>Employee</title>
+        <link rel="stylesheet" href="/asset/css/main.css" />
+        <script defer src="/asset/js/main.js"></script>
+        <!-- Start: Google Tag -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-E94958W4T7"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
+            gtag("config", "G-E94958W4T7");
+        </script>
+        <!-- End: Google Tag -->
+    </head>
+    <body>
+        <div class="wrapper">
+            <header>
+                <h1>Employee.</h1>
+                <span>The peoples, resources, and details.</span>
+                <nav>
+                    <button title="Home Page">
+                        <img src="/asset/media/icon-home.svg" alt="Home" />
+                    </button>
+                    <button title="Navigation Menu">
+                        <img src="/asset/media/icon-bar.svg" alt="Menu" />
+                    </button>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about.html">About</a></li>
+                        <li><a href="/career.html">Career</a></li>
+                        <li><a href="/contact.html">Contact</a></li>
+                        <li><a href="/employee.html">Employee</a></li>
+                        <li><a href="/faq.html">FAQs</a></li>
+                        <li><a href="/founder.html">Founder</a></li>
+                        <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="/service.html">Services</a></li>
+                        <li><a href="/term-condition.html">Terms Conditions</a></li>
+                        <li><a href="/closing.html">Closing</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <main>
+                <p>Welcome to the Rayatiga Employee Page! Here, you can easily search for any team member by entering their unique Employee ID. Once submitted, the system will instantly display the profile details of the employee, helping you connect with the right person within our team. Just enter the ID below to get started!</p>
+                <form id="employee-search">
+                    <input type="text" id="employee-id-input" placeholder="Enter 9-digit Employee ID" maxlength="9" required />
+                    <button type="submit">Search</button>
+                </form>
+                <div data-type="employee-search-info">
+                    <span id="employee-search-info"></span>
+                </div>
+                <div data-type="employee-detail">
+                    <h2>Employee Details</h2>
+                    <ul>
+                        <li><strong>Name:</strong> <span id="employee-name"></span> (<span id="employee-id"></span>)</li>
+                        <li><strong>Position:</strong> <span id="employee-title"></span></li>
+                        <li><strong>Status:</strong> <span id="employee-status"></span></li>
+                    </ul>
+                </div>
+            </main>
+            <footer>
+                <span>© 2020 - 2025 <a href="https://rayatiga.com">Rayatiga</a>. All Rights Reserved.</span>
+            </footer>
+        </div>
+    </body>
+</html>
