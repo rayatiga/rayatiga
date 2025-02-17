@@ -15,7 +15,7 @@
 body {
     font-size: 16px;
     background: #fefefa;
-    letter-spacing: -0.6px;
+    letter-spacing: -0.4px;
     font-family: "Inter", sans-serif;
 }
 
@@ -227,6 +227,6 @@ a:has([alt="Bell"]) {
     max-width: max-content;
 }
 [alt="Bell"] {
-    max-width: 14px;
-    max-height: 14px;
+    max-width: 16px;
+    max-height: 16px;
 }
