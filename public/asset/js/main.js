@@ -65,7 +65,9 @@ if (window.location.href.includes("employee")) {
         searchInfo.textContent = message;
         searchInfo.parentElement.style.display = "block";
         document.querySelector('[data-type="employee-detail"]').style.display = "none";
-        window.history.pushState({}, "", "?id=not-found");
+        const url = new URL(window.location);
+        url.searchParams.delete("id");
+        window.history.replaceState({}, "", url);
     }
     window.addEventListener("DOMContentLoaded", () => {
         const urlParams = new URLSearchParams(window.location.search);
