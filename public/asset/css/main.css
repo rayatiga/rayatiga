@@ -56,6 +56,9 @@ h2 {
     font-size: 14px;
     line-height: 1.7;
 }
+img {
+    max-width: 100%;
+}
 input,
 select,
 textarea {
@@ -157,13 +160,6 @@ main {
     margin: 64px 0;
     flex-direction: column;
 }
-main img {
-    width: 100%;
-    max-width: 240px;
-    max-height: 144px;
-    object-fit: cover;
-    aspect-ratio: 240 / 144;
-}
 main p,
 main span {
     color: #3f3f3f;
@@ -175,9 +171,9 @@ main a {
 main ul {
     color: #3f3f3f;
     font-size: 14px;
-    list-style: decimal;
-    padding-left: 14px;
     line-height: 1.7;
+    padding-left: 14px;
+    list-style: decimal;
 }
 
 footer > span {
@@ -194,8 +190,21 @@ footer > span > a {
     }
 }
 
-[data-type="faq"] details:not(:first-child) {
-    margin-top: 4px;
+.index main img {
+    width: 100%;
+    max-height: 144px;
+    object-fit: cover;
+    aspect-ratio: 240 / 144;
+}
+.index main div:has(img) {
+    gap: 8px;
+    display: grid;
+    max-width: 480px;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+[data-type="faq"] details:not(:last-child) {
+    margin-bottom: 4px;
 }
 [data-type="employee-detail"] {
     display: none;
