@@ -223,10 +223,6 @@ footer > span > a {
     color: #9f9f9f;
 }
 
-[href*="closing"] {
-    color: #ff5555;
-    font-weight: 500;
-}
 a:has([alt="Bell"]) {
     gap: 4px;
     display: flex;
