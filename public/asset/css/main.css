@@ -40,16 +40,9 @@ details {
     font-size: 14px;
     line-height: 1.7;
 }
-details[open] {
-    margin-bottom: 4px;
-}
 details summary {
     cursor: default;
     user-select: none;
-}
-details[open] summary {
-    font-weight: 600;
-    margin-bottom: 4px;
 }
 h2 {
     color: #3f3f3f;
@@ -83,7 +76,7 @@ strong {
     margin: 0 auto;
     padding: 80px 24px;
     flex-direction: column;
-    max-width: calc(640px);
+    max-width: calc(840px + (24px * 2));
 }
 
 header {
@@ -204,7 +197,13 @@ footer > span > a {
 }
 
 [data-type="faq"] details:not(:last-child) {
-    margin-bottom: 4px;
+    margin-bottom: 8px;
+}
+[data-type="faq"] details summary {
+    cursor: pointer;
+}
+[data-type="faq"] details[open] p {
+    margin-left: 16px;
 }
 [data-type="employee-detail"] {
     display: none;
