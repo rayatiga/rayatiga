@@ -221,16 +221,3 @@ footer > span > a {
 [data-type="employee-search-info"] span {
     color: #9f9f9f;
 }
-
-a:has([alt="Bell"]) {
-    gap: 4px;
-    display: flex;
-    color: #ff5555;
-    font-weight: 400;
-    align-items: center;
-    max-width: max-content;
-}
-[alt="Bell"] {
-    max-width: 16px;
-    max-height: 16px;
-}
